@@ -124,7 +124,7 @@ namespace Constants {
 	static const int NBinsFlashScore = 25; TString RecoLabelXAxisFlashScore = ";Flash score";
 	static const double MinFlashScore = 0., MaxFlashScore = 50.;
 
-	// --------------------------------------------------------------------------------------------------------------------------------------------------------
+	// --------------------------------------------------------------------------------------------------------------------------------------
 
 	// Binning & XLabels for STV
 
@@ -134,10 +134,11 @@ namespace Constants {
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; 
 	static TString LabelXAxisDeltaAlphaT = ";#delta#alpha_{T} [deg]"; static TString LabelXAxisTrueDeltaAlphaT = ";True #delta#alpha_{T} [deg]";
 
-	static const int NBinsDeltaPhiT = 10; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = { 0.,12.5,25.,37.5,50.,62.5,75.,90., 105., 120., 135. }; 
+	static const int NBinsDeltaPhiT = 10; 
+	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = { 0.,12.5,25.,37.5,50.,62.5,75.,90., 105., 120., 135. }; 
 	static TString LabelXAxisDeltaPhiT = ";#delta#phi_{T} [deg]"; static TString LabelXAxisTrueDeltaPhiT = ";True #delta#phi_{T} [deg]";
 
-	// --------------------------------------------------------------------------------------------------------------------------------------------------------
+	// ------------------------------------------------------------------------------------------------------------------------------------
 
 	// Labels for 2D Plots
 
@@ -157,13 +158,14 @@ namespace Constants {
 	static TString LabelXAxisEQE2D = ";True E^{QE} [GeV];Reco E^{QE} [GeV]";
 	static TString LabelXAxisQ22D = ";True Q^{2} [GeV^{2}/c^{2}];Reco Q^{2} [GeV^{2}/c^{2}]";
 
-	// --------------------------------------------------------------------------------------------------------------------------------------------------------
+	// --------------------------------------------------------------------------------------------------------------------------------------
 
 	static int OverlayColor = kAzure-4;
 	static int BeamOnColor = kBlack;
 	static int GenieColor = 610;
+	static int GenieOverlayColor = kOrange+7;	
 
-	// --------------------------------------------------------------------------------------------------------------------------------------------------------
+	// ---------------------------------------------------------------------------------------------------------------------------------------
 
 	// Constants, Cuts & Thresholds
 
@@ -208,7 +210,7 @@ namespace Constants {
 
 	static const double MinimumNuScore = 0.6;
 
-	// --------------------------------------------------------------------------------------------------------------------------------------------------------
+	// --------------------------------------------------------------------------------------------------------------------------------------
 
 }
 #endif
