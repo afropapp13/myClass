@@ -26,18 +26,18 @@ namespace Constants {
 	// Labels
 
 	static const TString PlotXAxis[] = {
-	  "#frac{d#sigma}{d#deltaP_{T}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{d#delta#alpha_{T}} []10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{d#delta#phi_{T}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{dP_{#mu}} [10^{-38} cm^{2}]"
+	  "#frac{d#sigma}{d#deltap_{T}} [10^{-38} #frac{cm^{2}}{GeV/c Ar}]"
+	 ,"#frac{d#sigma}{d#delta#alpha_{T}} []10^{-38} #frac{cm^{2}}{deg Ar}]"
+	 ,"#frac{d#sigma}{d#delta#phi_{T}} [10^{-38} #frac{cm^{2}}{deg Ar}]"
+	 ,"#frac{d#sigma}{dp_{#mu}} [10^{-38} #frac{cm^{2}}{GeV/c Ar}]"
 	 ,"#frac{d#sigma}{dcos#theta_{#mu}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{d#phi_{#mu}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{dP_{p}} [10^{-38} cm^{2}]"
+	 ,"#frac{d#sigma}{d#phi_{#mu}} [10^{-38} #frac{cm^{2}}{deg Ar}]"
+	 ,"#frac{d#sigma}{dp_{p}} [10^{-38} #frac{cm^{2}}{GeV/c Ar}]"
 	 ,"#frac{d#sigma}{dcos#theta_{p}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{d#phi_{p}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{dE^{Cal}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{dE^{QE}} [10^{-38} cm^{2}]"
-	 ,"#frac{d#sigma}{dQ^{2}} [10^{-38} cm^{2}]"
+	 ,"#frac{d#sigma}{d#phi_{p}} [10^{-38} #frac{cm^{2}}{deg Ar}]"
+	 ,"#frac{d#sigma}{dE^{Cal}} [10^{-38} #frac{cm^{2}}{GeV Ar}]"
+	 ,"#frac{d#sigma}{dE^{QE}} [10^{-38} #frac{cm^{2}}{GeV Ar}]"
+	 ,"#frac{d#sigma}{dQ^{2}} [10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}]"
 	};
 
 	// Genie Constants
