@@ -112,8 +112,8 @@ namespace Constants {
 	static const int NBinsdYZ = 20; TString RecoLabelXAxisdYZ = ";d_{YZ} (cm)";
 	static const double MindYZ = 0., MaxdYZ = 500.;
 
-	static const int NBinsNPE = 20; TString RecoLabelXAxisNPE = ";# PE";
-	static const double MinNPE = 0., MaxNPE = 1000.;
+	static const int NBinsNPE = 50; TString RecoLabelXAxisNPE = ";# PE";
+	static const double MinNPE = 0., MaxNPE = 3000.;
 
 	static const int NBinsDistance = 15; TString RecoLabelXAxisDistance = ";#mu - p distance (cm)";
 	static const double MinDistance = 0., MaxDistance = 5.;
