@@ -2,6 +2,7 @@
 #define CONSTANTS_H
 
 #include "TString.h"
+#include "TMath.h"
 
 #include <iostream>
 #include <fstream>
@@ -182,8 +183,9 @@ namespace Constants {
 
 	static const int MuonPdg = 13, ProtonPdg = 2212, AbsChargedPionPdg = 211, NeutralPionPdg = 111;
 
-	static const double MuonMass = 106, ProtonMass = 938; // MeV
-	static const double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938; // GeV
+	static const double MuonMass = 106, ProtonMass = 938.272, NeutronMass = 939.565; // MeV
+	static const double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938272, NeutronMass_GeV = 0.939565; // GeV
+	static const double DeltaM2 = TMath::Power(NeutronMass_GeV,2.) - TMath::Power(ProtonMass_GeV,2.);
 
 	static const double CosmicPID = -999.;
 	static const int CosmicPdg = -99;
@@ -211,7 +213,7 @@ namespace Constants {
 
 	static const double PurityThreshold = 0.1;
 
-	static const double MinimumNuScore = 0.6;
+	static const double MinimumNuScore = 0.6;		
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
