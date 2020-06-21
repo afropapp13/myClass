@@ -43,7 +43,7 @@ namespace Constants {
 
 	// Genie Constants
 
-	static const double FluxIntegratedXSection = 26.5736; // e-38 cm^2
+	static const double FluxIntegratedXSection = 26.5732; // e-38 cm^2
 	static const int NGenieEvents = 1E5;
 
 	// Global Constants
@@ -92,8 +92,8 @@ namespace Constants {
 	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.8,-0.6,-0.4,-0.2,-0.0,0.2,0.5,0.8,1.}; 
 	static TString LabelXAxisMuonCosTheta = ";cos#theta_{#mu}"; static TString LabelXAxisTrueMuonCosTheta = ";True cos#theta_{#mu}";
 
-	static const int NBinsProtonCosTheta = 9; 
-	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.8, -0.6,-0.3,0.,0.2,0.4,0.6,0.8,1. }; 
+	static const int NBinsProtonCosTheta = 8; 
+	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.6,-0.3,0.,0.2,0.4,0.6,0.8,1. }; 
 	static TString LabelXAxisProtonCosTheta = ";cos#theta_{p}"; static TString LabelXAxisTrueProtonCosTheta = ";True cos#theta_{p}";
 
 	static const int NBinsChi2 = 25; TString RecoLabelXAxisChi2 = ";#chi^{2}_{p}";
@@ -132,7 +132,7 @@ namespace Constants {
 
 	// Binning & XLabels for STV
 
-	static const int NBinsDeltaPT = 9; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9}; 
+	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static TString LabelXAxisDeltaPT = ";#deltap_{T} [GeV/c]"; static TString LabelXAxisTrueDeltaPT = ";True #deltap_{T} [GeV/c]";
 
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; 
