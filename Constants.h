@@ -140,7 +140,7 @@ namespace Constants {
 	static const int NBinsDeltaPhi = 15; static const double MinDeltaPhi = 0., MaxDeltaPhi = 360.;
 	static const int NBinsdYZ = 20; static const double MindYZ = 0., MaxdYZ = 500.;
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
-	static const int NBinsDistance = 44; static const double MinDistance = 0., MaxDistance = 22.;
+	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0.05, MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	
@@ -176,13 +176,7 @@ namespace Constants {
 	TString RecoLabelXAxisNPE = ";# PE";
 	TString RecoLabelXAxisDistance = ";#mu - p distance (cm)";
 	TString RecoLabelXAxisNuScore = ";#nu score";
-	TString RecoLabelXAxisFlashScore = ";Flash score";
-	
-	
-	
-	 
-	
-	
+	TString RecoLabelXAxisFlashScore = ";Flash score";	
 	
 	// ------------------------------------------------------------------------------------------------------------------------------------
 
