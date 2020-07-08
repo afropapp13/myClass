@@ -36,7 +36,7 @@ namespace Constants {
 	 ,"#frac{d#sigma}{d#delta#alpha_{T}} []10^{-38} #frac{cm^{2}}{deg Ar}]"
 	 ,"#frac{d#sigma}{d#delta#phi_{T}} [10^{-38} #frac{cm^{2}}{deg Ar}]"
 	 ,"#frac{d#sigma}{dp_{#mu}} [10^{-38} #frac{cm^{2}}{GeV/c Ar}]"
-	 ,"#frac{d#sigma}{dcos#theta_{#mu}} [10^{-38} #frac{Ar}]"
+	 ,"#frac{d#sigma}{dcos#theta_{#mu}} [10^{-38} #frac{cm^{2}}{Ar}]"
 	 ,"#frac{d#sigma}{d#phi_{#mu}} [10^{-38} #frac{cm^{2}}{deg Ar}]"
 	 ,"#frac{d#sigma}{dp_{p}} [10^{-38} #frac{cm^{2}}{GeV/c Ar}]"
 	 ,"#frac{d#sigma}{dcos#theta_{p}} [10^{-38} #frac{cm^{2}}{Ar}]"
