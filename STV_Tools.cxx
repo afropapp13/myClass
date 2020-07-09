@@ -25,7 +25,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	double MuonVectorTransMag = MuonVectorTrans.Mag();
 	
 	TLorentzVector MuonLorentzVector(MuonVector,MuonEnergy);
-	double MuonKE = MuonEnergy - MuonMass_GeV;	
+//	double MuonKE = MuonEnergy - MuonMass_GeV;	
 			
 	TVector3 ProtonVectorTrans;
 	ProtonVectorTrans.SetXYZ(ProtonVector.X(),ProtonVector.Y(),0.);
