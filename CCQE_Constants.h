@@ -213,8 +213,8 @@ namespace Constants {
 
 	static const double NPE = 10;
 
-	static const double MuonChi2Cut = 100.;
-	static const double ProtonChi2Cut = 80.;
+	static const double MuonChi2Cut = 80.;
+	static const double ProtonChi2Cut = 30.;
 
 	static const double MuonThreePlaneChi2LogLikelihoodCut = -1.;
 	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.5;
@@ -228,7 +228,8 @@ namespace Constants {
 	static const double ThresholdPurity = 0.1; // 10%
 	static const double UBSpaceReso = 0.3; // cm // 3mm spacing between the wires
 
-	static const double DeltaThetaCut = 180.; // deg
+	static const double DeltaThetaCentralValue = 90.; // deg
+	static const double DeltaThetaOpeningAngle = 55.; // deg
 	static const double DeltaPhiCentralValue = 180.; // deg
 	static const double DeltaPhiOpeningAngle = 35.; // deg
 	static const double MaxTransMissMomentum = 0.35; // deg
@@ -237,8 +238,8 @@ namespace Constants {
 
 	static const double MaxPFParticleTrackDistance = 20.; // cm
 
-	static const double YZBeamFlashVertexMaxDistance = 500.; // cm
-	static const double BeamFlashPEThreshold = 100; // PEs
+	static const double YZBeamFlashVertexMaxDistance = 200.; // cm
+	static const double BeamFlashPEThreshold = 150; // PEs
 
 	static const double ChargedPionMomentumThres = 0.07;
 	static const double NeutralPionMomentumThres = 0.0;
@@ -246,6 +247,9 @@ namespace Constants {
 	static const double PurityThreshold = 0.1;
 
 	static const double MinimumNuScore = 0.6;		
+	
+	static const int BoxWires = 50;
+	static const int BoxTicks = 100;		
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
