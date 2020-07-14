@@ -42,8 +42,8 @@ class TrackVertexSorting {
 	public:
 
 		// Default constructor
-//		TrackVertexSorting(){MaxTrackDist = 11;} // cm
-		TrackVertexSorting(){MaxTrackDist = 5;} // cm
+		TrackVertexSorting(){MaxTrackDist = 11;} // cm
+//		TrackVertexSorting(){MaxTrackDist = 5;} // cm
 
 		// Default destructor
 		~TrackVertexSorting(){}
