@@ -20,7 +20,8 @@ Box_Tools::Box_Tools(std::vector<double> Integral,std::vector<double> PeakTime,s
 	
 	int NHits = Integral.size();
 	
-	
+	double VertexWire = 0.;
+	double VertexTick = 0.;
 	
 	for (int hit = 0; hit < NHits; hit ++) {
 	
