@@ -22,7 +22,7 @@ class Box_Tools {
 	public:
 
 		// Default constructor
-		Box_Tools(sdt::vector<double> Integral,sdt::vector<double> PeakTime,sdt::vector<double> Wire,sdt::vector<double> Plane);
+		Box_Tools(std::vector<double> Integral,std::vector<double> PeakTime,std::vector<double> Wire,std::vector<double> Plane);
 
 		// Default destructor
 		//~Box_Tools(){}

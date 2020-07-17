@@ -12,7 +12,7 @@
 
 // __________________________________________________________________________________________________________________________________________________
 
-Box_Tools::Box_Tools(sdt::vector<double> Integral,sdt::vector<double> PeakTime,sdt::vector<double> Wire,sdt::vector<double> Plane) {
+Box_Tools::Box_Tools(std::vector<double> Integral,std::vector<double> PeakTime,std::vector<double> Wire,std::vector<double> Plane) {
 
 	fChargeBoxDepPlane0 = 0.;
 	fChargeBoxDepPlane1 = 0.;
