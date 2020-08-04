@@ -22,6 +22,8 @@ void BackTrackerTruthMatch::MatchToMCParticle(const art::Handle<std::vector<reco
 	double max_dQinTruthMatchedHits = -1., dQinAllHits = 0.;
 	std::unordered_map<int,double> trackid_dQinTruthMatchedHits;
 
+	double ftote = 0., fmaxe = 0.;
+
 	// Loop only over the recob::Hits
 
 	for (int i_h = 0; i_h < int(trk_hits_ptrs.size()); ++i_h) {
