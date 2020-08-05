@@ -155,7 +155,6 @@ namespace Constants {
 	static TString LabelXAxisMuonMomentum = ";P_{#mu} [GeV/c]"; static TString LabelXAxisTrueMuonMomentum = ";True P_{#mu} [GeV/c]";
 	static TString LabelXAxisProtonMomentum = ";P_{p} [GeV/c]"; static TString LabelXAxisTrueProtonMomentum = ";True P_{p} [GeV/c]";
 	static TString LabelXAxisMuonPhi = ";#phi_{#mu} [deg]"; static TString LabelXAxisTrueMuonPhi = ";True #phi_{#mu} [deg]";
-			
 	static TString LabelXAxisProtonPhi = ";#phi_{p} [deg]"; static TString LabelXAxisTrueProtonPhi = ";True #phi_{p} [deg]";
 	static TString LabelXAxisMuonCosTheta = ";cos#theta_{#mu}"; static TString LabelXAxisTrueMuonCosTheta = ";True cos#theta_{#mu}";
 	static TString LabelXAxisProtonCosTheta = ";cos#theta_{p}"; static TString LabelXAxisTrueProtonCosTheta = ";True cos#theta_{p}";
