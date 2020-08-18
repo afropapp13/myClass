@@ -14,7 +14,11 @@
 class STV_Tools {
 
 	private:
-		
+
+		double fkMiss;
+		double fEMiss;
+		double fPMissMinus;
+		double fPMiss;		
 		double fPt;
 		double fDeltaAlphaT;
 		double fDeltaPhiT;
@@ -30,6 +34,10 @@ class STV_Tools {
 		// Default destructor
 		//~STV_Tools(){}
 
+		double ReturnkMiss();
+		double ReturnEMiss();
+		double ReturnPMissMinus();
+		double ReturnPMiss();
 		double ReturnPt();
 		double ReturnDeltaAlphaT();
 		double ReturnDeltaPhiT();

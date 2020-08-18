@@ -62,8 +62,52 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 
 	TLorentzVector nuLorentzVector(0.,0.,fECal,fECal);
 	TLorentzVector qLorentzVector = nuLorentzVector - MuonLorentzVector;
-	fQ2 = - qLorentzVector.Mag2();		
+	fQ2 = - qLorentzVector.Mag2();
+	
+	// -------------------------------------------------------------------------------------------------------------------------
+	
+	// Light Cone Variables
+	
+	TLorentzVector MissLorentzVector = nuLorentzVector - MuonLorentzVector - ProtonLorentzVector;
+	
+	fEMiss = TMath::Abs(MissLorentzVector.E());
+	fPMiss = (MissLorentzVector.Vect()).Mag();	
+	fPMissMinus = fEMiss - MissLorentzVector.Z();
+	
+	double fkMissNum = ( TMath::Power(fPt,2.) + TMath::Power(ProtonMass_GeV,2.) );
+	double fkMissDen = ( fPMissMinus * (2*ProtonMass_GeV - fPMissMinus) );
+	
+	double fkMiss2 = TMath::Power(ProtonMass_GeV,2.) * fkMissNum / fkMissDen - TMath::Power(ProtonMass_GeV,2.); // Jackson's note				
 
+	fkMiss = sqrt(fkMiss2);
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnkMiss() {
+
+	return fkMiss;
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnEMiss() {
+
+	return fEMiss;
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnPMissMinus() {
+
+	return fPMissMinus;
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnPMiss() {
+
+	return fPMiss;
 }
 
 // __________________________________________________________________________________________________________________________________________________

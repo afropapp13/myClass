@@ -82,6 +82,10 @@ namespace Constants {
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
 	// Binning
+
+	static const int NBinskMiss = 10; static const double ArrayNBinskMiss[NBinskMiss+1] = {0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2,1.3,1.4,1.5}; 
+	static const int NBinsPMiss = 8; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
+	static const int NBinsPMissMinus = 8; static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.};	
 	
 	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; 
@@ -158,6 +162,10 @@ namespace Constants {
 	static TString LabelXAxisProtonPhi = ";#phi_{p} [deg]"; static TString LabelXAxisTrueProtonPhi = ";True #phi_{p} [deg]";
 	static TString LabelXAxisMuonCosTheta = ";cos#theta_{#mu}"; static TString LabelXAxisTrueMuonCosTheta = ";True cos#theta_{#mu}";
 	static TString LabelXAxisProtonCosTheta = ";cos#theta_{p}"; static TString LabelXAxisTrueProtonCosTheta = ";True cos#theta_{p}";
+
+	static TString LabelXAxiskMiss = ";k_{miss} [GeV/c]"; static TString LabelXAxisTruekMiss = ";True k_{miss} [GeV/c]";
+	static TString LabelXAxisPMissMinus = ";P^{-}_{miss} [GeV/c]"; static TString LabelXAxisTruePMissMinus = ";True P^{-}_{miss} [GeV/c]";
+	static TString LabelXAxisPMiss = ";P_{miss} [GeV/c]"; static TString LabelXAxisTruePMiss = ";True P_{miss} [GeV/c]";
 	
 	static TString LabelXAxisDeltaPT = ";#deltap_{T} [GeV/c]"; static TString LabelXAxisTrueDeltaPT = ";True #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT = ";#delta#alpha_{T} [deg]"; static TString LabelXAxisTrueDeltaAlphaT = ";True #delta#alpha_{T} [deg]";
