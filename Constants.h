@@ -24,6 +24,7 @@ namespace Constants {
 
 //	static TString UBCodeVersion = "v08_00_00_33";
 	static TString UBCodeVersion = "v08_00_00_43";	
+//	static TString UBCodeVersion = "v08_00_00_47";	
 	
 	// Determine analysis style
 	
@@ -73,19 +74,70 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run1 = 9147384.0;
 	static const double EXT_Run1 = 34150796.0;
 	
+	// v43 Run 2 
+
+	static const double tor860_wcut_Run2 = 0.;
+	static const double E1DCNT_wcut_Run2 = 1.;
+	static const double EXT_Run2 = 1.;
+	
 	// v43 Run 3 
 
 	static const double tor860_wcut_Run3 = 9.506e+18;
 	static const double E1DCNT_wcut_Run3 = 2297952.0;
-	static const double EXT_Run3 = 5668319.0;	
+	static const double EXT_Run3 = 5668319.0;
+	
+	// v43 Run 4 
 
+	static const double tor860_wcut_Run4 = 0.;
+	static const double E1DCNT_wcut_Run4 = 1.;
+	static const double EXT_Run4 = 1.;
+	
+	// v43 Run 5 
+
+	static const double tor860_wcut_Run5 = 0.;
+	static const double E1DCNT_wcut_Run5 = 1.;
+	static const double EXT_Run5 = 1.;		
+
+	// -----------------------------------------------------------------------------------------------------------------------------------------------
+
+	// v47 Run 1 
+/*
+	static const double tor860_wcut_Run1 = 1.655e+20;
+	static const double E1DCNT_wcut_Run1 = 36783134.0;
+	static const double EXT_Run1 = 65959384.0;
+	
+	// v47 Run 2 
+
+	static const double tor860_wcut_Run2 = 2.629e+20;
+	static const double E1DCNT_wcut_Run2 = 62229021.0;
+	static const double EXT_Run2 = 155584859.0;
+	
+	// v47 Run 3 
+
+	static const double tor860_wcut_Run3 = 2.566e+20;
+	static const double E1DCNT_wcut_Run3 = 61475496.0;
+	static const double EXT_Run3 = 202917228.0;
+	
+	// v47 Run 4 
+
+	static const double tor860_wcut_Run4 = 0.;
+	static const double E1DCNT_wcut_Run4 = 1.;
+	static const double EXT_Run4 = 1.;
+	
+	// v47 Run 5 
+
+	static const double tor860_wcut_Run5 = 0.;
+	static const double E1DCNT_wcut_Run5 = 1.;
+	static const double EXT_Run5 = 1.;
+*/
+	// -----------------------------------------------------------------------------------------------------------------------------------------------
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
 	// Binning
 
-	static const int NBinskMiss = 10; static const double ArrayNBinskMiss[NBinskMiss+1] = {0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2,1.3,1.4,1.5}; 
+	static const int NBinskMiss = 8; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static const int NBinsPMiss = 8; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
-	static const int NBinsPMissMinus = 8; static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.};	
+	static const int NBinsPMissMinus = 10; static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.,0.15,0.3,0.45,0.6,0.75,0.9,1.05,1.2,1.35,1.5};	
 	
 	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; 
