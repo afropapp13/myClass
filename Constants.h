@@ -56,8 +56,11 @@ namespace Constants {
 	// Genie Constants
 
 	static const double SuSav2FluxIntegratedXSection = 37.2171; // e-38 cm^2
-	static const double FluxIntegratedXSection = 26.5732; // e-38 cm^2
-	static const int NGenieEvents = 1E5;
+//	static const double FluxIntegratedXSection = 26.5732; // e-38 cm^2 MCC8 number
+	static const double G18_10a_02_11a_FluxIntegratedXSection = 27.1682; // e-38 cm^2 MCC9 number GENIE v3.0.6
+	static const double R_2_12_10_FluxIntegratedXSection = 35.116; // e-38 cm^2 MCC9 number GENIE v2.12.10
+	static const double R_3_0_4_FluxIntegratedXSection = 26.7883; // e-38 cm^2 MCC9 number GENIE v3.0.4
+//	static const int NGenieEvents = 1E5;
 
 	// Global Constants
 
@@ -268,13 +271,13 @@ namespace Constants {
 	static int OverlayColor = kAzure-4;
 	static int BeamOnColor = kBlack;
 	static int GenieColor = 610;
+	static int Geniev3OutOfTheBoxColor = kMagenta;
 	static int GenieOverlayColor = kOrange+7;	
 	static int GiBUUColor = 410;
 	static int NuWroColor = kOrange+7;	
 	static int NEUTColor = kRed+1;
-//	static int GENIEv2Color = kViolet+8;	
 	static int GENIEv2Color = kBlue;	
-	static int SuSav2Color = kCyan;	
+	static int SuSav2Color = 429;	
 	
 	// ---------------------------------------------------------------------------------------------------------------------------------------
 
