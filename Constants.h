@@ -51,6 +51,7 @@ namespace Constants {
 	 ,"#frac{d#sigma}{dE^{Cal}} [10^{-38} #frac{cm^{2}}{GeV Ar}]"
 	 ,"#frac{d#sigma}{dE^{QE}} [10^{-38} #frac{cm^{2}}{GeV Ar}]"
 	 ,"#frac{d#sigma}{dQ^{2}} [10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}]"
+	 ,"#frac{d#sigma}{dk_{Miss}} [10^{-38} #frac{cm^{2}}{GeV/c Ar}]"
 	};
 
 	// Genie Constants
@@ -270,13 +271,15 @@ namespace Constants {
 
 	static int OverlayColor = kAzure-4;
 	static int BeamOnColor = kBlack;
+	static int GenieOverlayColor = kBlack;
 	static int GenieColor = 610;
 	static int Geniev3OutOfTheBoxColor = kMagenta;
-	static int GenieOverlayColor = kOrange+7;	
+//	static int GenieOverlayColor = kOrange+7;	
 	static int GiBUUColor = 410;
 	static int NuWroColor = kOrange+7;	
 	static int NEUTColor = kRed+1;
 	static int GENIEv2Color = kBlue;	
+	static int GENIEv3_0_4_Color = kGray+1;
 	static int SuSav2Color = 429;	
 	
 	// ---------------------------------------------------------------------------------------------------------------------------------------
