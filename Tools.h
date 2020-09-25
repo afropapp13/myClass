@@ -18,7 +18,7 @@ class Tools {
 
 		// Default constructor
 		Tools(){ MuonMass = 106; ProtonMass = 938.272; MuonPdg = 13; ProtonPdg = 2212;
-			 FVx = 256.; FVy = 230; FVz = 1036.; borderx = 3.; bordery = 5.; borderz = 5.;}
+			 FVx = 256.; FVy = 230; FVz = 1036.; borderx = 3.; bordery = 3.; borderz = 3.;}
 
 		// Default destructor
 		~Tools(){}
