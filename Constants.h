@@ -145,9 +145,10 @@ namespace Constants {
 
 	// Binning
 
-	static const int NBinskMiss = 8; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
+	static const int NBinskMiss = 9; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.75,0.9,1.05}; 
 	static const int NBinsPMiss = 8; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
-	static const int NBinsPMissMinus = 10; static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.,0.15,0.3,0.45,0.6,0.75,0.9,1.05,1.2,1.35,1.5};	
+	static const int NBinsPMissMinus = 20; 
+	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.,0.075,0.15,0.225,0.3,0.375,0.45,0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5};	
 	
 	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; 
@@ -205,7 +206,7 @@ namespace Constants {
 	static const int NBinsDeltaTheta = 18; static const double MinDeltaTheta = 0., MaxDeltaTheta = 180.;
 	static const int NBinsDeltaPhi = 15; static const double MinDeltaPhi = 0., MaxDeltaPhi = 360.;
 	static const int NBinsdYZ = 20; static const double MindYZ = 0., MaxdYZ = 500.;
-	static const int NBinsLengthDifference = 50; static const double MinLengthDifference = -500., MaxLengthDifference = 500.;
+	static const int NBinsLengthDifference = 35; static const double MinLengthDifference = -150., MaxLengthDifference = 550.;
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0.05, MaxNuScore = 1.;
@@ -242,9 +243,9 @@ namespace Constants {
 	TString RecoLabelXAxisDeltaTheta = ";#Delta#theta";
 	TString RecoLabelXAxisThreePlaneChi2LogLikelihood = ";3-Plane LogLikelihood";
 	TString RecoLabelXAxisDeltaPhi = ";#Delta#phi";
-	TString RecoLabelXAxisdYZ = ";d_{YZ} (cm)";
+	TString RecoLabelXAxisdYZ = ";d_{YZ} [cm]";
 	TString RecoLabelXAxisNPE = ";# PE";
-	TString RecoLabelXAxisDistance = ";#mu - p distance (cm)";
+	TString RecoLabelXAxisDistance = ";#mu - p distance [cm]";
 	TString RecoLabelXAxisNuScore = ";#nu score";
 	TString RecoLabelXAxisFlashScore = ";Flash score";
 	TString RecoLabelXAxisLengthDifference = ";l_{#mu} - l_{p} [cm]";
