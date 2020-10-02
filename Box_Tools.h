@@ -17,19 +17,27 @@ class Box_Tools {
 		
 		double fChargeBoxDepPlane0;
 		double fChargeBoxDepPlane1;
-		double fChargeBoxDepPlane2;				
+		double fChargeBoxDepPlane2;
+		
+		double fChargeBoxTotalPlane0;
+		double fChargeBoxTotalPlane1;
+		double fChargeBoxTotalPlane2;	
+		
+		double fChargeFracDepPlane0;
+		double fChargeFracDepPlane1;
+		double fChargeFracDepPlane2;							
 
 	public:
 
 		// Default constructor
-		Box_Tools(std::vector<double> Integral,std::vector<double> PeakTime,std::vector<double> Wire,std::vector<double> Plane);
+		Box_Tools(std::vector<double> Integral,std::vector<double> PeakTime,std::vector<double> Wire,std::vector<double> Plane, double BoxWires, double BoxTicks, TVector3 VertexWire, TVector3 VertexTick);
 
 		// Default destructor
 		//~Box_Tools(){}
 
-		double GetChargeBoxDepPlane0();
-		double GetChargeBoxDepPlane1();
-		double GetChargeBoxDepPlane2();				
+		double GetChargeDepPlane0();
+		double GetChargeDepPlane1();
+		double GetChargeDepPlane2();				
 
 };
 
