@@ -211,7 +211,7 @@ namespace Constants {
 	static const int NBinsLengthDifference = 35; static const double MinLengthDifference = -150., MaxLengthDifference = 550.;
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
-	static const int NBinsNuScore = 25; static const double MinNuScore = 0.05, MaxNuScore = 1.;
+	static const int NBinsNuScore = 25; static const double MinNuScore = 0., MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
@@ -299,7 +299,7 @@ namespace Constants {
 	static const double ProtonChi2Cut = 80.;
 
 	static const double MuonThreePlaneChi2LogLikelihoodCut = -1.;
-	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.5;
+	static const double ProtonThreePlaneChi2LogLikelihoodCut = 0.;
 
 	static const double CosmicPID = -999.;
 	static const int CosmicPdg = -99;
@@ -327,7 +327,7 @@ namespace Constants {
 
 	static const double PurityThreshold = 0.1;
 
-	static const double MinimumNuScore = 0.6;		
+	static const double MinimumNuScore = 0.1;		
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
