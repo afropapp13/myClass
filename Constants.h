@@ -78,6 +78,41 @@ namespace Constants {
 
 	// POT Normalization
 
+
+	// v43 Run 1 
+
+	static const double tor860_wcut_Run1 = 4.566e+19;
+	static const double E1DCNT_wcut_Run1 = 10127594.0;
+	static const double EXT_Run1 = 34151572.0;
+	
+	// v43 Run 2 
+
+	static const double tor860_wcut_Run2 = 0.;
+	static const double E1DCNT_wcut_Run2 = 1.;
+	static const double EXT_Run2 = 1.;
+	
+	// v43 Run 3 
+
+	static const double tor860_wcut_Run3 = 9.513e+18;
+	static const double E1DCNT_wcut_Run3 = 2299517.0;
+	static const double EXT_Run3 = 15927891.0;
+	
+	// v43 Run 4 
+
+	static const double tor860_wcut_Run4 = 0.;
+	static const double E1DCNT_wcut_Run4 = 1.;
+	static const double EXT_Run4 = 1.;
+	
+	// v43 Run 5 
+
+	static const double tor860_wcut_Run5 = 0.;
+	static const double E1DCNT_wcut_Run5 = 1.;
+	static const double EXT_Run5 = 1.;		
+
+	// -----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+/*
 	// v43 Run 1 
 
 	static const double tor860_wcut_Run1 = 4.131e+19;
@@ -107,7 +142,7 @@ namespace Constants {
 	static const double tor860_wcut_Run5 = 0.;
 	static const double E1DCNT_wcut_Run5 = 1.;
 	static const double EXT_Run5 = 1.;		
-
+*/
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
 	// v47 Run 1 
