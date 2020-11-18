@@ -31,6 +31,20 @@ namespace Constants {
 //	static TString UBCodeVersion = "v08_00_00_33";
 	static TString UBCodeVersion = "v08_00_00_43";	
 //	static TString UBCodeVersion = "v08_00_00_47";	
+
+	// ---------------------------------------------------------------------------------
+
+	// Exporting paths
+
+	const TString PathToFiles = "/uboone/data/users/"+UserID+"/myEvents/OutputFiles/"+UBCodeVersion+"/";
+	const TString PathToExtractedXSec = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myXSec/"+UBCodeVersion+"/"; 
+	const TString FileEfficienciesPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myEfficiencies/"+UBCodeVersion+"/";
+	const TString PlotPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myPlots/"+UBCodeVersion+"/"; 
+	const TString PathToSystematics = "/uboone/data/users/"+UserID+"/mySTVAnalysis/mySystematics/"+UBCodeVersion+"/";
+	const TString TrueSTVPath = PathToFiles;
+	const TString MigrationMatrixPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myMigrationMatrices/"+UBCodeVersion+"/"; 
+
+	// ---------------------------------------------------------------------------------
 	
 	// Determine analysis style
 	
