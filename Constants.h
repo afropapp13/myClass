@@ -28,9 +28,9 @@ namespace Constants {
 
 	// UBCodeVersion
 
-//	static TString UBCodeVersion = "v08_00_00_33";
-	static TString UBCodeVersion = "v08_00_00_43";	
-//	static TString UBCodeVersion = "v08_00_00_47";	
+//	const TString UBCodeVersion = "v08_00_00_33";
+	const TString UBCodeVersion = "v08_00_00_43";	
+//	TString UBCodeVersion = "v08_00_00_47";	
 
 	// ---------------------------------------------------------------------------------
 
