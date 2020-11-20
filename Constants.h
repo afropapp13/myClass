@@ -264,8 +264,12 @@ namespace Constants {
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0., MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	static const int NBinsTrackScore = 25; static const double MinTrackScore = 0.5, MaxTrackScore = 1.;
-	static const int NBinsMuonVertexDistance = 25; static const double MinMuonVertexDistance = 0., MaxMuonVertexDistance = 7.5;
+	static const int NBinsMuonVertexDistance = 25; static const double MinMuonVertexDistance = 0., MaxMuonVertexDistance = 2.;
 	static const int NBinsProtonVertexDistance = 25; static const double MinProtonVertexDistance = 0., MaxProtonVertexDistance = 5.;
+	static const int NBinsVertexActivity = 25; static const double MinVertexActivity = 0., MaxVertexActivity = 1.;
+	static const int NBinsVertexX = 50; static const double MinVertexX = 0., MaxVertexX = 256.;
+	static const int NBinsVertexY = 50; static const double MinVertexY = -115., MaxVertexY = 115.;
+	static const int NBinsVertexZ = 50; static const double MinVertexZ = -10., MaxVertexZ = 1056.;
 	
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -307,6 +311,10 @@ namespace Constants {
 	TString RecoLabelXAxisMuonTrackScore = ";Muon Track Score";
 	TString RecoLabelXAxisMuonVertexDistanceTrackScore = ";Muon Vertex Distance [cm]";
 	TString RecoLabelXAxisProtonVertexDistanceTrackScore = ";Proton Vertex Distance [cm]";
+	TString RecoLabelXAxisVertexActivity = ";Vertex Activity";
+	TString RecoLabelXAxisVertexX = ";Vertex X [cm]";
+	TString RecoLabelXAxisVertexY = ";Vertex Y [cm]";
+	TString RecoLabelXAxisVertexZ = ";Vertex Z [cm]";
 	TString RecoLabelXAxisProtonTrackScore = ";Proton Track Score";
 	TString RecoLabelXAxisLengthDifference = ";l_{#mu} - l_{p} [cm]";
 	TString RecoLabelXAxisMuonLength = ";l_{#mu} [cm]";
