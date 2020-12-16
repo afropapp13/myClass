@@ -267,9 +267,9 @@ namespace Constants {
 	static const int NBinsMuonVertexDistance = 25; static const double MinMuonVertexDistance = 0., MaxMuonVertexDistance = 2.;
 	static const int NBinsProtonVertexDistance = 25; static const double MinProtonVertexDistance = 0., MaxProtonVertexDistance = 5.;
 	static const int NBinsVertexActivity = 25; static const double MinVertexActivity = 0., MaxVertexActivity = 1.;
-	static const int NBinsVertexX = 50; static const double MinVertexX = 0., MaxVertexX = 256.;
-	static const int NBinsVertexY = 50; static const double MinVertexY = -115., MaxVertexY = 115.;
-	static const int NBinsVertexZ = 50; static const double MinVertexZ = -10., MaxVertexZ = 1056.;
+	static const int NBinsVertexX = 50; static const double MinVertexX = -10., MaxVertexX = 265.;
+	static const int NBinsVertexY = 50; static const double MinVertexY = -120., MaxVertexY = 120.;
+	static const int NBinsVertexZ = 50; static const double MinVertexZ = -20., MaxVertexZ = 1056.;
 	
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
