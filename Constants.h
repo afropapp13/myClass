@@ -29,8 +29,8 @@ namespace Constants {
 	// UBCodeVersion
 
 //	const TString UBCodeVersion = "v08_00_00_33";
-	const TString UBCodeVersion = "v08_00_00_43";	
-//	TString UBCodeVersion = "v08_00_00_47";	
+//	const TString UBCodeVersion = "v08_00_00_43";
+	const TString UBCodeVersion = "v08_00_00_52";
 
 	// ---------------------------------------------------------------------------------
 
@@ -248,7 +248,7 @@ namespace Constants {
 	
 	*/
 
-	static const int NBinsChi2 = 25; static const double MinChi2 = 0., MaxChi2 = 500.;
+	static const int NBinsChi2 = 30; static const double MinChi2 = 0., MaxChi2 = 300.;
 	static const int NBinsThreePlaneChi2 = 25; static const double MinThreePlaneChi2 = 0., MaxThreePlaneChi2 = 500.;
 	static const int NBinsThreePlaneChi2LogLikelihood = 40;
 	static const double MinThreePlaneChi2LogLikelihood = -5., MaxThreePlaneChi2LogLikelihood = 5.;
@@ -261,6 +261,7 @@ namespace Constants {
 	static const int NBinsLengthDifference = 35; static const double MinLengthDifference = -150., MaxLengthDifference = 550.;
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
+	static const int NBinsEv = 40; static const double MinEv = 0., MaxEv = 2.;
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0., MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	static const int NBinsTrackScore = 25; static const double MinTrackScore = 0.5, MaxTrackScore = 1.;
@@ -297,7 +298,7 @@ namespace Constants {
 			
 	TString RecoLabelXAxisThreePlaneChi2MuonCandidateLogLikelihood = ";3-Plane LogLikelihood #mu-Candidate";
 	TString RecoLabelXAxisThreePlaneChi2ProtonCandidateLogLikelihood = ";3-Plane LogLikelihood p-Candidate";
-	TString RecoLabelXAxisChi2 = ";#chi^{2}_{p}";
+	TString RecoLabelXAxisChi2 = "Y-Plane ;#chi^{2}_{p}";
 	TString RecoLabelXAxisThreePlaneChi2 = ";3-plane #chi^{2}_{p}";
 	TString RecoLabelXAxisDeltaTheta = ";#Delta#theta";
 	TString RecoLabelXAxisThreePlaneChi2LogLikelihood = ";3-Plane LogLikelihood";
@@ -307,6 +308,7 @@ namespace Constants {
 	TString RecoLabelXAxisNPE = ";# PE";
 	TString RecoLabelXAxisDistance = ";#mu - p distance [cm]";
 	TString RecoLabelXAxisNuScore = ";#nu Score";
+	TString RecoLabelXAxisEv = ";E_{#nu} [GeV]";
 	TString RecoLabelXAxisFlashScore = ";Flash Score";
 	TString RecoLabelXAxisMuonTrackScore = ";Muon Track Score";
 	TString RecoLabelXAxisMuonVertexDistanceTrackScore = ";Muon Vertex Distance [cm]";

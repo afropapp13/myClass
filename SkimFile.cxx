@@ -8,6 +8,7 @@
 #include <TMath.h>
 #include <TVector3.h>
 #include <TLorentzVector.h>
+#include <TTree.h>
 
 #include <sstream>
 #include <iostream>
