@@ -97,7 +97,7 @@ namespace Constants {
 
 	static const double tor860_wcut_Run1 = 4.566e+19;
 	static const double E1DCNT_wcut_Run1 = 10127594.0;
-	static const double EXT_Run1 = 34151572.0;
+	static const double EXT_Run1 = 32514217.0;
 	
 	// v43 Run 2 
 
@@ -109,7 +109,7 @@ namespace Constants {
 
 	static const double tor860_wcut_Run3 = 9.513e+18;
 	static const double E1DCNT_wcut_Run3 = 2299517.0;
-	static const double EXT_Run3 = 15927891.0;
+	static const double EXT_Run3 = 131356320.0;
 	
 	// v43 Run 4 
 
@@ -245,9 +245,9 @@ namespace Constants {
 	static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] ={-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
 	static const int NBinsProtonCosTheta = 7; 
 	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = {0.15,0.2583,0.366,0.475 ,0.583,0.692,0.8,0.95}; 
-	
 	*/
 
+	static const int NBinsLLRPID = 40; static const double MinLLRPID = -1., MaxLLRPID = 1.;
 	static const int NBinsChi2 = 30; static const double MinChi2 = 0., MaxChi2 = 300.;
 	static const int NBinsThreePlaneChi2 = 25; static const double MinThreePlaneChi2 = 0., MaxThreePlaneChi2 = 500.;
 	static const int NBinsThreePlaneChi2LogLikelihood = 40;
@@ -294,8 +294,10 @@ namespace Constants {
 	static TString LabelXAxisDeltaPT = ";#deltap_{T} [GeV/c]"; static TString LabelXAxisTrueDeltaPT = ";True #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT = ";#delta#alpha_{T} [deg]"; static TString LabelXAxisTrueDeltaAlphaT = ";True #delta#alpha_{T} [deg]";
 	static TString LabelXAxisDeltaPhiT = ";#delta#phi_{T} [deg]"; static TString LabelXAxisTrueDeltaPhiT = ";True #delta#phi_{T} [deg]";
-		
-			
+
+	TString RecoLabelXAxisLLRPID = ";LLR PID Score";		
+	TString RecoLabelXAxisMuonLLRPID = ";#mu Candidate LLR PID Score";
+	TString RecoLabelXAxisProtonLLRPID = ";p Candidate LLR PID Score";
 	TString RecoLabelXAxisThreePlaneChi2MuonCandidateLogLikelihood = ";3-Plane LogLikelihood #mu-Candidate";
 	TString RecoLabelXAxisThreePlaneChi2ProtonCandidateLogLikelihood = ";3-Plane LogLikelihood p-Candidate";
 	TString RecoLabelXAxisChi2 = "Y-Plane ;#chi^{2}_{p}";
