@@ -82,7 +82,7 @@ namespace Constants {
 	static const double Units = 1E38; // so that the extracted cross-section is 10^{-38} cm^{2}
 	static const double NTargets = 1.1782E30; // Argon nuclei, not nucleons
 	
-	static const int NuMuPdg = 14, MuonPdg = 13, ProtonPdg = 2212, AbsChargedPionPdg = 211, NeutralPionPdg = 111, ElectronPdg = 11, DeuteriumPdg = 1000010020;
+	static const int NuMuPdg = 14, MuonPdg = 13, ProtonPdg = 2212, AbsChargedPionPdg = 211, NeutralPionPdg = 111, ElectronPdg = 11, DeuteriumPdg = 1000010020, NeutronPdg = 2112;
 
 	static const double MuonMass = 106, ProtonMass = 938.272, NeutronMass = 939.565; // MeV
 	static const double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938272, NeutronMass_GeV = 0.939565; // GeV
