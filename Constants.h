@@ -302,9 +302,9 @@ namespace Constants {
 	TString RecoLabelXAxisThreePlaneChi2ProtonCandidateLogLikelihood = ";3-Plane LogLikelihood p-Candidate";
 	TString RecoLabelXAxisChi2 = "Y-Plane ;#chi^{2}_{p}";
 	TString RecoLabelXAxisThreePlaneChi2 = ";3-plane #chi^{2}_{p}";
-	TString RecoLabelXAxisDeltaTheta = ";#Delta#theta";
+	TString RecoLabelXAxisDeltaTheta = ";#delta#theta_{#mu,p}";
 	TString RecoLabelXAxisThreePlaneChi2LogLikelihood = ";3-Plane LogLikelihood";
-	TString RecoLabelXAxisDeltaPhi = ";#Delta#phi";
+	TString RecoLabelXAxisDeltaPhi = ";#delta#phi_{#mu,p}";
 	TString RecoLabelXAxisdYZ = ";d_{YZ} [cm]";
 	TString RecoLabelXAxisdXYZ = ";d_{XYZ} [cm]";
 	TString RecoLabelXAxisNPE = ";# PE";
@@ -369,7 +369,7 @@ namespace Constants {
 	static const double ProtonChi2Cut = 80.;
 
 	static const double MuonThreePlaneChi2LogLikelihoodCut = -1.;
-	static const double ProtonThreePlaneChi2LogLikelihoodCut = 0.;
+	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.4;
 
 	static const double CosmicPID = -999.;
 	static const int CosmicPdg = -99;
