@@ -263,6 +263,7 @@ namespace Constants {
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
 	static const int NBinsEv = 40; static const double MinEv = 0., MaxEv = 2.;
+	static const int NBinsNu = 40; static const double MinNu = 0., MaxNu = 2.;
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0., MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	static const int NBinsTrackScore = 25; static const double MinTrackScore = 0.5, MaxTrackScore = 1.;
@@ -312,6 +313,7 @@ namespace Constants {
 	TString RecoLabelXAxisDistance = ";#mu - p distance [cm]";
 	TString RecoLabelXAxisNuScore = ";#nu Score";
 	TString RecoLabelXAxisEv = ";E_{#nu} [GeV]";
+	TString RecoLabelXAxisNu = ";Energy Transfer [GeV]";
 	TString RecoLabelXAxisFlashScore = ";Flash Score";
 	TString RecoLabelXAxisMuonTrackScore = ";Muon Track Score";
 	TString RecoLabelXAxisMuonVertexDistanceTrackScore = ";Muon Vertex Distance [cm]";
@@ -401,6 +403,8 @@ namespace Constants {
 	static const double MinimumNuScore = 0.1;
 
 	static double POTUncertainty = 0.02; // 2% POT Uncertainty		
+
+	static double NTargetUncertainty = 0.01; // 1% NTarget Uncertainty		
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
