@@ -44,6 +44,14 @@ namespace Constants {
 	const TString TrueSTVPath = PathToFiles;
 	const TString MigrationMatrixPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myMigrationMatrices/"+UBCodeVersion+"/"; 
 
+	//---------------------------------------------------------------------------------
+
+	// Zarko Pavlovic, Jun 22 2020
+
+	double Nominal_UB_XY_Surface = 256.35*233.; // cm2
+	double SoftFidSurface = 250. * 224.;  // cm2
+	double POTPerSpill = 4997.*5e8;
+
 	// ---------------------------------------------------------------------------------
 	
 	// Determine analysis style
@@ -80,7 +88,7 @@ namespace Constants {
 	// Global Constants
 
 	static const double Units = 1E38; // so that the extracted cross-section is 10^{-38} cm^{2}
-	static const double NTargets = 1.1782E30; // Argon nuclei, not nucleons
+	static const double NTargets = 1.203E30; // Argon nuclei, not nucleons
 	
 	static const int NuMuPdg = 14, MuonPdg = 13, ProtonPdg = 2212, AbsChargedPionPdg = 211, NeutralPionPdg = 111, ElectronPdg = 11, NeutronPdg = 2112, KaonPdg = 321;
 	static const int DeuteriumPdg = 1000010020, HeliumPdg = 1000020040, ArgonPdg = 1000180400;
@@ -262,8 +270,8 @@ namespace Constants {
 	static const int NBinsLengthDifference = 35; static const double MinLengthDifference = -150., MaxLengthDifference = 550.;
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
-	static const int NBinsEv = 40; static const double MinEv = 0., MaxEv = 2.;
-	static const int NBinsNu = 40; static const double MinNu = 0., MaxNu = 2.;
+	static const int NBinsEv = 38; static const double MinEv = 0.2, MaxEv = 2.;
+	static const int NBinsNu = 30; static const double MinNu = 0., MaxNu = 1.5;
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0., MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	static const int NBinsTrackScore = 25; static const double MinTrackScore = 0.5, MaxTrackScore = 1.;
