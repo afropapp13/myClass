@@ -271,7 +271,7 @@ namespace Constants {
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
 	static const int NBinsEv = 38; static const double MinEv = 0.2, MaxEv = 2.;
-	static const int NBinsNu = 30; static const double MinNu = 0., MaxNu = 1.5;
+	static const int NBinsNu = 20; static const double MinNu = 0., MaxNu = 1.;
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0., MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	static const int NBinsTrackScore = 25; static const double MinTrackScore = 0.5, MaxTrackScore = 1.;
@@ -380,7 +380,7 @@ namespace Constants {
 	static const double ProtonChi2Cut = 80.;
 
 	static const double MuonThreePlaneChi2LogLikelihoodCut = -1.;
-	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.4;
+	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.2;
 
 	static const double CosmicPID = -999.;
 	static const int CosmicPdg = -99;
