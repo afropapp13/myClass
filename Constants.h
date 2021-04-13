@@ -24,7 +24,10 @@ namespace Constants {
 	static const double A = 40.;
 	static const double Z = 18.;
 
-	static const int FontStyle = 132;
+	const int FontStyle = 132;
+	const double TextSize = 0.07;
+	const int NCont = 999; 
+	const TString CutExtension = "_NoCuts_PID_NuScore";
 
 	// UBCodeVersion
 
@@ -211,7 +214,7 @@ namespace Constants {
 	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; 
 	static const int NBinsDeltaPhiT = 10; 
-	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,12.5,25.,37.5,50.,62.5,75.,90.,105.,120.,135.};	
+	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,18,36,54,72,90,108,126,144,162.,180.};	
 	
 	static const int NBinsEQE = 8; static const double ArrayNBinsEQE[NBinsEQE+1] = {0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6,1.8}; 	
 	
@@ -380,7 +383,7 @@ namespace Constants {
 	static const double ProtonChi2Cut = 80.;
 
 	static const double MuonThreePlaneChi2LogLikelihoodCut = -1.;
-	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.2;
+	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.25;
 
 	static const double CosmicPID = -999.;
 	static const int CosmicPdg = -99;
@@ -408,13 +411,19 @@ namespace Constants {
 
 	static const double PurityThreshold = 0.1;
 
-	static const double MinimumNuScore = 0.1;
+	static const double MinimumNuScore = 0.08;
 
 	static double POTUncertainty = 0.02; // 2% POT Uncertainty		
 
 	static double NTargetUncertainty = 0.01; // 1% NTarget Uncertainty		
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
+
+	static const double NuScoreStep = (MaxNuScore - MinNuScore) / double(NBinsNuScore);
+	static const double LLPStep = (MaxThreePlaneChi2LogLikelihood - MinThreePlaneChi2LogLikelihood) / double(NBinsThreePlaneChi2LogLikelihood);
+	static const double MuonLengthStep = (MaxMuonLength - MinMuonLength) / double(NBinsMuonLength);
+
+	// --------------------------------------------------------------------------------------------------------------------------------
 
 }
 #endif
