@@ -105,24 +105,27 @@ void SVD(TMatrixD M)
     MM.Draw("colz");
 }
 
+// -----------------------------------------------------------------------------------------------
 
-void H2M(const TH2D* histo, TMatrixD& mat, bool rowcolumn)
-{
+void H2M(const TH2D* histo, TMatrixD& mat, bool rowcolumn) {
+
     // Fill 2D histogram into matrix
     // If TH2D(i, j) = Matrix(i, j), rowcolumn = kTRUE, else rowcolumn = kFALSE
 
     for (Int_t i=0; i<histo->GetNbinsX(); i++) {
 
-        for(Int_t j=0; j<histo->GetNbinsY(); j++) {
+        for (Int_t j=0; j<histo->GetNbinsY(); j++) {
 
-            if(rowcolumn) mat(i, j) = histo->GetBinContent(i+1, j+1);
-            else mat(j, i) = histo->GetBinContent(i+1, j+1);
+            if (rowcolumn) { mat(i, j) = histo->GetBinContent(i+1, j+1); }
+            else { mat(j, i) = histo->GetBinContent(i+1, j+1); }
 
         }
 
     }
 
 }
+
+// -----------------------------------------------------------------------------------------------
 
 void H2V(const TH1D* histo, TVectorD& vec)
 {
