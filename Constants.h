@@ -61,7 +61,23 @@ namespace Constants {
 	
 	static bool CCQElike = false;
 
-	// Labels & Label  map
+	// Labels / Ranges & Label  map
+
+	static std::map<TString,std::pair<double,double> > XSecRange =
+	{
+		{ "DeltaPTPlot",  std::make_pair(-7, 67) },
+		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.15) },
+		{ "DeltaPhiTPlot",  std::make_pair(-0.05, 0.53) },
+		{ "MuonMomentumPlot",  std::make_pair(-4, 24) },
+		{ "MuonCosThetaPlot",  std::make_pair(-3, 29) },
+		{ "MuonPhiPlot",  std::make_pair(0, 0.059) },
+		{ "ProtonMomentumPlot",  std::make_pair(-1, 37) },
+		{ "ProtonCosThetaPlot",  std::make_pair(-4, 27) },
+		{ "ProtonPhiPlot",  std::make_pair(0, 0.055) },
+		{ "ECalPlot",  std::make_pair(0, 60) },
+		{ "EQEPlot",  std::make_pair(0, 60) },
+		{ "Q2Plot",  std::make_pair(0, 60) },																	
+	};
 
 	static std::map<TString,TString> VarLabel =
 	{
@@ -76,7 +92,7 @@ namespace Constants {
 		{ "ProtonPhiPlot",  "#frac{d#sigma}{d#phi_{p}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "ECalPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
 		{ "EQEPlot",  "#frac{d#sigma}{dE^{QE}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
-		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },																						
+		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },																
 	};	
 
 	static const TString PlotXAxis[] = {
@@ -237,8 +253,8 @@ namespace Constants {
 /*	static const int NBinsDeltaPhiT = 10; */
 /*	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,18,36,54,72,90,108,126,144,162.,180.};	*/
 
-	static const int NBinsDeltaPhiT = 7;
-	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,15,29,51,81,115,155.,180.};
+	static const int NBinsDeltaPhiT = 6;
+	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,15,29,51,81,130.,180.};
 	
 	static const int NBinsEQE = 8; static const double ArrayNBinsEQE[NBinsEQE+1] = {0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6,1.8}; 	
 	
@@ -266,8 +282,8 @@ namespace Constants {
 /*	static const int NBinsProtonCosTheta = 8; */
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.6,-0.3,0.,0.2,0.4,0.6,0.8,1. }; */
 
-	static const int NBinsProtonCosTheta = 9; 
-	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.8,-0.5,-0.25,0.05,0.3,0.51,0.68,0.84,1. };
+	static const int NBinsProtonCosTheta = 8; 
+	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.63,-0.25,0.05,0.3,0.51,0.68,0.84,1. };
 	
 	
 	// CCQE analysis
