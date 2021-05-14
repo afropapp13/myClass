@@ -320,7 +320,7 @@ namespace Constants {
 	static const int NBinsdYZ = 20; static const double MindYZ = 0., MaxdYZ = 500.;
 	static const int NBinsdXYZ = 30; static const double MindXYZ = 0., MaxdXYZ = 600.;
 	static const int NBinsMuonLength = 50; static const double MinMuonLength = 0., MaxMuonLength = 400.;
-	static const int NBinsProtonLength = 50; static const double MinProtonLength = 0., MaxProtonLength = 150.;
+	static const int NBinsProtonLength = 50; static const double MinProtonLength = 0., MaxProtonLength = 100.;
 	static const int NBinsLengthDifference = 35; static const double MinLengthDifference = -150., MaxLengthDifference = 550.;
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
