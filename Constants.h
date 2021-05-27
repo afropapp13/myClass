@@ -14,7 +14,7 @@ using namespace std;
 namespace Constants {
 
 	// -------------------------------------------------------------------------------------
-
+	//Should probably make this a string that takes any locally defined username
 	TString UserID = "apapadop";
 
 	// -------------------------------------------------------------------------------------
