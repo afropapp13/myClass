@@ -23,7 +23,7 @@ namespace Constants {
 
 	static const double A = 40.;
 	static const double Z = 18.;
-
+	//Set font styles number to ~Times New Roman within ROOT: https://root.cern.ch/doc/master/classTAttText.html
 	const int FontStyle = 132;
 	const double TextSize = 0.07;
 	const int NCont = 999; 
