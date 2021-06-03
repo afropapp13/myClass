@@ -268,21 +268,26 @@ namespace Constants {
 /*	static const int NBinsMuonMomentum = 8; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.3,0.5,0.7,0.9,1.1,1.3,1.5,1.7}; */
 /*	static const int NBinsMuonMomentum = 5; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.25,0.45,0.8,1.15,1.7};*/
 /*	static const int NBinsMuonMomentum = 9; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.2,0.3,0.45,0.6,0.75,0.9,1.1,1.3,1.5};*/
-	static const int NBinsMuonMomentum = 9; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.25,0.4,0.55,0.7,0.85,1.,1.15,1.35,1.7};
+/*	static const int NBinsMuonMomentum = 9; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.25,0.4,0.55,0.7,0.85,1.,1.15,1.35,1.6};*/
+	static const int NBinsMuonMomentum = 8; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.25,0.4,0.55,0.7,0.85,1.,1.15,1.45};
 
 /*	static const int NBinsMuonPhi = 7; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-128.6,-77.1,-25.7,25.7,77.1,128.6,180.};*/
 	static const int NBinsMuonPhi = 7; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-125.,-77.1,-25.7,25.7,77.1,125.,180.};
 /*	static const int NBinsMuonCosTheta = 9; */
 /*	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.8,-0.6,-0.4,-0.2,-0.0,0.2,0.5,0.8,1.};*/
-	static const int NBinsMuonCosTheta = 11; 
+
+//	static const int NBinsMuonCosTheta = 11; 
 /*	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.82,-0.6,-0.4,-0.2,-0.0,0.2,0.45,0.67,0.85,1.};*/
-	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.8,-0.6,-0.4,-0.2,-0.0,0.2,0.4,0.55,0.7,0.85,1.};
+/*	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.8,-0.6,-0.4,-0.2,-0.0,0.2,0.4,0.55,0.7,0.85,1.};*/
+
+	static const int NBinsMuonCosTheta = 10;
+	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.7,-0.45,-0.2,-0.0,0.2,0.4,0.55,0.7,0.85,1.};
 
 /*	static const int NBinsProtonMomentum = 9; */
 /*	static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2};*/
 
 /*	static const int NBinsProtonMomentum = 8; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.37,0.5,0.6,0.7,0.8,0.92,1.07,1.25};*/
-	static const int NBinsProtonMomentum = 8; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.35,0.45,0.56,0.67,0.78,0.92,1.07,1.25};
+	static const int NBinsProtonMomentum = 8; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.35,0.45,0.56,0.67,0.78,0.92,1.06,1.2};
 
 /*	static const int NBinsProtonPhi = 7; static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] = { -180.,-128.6,-77.1,-25.7,25.7,77.1,128.6,180.}; */
 	static const int NBinsProtonPhi = 7; static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] = { -180.,-125.,-77.,-25.,25.,77.,125.,180.}; 
@@ -290,9 +295,12 @@ namespace Constants {
 /*	static const int NBinsProtonCosTheta = 8; */
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.6,-0.3,0.,0.2,0.4,0.6,0.8,1. }; */
 
-	static const int NBinsProtonCosTheta = 8; 
+//	static const int NBinsProtonCosTheta = 8; 
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.63,-0.25,0.05,0.3,0.51,0.68,0.84,1. };*/
-	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.61,-0.23,0.05,0.3,0.51,0.68,0.84,1. };
+/*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.61,-0.23,0.05,0.3,0.51,0.68,0.84,1. };*/
+
+	static const int NBinsProtonCosTheta = 7;
+	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.4,0.05,0.3,0.51,0.68,0.84,1. };
 	
 	
 	// CCQE analysis
