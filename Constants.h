@@ -303,29 +303,26 @@ namespace Constants {
 	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.4,0.05,0.3,0.51,0.68,0.84,1. };
 	
 	
-	// CCQE analysis
+	// MCC8 CCQE analysis binning 
 	
-	/*
+	static const int CCQENBinsECal = 7; 
+	static const double CCQEArrayNBinsECal[NBinsECal+1] = {0.3, 0.51428571, 0.72857143, 0.94285714, 1.15714286,1.37142857, 1.58571429, 1.8}; 
+	static const int CCQENBinsQ2 = 7; 
+	static const double CCQEArrayNBinsQ2[NBinsQ2+1] = {0., 0.17142857, 0.34285714, 0.51428571, 0.68571429, 0.85714286,1.02857143,1.2}; 
 	
-	static const int NBinsECal = 7; 
-	static const double ArrayNBinsECal[NBinsECal+1] = {0.3, 0.51428571, 0.72857143, 0.94285714, 1.15714286,1.37142857, 1.58571429, 1.8}; 
-	static const int NBinsQ2 = 7; 
-	static const double ArrayNBinsQ2[NBinsQ2+1] = {0., 0.17142857, 0.34285714, 0.51428571, 0.68571429, 0.85714286,1.02857143,1.2}; 
-	
-	static const int NBinsMuonMomentum = 7; 
-	static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5}; 
-	static const int NBinsMuonPhi = 7; 
-	static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = {-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
-	static const int NBinsMuonCosTheta = 7; 
-	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = {-0.65, -0.4083,-0.167,0.075,0.317,0.5583, 0.8, 0.95};
+	static const int CCQENBinsMuonMomentum = 7; 
+	static const double CCQEArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5}; 
+	static const int CCQENBinsMuonPhi = 7; 
+	static const double CCQEArrayNBinsMuonPhi[NBinsMuonPhi+1] = {-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
+	static const int CCQENBinsMuonCosTheta = 7; 
+	static const double CCQEArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = {-0.65, -0.4083,-0.167,0.075,0.317,0.5583, 0.8, 0.95};
 
-	static const int NBinsProtonMomentum = 7; 
-	static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.};
-	static const int NBinsProtonPhi = 7; 
-	static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] ={-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
-	static const int NBinsProtonCosTheta = 7; 
-	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = {0.15,0.2583,0.366,0.475 ,0.583,0.692,0.8,0.95}; 
-	*/
+	static const int CCQENBinsProtonMomentum = 7; 
+	static const double CCQEArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.};
+	static const int CCQENBinsProtonPhi = 7; 
+	static const double CCQEArrayNBinsProtonPhi[NBinsProtonPhi+1] ={-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
+	static const int CCQENBinsProtonCosTheta = 7; 
+	static const double CCQEArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = {0.15,0.2583,0.366,0.475 ,0.583,0.692,0.8,0.95}; 
 
 	static const int NBinsLLRPID = 40; static const double MinLLRPID = -1., MaxLLRPID = 1.;
 	static const int NBinsChi2 = 30; static const double MinChi2 = 0., MaxChi2 = 300.;
@@ -479,7 +476,7 @@ namespace Constants {
 
 	static const double PurityThreshold = 0.1;
 
-	static const double MinimumNuScore = 0.08;
+	static const double MinimumNuScore = 0.04;
 
 	static double POTUncertainty = 0.02; // 2% POT Uncertainty		
 
@@ -506,27 +503,27 @@ namespace Constants {
 
 	const TString Containment = "CandidateMu_StartContainment == 1 && CandidateP_StartContainment == 1 && CandidateP_EndContainment == 1 && True_CandidateMu_StartContainment == 1";
 
-	const TString ProtonMom = "CandidateP_P_Range_Recalibrate > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range_Recalibrate < "\
+	const TString ProtonMom = "CandidateP_P_Range > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range < "\
 		+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum])) + " && True_CandidateP_P > "+ TString(std::to_string(ArrayNBinsProtonMomentum[0]))\
 		+ " && True_CandidateP_P < "+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum]));
 
-	const TString DeltaPT = "Reco_Pt_Recalibrate > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt_Recalibrate < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
+	const TString DeltaPT = "Reco_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
 		+ " && True_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && True_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
  
-	const TString DeltaPhiT = "Reco_DeltaPhiT_Recalibrate > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT_Recalibrate < "\
+	const TString DeltaPhiT = "Reco_DeltaPhiT> " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT < "\
 		+ TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT]))\
 		+ " && True_DeltaPhiT > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && True_DeltaPhiT < " + TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT])); 
 
 	const TString MuonMom = "True_CandidateMu_P > "+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && True_CandidateMu_P < "\
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum]))\
-		+ " && ( ( CandidateMu_EndContainment == 1 && CandidateMu_P_Range_Recalibrate > "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_Range_Recalibrate < "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) || ( CandidateMu_EndContainment == 0 && CandidateMu_P_MCS_Recalibrate > "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_MCS_Recalibrate < "\
+		+ " && ( ( CandidateMu_EndContainment == 1 && CandidateMu_P_Range > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_Range < "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) || ( CandidateMu_EndContainment == 0 && CandidateMu_P_MCS > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_MCS < "\
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) )" ;
 
-	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range_Recalibrate-CandidateMu_P_MCS_Recalibrate)/CandidateMu_P_Range_Recalibrate < "\
-		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_P_MCS > " + MuMinMCSThres + " && CandidateMu_P_MCS_Recalibrate > " + MuMinMCSThres + ") )";
+	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range-CandidateMu_P_MCS)/CandidateMu_P_Range < "\
+		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_P_MCS > " + MuMinMCSThres + " && CandidateMu_P_MCS > " + MuMinMCSThres + ") )";
 
 	const TString MinHitsMu = "  (CandidateMu_Plane0_TruncdEdx[0][0] + CandidateMu_Plane1_TruncdEdx[0][0] + CandidateMu_Plane2_TruncdEdx[0][0] > " + MuMinSumHits + ")";
 
