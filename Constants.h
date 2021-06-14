@@ -56,10 +56,6 @@ namespace Constants {
 	double POTPerSpill = 4997.*5e8;
 
 	// ---------------------------------------------------------------------------------
-	
-	// Determine analysis style
-	
-	static bool CCQElike = false;
 
 	// Labels / Ranges & Label  map
 
@@ -486,7 +482,7 @@ namespace Constants {
 
 	const TString MuRangeMCSAgree = "0.25"; const double MuRangeMCSAgreeValue = 0.25;
 	const TString MuMinMCSThres = "0.3";  const double MuMinMCSThresValue = 0.3;
-	const TString MuMinSumHits = "0.2";  const double MuMinSumHitsValue = 0.2;
+	const TString MuMinSumHits = "0.7";  const double MuMinSumHitsValue = 0.7;
 	const TString PMinSumHits = "1.";  const double PMinSumHitsValue = 1.;	
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
@@ -525,9 +521,10 @@ namespace Constants {
 	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range-CandidateMu_P_MCS)/CandidateMu_P_Range < "\
 		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_P_MCS > " + MuMinMCSThres + " && CandidateMu_P_MCS > " + MuMinMCSThres + ") )";
 
-	const TString MinHitsMu = "  (CandidateMu_Plane0_TruncdEdx[0][0] + CandidateMu_Plane1_TruncdEdx[0][0] + CandidateMu_Plane2_TruncdEdx[0][0] > " + MuMinSumHits + ")";
 
-	const TString MinHitsP = " (CandidateP_Plane0_TruncdEdx[0][0] + CandidateP_Plane1_TruncdEdx[0][0] + CandidateP_Plane2_TruncdEdx[0][0] > " + PMinSumHits + ")";
+	const TString MinHitsMu = " ( (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep < " + MuMinSumHits +" ) )";
+
+	const TString MinHitsP = " ( (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep < " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep < " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep < " + PMinSumHits +" ) )";
 
 	const TString MinMuonVertexDist = "CandidateMuStartVertexDistance < CandidateMuEndVertexDistance";
 
