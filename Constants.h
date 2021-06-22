@@ -130,8 +130,12 @@ namespace Constants {
 
 	// ----------------------------------------------------------------------------------------------------------------------------------------------
 
-	// POT Normalization
+	// POT Normalization & Runs
 
+
+//	vector<TString> Runs{"Run1"};
+	vector<TString> Runs{"Run1","Run3"};
+//	vector<TString> Runs{"Run1","Run2","Run3","Run4","Run5"};
 
 	// v43 Run 1 
 
@@ -481,7 +485,7 @@ namespace Constants {
 	// Quality cuts
 
 	const TString MuRangeMCSAgree = "0.25"; const double MuRangeMCSAgreeValue = 0.25;
-	const TString MuMinMCSThres = "0.3";  const double MuMinMCSThresValue = 0.3;
+	const TString MuMinMCSLengthThres = "100";  const double MuMinMCSLengthThresValue = 100;
 	const TString MuMinSumHits = "0.7";  const double MuMinSumHitsValue = 0.7;
 	const TString PMinSumHits = "1.";  const double PMinSumHitsValue = 1.;	
 
@@ -499,27 +503,27 @@ namespace Constants {
 
 	const TString Containment = "CandidateMu_StartContainment == 1 && CandidateP_StartContainment == 1 && CandidateP_EndContainment == 1 && True_CandidateMu_StartContainment == 1";
 
-	const TString ProtonMom = "CandidateP_P_Range > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range < "\
+	const TString ProtonMom = "CandidateP_P_Range_Recalibrate > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range_Recalibrate < "\
 		+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum])) + " && True_CandidateP_P > "+ TString(std::to_string(ArrayNBinsProtonMomentum[0]))\
 		+ " && True_CandidateP_P < "+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum]));
 
-	const TString DeltaPT = "Reco_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
+	const TString DeltaPT = "Reco_Pt_Recalibrate > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt_Recalibrate < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
 		+ " && True_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && True_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
  
-	const TString DeltaPhiT = "Reco_DeltaPhiT> " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT < "\
+	const TString DeltaPhiT = "Reco_DeltaPhiT_Recalibrate > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT_Recalibrate < "\
 		+ TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT]))\
 		+ " && True_DeltaPhiT > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && True_DeltaPhiT < " + TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT])); 
 
 	const TString MuonMom = "True_CandidateMu_P > "+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && True_CandidateMu_P < "\
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum]))\
-		+ " && ( ( CandidateMu_EndContainment == 1 && CandidateMu_P_Range > "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_Range < "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) || ( CandidateMu_EndContainment == 0 && CandidateMu_P_MCS > "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_MCS < "\
+		+ " && ( ( CandidateMu_EndContainment == 1 && CandidateMu_P_Range_Recalibrate > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_Range_Recalibrate < "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) || ( CandidateMu_EndContainment == 0 && CandidateMu_P_MCS_Recalibrate > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_MCS_Recalibrate < "\
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) )" ;
 
-	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range-CandidateMu_P_MCS)/CandidateMu_P_Range < "\
-		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_P_MCS > " + MuMinMCSThres + " && CandidateMu_P_MCS > " + MuMinMCSThres + ") )";
+	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range_Recalibrate-CandidateMu_P_MCS_Recalibrate)/CandidateMu_P_Range_Recalibrate < "\
+		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_Length > 100) )";
 
 
 	const TString MinHitsMu = " ( (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep < " + MuMinSumHits +" ) )";
