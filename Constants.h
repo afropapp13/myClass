@@ -88,7 +88,7 @@ namespace Constants {
 		{ "ProtonPhiPlot",  "#frac{d#sigma}{d#phi_{p}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "ECalPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
 		{ "EQEPlot",  "#frac{d#sigma}{dE^{QE}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
-		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },																
+		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },											
 	};	
 
 	static const TString PlotXAxis[] = {
@@ -448,7 +448,7 @@ namespace Constants {
 	static const double ProtonChi2Cut = 80.;
 
 	static const double MuonThreePlaneChi2LogLikelihoodCut = -1.;
-	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.25;
+	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.5;
 
 	static const double CosmicPID = -999.;
 	static const int CosmicPdg = -99;
@@ -499,6 +499,8 @@ namespace Constants {
 
 	// Selection  & Quality cuts
 
+	// Reco level
+
 	const TString CC1p = "CC1p && CandidateMu_MCParticle_Pdg == 13 && CandidateP_MCParticle_Pdg == 2212 && NumberPi0 == 0"; 
 
 	const TString Containment = "CandidateMu_StartContainment == 1 && CandidateP_StartContainment == 1 && CandidateP_EndContainment == 1 && True_CandidateMu_StartContainment == 1";
@@ -523,7 +525,9 @@ namespace Constants {
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) )" ;
 
 	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range_Recalibrate-CandidateMu_P_MCS_Recalibrate)/CandidateMu_P_Range_Recalibrate < "\
-		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_Length > 100) )";
+		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_Length > " + MuMinMCSLengthThres + ") )";
+
+	const TString OnlyContainedMuQualityCut = " ( ( CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range_Recalibrate-CandidateMu_P_MCS_Recalibrate)/CandidateMu_P_Range_Recalibrate < "+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0) )";
 
 
 	const TString MinHitsMu = " ( (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep < " + MuMinSumHits +" ) )";
@@ -534,14 +538,40 @@ namespace Constants {
 
 	const TString MinProtonVertexDist = "CandidatePStartVertexDistance < CandidatePEndVertexDistance";
 
+	const TString AvoidFlippedTracks = "StartToStartDistance < EndToEndDistance";
+
 	const TString qualifier = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinHitsMu\
-		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist;
+		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
 	const TString qualifierNoMuRangeCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + MinHitsMu\
-		+ " && " + MinHitsP  + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist;
+		+ " && " + MinHitsP  + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
 	const TString qualifierNoHitSumCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut\
-		+ " && " + MinMuonVertexDist + " && " + MinProtonVertexDist;
+		+ " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+
+	const TString qualifierNoExitMuQC = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + OnlyContainedMuQualityCut\
+		+ " && " + MinHitsMu+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+
+	// --------------------------------------------------------------------------------------------------------------------------------
+
+	const TString TrueCC1p = "CC1p && NumberPi0 == 0";
+
+	const TString TrueProtonMom = "Proton_MCParticle_Mom > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && Proton_MCParticle_Mom < "\
+		+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum]));
+
+	const TString TrueMuonMom = "Muon_MCParticle_Mom > " + TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && Muon_MCParticle_Mom < "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])); 
+
+	const TString TrueDeltaPT = "True_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && True_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
+
+	const TString TrueDeltaAlphaT = "True_DeltaAlphaT > " + TString(std::to_string(ArrayNBinsDeltaAlphaT[0])) + " && True_DeltaAlphaT < "\
+		+ TString(std::to_string(ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT]));
+
+	const TString TrueDeltaPhiT = "True_DeltaPhiT > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && True_DeltaPhiT < " + TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT]));
+
+	const TString TrueQualifier = TrueCC1p + " && " + TrueProtonMom + " && " + TrueMuonMom + " && " + TrueDeltaPT + " && " + TrueDeltaAlphaT + " && " + TrueDeltaPhiT;
+
+	// --------------------------------------------------------------------------------------------------------------------------------
 
 }
 #endif
