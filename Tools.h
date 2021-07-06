@@ -23,6 +23,7 @@ class Tools {
 		// Default destructor
 		~Tools(){}
 
+		bool is_meson_or_antimeson(int pdg);
 		bool IsContained(TVector3 TrackStart, TVector3 TrackEnd);
 		bool inFV(double x, double y, double z);
 		bool inFVVector(TVector3 vector);

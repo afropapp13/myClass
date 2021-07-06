@@ -134,7 +134,9 @@ namespace Constants {
 
 
 //	vector<TString> Runs{"Run1"};
-	vector<TString> Runs{"Run1","Run3"};
+/*	vector<TString> Runs{"Run1","Run3"};*/
+/*	vector<TString> Runs{"Run1","Run2","Run3"};*/
+	vector<TString> Runs{"Run1","Run2","Run3","Combined"};
 //	vector<TString> Runs{"Run1","Run2","Run3","Run4","Run5"};
 
 	// v43 Run 1 
@@ -142,30 +144,54 @@ namespace Constants {
 	static const double tor860_wcut_Run1 = 4.566e+19;
 	static const double E1DCNT_wcut_Run1 = 10127594.0;
 	static const double EXT_Run1 = 32514217.0;
+
+	static const double Fulltor860_wcut_Run1 = 1.62e20;
+	static const double FullE1DCNT_wcut_Run1 = 36139233.0;
+	static const double FullEXT_Run1 = 65498807.0;
 	
 	// v43 Run 2 
 
 	static const double tor860_wcut_Run2 = 0.;
 	static const double E1DCNT_wcut_Run2 = 1.;
 	static const double EXT_Run2 = 1.;
+
+	static const double Fulltor860_wcut_Run2 = 2.62e20;
+	static const double FullE1DCNT_wcut_Run2 = 62045760.0;
+	static const double FullEXT_Run2 = 152404890.0;
 	
 	// v43 Run 3 
 
 	static const double tor860_wcut_Run3 = 9.513e+18;
 	static const double E1DCNT_wcut_Run3 = 2299517.0;
 	static const double EXT_Run3 = 131356320.0;
+
+	static const double Fulltor860_wcut_Run3 = 2.55e20;
+	static const double FullE1DCNT_wcut_Run3 = 61012955.0;
+	static const double FullEXT_Run3 = 214555174.0;
 	
 	// v43 Run 4 
 
 	static const double tor860_wcut_Run4 = 0.;
 	static const double E1DCNT_wcut_Run4 = 1.;
 	static const double EXT_Run4 = 1.;
+
+	static const double Fulltor860_wcut_Run4 = 0.;
+	static const double FullE1DCNT_wcut_Run4 = 1.;
+	static const double FullEXT_Run4 = 1.;
 	
 	// v43 Run 5 
 
 	static const double tor860_wcut_Run5 = 0.;
 	static const double E1DCNT_wcut_Run5 = 1.;
-	static const double EXT_Run5 = 1.;		
+	static const double EXT_Run5 = 1.;	
+
+	static const double Fulltor860_wcut_Run5 = 0.;
+	static const double FullE1DCNT_wcut_Run5 = 1.;
+	static const double FullEXT_Run5 = 1.;	
+
+	// Combined POT
+
+	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + tor860_wcut_Run5;	
 
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -246,17 +272,18 @@ namespace Constants {
 /*	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; */
 /*	static const int NBinsDeltaPT = 4; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.18,0.41,0.73,1.};*/
 /*	static const int NBinsDeltaPT = 6; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.12,0.24,0.36,0.55,0.74,1.};*/
-	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.75,0.95};
+/*	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.75,0.95};*/
+	static const int NBinsDeltaPT = 14; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.61,0.68,0.75};
 
 /*	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; */
 /*	static const int NBinsDeltaAlphaT = 4; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,36.,85.,140.,180. }; */
-	static const int NBinsDeltaAlphaT = 6; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,30,60.,90.,120.,150.,180. }; 
+	static const int NBinsDeltaAlphaT = 12; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,15.,30,45.,60.,75.,90.,105.,120.,135.,150.,165.,180. }; 
 
 /*	static const int NBinsDeltaPhiT = 10; */
 /*	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,18,36,54,72,90,108,126,144,162.,180.};	*/
 
 /*	static const int NBinsDeltaPhiT = 6; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,15,29,51,81,130.,180.};*/
-	static const int NBinsDeltaPhiT = 10; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,10.,20.,30.,47.,64.,81.,100.,125.,155.,180.};
+	static const int NBinsDeltaPhiT = 13; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,10.,20.,30.,40.,50.,60.,75.,90.,106.,126.,145.,162.,180.};
 	
 	static const int NBinsEQE = 8; static const double ArrayNBinsEQE[NBinsEQE+1] = {0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6,1.8}; 	
 	
@@ -269,10 +296,10 @@ namespace Constants {
 /*	static const int NBinsMuonMomentum = 5; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.25,0.45,0.8,1.15,1.7};*/
 /*	static const int NBinsMuonMomentum = 9; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.2,0.3,0.45,0.6,0.75,0.9,1.1,1.3,1.5};*/
 /*	static const int NBinsMuonMomentum = 9; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.25,0.4,0.55,0.7,0.85,1.,1.15,1.35,1.6};*/
-	static const int NBinsMuonMomentum = 8; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.25,0.4,0.55,0.7,0.85,1.,1.15,1.4};
+	static const int NBinsMuonMomentum = 11; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2};
 
 /*	static const int NBinsMuonPhi = 7; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-128.6,-77.1,-25.7,25.7,77.1,128.6,180.};*/
-	static const int NBinsMuonPhi = 7; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-125.,-77.1,-25.7,25.7,77.1,125.,180.};
+	static const int NBinsMuonPhi = 18; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-160.,-140.,-120.,-100.,-80,-60,-40,-20.,0.,20.,40.,60.,80.,100.,120.,140.,160.,180.};
 /*	static const int NBinsMuonCosTheta = 9; */
 /*	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.8,-0.6,-0.4,-0.2,-0.0,0.2,0.5,0.8,1.};*/
 
@@ -280,17 +307,18 @@ namespace Constants {
 /*	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.82,-0.6,-0.4,-0.2,-0.0,0.2,0.45,0.67,0.85,1.};*/
 /*	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.8,-0.6,-0.4,-0.2,-0.0,0.2,0.4,0.55,0.7,0.85,1.};*/
 
-	static const int NBinsMuonCosTheta = 10;
-	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.7,-0.45,-0.2,-0.0,0.2,0.4,0.55,0.7,0.85,1.};
+	static const int NBinsMuonCosTheta = 19;
+	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.85,-0.7,-0.57,-0.45,-0.32,-0.2,-0.1,0.,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.89,0.95,1.};
 
 /*	static const int NBinsProtonMomentum = 9; */
 /*	static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2};*/
 
 /*	static const int NBinsProtonMomentum = 8; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.37,0.5,0.6,0.7,0.8,0.92,1.07,1.25};*/
-	static const int NBinsProtonMomentum = 7; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.35,0.45,0.56,0.67,0.78,0.92,1.1};
+/*	static const int NBinsProtonMomentum = 14; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.9,1.,1.1};*/
+	static const int NBinsProtonMomentum = 12; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.87,1.};
 
 /*	static const int NBinsProtonPhi = 7; static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] = { -180.,-128.6,-77.1,-25.7,25.7,77.1,128.6,180.}; */
-	static const int NBinsProtonPhi = 7; static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] = { -180.,-125.,-77.,-25.,25.,77.,125.,180.}; 
+	static const int NBinsProtonPhi = 18; static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] = {-180.,-160.,-140.,-120.,-100.,-80,-60,-40,-20.,0.,20.,40.,60.,80.,100.,120.,140.,160.,180.}; 
 
 /*	static const int NBinsProtonCosTheta = 8; */
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.6,-0.3,0.,0.2,0.4,0.6,0.8,1. }; */
@@ -299,8 +327,8 @@ namespace Constants {
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.63,-0.25,0.05,0.3,0.51,0.68,0.84,1. };*/
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.61,-0.23,0.05,0.3,0.51,0.68,0.84,1. };*/
 
-	static const int NBinsProtonCosTheta = 7;
-	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.4,0.05,0.3,0.51,0.68,0.84,1. };
+	static const int NBinsProtonCosTheta = 13;
+	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1. };
 	
 	
 	// MCC8 CCQE analysis binning 
@@ -338,8 +366,8 @@ namespace Constants {
 	static const int NBinsLengthDifference = 35; static const double MinLengthDifference = -150., MaxLengthDifference = 550.;
 	static const int NBinsNPE = 50; static const double MinNPE = 0., MaxNPE = 3000.;
 	static const int NBinsDistance = 22; static const double MinDistance = 0., MaxDistance = 11.;
-	static const int NBinsEv = 38; static const double MinEv = 0.2, MaxEv = 2.;
-	static const int NBinsNu = 20; static const double MinNu = 0., MaxNu = 1.;
+	static const int NBinsEv = 36; static const double MinEv = 0.25, MaxEv = 1.6;
+	static const int NBinsNu = 30; static const double MinNu = 0., MaxNu = 0.8;
 	static const int NBinsNuScore = 25; static const double MinNuScore = 0., MaxNuScore = 1.;
 	static const int NBinsFlashScore = 25; static const double MinFlashScore = 0., MaxFlashScore = 50.; 
 	static const int NBinsTrackScore = 25; static const double MinTrackScore = 0.5, MaxTrackScore = 1.;
@@ -348,7 +376,7 @@ namespace Constants {
 	static const int NBinsVertexActivity = 25; static const double MinVertexActivity = 0., MaxVertexActivity = 1.;
 	static const int NBinsVertexX = 50; static const double MinVertexX = -10., MaxVertexX = 265.;
 	static const int NBinsVertexY = 50; static const double MinVertexY = -120., MaxVertexY = 120.;
-	static const int NBinsVertexZ = 50; static const double MinVertexZ = -20., MaxVertexZ = 1056.;
+	static const int NBinsVertexZ = 50; static const double MinVertexZ = -50., MaxVertexZ = 1056.;
 	
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -449,6 +477,7 @@ namespace Constants {
 
 	static const double MuonThreePlaneChi2LogLikelihoodCut = -1.;
 	static const double ProtonThreePlaneChi2LogLikelihoodCut = -0.5;
+	static const double ProtonLLRPIDScore = 0.;
 
 	static const double CosmicPID = -999.;
 	static const int CosmicPdg = -99;
@@ -476,11 +505,14 @@ namespace Constants {
 
 	static const double PurityThreshold = 0.1;
 
-	static const double MinimumNuScore = 0.04;
+/*	static const double MinimumNuScore = 0.04;*/
+	static const double MinimumNuScore = 0.;
 
 	static double POTUncertainty = 0.02; // 2% POT Uncertainty		
 
-	static double NTargetUncertainty = 0.01; // 1% NTarget Uncertainty	
+	static double NTargetUncertainty = 0.01; // 1% NTarget Uncertainty
+
+	constexpr float TRACK_SCORE_CUT = 0.5;	
 
 	// Quality cuts
 
@@ -494,10 +526,16 @@ namespace Constants {
 	static const double NuScoreStep = (MaxNuScore - MinNuScore) / double(NBinsNuScore);
 	static const double LLPStep = (MaxThreePlaneChi2LogLikelihood - MinThreePlaneChi2LogLikelihood) / double(NBinsThreePlaneChi2LogLikelihood);
 	static const double MuonLengthStep = (MaxMuonLength - MinMuonLength) / double(NBinsMuonLength);
+	static const double LLRPIDStep = (MaxLLRPID - MinLLRPID) / double(NBinsLLRPID);
 
 	// --------------------------------------------------------------------------------------------------------------------------------
 
 	// Selection  & Quality cuts
+
+	// To recalibrate or not, that is the question
+
+	TString Recalibrate = "";
+//	TString Recalibrate = "_Recalibrate"; 
 
 	// Reco level
 
@@ -505,34 +543,55 @@ namespace Constants {
 
 	const TString Containment = "CandidateMu_StartContainment == 1 && CandidateP_StartContainment == 1 && CandidateP_EndContainment == 1 && True_CandidateMu_StartContainment == 1";
 
-	const TString ProtonMom = "CandidateP_P_Range_Recalibrate > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range_Recalibrate < "\
+	const TString ContainmentData = "CandidateMu_StartContainment == 1 && CandidateP_StartContainment == 1 && CandidateP_EndContainment == 1";
+
+	const TString ProtonMom = "CandidateP_P_Range" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range" + Recalibrate + " < "\
 		+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum])) + " && True_CandidateP_P > "+ TString(std::to_string(ArrayNBinsProtonMomentum[0]))\
 		+ " && True_CandidateP_P < "+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum]));
 
-	const TString DeltaPT = "Reco_Pt_Recalibrate > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt_Recalibrate < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
+	const TString ProtonMomData = "CandidateP_P_Range" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range" + Recalibrate + " < "\
+		+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum]));
+
+	const TString DeltaPT = "Reco_Pt" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt" + Recalibrate + " < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
 		+ " && True_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && True_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
+
+	const TString DeltaPTData = "Reco_Pt" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt" + Recalibrate + " < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
  
-	const TString DeltaPhiT = "Reco_DeltaPhiT_Recalibrate > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT_Recalibrate < "\
+	const TString DeltaPhiT = "Reco_DeltaPhiT" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT" + Recalibrate + " < "\
 		+ TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT]))\
 		+ " && True_DeltaPhiT > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && True_DeltaPhiT < " + TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT])); 
 
+	const TString DeltaPhiTData = "Reco_DeltaPhiT" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT" + Recalibrate + " < "\
+		+ TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT])); 
+
 	const TString MuonMom = "True_CandidateMu_P > "+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && True_CandidateMu_P < "\
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum]))\
-		+ " && ( ( CandidateMu_EndContainment == 1 && CandidateMu_P_Range_Recalibrate > "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_Range_Recalibrate < "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) || ( CandidateMu_EndContainment == 0 && CandidateMu_P_MCS_Recalibrate > "\
-		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_MCS_Recalibrate < "\
+		+ " && ( ( CandidateMu_EndContainment == 1 && CandidateMu_P_Range" + Recalibrate + " > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_Range" + Recalibrate + " < "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) || ( CandidateMu_EndContainment == 0 && CandidateMu_P_MCS" + Recalibrate + " > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_MCS" + Recalibrate + " < "\
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) )" ;
 
-	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range_Recalibrate-CandidateMu_P_MCS_Recalibrate)/CandidateMu_P_Range_Recalibrate < "\
+	const TString MuonMomData = "( ( CandidateMu_EndContainment == 1 && CandidateMu_P_Range" + Recalibrate + " > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_Range" + Recalibrate + " < "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) || ( CandidateMu_EndContainment == 0 && CandidateMu_P_MCS" + Recalibrate + " > "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && CandidateMu_P_MCS" + Recalibrate + " < "\
+		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])) +" ) )" ;
+
+	const TString QualityCut = " ( (CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range" + Recalibrate\
+		+ "-CandidateMu_P_MCS" + Recalibrate + ")/CandidateMu_P_Range" + Recalibrate + " < "\
 		+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0 && CandidateMu_Length > " + MuMinMCSLengthThres + ") )";
 
-	const TString OnlyContainedMuQualityCut = " ( ( CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range_Recalibrate-CandidateMu_P_MCS_Recalibrate)/CandidateMu_P_Range_Recalibrate < "+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0) )";
+	const TString OnlyContainedMuQualityCut = " ( ( CandidateMu_EndContainment == 1 && TMath::Abs(CandidateMu_P_Range" + Recalibrate + "-CandidateMu_P_MCS" + Recalibrate + ")/CandidateMu_P_Range" + Recalibrate + " < "+ MuRangeMCSAgree +" ) || (CandidateMu_EndContainment == 0) )";
 
 
-	const TString MinHitsMu = " ( (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep < " + MuMinSumHits +" ) )";
+/*	const TString MinHitsMu = " ( (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep < " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep > " + MuMinSumHits +" ) || (CandidateMu_Plane0_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane1_LastEDep > " + MuMinSumHits + " && CandidateMu_Plane2_LastEDep < " + MuMinSumHits +" ) )";*/
 
-	const TString MinHitsP = " ( (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep < " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep < " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep < " + PMinSumHits +" ) )";
+	const TString MinHitsMu = "CandidateMu_P_Range > 0";
+
+/*	const TString MinHitsP = " ( (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep < " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep < " + PMinSumHits + " && CandidateP_Plane2_LastEDep > " + PMinSumHits +" ) || (CandidateP_Plane0_LastEDep > " + PMinSumHits + " && CandidateP_Plane1_LastEDep > " + PMinSumHits + " && CandidateP_Plane2_LastEDep < " + PMinSumHits +" ) )";*/
+
+	const TString MinHitsP = "CandidateP_P_Range > 0";
 
 	const TString MinMuonVertexDist = "CandidateMuStartVertexDistance < CandidateMuEndVertexDistance";
 
@@ -541,6 +600,9 @@ namespace Constants {
 	const TString AvoidFlippedTracks = "StartToStartDistance < EndToEndDistance";
 
 	const TString qualifier = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinHitsMu\
+		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+
+	const TString qualifierData = ContainmentData +" && " + ProtonMomData + " && " + DeltaPTData + " && " + DeltaPhiTData + " && " + MuonMomData + " && " + QualityCut + " && " + MinHitsMu\
 		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
 	const TString qualifierNoMuRangeCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + MinHitsMu\
