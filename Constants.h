@@ -64,15 +64,20 @@ namespace Constants {
 		{ "DeltaPTPlot",  std::make_pair(-7, 67) },
 		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.15) },
 		{ "DeltaPhiTPlot",  std::make_pair(-0.05, 0.53) },
-		{ "MuonMomentumPlot",  std::make_pair(-4, 24) },
-		{ "MuonCosThetaPlot",  std::make_pair(-3, 29) },
+		{ "MuonMomentumPlot",  std::make_pair(0, 24) },
+		{ "MuonCosThetaPlot",  std::make_pair(0, 29) },
 		{ "MuonPhiPlot",  std::make_pair(0, 0.059) },
 		{ "ProtonMomentumPlot",  std::make_pair(-1, 37) },
 		{ "ProtonCosThetaPlot",  std::make_pair(-4, 27) },
 		{ "ProtonPhiPlot",  std::make_pair(0, 0.055) },
 		{ "ECalPlot",  std::make_pair(0, 60) },
 		{ "EQEPlot",  std::make_pair(0, 60) },
-		{ "Q2Plot",  std::make_pair(0, 60) },																	
+		{ "Q2Plot",  std::make_pair(0, 60) },	
+		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
+		{ "CCQEMuonCosThetaPlot",  std::make_pair(-1, 29) },
+		{ "CCQEProtonMomentumPlot",  std::make_pair(-1, 37) },
+		{ "CCQEProtonCosThetaPlot",  std::make_pair(-4, 27) },
+																
 	};
 
 	static std::map<TString,TString> VarLabel =
@@ -88,7 +93,12 @@ namespace Constants {
 		{ "ProtonPhiPlot",  "#frac{d#sigma}{d#phi_{p}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "ECalPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
 		{ "EQEPlot",  "#frac{d#sigma}{dE^{QE}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
-		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },											
+		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
+		{ "CCQEMuonMomentumPlot",  "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "CCQEMuonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
+		{ "CCQEProtonMomentumPlot",  "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "CCQEProtonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
+										
 	};	
 
 	static const TString PlotXAxis[] = {
@@ -273,11 +283,13 @@ namespace Constants {
 /*	static const int NBinsDeltaPT = 4; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.18,0.41,0.73,1.};*/
 /*	static const int NBinsDeltaPT = 6; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.12,0.24,0.36,0.55,0.74,1.};*/
 /*	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.75,0.95};*/
-	static const int NBinsDeltaPT = 14; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.61,0.68,0.75};
+/*	static const int NBinsDeltaPT = 14; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.61,0.68,0.75};*/
+	static const int NBinsDeltaPT = 12; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75};
 
 /*	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; */
 /*	static const int NBinsDeltaAlphaT = 4; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,36.,85.,140.,180. }; */
-	static const int NBinsDeltaAlphaT = 12; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,15.,30,45.,60.,75.,90.,105.,120.,135.,150.,165.,180. }; 
+/*	static const int NBinsDeltaAlphaT = 12; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,15.,30,45.,60.,75.,90.,105.,120.,135.,150.,165.,180. }; */
+	static const int NBinsDeltaAlphaT = 10; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,15.,30.,45.,62.,77.,92.,115.,135.,160.,180. };
 
 /*	static const int NBinsDeltaPhiT = 10; */
 /*	static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,18,36,54,72,90,108,126,144,162.,180.};	*/
@@ -299,7 +311,7 @@ namespace Constants {
 	static const int NBinsMuonMomentum = 11; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2};
 
 /*	static const int NBinsMuonPhi = 7; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-128.6,-77.1,-25.7,25.7,77.1,128.6,180.};*/
-	static const int NBinsMuonPhi = 18; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-160.,-140.,-120.,-100.,-80,-60,-40,-20.,0.,20.,40.,60.,80.,100.,120.,140.,160.,180.};
+	static const int NBinsMuonPhi = 17; static const double ArrayNBinsMuonPhi[NBinsMuonPhi+1] = { -180.,-160.,-140.,-120.,-100.,-80,-60,-40,-20.,0.,20.,40.,60.,90.,120.,140.,160.,180.};
 /*	static const int NBinsMuonCosTheta = 9; */
 /*	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.8,-0.6,-0.4,-0.2,-0.0,0.2,0.5,0.8,1.};*/
 
@@ -315,7 +327,8 @@ namespace Constants {
 
 /*	static const int NBinsProtonMomentum = 8; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.37,0.5,0.6,0.7,0.8,0.92,1.07,1.25};*/
 /*	static const int NBinsProtonMomentum = 14; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.9,1.,1.1};*/
-	static const int NBinsProtonMomentum = 12; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.87,1.};
+/*	static const int NBinsProtonMomentum = 12; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3,0.35,0.4,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.87,1.};*/
+	static const int NBinsProtonMomentum = 11; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3,0.38,0.45,0.5,0.55,0.6,0.65,0.7,0.75,0.8,0.87,1.};
 
 /*	static const int NBinsProtonPhi = 7; static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] = { -180.,-128.6,-77.1,-25.7,25.7,77.1,128.6,180.}; */
 	static const int NBinsProtonPhi = 18; static const double ArrayNBinsProtonPhi[NBinsProtonPhi+1] = {-180.,-160.,-140.,-120.,-100.,-80,-60,-40,-20.,0.,20.,40.,60.,80.,100.,120.,140.,160.,180.}; 
@@ -327,8 +340,9 @@ namespace Constants {
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.63,-0.25,0.05,0.3,0.51,0.68,0.84,1. };*/
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.61,-0.23,0.05,0.3,0.51,0.68,0.84,1. };*/
 
-	static const int NBinsProtonCosTheta = 13;
-	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1. };
+	static const int NBinsProtonCosTheta = 12;
+/*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1. };*/
+	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.34,0.47,0.6,0.7,0.8,0.9,1. };
 	
 	
 	// MCC8 CCQE analysis binning 
