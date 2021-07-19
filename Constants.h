@@ -274,7 +274,7 @@ namespace Constants {
 
 	// Binning
 
-	static const int NBinskMiss = 9; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.75,0.9,1.05}; 
+	static const int NBinskMiss = 12; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75}; 
 	static const int NBinsPMiss = 8; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static const int NBinsPMissMinus = 20; 
 	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.,0.075,0.15,0.225,0.3,0.375,0.45,0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5};	
