@@ -231,7 +231,7 @@ double STV_Tools::ReturnQ2() {
 
 double STV_Tools::ReturnA() {
 
-	return fQ2;
+	return fA;
 
 }
 

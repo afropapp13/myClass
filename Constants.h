@@ -77,7 +77,15 @@ namespace Constants {
 		{ "CCQEMuonCosThetaPlot",  std::make_pair(-1, 29) },
 		{ "CCQEProtonMomentumPlot",  std::make_pair(-1, 37) },
 		{ "CCQEProtonCosThetaPlot",  std::make_pair(-4, 27) },
-																
+		{ "DeltaPLPlot",  std::make_pair(-7, 67) },
+		{ "DeltaPnPlot",  std::make_pair(-7, 67) },
+		{ "DeltaPtxPlot",  std::make_pair(-7, 67) },
+		{ "DeltaPtyPlot",  std::make_pair(-7, 67) },	
+		{ "APlot",  std::make_pair(-7, 67) },	
+		{ "kMissPlot",  std::make_pair(-7, 67) },
+		{ "PMissPlot",  std::make_pair(-7, 67) },	
+		{ "PMissMinusPlot",  std::make_pair(-7, 67) },
+													
 	};
 
 	static std::map<TString,TString> VarLabel =
@@ -98,24 +106,18 @@ namespace Constants {
 		{ "CCQEMuonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "CCQEProtonMomentumPlot",  "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "CCQEProtonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
+		{ "DeltaPLPlot",  "#frac{d#sigma}{d#deltap_{L}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPnPlot",  "#frac{d#sigma}{dp_{n}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPtxPlot",  "#frac{d#sigma}{d#deltap_{T,x}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPtyPlot",  "#frac{d#sigma}{d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "APlot",  "#frac{d#sigma}{d#alpha} #left[10^{-38} #frac{cm^{2}}{c Ar}#right]" },
+		{ "kMissPlot",  "#frac{d#sigma}{dk_{Miss}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "PMissPlot",  "#frac{d#sigma}{dP_{Miss}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "PMissMinusPlot",  "#frac{d#sigma}{dp_{Miss}^{-}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" }
 										
 	};	
 
-	static const TString PlotXAxis[] = {
-	  "#frac{d#sigma}{d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]"
-	 ,"#frac{d#sigma}{d#delta#alpha_{T}} #left[]10^{-38} #frac{cm^{2}}{deg Ar}#right]"
-	 ,"#frac{d#sigma}{d#delta#phi_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]"
-	 ,"#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]"
-	 ,"#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]"
-	 ,"#frac{d#sigma}{d#phi_{#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]"
-	 ,"#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]"
-	 ,"#frac{d#sigma}{dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]"
-	 ,"#frac{d#sigma}{d#phi_{p}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]"
-	 ,"#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]"
-	 ,"#frac{d#sigma}{dE^{QE}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]"
-	 ,"#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]"
-	 ,"#frac{d#sigma}{dk_{Miss}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]"
-	};
+	// ----------------------------------------------------------------------------------------------------------------------------------------------
 
 	// Genie Constants
 
@@ -137,6 +139,17 @@ namespace Constants {
 	static const double MuonMass = 106, ProtonMass = 938.272, NeutronMass = 939.565; // MeV
 	static const double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938272, NeutronMass_GeV = 0.939565; // GeV
 	static const double DeltaM2 = TMath::Power(NeutronMass_GeV,2.) - TMath::Power(ProtonMass_GeV,2.); // GeV^2	
+
+	// ----------------------------------------------------------------------------------------------------------------------------------------------
+
+	// Plots to be included for xsec extraction purposes
+
+	vector<TString> PlotNames{"DeltaPTPlot","DeltaAlphaTPlot","DeltaPhiTPlot","MuonMomentumPlot","MuonCosThetaPlot","MuonCosThetaSingleBinPlot","MuonPhiPlot","ProtonMomentumPlot"
+				 ,"ProtonCosThetaPlot","ProtonPhiPlot"
+				 ,"CCQEMuonMomentumPlot","CCQEMuonCosThetaPlot","CCQEProtonMomentumPlot","CCQEProtonCosThetaPlot","DeltaPLPlot","DeltaPnPlot","DeltaPtxPlot","DeltaPtyPlot"
+				 ,"APlot","kMissPlot","PMissPlot","PMissMinusPlot"};
+
+	// "ECalPlot" "EQEPlot" "Q2Plot" "CCQEECalPlot" "CCQEEQEPlot" "CCQEQ2Plot"
 
 	// ----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -205,79 +218,13 @@ namespace Constants {
 
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
-
-/*
-	// v43 Run 1 
-
-	static const double tor860_wcut_Run1 = 4.131e+19;
-	static const double E1DCNT_wcut_Run1 = 9147384.0;
-	static const double EXT_Run1 = 34150796.0;
-	
-	// v43 Run 2 
-
-	static const double tor860_wcut_Run2 = 0.;
-	static const double E1DCNT_wcut_Run2 = 1.;
-	static const double EXT_Run2 = 1.;
-	
-	// v43 Run 3 
-
-	static const double tor860_wcut_Run3 = 9.506e+18;
-	static const double E1DCNT_wcut_Run3 = 2297952.0;
-	static const double EXT_Run3 = 5668319.0;
-	
-	// v43 Run 4 
-
-	static const double tor860_wcut_Run4 = 0.;
-	static const double E1DCNT_wcut_Run4 = 1.;
-	static const double EXT_Run4 = 1.;
-	
-	// v43 Run 5 
-
-	static const double tor860_wcut_Run5 = 0.;
-	static const double E1DCNT_wcut_Run5 = 1.;
-	static const double EXT_Run5 = 1.;		
-*/
-	// -----------------------------------------------------------------------------------------------------------------------------------------------
-
-	// v47 Run 1 
-/*
-	static const double tor860_wcut_Run1 = 1.655e+20;
-	static const double E1DCNT_wcut_Run1 = 36783134.0;
-	static const double EXT_Run1 = 65959384.0;
-	
-	// v47 Run 2 
-
-	static const double tor860_wcut_Run2 = 2.629e+20;
-	static const double E1DCNT_wcut_Run2 = 62229021.0;
-	static const double EXT_Run2 = 155584859.0;
-	
-	// v47 Run 3 
-
-	static const double tor860_wcut_Run3 = 2.566e+20;
-	static const double E1DCNT_wcut_Run3 = 61475496.0;
-	static const double EXT_Run3 = 202917228.0;
-	
-	// v47 Run 4 
-
-	static const double tor860_wcut_Run4 = 0.;
-	static const double E1DCNT_wcut_Run4 = 1.;
-	static const double EXT_Run4 = 1.;
-	
-	// v47 Run 5 
-
-	static const double tor860_wcut_Run5 = 0.;
-	static const double E1DCNT_wcut_Run5 = 1.;
-	static const double EXT_Run5 = 1.;
-*/
-	// -----------------------------------------------------------------------------------------------------------------------------------------------
-	// -----------------------------------------------------------------------------------------------------------------------------------------------
-
 	// Binning
 
-	static const int NBinskMiss = 12; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75}; 
+	static const int NBinsA = 10; static const double ArrayNBinsA[NBinsA+1] = {0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2,1.3,1.4,1.5}; 
+	static const int NBinskMiss = 11; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75}; 
 	static const int NBinsPMiss = 8; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
-	static const int NBinsPMissMinus = 20; 
-	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.,0.075,0.15,0.225,0.3,0.375,0.45,0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5};	
+	static const int NBinsPMissMinus = 13; 
+	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5};	
 	
 /*	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; */
 /*	static const int NBinsDeltaPT = 4; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.18,0.41,0.73,1.};*/
@@ -285,6 +232,11 @@ namespace Constants {
 /*	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.75,0.95};*/
 /*	static const int NBinsDeltaPT = 14; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.61,0.68,0.75};*/
 	static const int NBinsDeltaPT = 12; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75};
+
+	static const int NBinsDeltaPL = 9; static const double ArrayNBinsDeltaPL[NBinsDeltaPL+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47};
+	static const int NBinsDeltaPn = 9; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.1,0.2,0.27,0.34,0.4,0.47,0.55,0.65,0.75};
+	static const int NBinsDeltaPtx = 10; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55};
+	static const int NBinsDeltaPty = 14; static const double ArrayNBinsDeltaPty[NBinsDeltaPty+1] = {-0.47,-0.36,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.36,0.47};
 
 /*	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; */
 /*	static const int NBinsDeltaAlphaT = 4; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,36.,85.,140.,180. }; */
@@ -410,6 +362,12 @@ namespace Constants {
 	static TString LabelXAxiskMiss = ";k_{miss} [GeV/c]"; static TString LabelXAxisTruekMiss = ";True k_{miss} [GeV/c]";
 	static TString LabelXAxisPMissMinus = ";P^{-}_{miss} [GeV/c]"; static TString LabelXAxisTruePMissMinus = ";True P^{-}_{miss} [GeV/c]";
 	static TString LabelXAxisPMiss = ";P_{miss} [GeV/c]"; static TString LabelXAxisTruePMiss = ";True P_{miss} [GeV/c]";
+
+	static TString LabelXAxisDeltaPL = ";#deltap_{L} [GeV/c]"; static TString LabelXAxisTrueDeltaPL = ";True #deltap_{L} [GeV/c]";
+	static TString LabelXAxisDeltaPn = ";p_{n,proxy} [GeV/c]"; static TString LabelXAxisTrueDeltaPn = ";True p_{n,proxy} [GeV/c]";
+	static TString LabelXAxisDeltaPtx = ";#deltap_{T,x} [GeV/c]"; static TString LabelXAxisTrueDeltaPtx = ";True #deltap_{T,x} [GeV/c]";
+	static TString LabelXAxisDeltaPty = ";#deltap_{T,y} [GeV/c]"; static TString LabelXAxisTrueDeltaPty = ";True #deltap_{T,y} [GeV/c]";
+	static TString LabelXAxisA = ";#alpha [c]"; static TString LabelXAxisTrueA = ";True #alpha [c]";
 	
 	static TString LabelXAxisDeltaPT = ";#deltap_{T} [GeV/c]"; static TString LabelXAxisTrueDeltaPT = ";True #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT = ";#delta#alpha_{T} [deg]"; static TString LabelXAxisTrueDeltaAlphaT = ";True #delta#alpha_{T} [deg]";
@@ -452,6 +410,16 @@ namespace Constants {
 	static TString LabelXAxisDeltaPT2D = LabelXAxisTrueDeltaPT+";Reco #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT2D = LabelXAxisTrueDeltaAlphaT+";Reco #delta#alpha_{T} [deg]";
 	static TString LabelXAxisDeltaPhiT2D = LabelXAxisTrueDeltaPhiT+";Reco #delta#phi_{T} [deg]";
+
+	static TString LabelXAxisDeltaPL2D = LabelXAxisTrueDeltaPL+";Reco #deltap_{L} [GeV/c]";
+	static TString LabelXAxisDeltaPn2D = LabelXAxisTrueDeltaPn+";Reco p_{n,proxy} [GeV/c]";
+	static TString LabelXAxisDeltaPtx2D = LabelXAxisTrueDeltaPtx+";Reco #delta p_{T,x} [GeV/c]";
+	static TString LabelXAxisDeltaPty2D = LabelXAxisTrueDeltaPty+";Reco #delta p_{T,y} [GeV/c]";
+	static TString LabelXAxisA2D = LabelXAxisTrueA+";Reco #alpha [c]";
+
+	static TString LabelXAxiskMiss2D = LabelXAxisTruekMiss+";Reco k_{Miss} [GeV/c]";
+	static TString LabelXAxisPMiss2D = LabelXAxisTruePMiss+";Reco P_{Miss} [GeV/c]";
+	static TString LabelXAxisPMissMinus2D = LabelXAxisTruePMissMinus+";Reco P^{-}_{Miss} [GeV/c]";
 
 	static TString LabelXAxisMuonMomentum2D = LabelXAxisTrueMuonMomentum+";Reco P_{#mu} [GeV/c]";
 	static TString LabelXAxisMuonPhi2D = LabelXAxisTrueMuonPhi+";Reco #phi_{#mu} [deg]";
