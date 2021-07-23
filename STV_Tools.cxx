@@ -118,8 +118,12 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 
 	// https://journals.aps.org/prd/pdf/10.1103/PhysRevD.101.092001
 
-	fPtx = fPt * TMath::Sin(fDeltaAlphaT * TMath::Pi() / 180.);
-	fPty = fPt * TMath::Cos(fDeltaAlphaT * TMath::Pi() / 180.);
+//	fPtx = fPt * TMath::Sin(fDeltaAlphaT * TMath::Pi() / 180.);
+//	fPty = fPt * TMath::Cos(fDeltaAlphaT * TMath::Pi() / 180.);
+
+	TVector3 UnitZ(0,0,1);
+	fPtx = ( UnitZ.Cross(MuonVectorTrans) ).Dot(PtVector) / MuonVectorTransMag;
+	fPty = - (MuonVectorTrans).Dot(PtVector) / MuonVectorTransMag;
 
 	// -------------------------------------------------------------------------------------------------------------------------
 

@@ -66,6 +66,7 @@ namespace Constants {
 		{ "DeltaPhiTPlot",  std::make_pair(-0.05, 0.53) },
 		{ "MuonMomentumPlot",  std::make_pair(0, 24) },
 		{ "MuonCosThetaPlot",  std::make_pair(0, 29) },
+		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 100) },
 		{ "MuonPhiPlot",  std::make_pair(0, 0.059) },
 		{ "ProtonMomentumPlot",  std::make_pair(-1, 37) },
 		{ "ProtonCosThetaPlot",  std::make_pair(-4, 27) },
@@ -77,14 +78,14 @@ namespace Constants {
 		{ "CCQEMuonCosThetaPlot",  std::make_pair(-1, 29) },
 		{ "CCQEProtonMomentumPlot",  std::make_pair(-1, 37) },
 		{ "CCQEProtonCosThetaPlot",  std::make_pair(-4, 27) },
-		{ "DeltaPLPlot",  std::make_pair(-7, 67) },
-		{ "DeltaPnPlot",  std::make_pair(-7, 67) },
-		{ "DeltaPtxPlot",  std::make_pair(-7, 67) },
-		{ "DeltaPtyPlot",  std::make_pair(-7, 67) },	
-		{ "APlot",  std::make_pair(-7, 67) },	
+		{ "DeltaPLPlot",  std::make_pair(-7, 47) },
+		{ "DeltaPnPlot",  std::make_pair(-7, 49) },
+		{ "DeltaPtxPlot",  std::make_pair(-7, 47) },
+		{ "DeltaPtyPlot",  std::make_pair(-7, 47) },	
+		{ "APlot",  std::make_pair(-7, 39) },	
 		{ "kMissPlot",  std::make_pair(-7, 67) },
-		{ "PMissPlot",  std::make_pair(-7, 67) },	
-		{ "PMissMinusPlot",  std::make_pair(-7, 67) },
+		{ "PMissPlot",  std::make_pair(-7, 59) },	
+		{ "PMissMinusPlot",  std::make_pair(-7, 47) },
 													
 	};
 
@@ -95,6 +96,7 @@ namespace Constants {
 		{ "DeltaPhiTPlot",  "#frac{d#sigma}{d#delta#phi_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "MuonMomentumPlot",  "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "MuonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
+		{ "MuonCosThetaSingleBinPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "MuonPhiPlot",  "#frac{d#sigma}{d#phi_{#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "ProtonMomentumPlot",  "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "ProtonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
@@ -145,8 +147,10 @@ namespace Constants {
 	// Plots to be included for xsec extraction purposes
 
 	vector<TString> PlotNames{"DeltaPTPlot","DeltaAlphaTPlot","DeltaPhiTPlot","MuonMomentumPlot","MuonCosThetaPlot","MuonCosThetaSingleBinPlot","MuonPhiPlot","ProtonMomentumPlot"
-				 ,"ProtonCosThetaPlot","ProtonPhiPlot"
-				 ,"CCQEMuonMomentumPlot","CCQEMuonCosThetaPlot","CCQEProtonMomentumPlot","CCQEProtonCosThetaPlot","DeltaPLPlot","DeltaPnPlot","DeltaPtxPlot","DeltaPtyPlot"
+				 ,"ProtonCosThetaPlot","ProtonPhiPlot","Q2Plot","ECalPlot","EQEPlot"
+				 ,"CCQEMuonMomentumPlot","CCQEMuonCosThetaPlot","CCQEProtonMomentumPlot","CCQEProtonCosThetaPlot"
+				 ,"CCQEQ2Plot","CCQEECalPlot"
+				 ,"DeltaPLPlot","DeltaPnPlot","DeltaPtxPlot","DeltaPtyPlot"
 				 ,"APlot","kMissPlot","PMissPlot","PMissMinusPlot"};
 
 	// "ECalPlot" "EQEPlot" "Q2Plot" "CCQEECalPlot" "CCQEEQEPlot" "CCQEQ2Plot"
@@ -222,7 +226,7 @@ namespace Constants {
 
 	static const int NBinsA = 10; static const double ArrayNBinsA[NBinsA+1] = {0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2,1.3,1.4,1.5}; 
 	static const int NBinskMiss = 11; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75}; 
-	static const int NBinsPMiss = 8; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
+	static const int NBinsPMiss = 9; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.07,0.14,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
 	static const int NBinsPMissMinus = 13; 
 	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5};	
 	
@@ -233,9 +237,9 @@ namespace Constants {
 /*	static const int NBinsDeltaPT = 14; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.61,0.68,0.75};*/
 	static const int NBinsDeltaPT = 12; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75};
 
-	static const int NBinsDeltaPL = 9; static const double ArrayNBinsDeltaPL[NBinsDeltaPL+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47};
-	static const int NBinsDeltaPn = 9; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.1,0.2,0.27,0.34,0.4,0.47,0.55,0.65,0.75};
-	static const int NBinsDeltaPtx = 10; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55};
+	static const int NBinsDeltaPL = 17; static const double ArrayNBinsDeltaPL[NBinsDeltaPL+1] = {-0.47,-0.39,-0.32,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47};
+	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.27,0.34,0.4,0.47,0.55,0.65,0.75};
+	static const int NBinsDeltaPtx = 20; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.47,-0.4,-0.35,-0.3,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55};
 	static const int NBinsDeltaPty = 14; static const double ArrayNBinsDeltaPty[NBinsDeltaPty+1] = {-0.47,-0.36,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.36,0.47};
 
 /*	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,25.,50.,75.,100.,125.,150.,180. }; */
