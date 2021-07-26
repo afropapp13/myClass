@@ -75,9 +75,9 @@ namespace Constants {
 		{ "EQEPlot",  std::make_pair(0, 60) },
 		{ "Q2Plot",  std::make_pair(0, 60) },	
 		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
-		{ "CCQEMuonCosThetaPlot",  std::make_pair(-1, 29) },
+		{ "CCQEMuonCosThetaPlot",  std::make_pair(-1, 9) },
 		{ "CCQEProtonMomentumPlot",  std::make_pair(-1, 37) },
-		{ "CCQEProtonCosThetaPlot",  std::make_pair(-4, 27) },
+		{ "CCQEProtonCosThetaPlot",  std::make_pair(-4, 11) },
 		{ "DeltaPLPlot",  std::make_pair(-7, 47) },
 		{ "DeltaPnPlot",  std::make_pair(-7, 49) },
 		{ "DeltaPtxPlot",  std::make_pair(-7, 47) },
@@ -308,15 +308,15 @@ namespace Constants {
 	static const int CCQENBinsQ2 = 7; 
 	static const double CCQEArrayNBinsQ2[NBinsQ2+1] = {0., 0.17142857, 0.34285714, 0.51428571, 0.68571429, 0.85714286,1.02857143,1.2}; 
 	
-	static const int CCQENBinsMuonMomentum = 7; 
-	static const double CCQEArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3, 1.5}; 
+	static const int CCQENBinsMuonMomentum = 4; // 7 in the paper but fully contained sample now, so no events in last bins 
+	static const double CCQEArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9}; // 1.1, 1.3,1.5 
 	static const int CCQENBinsMuonPhi = 7; 
 	static const double CCQEArrayNBinsMuonPhi[NBinsMuonPhi+1] = {-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
 	static const int CCQENBinsMuonCosTheta = 7; 
 	static const double CCQEArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = {-0.65, -0.4083,-0.167,0.075,0.317,0.5583, 0.8, 0.95};
 
-	static const int CCQENBinsProtonMomentum = 7; 
-	static const double CCQEArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.};
+	static const int CCQENBinsProtonMomentum = 4; //  7 in the paper but fully contained sample now, so no events in last bins
+	static const double CCQEArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7}; // 0.8, 0.9, 1.
 	static const int CCQENBinsProtonPhi = 7; 
 	static const double CCQEArrayNBinsProtonPhi[NBinsProtonPhi+1] ={-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
 	static const int CCQENBinsProtonCosTheta = 7; 
