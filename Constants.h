@@ -43,6 +43,7 @@ namespace Constants {
 	const TString PathToExtractedXSec = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myXSec/"+UBCodeVersion+"/"; 
 	const TString FileEfficienciesPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myEfficiencies/"+UBCodeVersion+"/";
 	const TString PlotPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myPlots/"+UBCodeVersion+"/"; 
+	const TString CCQEPlotPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myCCQEPlots/"+UBCodeVersion+"/"; 
 	const TString PathToSystematics = "/uboone/data/users/"+UserID+"/mySTVAnalysis/mySystematics/"+UBCodeVersion+"/";
 	const TString TrueSTVPath = PathToFiles;
 	const TString MigrationMatrixPath = "/uboone/data/users/"+UserID+"/mySTVAnalysis/myMigrationMatrices/"+UBCodeVersion+"/"; 
@@ -308,23 +309,17 @@ namespace Constants {
 	static const double CCQEArrayNBinsECal[CCQENBinsECal+1] = {0.3, 0.51428571, 0.72857143, 0.94285714, 1.15714286,1.37142857, 1.58571429, 1.8}; 
 	static const int CCQENBinsQ2 = 7; 
 	static const double CCQEArrayNBinsQ2[CCQENBinsQ2+1] = {0., 0.17142857, 0.34285714, 0.51428571, 0.68571429, 0.85714286,1.02857143,1.2}; 
-	
-	static const int CCQENBinsMuonMomentum = 4; // 7 in the paper but fully contained sample now, so no events in last bins 
-	static const double CCQEArrayNBinsMuonMomentum[CCQENBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9}; // 1.1, 1.3,1.5 
 
-	static const int PRLCCQENBinsMuonMomentum = 7; // PRL binning
-	static const double PRLCCQEArrayNBinsMuonMomentum[PRLCCQENBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3,1.5}; // PRL binnning
+	static const int CCQENBinsMuonMomentum = 7; // PRL binning
+	static const double CCQEArrayNBinsMuonMomentum[CCQENBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3,1.5}; // PRL binnning
 
 	static const int CCQENBinsMuonPhi = 7; 
 	static const double CCQEArrayNBinsMuonPhi[CCQENBinsMuonPhi+1] = {-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
 	static const int CCQENBinsMuonCosTheta = 7; 
 	static const double CCQEArrayNBinsMuonCosTheta[CCQENBinsMuonCosTheta+1] = {-0.65, -0.4083,-0.167,0.075,0.317,0.5583, 0.8, 0.95};
 
-	static const int CCQENBinsProtonMomentum = 4; //  7 in the paper but fully contained sample now, so no events in last bins
-	static const double CCQEArrayNBinsProtonMomentum[CCQENBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7}; // 0.8, 0.9, 1.
-
-	static const int PRLCCQENBinsProtonMomentum = 7; // PRL binning
-	static const double PRLCCQEArrayNBinsProtonMomentum[PRLCCQENBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.};  // PRL binning
+	static const int CCQENBinsProtonMomentum = 7; // PRL binning
+	static const double CCQEArrayNBinsProtonMomentum[CCQENBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.};  // PRL binning
 
 	static const int CCQENBinsProtonPhi = 7; 
 	static const double CCQEArrayNBinsProtonPhi[CCQENBinsProtonPhi+1] ={-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
