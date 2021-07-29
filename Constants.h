@@ -79,11 +79,11 @@ namespace Constants {
 		{ "CCQEProtonMomentumPlot",  std::make_pair(-1, 37) },
 		{ "CCQEProtonCosThetaPlot",  std::make_pair(-4, 11) },
 		{ "DeltaPLPlot",  std::make_pair(-7, 47) },
-		{ "DeltaPnPlot",  std::make_pair(-7, 49) },
+		{ "DeltaPnPlot",  std::make_pair(-7, 59) },
 		{ "DeltaPtxPlot",  std::make_pair(-7, 47) },
 		{ "DeltaPtyPlot",  std::make_pair(-7, 47) },	
 		{ "APlot",  std::make_pair(-7, 39) },	
-		{ "kMissPlot",  std::make_pair(-7, 67) },
+		{ "kMissPlot",  std::make_pair(-7, 59) },
 		{ "PMissPlot",  std::make_pair(-7, 59) },	
 		{ "PMissMinusPlot",  std::make_pair(-7, 47) },
 													
@@ -237,7 +237,7 @@ namespace Constants {
 /*	static const int NBinsDeltaPT = 14; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.61,0.68,0.75};*/
 	static const int NBinsDeltaPT = 12; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75};
 
-	static const int NBinsDeltaPL = 17; static const double ArrayNBinsDeltaPL[NBinsDeltaPL+1] = {-0.47,-0.39,-0.32,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47};
+	static const int NBinsDeltaPL = 16; static const double ArrayNBinsDeltaPL[NBinsDeltaPL+1] = {-0.47,-0.39,-0.32,-0.25,-0.17,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47};
 	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.27,0.34,0.4,0.47,0.55,0.65,0.75};
 	static const int NBinsDeltaPtx = 20; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.47,-0.4,-0.35,-0.3,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55};
 	static const int NBinsDeltaPty = 14; static const double ArrayNBinsDeltaPty[NBinsDeltaPty+1] = {-0.47,-0.36,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.36,0.47};
@@ -300,27 +300,38 @@ namespace Constants {
 /*	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1. };*/
 	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.34,0.47,0.6,0.7,0.8,0.9,1. };
 	
+	// -----------------------------------------------------------------------------------------------------------------------------------------
 	
 	// MCC8 CCQE analysis binning 
 	
 	static const int CCQENBinsECal = 7; 
-	static const double CCQEArrayNBinsECal[NBinsECal+1] = {0.3, 0.51428571, 0.72857143, 0.94285714, 1.15714286,1.37142857, 1.58571429, 1.8}; 
+	static const double CCQEArrayNBinsECal[CCQENBinsECal+1] = {0.3, 0.51428571, 0.72857143, 0.94285714, 1.15714286,1.37142857, 1.58571429, 1.8}; 
 	static const int CCQENBinsQ2 = 7; 
-	static const double CCQEArrayNBinsQ2[NBinsQ2+1] = {0., 0.17142857, 0.34285714, 0.51428571, 0.68571429, 0.85714286,1.02857143,1.2}; 
+	static const double CCQEArrayNBinsQ2[CCQENBinsQ2+1] = {0., 0.17142857, 0.34285714, 0.51428571, 0.68571429, 0.85714286,1.02857143,1.2}; 
 	
 	static const int CCQENBinsMuonMomentum = 4; // 7 in the paper but fully contained sample now, so no events in last bins 
-	static const double CCQEArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9}; // 1.1, 1.3,1.5 
+	static const double CCQEArrayNBinsMuonMomentum[CCQENBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9}; // 1.1, 1.3,1.5 
+
+	static const int PRLCCQENBinsMuonMomentum = 7; // PRL binning
+	static const double PRLCCQEArrayNBinsMuonMomentum[PRLCCQENBinsMuonMomentum+1] = {0.1, 0.3, 0.5, 0.7, 0.9, 1.1, 1.3,1.5}; // PRL binnning
+
 	static const int CCQENBinsMuonPhi = 7; 
-	static const double CCQEArrayNBinsMuonPhi[NBinsMuonPhi+1] = {-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
+	static const double CCQEArrayNBinsMuonPhi[CCQENBinsMuonPhi+1] = {-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
 	static const int CCQENBinsMuonCosTheta = 7; 
-	static const double CCQEArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = {-0.65, -0.4083,-0.167,0.075,0.317,0.5583, 0.8, 0.95};
+	static const double CCQEArrayNBinsMuonCosTheta[CCQENBinsMuonCosTheta+1] = {-0.65, -0.4083,-0.167,0.075,0.317,0.5583, 0.8, 0.95};
 
 	static const int CCQENBinsProtonMomentum = 4; //  7 in the paper but fully contained sample now, so no events in last bins
-	static const double CCQEArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7}; // 0.8, 0.9, 1.
+	static const double CCQEArrayNBinsProtonMomentum[CCQENBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7}; // 0.8, 0.9, 1.
+
+	static const int PRLCCQENBinsProtonMomentum = 7; // PRL binning
+	static const double PRLCCQEArrayNBinsProtonMomentum[PRLCCQENBinsProtonMomentum+1] = {0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.};  // PRL binning
+
 	static const int CCQENBinsProtonPhi = 7; 
-	static const double CCQEArrayNBinsProtonPhi[NBinsProtonPhi+1] ={-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
+	static const double CCQEArrayNBinsProtonPhi[CCQENBinsProtonPhi+1] ={-180.,-128.57142857,-77.14285714,-25.71428571,25.71428571,77.14285714,128.57142857,180.};
 	static const int CCQENBinsProtonCosTheta = 7; 
-	static const double CCQEArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = {0.15,0.2583,0.366,0.475 ,0.583,0.692,0.8,0.95}; 
+	static const double CCQEArrayNBinsProtonCosTheta[CCQENBinsProtonCosTheta+1] = {0.15,0.2583,0.366,0.475 ,0.583,0.692,0.8,0.95}; 
+
+	// -----------------------------------------------------------------------------------------------------------------------------------------
 
 	static const int NBinsLLRPID = 40; static const double MinLLRPID = -1., MaxLLRPID = 1.;
 	static const int NBinsChi2 = 30; static const double MinChi2 = 0., MaxChi2 = 300.;
@@ -450,7 +461,8 @@ namespace Constants {
 	static int NEUTColor = kRed+1;
 	static int GENIEv2Color = kBlue;	
 	static int GENIEv3_0_4_Color = kGray+1;
-	static int SuSav2Color = 429;	
+//	static int SuSav2Color = 429;	
+	static int SuSav2Color = kOrange-3;	
 	
 	// ---------------------------------------------------------------------------------------------------------------------------------------
 
