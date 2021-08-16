@@ -51,6 +51,7 @@ namespace Constants {
 	//---------------------------------------------------------------------------------
 
 	// Zarko Pavlovic, Jun 22 2020
+	// /pnfs/uboone/persistent/uboonebeam/bnb_gsimple/bnb_gsimple_fluxes_01.09.2019_463_hist/readme.txt
 
 	double Nominal_UB_XY_Surface = 256.35*233.; // cm2
 	double SoftFidSurface = 250. * 224.;  // cm2
@@ -62,31 +63,33 @@ namespace Constants {
 
 	static std::map<TString,std::pair<double,double> > XSecRange =
 	{
-		{ "DeltaPTPlot",  std::make_pair(-7, 67) },
+		{ "DeltaPTPlot",  std::make_pair(0, 67) },
 		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.15) },
-		{ "DeltaPhiTPlot",  std::make_pair(-0.05, 0.53) },
+		{ "DeltaPhiTPlot",  std::make_pair(0., 0.53) },
 		{ "MuonMomentumPlot",  std::make_pair(0, 24) },
 		{ "MuonCosThetaPlot",  std::make_pair(0, 29) },
-		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 100) },
+		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 22) },
 		{ "MuonPhiPlot",  std::make_pair(0, 0.059) },
-		{ "ProtonMomentumPlot",  std::make_pair(-1, 37) },
-		{ "ProtonCosThetaPlot",  std::make_pair(-4, 27) },
+		{ "ProtonMomentumPlot",  std::make_pair(0, 37) },
+		{ "ProtonCosThetaPlot",  std::make_pair(0, 27) },
 		{ "ProtonPhiPlot",  std::make_pair(0, 0.055) },
-		{ "ECalPlot",  std::make_pair(0, 60) },
-		{ "EQEPlot",  std::make_pair(0, 60) },
-		{ "Q2Plot",  std::make_pair(0, 60) },	
+		{ "ECalPlot",  std::make_pair(0, 24) },
+		{ "EQEPlot",  std::make_pair(0, 24) },
+		{ "Q2Plot",  std::make_pair(0, 34) },	
 		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
-		{ "CCQEMuonCosThetaPlot",  std::make_pair(-1, 9) },
-		{ "CCQEProtonMomentumPlot",  std::make_pair(-1, 37) },
-		{ "CCQEProtonCosThetaPlot",  std::make_pair(-4, 11) },
-		{ "DeltaPLPlot",  std::make_pair(-7, 47) },
-		{ "DeltaPnPlot",  std::make_pair(-7, 59) },
-		{ "DeltaPtxPlot",  std::make_pair(-7, 47) },
-		{ "DeltaPtyPlot",  std::make_pair(-7, 47) },	
-		{ "APlot",  std::make_pair(-7, 39) },	
-		{ "kMissPlot",  std::make_pair(-7, 59) },
-		{ "PMissPlot",  std::make_pair(-7, 59) },	
-		{ "PMissMinusPlot",  std::make_pair(-7, 47) },
+		{ "CCQEMuonCosThetaPlot",  std::make_pair(0, 9) },
+		{ "CCQEProtonMomentumPlot",  std::make_pair(0, 37) },
+		{ "CCQEProtonCosThetaPlot",  std::make_pair(0, 11) },
+		{ "CCQEECalPlot",  std::make_pair(0, 24) },
+		{ "CCQEQ2Plot",  std::make_pair(0, 24) },	
+		{ "DeltaPLPlot",  std::make_pair(0, 47) },
+		{ "DeltaPnPlot",  std::make_pair(0, 59) },
+		{ "DeltaPtxPlot",  std::make_pair(0, 47) },
+		{ "DeltaPtyPlot",  std::make_pair(0, 47) },	
+		{ "APlot",  std::make_pair(0, 39) },	
+		{ "kMissPlot",  std::make_pair(0, 59) },
+		{ "PMissPlot",  std::make_pair(0, 59) },	
+		{ "PMissMinusPlot",  std::make_pair(0, 47) },
 													
 	};
 
@@ -109,8 +112,10 @@ namespace Constants {
 		{ "CCQEMuonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "CCQEProtonMomentumPlot",  "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "CCQEProtonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
+		{ "CCQEECalPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
+		{ "CCQEQ2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
 		{ "DeltaPLPlot",  "#frac{d#sigma}{d#deltap_{L}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
-		{ "DeltaPnPlot",  "#frac{d#sigma}{dp_{n}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPnPlot",  "#frac{d#sigma}{dp_{n,proxy}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPtxPlot",  "#frac{d#sigma}{d#deltap_{T,x}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPtyPlot",  "#frac{d#sigma}{d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "APlot",  "#frac{d#sigma}{d#alpha} #left[10^{-38} #frac{cm^{2}}{c Ar}#right]" },
@@ -129,7 +134,10 @@ namespace Constants {
 	static const double G18_10a_02_11a_FluxIntegratedXSection = 27.1682; // e-38 cm^2 MCC9 number GENIE v3.0.6
 	static const double R_2_12_10_FluxIntegratedXSection = 35.116; // e-38 cm^2 MCC9 number GENIE v2.12.10
 	static const double R_3_0_4_FluxIntegratedXSection = 26.7883; // e-38 cm^2 MCC9 number GENIE v3.0.4
-//	static const int NGenieEvents = 1E5;
+	static const double R_3_0_6_G18_10a_02_11a_NoCoulomb_FluxIntegratedXSection = 26.134; // e-38 cm^2 MCC9 number GENIE v3.0.6 / G18_10a_02_11a w/o Coulomb corrections
+	static const double R_3_0_6_G18_10a_02_11a_NoRPA_FluxIntegratedXSection = 27.7777; // e-38 cm^2 MCC9 number GENIE v3.0.6 / G18_10a_02_11a w/o RPA corrections
+	static const double R_3_0_6_G18_10a_02_11a_RFG_FluxIntegratedXSection = 25.76; // e-38 cm^2 MCC9 number GENIE v3.0.6 / G18_10a_02_11a and RFG instead of LFG
+	static const double R_3_0_6_G18_10a_02_11a_EffSF_FluxIntegratedXSection = 24.5238; // e-38 cm^2 MCC9 number GENIE v3.0.6 / G18_10a_02_11a and EffSF instead of LFG
 
 	// Global Constants
 
@@ -200,26 +208,28 @@ namespace Constants {
 	// v43 Run 4 
 
 	static const double tor860_wcut_Run4 = 0.;
-	static const double E1DCNT_wcut_Run4 = 1.;
-	static const double EXT_Run4 = 1.;
+	static const double E1DCNT_wcut_Run4 = 0.;
+	static const double EXT_Run4 = 0.;
 
 	static const double Fulltor860_wcut_Run4 = 0.;
-	static const double FullE1DCNT_wcut_Run4 = 1.;
-	static const double FullEXT_Run4 = 1.;
+	static const double FullE1DCNT_wcut_Run4 = 0.;
+	static const double FullEXT_Run4 = 0.;
 	
 	// v43 Run 5 
 
 	static const double tor860_wcut_Run5 = 0.;
-	static const double E1DCNT_wcut_Run5 = 1.;
-	static const double EXT_Run5 = 1.;	
+	static const double E1DCNT_wcut_Run5 = 0.;
+	static const double EXT_Run5 = 0.;	
 
 	static const double Fulltor860_wcut_Run5 = 0.;
-	static const double FullE1DCNT_wcut_Run5 = 1.;
-	static const double FullEXT_Run5 = 1.;	
+	static const double FullE1DCNT_wcut_Run5 = 0.;
+	static const double FullEXT_Run5 = 0.;	
 
 	// Combined POT
 
 	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + tor860_wcut_Run5;	
+	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4 + FullEXT_Run5;	
+	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4 + FullE1DCNT_wcut_Run5;	
 
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -369,9 +379,9 @@ namespace Constants {
 	static TString LabelXAxisMuonCosTheta = ";cos#theta_{#mu}"; static TString LabelXAxisTrueMuonCosTheta = ";True cos#theta_{#mu}";
 	static TString LabelXAxisProtonCosTheta = ";cos#theta_{p}"; static TString LabelXAxisTrueProtonCosTheta = ";True cos#theta_{p}";
 
-	static TString LabelXAxiskMiss = ";k_{miss} [GeV/c]"; static TString LabelXAxisTruekMiss = ";True k_{miss} [GeV/c]";
-	static TString LabelXAxisPMissMinus = ";P^{-}_{miss} [GeV/c]"; static TString LabelXAxisTruePMissMinus = ";True P^{-}_{miss} [GeV/c]";
-	static TString LabelXAxisPMiss = ";P_{miss} [GeV/c]"; static TString LabelXAxisTruePMiss = ";True P_{miss} [GeV/c]";
+	static TString LabelXAxiskMiss = ";k_{Miss} [GeV/c]"; static TString LabelXAxisTruekMiss = ";True k_{miss} [GeV/c]";
+	static TString LabelXAxisPMissMinus = ";P^{-}_{Miss} [GeV/c]"; static TString LabelXAxisTruePMissMinus = ";True P^{-}_{miss} [GeV/c]";
+	static TString LabelXAxisPMiss = ";P_{Miss} [GeV/c]"; static TString LabelXAxisTruePMiss = ";True P_{miss} [GeV/c]";
 
 	static TString LabelXAxisDeltaPL = ";#deltap_{L} [GeV/c]"; static TString LabelXAxisTrueDeltaPL = ";True #deltap_{L} [GeV/c]";
 	static TString LabelXAxisDeltaPn = ";p_{n,proxy} [GeV/c]"; static TString LabelXAxisTrueDeltaPn = ";True p_{n,proxy} [GeV/c]";
