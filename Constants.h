@@ -74,7 +74,7 @@ namespace Constants {
 		{ "ProtonCosThetaPlot",  std::make_pair(0, 27) },
 		{ "ProtonPhiPlot",  std::make_pair(0, 0.055) },
 		{ "ECalPlot",  std::make_pair(0, 24) },
-		{ "EQEPlot",  std::make_pair(0, 24) },
+		{ "EQEPlot",  std::make_pair(0, 19) },
 		{ "Q2Plot",  std::make_pair(0, 34) },	
 		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
 		{ "CCQEMuonCosThetaPlot",  std::make_pair(0, 9) },
@@ -125,7 +125,7 @@ namespace Constants {
 										
 	};	
 
-	// ----------------------------------------------------------------------------------------------------------------------------------------------
+	// -------------------------------------------------------------------------------------------------------------------------
 
 	// Genie Constants
 
@@ -151,7 +151,7 @@ namespace Constants {
 	static const double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938272, NeutronMass_GeV = 0.939565; // GeV
 	static const double DeltaM2 = TMath::Power(NeutronMass_GeV,2.) - TMath::Power(ProtonMass_GeV,2.); // GeV^2	
 
-	// ----------------------------------------------------------------------------------------------------------------------------------------------
+	// -------------------------------------------------------------------------------------------------------------------------
 
 	// Plots to be included for xsec extraction purposes
 
@@ -164,7 +164,7 @@ namespace Constants {
 
 	// "ECalPlot" "EQEPlot" "Q2Plot" "CCQEECalPlot" "CCQEEQEPlot" "CCQEQ2Plot"
 
-	// ----------------------------------------------------------------------------------------------------------------------------------------------
+	// --------------------------------------------------------------------------------------------------------------------------
 
 	// POT Normalization & Runs
 
@@ -174,6 +174,11 @@ namespace Constants {
 /*	vector<TString> Runs{"Run1","Run2","Run3"};*/
 	vector<TString> Runs{"Run1","Run2","Run3","Combined"};
 //	vector<TString> Runs{"Run1","Run2","Run3","Run4","Run5"};
+
+	// DeltaPT Slices
+
+	vector<double> LowPT{0.,0.2,0.4};
+	vector<double> HighPT{0.2,0.4,2.};	
 
 	// v43 Run 1 
 
@@ -264,11 +269,11 @@ namespace Constants {
 /*	static const int NBinsDeltaPhiT = 6; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,15,29,51,81,130.,180.};*/
 	static const int NBinsDeltaPhiT = 13; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,10.,20.,30.,40.,50.,60.,75.,90.,106.,126.,145.,162.,180.};
 	
-	static const int NBinsEQE = 8; static const double ArrayNBinsEQE[NBinsEQE+1] = {0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6,1.8}; 	
+	static const int NBinsEQE = 7; static const double ArrayNBinsEQE[NBinsEQE+1] = {0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}; 	
 	
 	// STV analysis
 
-	static const int NBinsECal = 8; static const double ArrayNBinsECal[NBinsECal+1] = {0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6,1.8}; 
+	static const int NBinsECal = 7; static const double ArrayNBinsECal[NBinsECal+1] = {0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}; 
 	static const int NBinsQ2 = 8; static const double ArrayNBinsQ2[NBinsQ2+1] = { 0.0,0.1,0.2,0.3,0.4,0.5,0.65,0.8,1.}; 	
 	
 /*	static const int NBinsMuonMomentum = 8; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.3,0.5,0.7,0.9,1.1,1.3,1.5,1.7}; */
