@@ -33,8 +33,6 @@ namespace Constants {
 
 	// UBCodeVersion
 
-//	const TString UBCodeVersion = "v08_00_00_33";
-//	const TString UBCodeVersion = "v08_00_00_43";
 	const TString UBCodeVersion = "v08_00_00_52";
 
 	// ---------------------------------------------------------------------------------
