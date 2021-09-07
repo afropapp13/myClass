@@ -59,6 +59,16 @@ namespace Constants {
 
 	// ---------------------------------------------------------------------------------
 
+	std::vector<double> range{0.,0.1,0.2,0.3,1.};
+	int NRanges = range.size() - 1; 
+	int NBins = 80;
+	double LowEdge = 0.;
+	double HighEdge = 0.8;
+	
+	std::vector<TString> RangeLabel{"","0 < p_{n} < 0.1 GeV/c","0.1 < p_{n} < 0.2 GeV/c","0.2 < p_{n} < 0.3 GeV/c","p_{n} > 0.3 GeV/c"};
+
+	// ---------------------------------------------------------------------------------
+
 	// Labels / Ranges & Label  map
 
 	static std::map<TString,std::pair<double,double> > XSecRange =
@@ -74,6 +84,9 @@ namespace Constants {
 		{ "ProtonCosThetaPlot",  std::make_pair(0, 27) },
 		{ "ProtonPhiPlot",  std::make_pair(0, 0.055) },
 		{ "ECalPlot",  std::make_pair(0, 24) },
+		{ "ECalLowPTPlot",  std::make_pair(0, 10.9) },	
+		{ "ECalMidPTPlot",  std::make_pair(0, 6.9) },	
+		{ "ECalHighPTPlot",  std::make_pair(0, 2.9) },				
 		{ "EQEPlot",  std::make_pair(0, 19) },
 		{ "Q2Plot",  std::make_pair(0, 34) },	
 		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
@@ -106,6 +119,9 @@ namespace Constants {
 		{ "ProtonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "ProtonPhiPlot",  "#frac{d#sigma}{d#phi_{p}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "ECalPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
+		{ "ECalLowPTPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },	
+		{ "ECalMidPTPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
+		{ "ECalHighPTPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },					
 		{ "EQEPlot",  "#frac{d#sigma}{dE^{QE}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
 		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
 		{ "CCQEMuonMomentumPlot",  "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
@@ -522,7 +538,7 @@ namespace Constants {
 
 	static double NTargetUncertainty = 0.01; // 1% NTarget Uncertainty
 
-	constexpr float TRACK_SCORE_CUT = 0.5;	
+	constexpr float TRACK_SCORE_CUT = 0.8;	
 
 	// Quality cuts
 
@@ -550,6 +566,8 @@ namespace Constants {
 	// Reco level
 
 	const TString CC1p = "CC1p && CandidateMu_MCParticle_Pdg == 13 && CandidateP_MCParticle_Pdg == 2212 && NumberPi0 == 0"; 
+	
+	const TString CC1p1pi = "CandidateMu_MCParticle_Pdg == 211 && CandidateP_MCParticle_Pdg == 2212 && NumberPi0 == 0";	
 
 	const TString Containment = "CandidateMu_StartContainment == 1 && CandidateP_StartContainment == 1 && CandidateP_EndContainment == 1 && True_CandidateMu_StartContainment == 1";
 
@@ -562,10 +580,10 @@ namespace Constants {
 	const TString ProtonMomData = "CandidateP_P_Range" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsProtonMomentum[0])) + " && CandidateP_P_Range" + Recalibrate + " < "\
 		+ TString(std::to_string(ArrayNBinsProtonMomentum[NBinsProtonMomentum]));
 
-	const TString DeltaPT = "Reco_Pt" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt" + Recalibrate + " < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
+	//const TString DeltaPT = "Reco_Pt" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt" + Recalibrate + " < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]))\
 		+ " && True_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && True_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
 
-	const TString DeltaPTData = "Reco_Pt" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt" + Recalibrate + " < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
+	//const TString DeltaPTData = "Reco_Pt" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && Reco_Pt" + Recalibrate + " < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
  
 	const TString DeltaPhiT = "Reco_DeltaPhiT" + Recalibrate + " > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && Reco_DeltaPhiT" + Recalibrate + " < "\
 		+ TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT]))\
@@ -608,23 +626,32 @@ namespace Constants {
 	const TString MinProtonVertexDist = "CandidatePStartVertexDistance < CandidatePEndVertexDistance";
 
 	const TString AvoidFlippedTracks = "StartToStartDistance < EndToEndDistance";
+	
+	// --------------------------------------------------------------------------------------------------------------------------------
+	
+	// Qualifiers using reco info
 
-	const TString qualifier = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinHitsMu\
+	const TString qualifier = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinHitsMu\
 		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
-	const TString qualifierData = ContainmentData +" && " + ProtonMomData + " && " + DeltaPTData + " && " + DeltaPhiTData + " && " + MuonMomData + " && " + QualityCut + " && " + MinHitsMu\
+	const TString qualifierData = ContainmentData +" && " + ProtonMomData + " && " + DeltaPhiTData + " && " + MuonMomData + " && " + QualityCut + " && " + MinHitsMu\
 		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
-	const TString qualifierNoMuRangeCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + MinHitsMu\
+	const TString qualifierNoMuRangeCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + MinHitsMu\
 		+ " && " + MinHitsP  + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
-	const TString qualifierNoHitSumCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut\
+	const TString qualifierNoHitSumCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut\
 		+ " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
-	const TString qualifierNoExitMuQC = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPT + " && " + DeltaPhiT + " && " + MuonMom + " && " + OnlyContainedMuQualityCut\
+	const TString qualifierNoExitMuQC = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + OnlyContainedMuQualityCut\
 		+ " && " + MinHitsMu+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+		
+	const TString qualifierCC1p1pi = CC1p1pi +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinHitsMu\
+		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;		
 
 	// --------------------------------------------------------------------------------------------------------------------------------
+	
+	// Qualifiers using truth level info
 
 	const TString TrueCC1p = "CC1p && NumberPi0 == 0";
 
@@ -634,14 +661,14 @@ namespace Constants {
 	const TString TrueMuonMom = "Muon_MCParticle_Mom > " + TString(std::to_string(ArrayNBinsMuonMomentum[0])) + " && Muon_MCParticle_Mom < "\
 		+ TString(std::to_string(ArrayNBinsMuonMomentum[NBinsMuonMomentum])); 
 
-	const TString TrueDeltaPT = "True_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && True_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
+	//const TString TrueDeltaPT = "True_Pt > " + TString(std::to_string(ArrayNBinsDeltaPT[0])) + " && True_Pt < " + TString(std::to_string(ArrayNBinsDeltaPT[NBinsDeltaPT]));
 
 	const TString TrueDeltaAlphaT = "True_DeltaAlphaT > " + TString(std::to_string(ArrayNBinsDeltaAlphaT[0])) + " && True_DeltaAlphaT < "\
 		+ TString(std::to_string(ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT]));
 
 	const TString TrueDeltaPhiT = "True_DeltaPhiT > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && True_DeltaPhiT < " + TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT]));
 
-	const TString TrueQualifier = TrueCC1p + " && " + TrueProtonMom + " && " + TrueMuonMom + " && " + TrueDeltaPT + " && " + TrueDeltaAlphaT + " && " + TrueDeltaPhiT;
+	const TString TrueQualifier = TrueCC1p + " && " + TrueProtonMom + " && " + TrueMuonMom + " && " + TrueDeltaAlphaT + " && " + TrueDeltaPhiT;
 
 	// --------------------------------------------------------------------------------------------------------------------------------
 
