@@ -259,17 +259,17 @@ namespace Constants {
 	// Binning
 
 	static const int NBinsA = 10; static const double ArrayNBinsA[NBinsA+1] = {0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2,1.3,1.4,1.5}; 
-	static const int NBinskMiss = 11; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75}; 
+	static const int NBinskMiss = 13; static const double ArrayNBinskMiss[NBinskMiss+1] = {0,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9,1.1}; 
 	static const int NBinsPMiss = 9; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {0,0.07,0.14,0.2,0.3,0.4,0.5,0.6,0.8,1.}; 
-	static const int NBinsPMissMinus = 13; 
-	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5};	
+	static const int NBinsPMissMinus = 14; 
+	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5,1.6};	
 	
 /*	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.8,1.}; */
 /*	static const int NBinsDeltaPT = 4; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.18,0.41,0.73,1.};*/
 /*	static const int NBinsDeltaPT = 6; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.12,0.24,0.36,0.55,0.74,1.};*/
 /*	static const int NBinsDeltaPT = 8; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.1,0.2,0.3,0.4,0.5,0.6,0.75,0.95};*/
 /*	static const int NBinsDeltaPT = 14; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.45,0.5,0.55,0.61,0.68,0.75};*/
-	static const int NBinsDeltaPT = 12; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75};
+	static const int NBinsDeltaPT = 13; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.85};
 
 	static const int NBinsDeltaPL = 16; static const double ArrayNBinsDeltaPL[NBinsDeltaPL+1] = {-0.47,-0.39,-0.32,-0.25,-0.17,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47};
 	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.27,0.34,0.4,0.47,0.55,0.65,0.75};
@@ -538,7 +538,7 @@ namespace Constants {
 
 	static double NTargetUncertainty = 0.01; // 1% NTarget Uncertainty
 
-	constexpr float TRACK_SCORE_CUT = 0.8;	
+	constexpr float TRACK_SCORE_CUT = 0.5;	
 
 	// Quality cuts
 
@@ -631,23 +631,29 @@ namespace Constants {
 	
 	// Qualifiers using reco info
 
-	const TString qualifier = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinHitsMu\
-		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+	const TString qualifier = CC1p +" && "+ Containment + " && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinMuonVertexDist\
+		+ " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+		
+	const TString qualifierNoPCut = CC1p +" && "+ Containment + " && " + DeltaPhiT + " && " + QualityCut + " && " + MinMuonVertexDist\
+		+ " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
-	const TString qualifierData = ContainmentData +" && " + ProtonMomData + " && " + DeltaPhiTData + " && " + MuonMomData + " && " + QualityCut + " && " + MinHitsMu\
-		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+	const TString qualifierPPNoCut = CC1p +" && "+ Containment + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinMuonVertexDist\
+		+ " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;				
 
-	const TString qualifierNoMuRangeCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + MinHitsMu\
-		+ " && " + MinHitsP  + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+	const TString qualifierData = ContainmentData +" && " + ProtonMomData + " && " + DeltaPhiTData + " && " + MuonMomData + " && " + QualityCut + " && " + MinMuonVertexDist\
+		+ " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+
+	const TString qualifierNoMuRangeCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + MinMuonVertexDist\
+		+ " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
 	const TString qualifierNoHitSumCut = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut\
 		+ " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 
 	const TString qualifierNoExitMuQC = CC1p +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + OnlyContainedMuQualityCut\
-		+ " && " + MinHitsMu+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
+		+ " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;
 		
-	const TString qualifierCC1p1pi = CC1p1pi +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinHitsMu\
-		+ " && " + MinHitsP + " && " + MinMuonVertexDist + " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;		
+	const TString qualifierCC1p1pi = CC1p1pi +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinMuonVertexDist\
+		+ " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;		
 
 	// --------------------------------------------------------------------------------------------------------------------------------
 	
@@ -669,6 +675,10 @@ namespace Constants {
 	const TString TrueDeltaPhiT = "True_DeltaPhiT > " + TString(std::to_string(ArrayNBinsDeltaPhiT[0])) + " && True_DeltaPhiT < " + TString(std::to_string(ArrayNBinsDeltaPhiT[NBinsDeltaPhiT]));
 
 	const TString TrueQualifier = TrueCC1p + " && " + TrueProtonMom + " && " + TrueMuonMom + " && " + TrueDeltaAlphaT + " && " + TrueDeltaPhiT;
+	
+	const TString TrueQualifierNoPCut = TrueCC1p + " && " + TrueDeltaAlphaT + " && " + TrueDeltaPhiT;	
+	
+	const TString TrueQualifierNoPPCut = TrueCC1p + " && " + TrueMuonMom + " && " + TrueDeltaAlphaT + " && " + TrueDeltaPhiT;	
 
 	// --------------------------------------------------------------------------------------------------------------------------------
 
