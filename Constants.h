@@ -268,8 +268,7 @@ namespace Constants {
 	
 //	static const int NBinsPMissMinus = 14; 
 //	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.525,0.6,0.675,0.75,0.825,0.9,0.975,1.05,1.125,1.2,1.275,1.35,1.425,1.5,1.6};	
-	static const int NBinsPMissMinus = 11; 
-	static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2,1.3,1.4,1.5,1.6};
+	static const int NBinsPMissMinus = 11; static const double ArrayNBinsPMissMinus[NBinsPMissMinus+1] = {0.5,0.6,0.7,0.8,0.9,1.,1.1,1.2,1.3,1.4,1.5,1.6};
 	
 	static const int NBinsDeltaPT = 13; static const double ArrayNBinsDeltaPT[NBinsDeltaPT+1] = {0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.85};
 
@@ -280,7 +279,7 @@ namespace Constants {
 	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.65,0.75,0.85};
 
 //	static const int NBinsDeltaPtx = 20; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.47,-0.4,-0.35,-0.3,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55};
-	static const int NBinsDeltaPtx = 11; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.44,-0.33,-0.22,-0.11,0,0.11,0.22,0.33,0.44,0.55};
+	static const int NBinsDeltaPtx = 11; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45,0.55};
 	
 //	static const int NBinsDeltaPty = 14; static const double ArrayNBinsDeltaPty[NBinsDeltaPty+1] = {-0.47,-0.36,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.36,0.47};
 	static const int NBinsDeltaPty = 10; static const double ArrayNBinsDeltaPty[NBinsDeltaPty+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45};
