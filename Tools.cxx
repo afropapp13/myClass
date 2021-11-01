@@ -1,14 +1,69 @@
-
 //Class created by Afroditi Papadopoulou (apapadop@mit.edu)
 
-// _________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
 
 #ifndef TOOLS_CXX
 #define TOOLS_CXX
 
+// STD includes
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <cstring>
+#include <cstdlib>
+#include <sstream>
+
+// Root Includes
+#include "TRandom3.h"
+
 #include "Tools.h"
 
-// __________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
+
+int Tools::ConcatRunSubRunEvent(int run, int subrun, int event) { 
+
+	// Safety checks to make sure that the numbers are not huge
+
+	int ModRun = run /1E5; if (TMath::Abs(ModRun) > 1) { run = ModRun; }
+	int ModSubRun = subrun /1E5; if (TMath::Abs(ModSubRun) > 1) { subrun = ModSubRun; }	
+	int ModEvent = event /1E5; if (TMath::Abs(ModEvent) > 1) { event = ModEvent; }	
+
+	// Convert the integers to string 
+	std::string srun    = std::to_string(run); 
+	std::string ssubrun = std::to_string(subrun);
+	std::string sevent  = std::to_string(event);
+
+	// Concatenate the subrun and event. Dont add the run because it makes the number too long for storing as an int
+	std::string s =  ssubrun + sevent; 
+
+	// std::cout << srun << "  " << ssubrun << "  " << sevent<< std::endl;
+  
+	// Convert the concatenated string to integer 
+	int c = stoi(s); 
+  
+	// return the formed integer 
+	return c; 
+
+}
+
+//----------------------------------------//
+
+double Tools::PoissonRandomNumber(int uni, int seed) {
+
+	// Set the seed of the TRandom 3 based on the run,subrun,event
+	TRandom3* rand = new TRandom3();
+	rand->SetSeed(seed); 
+
+	// Generate the weight, using a poisson dist with mean 1
+	double weight_poisson = rand->Poisson(1);
+
+	return weight_poisson;
+	delete rand;
+
+}
+
+//----------------------------------------//
 
 bool Tools::is_meson_or_antimeson( int pdg_code ) {
 
@@ -45,7 +100,7 @@ bool Tools::is_meson_or_antimeson( int pdg_code ) {
 	return true;
 }
 
-// __________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
 
 bool Tools::inFVVector(TVector3 vector) {
 
@@ -54,7 +109,7 @@ bool Tools::inFVVector(TVector3 vector) {
 	else return false;
 }
 
-// __________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
 
 bool Tools::inFV(double x, double y, double z) {
 
@@ -62,7 +117,7 @@ bool Tools::inFV(double x, double y, double z) {
 	else return false;
 }
 
-// __________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
 
 bool Tools::IsContained(TVector3 TrackStart, TVector3 TrackEnd) {
 
@@ -74,7 +129,7 @@ bool Tools::IsContained(TVector3 TrackStart, TVector3 TrackEnd) {
 
 }
 
-// __________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
 
 double Tools::PToKE(int pdg, double momentum) {
 
@@ -87,7 +142,7 @@ double Tools::PToKE(int pdg, double momentum) {
 
 }
 
-// __________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
 
 double Tools::KEToP(int pdg, double ke) {
 
@@ -100,6 +155,6 @@ double Tools::KEToP(int pdg, double ke) {
 
 }
 
-// __________________________________________________________________________________________________________________________________________________
+//----------------------------------------//
 
 #endif

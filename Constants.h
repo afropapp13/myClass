@@ -54,7 +54,7 @@ namespace Constants {
 	// /pnfs/uboone/persistent/uboonebeam/bnb_gsimple/bnb_gsimple_fluxes_01.09.2019_463_hist/readme.txt
 
 	double Nominal_UB_XY_Surface = 256.35*233.; // cm2
-	double SoftFidSurface = 250. * 224.;  // cm2
+	double SoftFidSurface = 236. * 210.;  // cm2
 	double POTPerSpill = 4997.*5e8;
 
 	// ---------------------------------------------------------------------------------
@@ -73,22 +73,22 @@ namespace Constants {
 
 	static std::map<TString,std::pair<double,double> > XSecRange =
 	{
-		{ "DeltaPTPlot",  std::make_pair(0, 67) },
-		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.15) },
-		{ "DeltaPhiTPlot",  std::make_pair(0., 0.53) },
-		{ "MuonMomentumPlot",  std::make_pair(0, 24) },
-		{ "MuonCosThetaPlot",  std::make_pair(0, 29) },
-		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 22) },
-		{ "MuonPhiPlot",  std::make_pair(0, 0.059) },
-		{ "ProtonMomentumPlot",  std::make_pair(0, 37) },
-		{ "ProtonCosThetaPlot",  std::make_pair(0, 27) },
-		{ "ProtonPhiPlot",  std::make_pair(0, 0.055) },
-		{ "ECalPlot",  std::make_pair(0, 24) },
+		{ "DeltaPTPlot",  std::make_pair(0, 44) }, // 57
+		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.13) },
+		{ "DeltaPhiTPlot",  std::make_pair(0., 0.39) },
+		{ "MuonMomentumPlot",  std::make_pair(0, 26) },
+		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
+		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14) },
+		{ "MuonPhiPlot",  std::make_pair(0, 0.049) },
+		{ "ProtonMomentumPlot",  std::make_pair(0, 34) },
+		{ "ProtonCosThetaPlot",  std::make_pair(0, 24) },
+		{ "ProtonPhiPlot",  std::make_pair(0, 0.045) },
+		{ "ECalPlot",  std::make_pair(0, 19.9) },
 		{ "ECalLowPTPlot",  std::make_pair(0, 10.9) },	
-		{ "ECalMidPTPlot",  std::make_pair(0, 6.9) },	
-		{ "ECalHighPTPlot",  std::make_pair(0, 2.9) },				
+		{ "ECalMidPTPlot",  std::make_pair(0, 6.4) },	
+		{ "ECalHighPTPlot",  std::make_pair(0, 3.7) },				
 		{ "EQEPlot",  std::make_pair(0, 19) },
-		{ "Q2Plot",  std::make_pair(0, 34) },	
+		{ "Q2Plot",  std::make_pair(0, 29) },	
 		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
 		{ "CCQEMuonCosThetaPlot",  std::make_pair(0, 9) },
 		{ "CCQEProtonMomentumPlot",  std::make_pair(0, 37) },
@@ -96,13 +96,13 @@ namespace Constants {
 		{ "CCQEECalPlot",  std::make_pair(0, 24) },
 		{ "CCQEQ2Plot",  std::make_pair(0, 24) },	
 		{ "DeltaPLPlot",  std::make_pair(0, 47) },
-		{ "DeltaPnPlot",  std::make_pair(0, 59) },
+		{ "DeltaPnPlot",  std::make_pair(0, 49) },
 		{ "DeltaPtxPlot",  std::make_pair(0, 47) },
-		{ "DeltaPtyPlot",  std::make_pair(0, 47) },	
-		{ "APlot",  std::make_pair(0, 39) },	
-		{ "kMissPlot",  std::make_pair(0, 59) },
-		{ "PMissPlot",  std::make_pair(0, 59) },	
-		{ "PMissMinusPlot",  std::make_pair(0, 47) },
+		{ "DeltaPtyPlot",  std::make_pair(0, 39) },	
+		{ "APlot",  std::make_pair(0, 34) },	
+		{ "kMissPlot",  std::make_pair(0, 49) },
+		{ "PMissPlot",  std::make_pair(0, 49) },	
+		{ "PMissMinusPlot",  std::make_pair(0, 39) },
 													
 	};
 
@@ -158,7 +158,8 @@ namespace Constants {
 	// Global Constants
 
 	static const double Units = 1E38; // so that the extracted cross-section is 10^{-38} cm^{2}
-	static const double NTargets = 1.203E30; // Argon nuclei, not nucleons
+//	static const double NTargets = 1.203E30; // Argon nuclei, not nucleons
+	static const double NTargets = 1.05E30; // Argon nuclei, not nucleons
 	
 	static const int NuMuPdg = 14, MuonPdg = 13, ProtonPdg = 2212, AbsChargedPionPdg = 211, NeutralPionPdg = 111, ElectronPdg = 11, NeutronPdg = 2112, KaonPdg = 321;
 	static const int DeuteriumPdg = 1000010020, HeliumPdg = 1000020040, ArgonPdg = 1000180400;

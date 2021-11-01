@@ -107,7 +107,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	// For the calculation of the excitation energies
 	// https://doi.org/10.1140/epjc/s10052-019-6750-3
 
-	double MAPrime = MA - NeutronMass_GeV + 0.0178; // GeV, constant obtained from table I 
+	double MAPrime = MA - NeutronMass_GeV + 0.0309; // GeV, constant obtained from table 7 
 
 	// For the calculation of p_n, back to the Minerva PRL
 	// https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.121.022504
