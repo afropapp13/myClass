@@ -25,7 +25,7 @@ class Tools {
 		~Tools(){}
 
 		int ConcatRunSubRunEvent(int run, int subrun, int event);
-		double PoissonRandomNumber(int uni, int seed);
+		double PoissonRandomNumber(int seed);
 		bool is_meson_or_antimeson(int pdg);
 		bool IsContained(TVector3 TrackStart, TVector3 TrackEnd);
 		bool inFV(double x, double y, double z);

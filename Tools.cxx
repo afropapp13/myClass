@@ -25,9 +25,9 @@ int Tools::ConcatRunSubRunEvent(int run, int subrun, int event) {
 
 	// Safety checks to make sure that the numbers are not huge
 
-	int ModRun = run /1E5; if (TMath::Abs(ModRun) > 1) { run = ModRun; }
-	int ModSubRun = subrun /1E5; if (TMath::Abs(ModSubRun) > 1) { subrun = ModSubRun; }	
-	int ModEvent = event /1E5; if (TMath::Abs(ModEvent) > 1) { event = ModEvent; }	
+	int ModRun = run /1E6; if (TMath::Abs(ModRun) > 1) { run = TMath::Abs(ModRun); }
+	int ModSubRun = subrun /1E6; if (TMath::Abs(ModSubRun) > 1) { subrun = TMath::Abs(ModSubRun); }	
+	int ModEvent = event /1E6; if (TMath::Abs(ModEvent) > 1) { event = TMath::Abs(ModEvent); }	
 
 	// Convert the integers to string 
 	std::string srun    = std::to_string(run); 
@@ -49,7 +49,7 @@ int Tools::ConcatRunSubRunEvent(int run, int subrun, int event) {
 
 //----------------------------------------//
 
-double Tools::PoissonRandomNumber(int uni, int seed) {
+double Tools::PoissonRandomNumber(int seed) {
 
 	// Set the seed of the TRandom 3 based on the run,subrun,event
 	TRandom3* rand = new TRandom3();
@@ -58,8 +58,8 @@ double Tools::PoissonRandomNumber(int uni, int seed) {
 	// Generate the weight, using a poisson dist with mean 1
 	double weight_poisson = rand->Poisson(1);
 
-	return weight_poisson;
 	delete rand;
+	return weight_poisson;
 
 }
 
