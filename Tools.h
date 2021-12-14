@@ -7,6 +7,7 @@
 #include <string>
 #include <vector>
 
+#include "TString.h"
 #include "TMath.h"
 #include <TVector3.h>
 
@@ -32,13 +33,14 @@ class Tools {
 		bool inFVVector(TVector3 vector);
 		double PToKE(int pdg, double momentum);
 		double KEToP(int pdg, double ke);
+		TString to_string_with_precision(double a_value, const int n);
+		TString ConvertToString(double value);
+		int ReturnIndex(double value, std::vector<double> vec);				
 
 		double MuonMass; // MeV
 		double ProtonMass; // MeV
-
 		int MuonPdg;
 		int ProtonPdg;
-
 		double FVx;
 		double FVy;
 		double FVz;

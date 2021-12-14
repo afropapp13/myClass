@@ -157,4 +157,42 @@ double Tools::KEToP(int pdg, double ke) {
 
 //----------------------------------------//
 
+TString Tools::to_string_with_precision(double a_value, const int n = 2) {
+    std::ostringstream out;
+    out.precision(n);
+    out << std::fixed << a_value;
+    return TString(out.str());
+}
+
+//----------------------------------------//
+
+TString Tools::ConvertToString(double value) {
+
+	TString StringValue = Tools::to_string_with_precision(value, 2);
+	StringValue.ReplaceAll(".","_");
+	StringValue.ReplaceAll("-","Minus");	
+
+	return StringValue;
+
+}
+
+//----------------------------------------//
+
+int Tools::ReturnIndex(double value, std::vector<double> vec) {
+
+	int length = vec.size();
+	int index = -1;
+
+	for (int i = 0; i < length-1; i ++) {
+
+		if (value > vec.at(i) && value < vec.at(i+1)) { return i; }
+
+	}	
+
+	return index;
+
+}
+
+//----------------------------------------//
+
 #endif

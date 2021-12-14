@@ -229,7 +229,11 @@ namespace Constants {
 	static const double FullE1DCNT_wcut_Run3 = 61012955.0;
 	static const double FullEXT_Run3 = 214555174.0;
 	
-	// v43 Run 4 
+	// v43 Run 4(a) 
+
+	static const double tor860_wcut_Run4a = 4.583e+19;
+	static const double E1DCNT_wcut_Run4a = 10326741.0;
+	static const double EXT_Run4a = 35802824.0;
 
 	static const double tor860_wcut_Run4 = 0.;
 	static const double E1DCNT_wcut_Run4 = 0.;
@@ -645,7 +649,7 @@ namespace Constants {
 	const TString qualifierCC1p1pi = CC1p1pi +" && "+ Containment +" && " + ProtonMom + " && " + DeltaPhiT + " && " + MuonMom + " && " + QualityCut + " && " + MinMuonVertexDist\
 		+ " && " + MinProtonVertexDist + " && " + AvoidFlippedTracks;		
 
-	// --------------------------------------------------------------------------------------------------------------------------------
+	//----------------------------------------//
 	
 	// Qualifiers using truth level info
 
@@ -670,7 +674,17 @@ namespace Constants {
 	
 	const TString TrueQualifierNoPPCut = TrueCC1p + " && " + TrueMuonMom + " && " + TrueDeltaAlphaT + " && " + TrueDeltaPhiT;	
 
-	// --------------------------------------------------------------------------------------------------------------------------------
+	//----------------------------------------//
+	
+	// And moving on towards a 2D analysis
+	
+	// Per Adi's request
+	// Ecal in DeltaPT and DeltaAlphaT bins
+	
+	static const int TwoDNBinsDeltaPT = 3; std::vector<double> TwoDArrayNBinsDeltaPT{0.0,0.2,0.4,1.0};
+	static const int TwoDNBinsDeltaAlphaT = 4; std::vector<double> TwoDArrayNBinsDeltaAlphaT{0.0,45.0,90.0,135.0,180.0};		
+	
+	//----------------------------------------//	
 
 }
 #endif
