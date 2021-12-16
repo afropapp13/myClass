@@ -103,7 +103,25 @@ namespace Constants {
 		{ "kMissPlot",  std::make_pair(0, 49) },
 		{ "PMissPlot",  std::make_pair(0, 49) },	
 		{ "PMissMinusPlot",  std::make_pair(0, 39) },
-													
+		{ "DeltaAlphaT_DeltaPT_0_00To0_20Plot",  std::make_pair(0, 0.13) },
+		{ "DeltaAlphaT_DeltaPT_0_20To0_40Plot",  std::make_pair(0, 0.13) },				
+		{ "DeltaAlphaT_DeltaPT_0_40To1_00Plot",  std::make_pair(0, 0.13) },
+		{ "DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 0.13) },
+		{ "DeltaAlphaT_MuonCosTheta_0_00To0_50Plot",  std::make_pair(0, 0.13) },
+		{ "DeltaAlphaT_MuonCosTheta_0_50To0_75Plot",  std::make_pair(0, 0.13) },
+		{ "DeltaAlphaT_MuonCosTheta_0_75To1_00Plot",  std::make_pair(0, 0.13) },
+		{ "DeltaPT_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 44.) },
+		{ "DeltaPT_MuonCosTheta_0_00To0_50Plot",  std::make_pair(0, 44.) },
+		{ "DeltaPT_MuonCosTheta_0_50To0_75Plot",  std::make_pair(0, 44.) },
+		{ "DeltaPT_MuonCosTheta_0_75To1_00Plot",  std::make_pair(0, 44.) },
+		{ "MuonMomentum_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 26.) },
+		{ "MuonMomentum_MuonCosTheta_0_00To0_50Plot",  std::make_pair(0, 26.) },
+		{ "MuonMomentum_MuonCosTheta_0_50To0_75Plot",  std::make_pair(0, 26.) },
+		{ "MuonMomentum_MuonCosTheta_0_75To1_00Plot",  std::make_pair(0, 26.) },
+		{ "ProtonMomentum_ProtonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 26.) },
+		{ "ProtonMomentum_ProtonCosTheta_0_00To0_50Plot",  std::make_pair(0, 26.) },
+		{ "ProtonMomentum_ProtonCosTheta_0_50To0_75Plot",  std::make_pair(0, 26.) },
+		{ "ProtonMomentum_ProtonCosTheta_0_75To1_00Plot",  std::make_pair(0, 26.) },							
 	};
 
 	static std::map<TString,TString> VarLabel =
@@ -137,8 +155,79 @@ namespace Constants {
 		{ "APlot",  "#frac{d#sigma}{d#alpha} #left[10^{-38} #frac{cm^{2}}{c Ar}#right]" },
 		{ "kMissPlot",  "#frac{d#sigma}{dk_{Miss}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "PMissPlot",  "#frac{d#sigma}{dP_{Miss}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
-		{ "PMissMinusPlot",  "#frac{d#sigma}{dp_{Miss}^{-}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" }
-										
+		{ "PMissMinusPlot",  "#frac{d#sigma}{dp_{Miss}^{-}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaAlphaT_DeltaPT_0_00To0_20Plot",  "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaAlphaT_DeltaPT_0_20To0_40Plot",  "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },				
+		{ "DeltaAlphaT_DeltaPT_0_40To1_00Plot",  "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot",  "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaAlphaT_MuonCosTheta_0_00To0_50Plot", "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaAlphaT_MuonCosTheta_0_50To0_75Plot", "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaAlphaT_MuonCosTheta_0_75To1_00Plot", "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaPT_MuonCosTheta_Minus1_00To0_00Plot", "#frac{d#sigma}{d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPT_MuonCosTheta_0_00To0_50Plot", "#frac{d#sigma}{d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPT_MuonCosTheta_0_50To0_75Plot", "#frac{d#sigma}{d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPT_MuonCosTheta_0_75To1_00Plot", "#frac{d#sigma}{d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "MuonMomentum_MuonCosTheta_Minus1_00To0_00Plot", "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "MuonMomentum_MuonCosTheta_0_00To0_50Plot", "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "MuonMomentum_MuonCosTheta_0_50To0_75Plot", "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "MuonMomentum_MuonCosTheta_0_75To1_00Plot", "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "ProtonMomentum_ProtonCosTheta_Minus1_00To0_00Plot", "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "ProtonMomentum_ProtonCosTheta_0_00To0_50Plot", "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "ProtonMomentum_ProtonCosTheta_0_50To0_75Plot", "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "ProtonMomentum_ProtonCosTheta_0_75To1_00Plot", "#frac{d#sigma}{dp_{p}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+	};	
+	
+	static std::map<TString,TString> LatexLabel =
+	{
+		{ "DeltaPTPlot",  "" },
+		{ "DeltaAlphaTPlot",  "" },
+		{ "DeltaPhiTPlot",  "" },
+		{ "MuonMomentumPlot",  "" },
+		{ "MuonCosThetaPlot",  "" },
+		{ "MuonCosThetaSingleBinPlot",  "" },
+		{ "MuonPhiPlot",  "" },
+		{ "ProtonMomentumPlot",  "" },
+		{ "ProtonCosThetaPlot",  "" },
+		{ "ProtonPhiPlot",  "" },
+		{ "ECalPlot",  "" },
+		{ "ECalLowPTPlot",  "" },	
+		{ "ECalMidPTPlot",  "" },
+		{ "ECalHighPTPlot",  "" },					
+		{ "EQEPlot",  "" },
+		{ "Q2Plot",  "" },	
+		{ "CCQEMuonMomentumPlot",  "" },
+		{ "CCQEMuonCosThetaPlot",  "" },
+		{ "CCQEProtonMomentumPlot",  "" },
+		{ "CCQEProtonCosThetaPlot",  "" },
+		{ "CCQEECalPlot",  "" },
+		{ "CCQEQ2Plot",  "" },	
+		{ "DeltaPLPlot",  "" },
+		{ "DeltaPnPlot",  "" },
+		{ "DeltaPtxPlot",  "" },
+		{ "DeltaPtyPlot",  "" },
+		{ "APlot",  "" },
+		{ "kMissPlot",  "" },
+		{ "PMissPlot",  "" },
+		{ "PMissMinusPlot",  "" },
+		{ "DeltaAlphaT_DeltaPT_0_00To0_20Plot",  "#delta p_{T} < 0.2 GeV/c" },
+		{ "DeltaAlphaT_DeltaPT_0_20To0_40Plot",  "0.2 < #delta p_{T} < 0.4 GeV/c" },				
+		{ "DeltaAlphaT_DeltaPT_0_40To1_00Plot",  "#delta p_{T} > 0.4 GeV/c" },
+		{ "DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot",  "-1 < cos#theta_{#mu} < 0" },
+		{ "DeltaAlphaT_MuonCosTheta_0_00To0_50Plot", "0 < cos#theta_{#mu} < 0.5" },
+		{ "DeltaAlphaT_MuonCosTheta_0_50To0_75Plot", "0.5 < cos#theta_{#mu} < 0.75" },
+		{ "DeltaAlphaT_MuonCosTheta_0_75To1_00Plot", "0.75 < cos#theta_{#mu} < 1" },
+		{ "DeltaPT_MuonCosTheta_Minus1_00To0_00Plot", "-1 < cos#theta_{#mu} < 0" },
+		{ "DeltaPT_MuonCosTheta_0_00To0_50Plot", "0 < cos#theta_{#mu} < 0.5" },
+		{ "DeltaPT_MuonCosTheta_0_50To0_75Plot", "0.5 < cos#theta_{#mu} < 0.75" },
+		{ "DeltaPT_MuonCosTheta_0_75To1_00Plot", "0.75 < cos#theta_{#mu} < 1" },
+		{ "MuonMomentum_MuonCosTheta_Minus1_00To0_00Plot", "-1 < cos#theta_{#mu} < 0" },
+		{ "MuonMomentum_MuonCosTheta_0_00To0_50Plot", "0 < cos#theta_{#mu} < 0.5" },
+		{ "MuonMomentum_MuonCosTheta_0_50To0_75Plot", "0.5 < cos#theta_{#mu} < 0.75" },
+		{ "MuonMomentum_MuonCosTheta_0_75To1_00Plot", "0.75 < cos#theta_{#mu} < 1" },
+		{ "ProtonMomentum_ProtonCosTheta_Minus1_00To0_00Plot", "-1 < cos#theta_{p} < 0" },
+		{ "ProtonMomentum_ProtonCosTheta_0_00To0_50Plot", "0 < cos#theta_{p} < 0.5" },
+		{ "ProtonMomentum_ProtonCosTheta_0_50To0_75Plot", "0.5 < cos#theta_{p} < 0.75" },
+		{ "ProtonMomentum_ProtonCosTheta_0_75To1_00Plot", "0.75 < cos#theta_{p} < 1" },
 	};	
 
 	// -------------------------------------------------------------------------------------------------------------------------
@@ -179,7 +268,9 @@ namespace Constants {
 				 ,"CCQEMuonMomentumPlot","CCQEMuonCosThetaPlot","CCQEProtonMomentumPlot","CCQEProtonCosThetaPlot"
 				 ,"CCQEQ2Plot","CCQEECalPlot"
 				 ,"DeltaPLPlot","DeltaPnPlot","DeltaPtxPlot","DeltaPtyPlot"
-				 ,"APlot","kMissPlot","PMissPlot","PMissMinusPlot"};
+				 ,"APlot","kMissPlot","PMissPlot","PMissMinusPlot"
+				 //,"DeltaAlphaT_DeltaPT_0_00To_0_20Plot","DeltaAlphaT_DeltaPT_0_20To_0_40Plot","DeltaAlphaT_DeltaPT_0_40To_1_00Plot"
+				 };
 
 	// "ECalPlot" "EQEPlot" "Q2Plot" "CCQEECalPlot" "CCQEEQEPlot" "CCQEQ2Plot"
 
@@ -677,12 +768,11 @@ namespace Constants {
 	//----------------------------------------//
 	
 	// And moving on towards a 2D analysis
-	
-	// Per Adi's request
-	// Ecal in DeltaPT and DeltaAlphaT bins
-	
+		
 	static const int TwoDNBinsDeltaPT = 3; std::vector<double> TwoDArrayNBinsDeltaPT{0.0,0.2,0.4,1.0};
-	static const int TwoDNBinsDeltaAlphaT = 4; std::vector<double> TwoDArrayNBinsDeltaAlphaT{0.0,45.0,90.0,135.0,180.0};		
+	static const int TwoDNBinsDeltaAlphaT = 4; std::vector<double> TwoDArrayNBinsDeltaAlphaT{0.0,45.0,90.0,135.0,180.0};
+	static const int TwoDNBinsMuonCosTheta = 4; std::vector<double> TwoDArrayNBinsMuonCosTheta{-1.,0.0,0.5,0.75,1.0};
+	static const int TwoDNBinsProtonCosTheta = 4; std::vector<double> TwoDArrayNBinsProtonCosTheta{-1.,0.0,0.5,0.75,1.0};				
 	
 	//----------------------------------------//	
 
