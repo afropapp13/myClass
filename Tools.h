@@ -10,6 +10,8 @@
 #include "TString.h"
 #include "TMath.h"
 #include <TVector3.h>
+#include "TH1D.h"
+#include "TH2D.h"
 
 class Tools {
 
@@ -35,7 +37,9 @@ class Tools {
 		double KEToP(int pdg, double ke);
 		TString to_string_with_precision(double a_value, const int n);
 		TString ConvertToString(double value);
-		int ReturnIndex(double value, std::vector<double> vec);				
+		int ReturnIndex(double value, std::vector<double> vec);
+		void Reweight(TH1D* h, double SF);	
+		void Reweight2D(TH2D* h, double SF);					
 
 		double MuonMass; // MeV
 		double ProtonMass; // MeV

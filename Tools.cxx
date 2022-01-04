@@ -195,4 +195,53 @@ int Tools::ReturnIndex(double value, std::vector<double> vec) {
 
 //----------------------------------------//
 
+void Tools::Reweight(TH1D* h, double SF = 1.) {
+
+	int NBins = h->GetXaxis()->GetNbins();
+
+	for (int i = 0; i < NBins; i++) {
+
+		double CurrentEntry = h->GetBinContent(i+1);
+		double NewEntry = CurrentEntry * SF / h->GetBinWidth(i+1);
+
+		double CurrentError = h->GetBinError(i+1);
+		double NewError = CurrentError * SF / h->GetBinWidth(i+1);
+
+		h->SetBinContent(i+1,NewEntry); 
+//		h->SetBinError(i+1,NewError); 
+		h->SetBinError(i+1,0.000001); 
+
+	}
+
+}
+
+//----------------------------------------//
+
+void Tools::Reweight2D(TH2D* h, double SF = 1.) {
+
+	int NBinsX = h->GetXaxis()->GetNbins();
+	int NBinsY = h->GetYaxis()->GetNbins();
+
+	for (int i = 0; i < NBinsX; i++) {
+
+		for (int j = 0; j < NBinsX; j++) {
+
+			double CurrentEntry = h->GetBinContent(i+1,j+1);
+			double NewEntry = CurrentEntry * SF / ( h->GetXaxis()->GetBinWidth(i+1) * h->GetYaxis()->GetBinWidth(j+1) );
+
+			double CurrentError = h->GetBinError(i+1,j+1);
+			double NewError = CurrentError * SF / ( h->GetXaxis()->GetBinWidth(i+1) * h->GetYaxis()->GetBinWidth(j+1) );
+
+			h->SetBinContent(i+1,j+1,NewEntry); 
+//			h->SetBinError(i+1,j+1,NewError); 
+			h->SetBinError(i+1,j+1,0.000001); 
+
+		}
+
+	}
+
+}
+
+//----------------------------------------//
+
 #endif
