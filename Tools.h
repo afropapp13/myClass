@@ -39,7 +39,11 @@ class Tools {
 		TString ConvertToString(double value);
 		int ReturnIndex(double value, std::vector<double> vec);
 		void Reweight(TH1D* h, double SF);	
-		void Reweight2D(TH2D* h, double SF);					
+		void Reweight2D(TH2D* h, double SF);	
+		
+		int Return2DNBins(std::vector< std::vector<double> > BinVector);
+		std::vector<double> Return2DBinIndices(std::vector< std::vector<double> > BinVector);			
+		int ReturnIndexIn2DList(std::vector< std::vector<double> > BinEdgeVector, int SliceIndex, double ValueInSlice);							
 
 		double MuonMass; // MeV
 		double ProtonMass; // MeV

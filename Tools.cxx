@@ -21,6 +21,90 @@
 
 //----------------------------------------//
 
+int Tools::ReturnIndexIn2DList(std::vector< std::vector<double> > BinEdgeVector, int SliceIndex, double ValueInSlice) { 
+
+	int BinIndex = 1; // TH1D bin index, thus starting from 1
+	int VectorRowSize = BinEdgeVector.size();
+
+	for (int irow = 0; irow < VectorRowSize; irow++) {
+
+		if (irow != SliceIndex) {
+
+			BinIndex += BinEdgeVector.at(irow).size()-1;
+
+		} else {
+
+			int LocalBins = BinEdgeVector.at(irow).size();
+			BinIndex += ReturnIndex(ValueInSlice, BinEdgeVector.at(irow));
+			return BinIndex;
+
+		}
+
+
+	}
+
+	return BinIndex+1; // Offset to account for bin number vs array index
+
+}
+
+//----------------------------------------//
+
+std::vector<double> Tools::Return2DBinIndices(std::vector< std::vector<double> > BinEdgeVector) { 
+
+	int BinCounter = 0;
+	int VectorRowSize = BinEdgeVector.size();
+	std::vector<double> BinIndices;
+
+	for (int irow = 0; irow < VectorRowSize; irow++) {
+
+		int NElements = BinEdgeVector.at(irow).size();
+
+		for (int ielement = 0; ielement < NElements-1; ielement++) {
+
+			// Lower bin edges in the form of indices
+			// + 0.5 so that the bins are centered at an integer (e.g. Bin 1, 2, 3 et al)
+			BinIndices.push_back(BinCounter+0.5);
+			BinCounter++;
+
+		}
+
+	}
+
+	// Upper bin edge
+	BinIndices.push_back(BinCounter+0.5);
+	return BinIndices;
+
+}	
+
+//----------------------------------------//
+
+int Tools::Return2DNBins(std::vector< std::vector<double> > BinEdgeVector) { 
+
+	int NBins = 0;
+	int BinCounter = 0;
+	int VectorRowSize = BinEdgeVector.size();
+
+	for (int irow = 0; irow < VectorRowSize; irow++) {
+
+		int NElements = BinEdgeVector.at(irow).size();
+
+		// Number of bins for each subvector
+		NBins += NElements-1;
+
+		for (int ielement = 0; ielement < NElements-1; ielement++) {
+
+			BinCounter++;
+
+		}
+
+	}
+
+	return NBins;
+
+}	
+
+//----------------------------------------//
+
 int Tools::ConcatRunSubRunEvent(int run, int subrun, int event) { 
 
 	// Safety checks to make sure that the numbers are not huge
