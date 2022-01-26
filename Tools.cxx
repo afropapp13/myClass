@@ -21,6 +21,57 @@
 
 //----------------------------------------//
 
+std::vector<TMatrixD> Tools::MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrixD matrix_syst) {
+
+	// MiniBooNE note from Mike Schaevitz
+	// https://microboone-docdb.fnal.gov/cgi-bin/sso/RetrieveFile?docid=5926&filename=tn253.pdf&version=1
+	
+	TMatrixD matrix_shape(nbins, nbins);
+	TMatrixD matrix_mixed(nbins, nbins);
+	TMatrixD matrix_norm(nbins, nbins);
+
+	///
+	double N_T = 0;
+	for (int idx = 0; idx < nbins; idx++) { N_T += matrix_pred(idx); }
+
+	///
+	double M_kl = 0;
+
+	for (int i = 0; i < nbins; i++) {
+		
+		for (int j = 0; j < nbins; j++) {
+			
+			M_kl += matrix_syst(i,j);
+	
+		}
+
+	}
+
+	///
+	for (int i = 0; i < nbins; i++) {
+
+		for (int j = 0; j < nbins; j++) {	
+  
+			double N_i = matrix_pred(i);
+			double N_j = matrix_pred(j);
+			double M_ij = matrix_syst(i,j);	  
+			double M_ik = 0; for(int k=0; k<nbins; k++) M_ik += matrix_syst(i,k);
+			double M_kj = 0; for(int k=0; k<nbins; k++) M_kj += matrix_syst(k,j);
+			matrix_shape(i,j) = M_ij - N_j*M_ik/N_T - N_i*M_kj/N_T + N_i*N_j*M_kl/N_T/N_T;
+			matrix_mixed(i,j) = N_j*M_ik/N_T + N_i*M_kj/N_T - 2*N_i*N_j*M_kl/N_T/N_T;	
+			matrix_norm(i,j) = N_i*N_j*M_kl/N_T/N_T;
+
+		}
+
+	}
+
+	std::vector<TMatrixD> NormShapeVector = {matrix_norm,matrix_shape};
+	return NormShapeVector;
+
+}
+
+//----------------------------------------//
+
 int Tools::ReturnIndexIn2DList(std::vector< std::vector<double> > BinEdgeVector, int SliceIndex, double ValueInSlice) { 
 
 	int BinIndex = 1; // TH1D bin index, thus starting from 1

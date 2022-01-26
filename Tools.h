@@ -12,6 +12,8 @@
 #include <TVector3.h>
 #include "TH1D.h"
 #include "TH2D.h"
+#include <TVectorD.h>
+#include <TMatrixD.h>
 
 class Tools {
 
@@ -40,6 +42,7 @@ class Tools {
 		int ReturnIndex(double value, std::vector<double> vec);
 		void Reweight(TH1D* h, double SF);	
 		void Reweight2D(TH2D* h, double SF);	
+		std::vector<TMatrixD> MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrixD matrix_syst);		
 		
 		int Return2DNBins(std::vector< std::vector<double> > BinVector);
 		std::vector<double> Return2DBinIndices(std::vector< std::vector<double> > BinVector);			
