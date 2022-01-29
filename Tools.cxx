@@ -72,6 +72,99 @@ std::vector<TMatrixD> Tools::MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrix
 
 //----------------------------------------//
 
+int Tools::ReturnIndexIn3DList(std::vector< std::vector< std::vector<double> > > BinEdgeVector, int FirstSliceIndex, int SecondSliceIndex, double ValueInSlice) { 
+
+	int BinIndex = 1; // TH1D bin index, thus starting from 1
+	int VectorRowSize = BinEdgeVector.size();
+
+	for (int irow = 0; irow < VectorRowSize; irow++) {
+
+		int VectorColumnSize = BinEdgeVector.at(irow).size();
+
+		for (int icolumn = 0; icolumn < VectorColumnSize; icolumn++){
+
+			if (irow != FirstSliceIndex || icolumn != SecondSliceIndex) {
+
+				BinIndex += BinEdgeVector.at(irow).at(icolumn).size()-1;
+
+			} else {
+
+				int LocalBins = BinEdgeVector.at(irow).at(icolumn).size();
+				BinIndex += ReturnIndex(ValueInSlice, BinEdgeVector.at(irow).at(icolumn));
+				return BinIndex;
+
+			}
+
+		}	
+
+	}
+
+	return BinIndex+1; // Offset to account for bin number vs array index
+
+}
+
+//----------------------------------------//
+
+std::vector<double> Tools::Return3DBinIndices(std::vector< std::vector< std::vector<double> > > BinEdgeVector) { 
+
+	int BinCounter = 0;
+	int VectorRowSize = BinEdgeVector.size();
+	std::vector<double> BinIndices;
+
+	for (int irow = 0; irow < VectorRowSize; irow++) {
+
+		int NElements = BinEdgeVector.at(irow).size();
+
+		for (int ielement = 0; ielement < NElements; ielement++) {
+
+			int NElementsColumn = BinEdgeVector.at(irow).at(ielement).size();	
+
+			for (int icolumn = 0; icolumn < NElementsColumn-1; icolumn++) {
+
+				// Lower bin edges in the form of indices
+				// + 0.5 so that the bins are centered at an integer (e.g. Bin 1, 2, 3 et al)
+				BinIndices.push_back(BinCounter+0.5);
+				BinCounter++;
+
+			}	
+
+		}
+
+	}
+	// Upper bin edge
+	BinIndices.push_back(BinCounter+0.5);
+	return BinIndices;
+
+}	
+
+//----------------------------------------//
+
+int Tools::Return3DNBins(std::vector< std::vector< std::vector<double> > > BinEdgeVector) { 
+
+	int NBins = 0;
+	int VectorRowSize = BinEdgeVector.size();
+
+	for (int irow = 0; irow < VectorRowSize; irow++) {
+
+		int NElements = BinEdgeVector.at(irow).size();
+
+		for (int icolumn = 0; icolumn < NElements; icolumn++) {
+
+			int NElementsColumn = BinEdgeVector.at(irow).at(icolumn).size();
+
+			// Number of bins for each subvector
+			NBins += NElementsColumn-1;
+
+		}
+
+	}
+
+	return NBins;
+
+}
+
+//----------------------------------------//
+
 int Tools::ReturnIndexIn2DList(std::vector< std::vector<double> > BinEdgeVector, int SliceIndex, double ValueInSlice) { 
 
 	int BinIndex = 1; // TH1D bin index, thus starting from 1
@@ -132,7 +225,6 @@ std::vector<double> Tools::Return2DBinIndices(std::vector< std::vector<double> >
 int Tools::Return2DNBins(std::vector< std::vector<double> > BinEdgeVector) { 
 
 	int NBins = 0;
-	int BinCounter = 0;
 	int VectorRowSize = BinEdgeVector.size();
 
 	for (int irow = 0; irow < VectorRowSize; irow++) {
@@ -141,12 +233,6 @@ int Tools::Return2DNBins(std::vector< std::vector<double> > BinEdgeVector) {
 
 		// Number of bins for each subvector
 		NBins += NElements-1;
-
-		for (int ielement = 0; ielement < NElements-1; ielement++) {
-
-			BinCounter++;
-
-		}
 
 	}
 

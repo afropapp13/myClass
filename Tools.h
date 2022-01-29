@@ -46,7 +46,11 @@ class Tools {
 		
 		int Return2DNBins(std::vector< std::vector<double> > BinVector);
 		std::vector<double> Return2DBinIndices(std::vector< std::vector<double> > BinVector);			
-		int ReturnIndexIn2DList(std::vector< std::vector<double> > BinEdgeVector, int SliceIndex, double ValueInSlice);							
+		int ReturnIndexIn2DList(std::vector< std::vector<double> > BinEdgeVector, int SliceIndex, double ValueInSlice);
+		
+		int Return3DNBins(std::vector< std::vector< std::vector<double> > > BinVector);
+		std::vector<double> Return3DBinIndices(std::vector< std::vector< std::vector<double> > > BinVector);			
+		int ReturnIndexIn3DList(std::vector< std::vector< std::vector<double> > > BinEdgeVector, int FirstSliceIndex, int SecondSliceIndex, double ValueInSlice);
 
 		double MuonMass; // MeV
 		double ProtonMass; // MeV
