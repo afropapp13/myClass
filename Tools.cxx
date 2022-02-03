@@ -19,6 +19,106 @@
 
 #include "Tools.h"
 
+using namespace std;
+
+//----------------------------------------//
+
+std::vector< std::vector<double> > Tools::CollapseMatrixIntoArray(std::vector< std::vector< std::vector<double> > > Matrix) {
+
+	// First make sure that the new vector has the correct size
+
+	int NRows = Matrix.size();
+	std::vector< std::vector<double> > SerialArray; SerialArray.resize(NRows);
+cout << "NRows = " << NRows << endl;
+	int NColumns = Matrix.at(0).size();
+cout << "NColumns = " << NColumns << endl;
+
+	for (int icolumn = 0; icolumn < NColumns; icolumn++) {
+
+		for (int irow = 0; irow < NRows; irow++) {		
+
+			for (int ielement = 0; ielement < Matrix.at(irow).at(icolumn).size(); ielement++) {
+
+				SerialArray[irow].push_back(Matrix.at(irow).at(icolumn).at(ielement));
+
+			}
+
+		}
+
+	}
+
+	return SerialArray;
+
+}
+
+//----------------------------------------//
+
+TH2D* Tools::Get2DHistoBins(TH2D* h,int LowBin,int HighBin,double ScaleFactor,std::vector<double> Binning) {
+
+	TString PlotName = TString(h->GetName()) + "_"+TString(std::to_string(LowBin)) + "_"+TString(std::to_string(HighBin));
+	TString XaxisTitle = h->GetXaxis()->GetTitle();
+	TString YaxisTitle = h->GetYaxis()->GetTitle();	
+	int NBins = HighBin - LowBin + 1;
+ 
+	TH2D* clone = new TH2D(PlotName,";" + XaxisTitle + ";" + YaxisTitle, NBins, &Binning[0], NBins, &Binning[0] );
+
+	// Loop over the bin indices, aka starting from 1
+	for (int iBin = 1; iBin <= NBins; iBin++) {
+
+		for (int jBin = 1; jBin <= NBins; jBin++) {
+
+			double BinWidth = ( Binning.at(iBin) - Binning.at(iBin - 1) ) * ( Binning.at(jBin) - Binning.at(jBin - 1) );
+			double TotalScaleFactor = BinWidth * TMath::Power(ScaleFactor,2.);			
+
+			double CurrentHistoEntry = h->GetBinContent(LowBin + iBin - 1,LowBin + jBin - 1);		
+			double CurrentHistoError = h->GetBinError(LowBin + iBin - 1,LowBin + jBin - 1);	
+
+			double NewHistoEntry = CurrentHistoEntry / TotalScaleFactor;
+			double NewHistoError = CurrentHistoError / TotalScaleFactor;
+
+			clone->SetBinContent(iBin,jBin,NewHistoEntry);
+			clone->SetBinError(iBin,jBin,NewHistoError);
+
+		}		
+
+	} // End of the loop over the bin indices
+
+	return clone;
+
+}
+
+//----------------------------------------//
+
+TH1D* Tools::GetHistoBins(TH1D* h,int LowBin,int HighBin,double ScaleFactor,std::vector<double> Binning, TString Name) {
+
+	TString PlotName = Name + TString(h->GetName()) + "_"+TString(std::to_string(LowBin)) + "_"+TString(std::to_string(HighBin));
+	TString XaxisTitle = h->GetXaxis()->GetTitle();
+	TString YaxisTitle = h->GetYaxis()->GetTitle();	
+	int NBins = HighBin - LowBin + 1;
+
+	TH1D* clone = new TH1D(PlotName,";" + XaxisTitle + ";" + YaxisTitle, NBins, &Binning[0] );
+
+	// Loop over the bin indices, aka starting from 1
+	for (int iBin = 1; iBin <= NBins; iBin++) {
+
+		double BinWidth = Binning.at(iBin) - Binning.at(iBin - 1);
+		double TotalScaleFactor = BinWidth * ScaleFactor;
+
+		double CurrentHistoEntry = h->GetBinContent(LowBin + iBin - 1);		
+		double CurrentHistoError = h->GetBinError(LowBin + iBin - 1);	
+
+		double NewHistoEntry = CurrentHistoEntry / TotalScaleFactor;
+		double NewHistoError = CurrentHistoError / TotalScaleFactor;		
+
+		clone->SetBinContent(iBin,NewHistoEntry);
+		clone->SetBinError(iBin,NewHistoError);		
+
+	} // End of the loop over the bin indices
+
+	return clone;
+
+}
+
 //----------------------------------------//
 
 std::vector<TMatrixD> Tools::MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrixD matrix_syst) {
