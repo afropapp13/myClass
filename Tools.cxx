@@ -37,7 +37,7 @@ cout << "NColumns = " << NColumns << endl;
 
 		for (int irow = 0; irow < NRows; irow++) {		
 
-			for (int ielement = 0; ielement < Matrix.at(irow).at(icolumn).size(); ielement++) {
+			for (int ielement = 0; ielement < (int)(Matrix.at(irow).at(icolumn).size()); ielement++) {
 
 				SerialArray[irow].push_back(Matrix.at(irow).at(icolumn).at(ielement));
 
