@@ -84,9 +84,9 @@ namespace Constants {
 		{ "ProtonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "ProtonPhiPlot",  std::make_pair(0, 0.045) },
 		{ "ECalPlot",  std::make_pair(0, 22.9) },
-		{ "ECalLowPTPlot",  std::make_pair(0, 54.9) },	
-		{ "ECalMidPTPlot",  std::make_pair(0, 39.9) },	
-		{ "ECalHighPTPlot",  std::make_pair(0, 7.9) },				
+		{ "ECal_DeltaPT_0_00To0_20Plot",  std::make_pair(0, 54.9) },	
+		{ "ECal_DeltaPT_0_20To0_40Plot",  std::make_pair(0, 39.9) },	
+		{ "ECal_DeltaPT_0_40To1_00Plot",  std::make_pair(0, 7.9) },				
 		{ "EQEPlot",  std::make_pair(0, 19) },
 		{ "Q2Plot",  std::make_pair(0, 29) },	
 		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
@@ -150,31 +150,31 @@ namespace Constants {
 		{ "DeltaPtx_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 17.) },
 		{ "DeltaPtx_DeltaPty_Minus0_15To0_15Plot",  std::make_pair(0, 109.) },
 		{ "DeltaPtx_DeltaPty_0_15To0_45Plot",  std::make_pair(0, 12.) },		
-		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.45) },
-		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.49) },
-		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.49) },	
-		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.49) },
-		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.09) },
-		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.09) },
-		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.29) },	
-		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.29) },
-		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.005) },
-		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.005) },
-		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.005) },	
-		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.005) },
-		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 4.) },
-		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 4.) },
-		{ "ECal_ProtonCosTheta_Minus1_00To0_00_ProtonMomentum_0_30To0_50Plot",  std::make_pair(0, 14.) },
+		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.42) },
+		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.44) },
+		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.47) },	
+		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.43) },
+		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.19) },
+		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.19) },
+		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.31) },	
+		{ "ECal_DeltaPT_0_20To0_40_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.32) },
+		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.05) },
+		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.05) },
+		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.05) },	
+		{ "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.05) },
+		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 8.) },
+		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 3.) },
+		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 0.04) },
+		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 9.) },
+		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 5.) },
+		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 7.) },
+		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 9.) },
+		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_64Plot",  std::make_pair(0, 9.) },
+		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 8.) },
+		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 40.) },
+		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 2.) },
+		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_64To1_20Plot",  std::make_pair(0, 3.) },
+		{ "ECal_ProtonCosTheta_Minus1_00To0_00_ProtonMomentum_0_30To0_50Plot",  std::make_pair(0, 12.) },
 		{ "ECal_ProtonCosTheta_0_00To0_50_ProtonMomentum_0_30To0_50Plot",  std::make_pair(0, 40.) },
 		{ "ECal_ProtonCosTheta_0_50To0_75_ProtonMomentum_0_30To0_50Plot",  std::make_pair(0, 49.) },
 		{ "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_30To0_50Plot",  std::make_pair(0, 50.) },
@@ -226,9 +226,9 @@ namespace Constants {
 		{ "ProtonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "ProtonPhiPlot",  "#frac{d#sigma}{d#phi_{p}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "ECalPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
-		{ "ECalLowPTPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },	
-		{ "ECalMidPTPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
-		{ "ECalHighPTPlot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },					
+		{ "ECal_DeltaPT_0_00To0_20Plot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },	
+		{ "ECal_DeltaPT_0_20To0_40Plot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
+		{ "ECal_DeltaPT_0_40To1_00Plot",  "#frac{d#sigma}{dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },					
 		{ "EQEPlot",  "#frac{d#sigma}{dE^{QE}} #left[10^{-38} #frac{cm^{2}}{GeV Ar}#right]" },
 		{ "Q2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
 		{ "CCQEMuonMomentumPlot",  "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
@@ -344,9 +344,9 @@ namespace Constants {
 		{ "SerialDeltaPn_DeltaPTPlot",  "#frac{d^{2}#sigma}{dp_{n,proxy}d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },
 		{ "SerialECal_DeltaPTPlot", "#frac{d^{2}#sigma}{dE^{Cal} d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },
 		{ "SerialECal_DeltaAlphaTPlot", "#frac{d^{2}#sigma}{dE^{Cal} d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]" },
-		{ "SerialECal_DeltaPTDeltaAlphaTPlot", "#frac{d^{2}#sigma}{dE^{Cal} d#deltap_{T} d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
-		{ "SerialECal_MuonCosThetaMuonMomentumPlot", "#frac{d^{2}#sigma}{dE^{Cal} dp_{#mu} dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },
-		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", "#frac{d^{2}#sigma}{dE^{Cal} dp_{p} dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },		
+		{ "SerialECal_DeltaPTDeltaAlphaTPlot", "#frac{d^{3}#sigma}{dE^{Cal} d#deltap_{T} d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
+		{ "SerialECal_MuonCosThetaMuonMomentumPlot", "#frac{d^{3}#sigma}{dE^{Cal} dp_{#mu} dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },
+		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", "#frac{d^{3}#sigma}{dE^{Cal} dp_{p} dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },		
 		{ "SerialProtonCosTheta_MuonCosThetaPlot",  "#frac{d^{2}#sigma}{dcos#theta_{#mu} dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "SerialDeltaPty_DeltaPtxPlot", "#frac{d^{2}#sigma}{d#deltap_{T,x} d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },
 		{ "SerialDeltaPtx_DeltaPtyPlot", "#frac{d^{2}#sigma}{d#deltap_{T,x} d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },			
@@ -365,9 +365,9 @@ namespace Constants {
 		{ "ProtonCosThetaPlot",  "" },
 		{ "ProtonPhiPlot",  "" },
 		{ "ECalPlot",  "" },
-		{ "ECalLowPTPlot",  "" },	
-		{ "ECalMidPTPlot",  "" },
-		{ "ECalHighPTPlot",  "" },					
+		{ "ECal_DeltaPT_0_00To0_20Plot",  "#deltap_{T} < 0.2 GeV/c" },	
+		{ "ECal_DeltaPT_0_20To0_40Plot",  "0.2 < #deltap_{T} < 0.4 GeV/c" },
+		{ "ECal_DeltaPT_0_40To1_00Plot",  "#deltap_{T} > 0.4 GeV/c" },					
 		{ "EQEPlot",  "" },
 		{ "Q2Plot",  "" },	
 		{ "CCQEMuonMomentumPlot",  "" },
@@ -543,9 +543,9 @@ namespace Constants {
 		{ "SerialDeltaPn_DeltaPTPlot_1",  "DeltaPn_DeltaPT_0_20To0_40Plot" },
 		{ "SerialDeltaPn_DeltaPTPlot_2",  "DeltaPn_DeltaPT_0_40To1_00Plot" },
 								
-		{ "SerialECal_DeltaPTPlot_0", "ECalLowPTPlot" },
-		{ "SerialECal_DeltaPTPlot_1", "ECalMidPTPlot" },
-		{ "SerialECal_DeltaPTPlot_2", "ECalHighPTPlot" },
+		{ "SerialECal_DeltaPTPlot_0", "ECal_DeltaPT_0_00To0_20Plot" },
+		{ "SerialECal_DeltaPTPlot_1", "ECal_DeltaPT_0_20To0_40Plot" },
+		{ "SerialECal_DeltaPTPlot_2", "ECal_DeltaPT_0_40To1_00Plot" },
 		
 		{ "SerialECal_DeltaAlphaTPlot_0", "ECal_DeltaAlphaT_0_00To45_00Plot" },
 		{ "SerialECal_DeltaAlphaTPlot_1", "ECal_DeltaAlphaT_45_00To90_00Plot" },
@@ -640,7 +640,7 @@ namespace Constants {
 	vector<TString> PlotNames{"DeltaPTPlot","DeltaAlphaTPlot","DeltaPhiTPlot","MuonMomentumPlot","MuonCosThetaPlot"
 				 ,"MuonCosThetaSingleBinPlot","MuonPhiPlot","ProtonMomentumPlot"
 				 ,"ProtonCosThetaPlot","ProtonPhiPlot","Q2Plot","ECalPlot","EQEPlot"
-				 ,"ECalLowPTPlot","ECalMidPTPlot","ECalHighPTPlot"
+				 ,"ECal_DeltaPT_0_00To0_20Plot","ECal_DeltaPT_0_20To0_40Plot","ECal_DeltaPT_0_40To1_00Plot"
 				 ,"CCQEMuonMomentumPlot","CCQEMuonCosThetaPlot","CCQEProtonMomentumPlot","CCQEProtonCosThetaPlot"
 				 ,"CCQEQ2Plot","CCQEECalPlot"
 				 ,"DeltaPLPlot","DeltaPnPlot","DeltaPtxPlot","DeltaPtyPlot"
@@ -710,11 +710,6 @@ namespace Constants {
 /*	vector<TString> Runs{"Run1","Run2","Run3"};*/
 	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Combined"};
 //	vector<TString> Runs{"Run1","Run2","Run3","Run4","Run5"};
-
-	// DeltaPT Slices
-
-	vector<double> LowPT{0.,0.2,0.4};
-	vector<double> HighPT{0.2,0.4,2.};	
 
 	// v43 Run 1 
 
@@ -1219,8 +1214,8 @@ namespace Constants {
 	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaPTInDeltaAlphaTSlices{ 
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}, // DeltaAlphaT < 45 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}, // 45 < DeltaAlphaT < 90 deg
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.9}, // DeltaAlphaT < 45 deg
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.9}, // 45 < DeltaAlphaT < 90 deg
 												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}, // 90 < DeltaAlphaT < 135 deg
 												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}  // DeltaAlphaT > 135 deg		
 											};											
@@ -1291,7 +1286,7 @@ namespace Constants {
 												{0,0.1,0.2,0.3,0.4,0.55,0.65,0.75,0.9}, // -1    < cosθp < 0
 												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}, //  0    < cosθp < 0.5
 												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}, //  0.5  < cosθp < 0.75
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}  //  0.75 < cosθp < 1
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.9}  //  0.75 < cosθp < 1
 											};																						
 											
 	//----------------------------------------//
@@ -1299,7 +1294,7 @@ namespace Constants {
 	std::vector< std::vector<double> > TwoDArrayNBinsMuonMomentumInMuonCosThetaSlices{ 
 												{ 0.1,0.2,0.3,0.4,1.2},                           // -1    < cosθμ < 0
 												{ 0.1,0.2,0.3,0.4,0.5,1.2},                       //  0    < cosθμ < 0.5
-												{ 0.1,0.2,0.3,0.4,0.5,0.64,0.77,0.9,1.2},         //  0.5  < cosθμ < 0.75
+												{ 0.1,0.2,0.3,0.4,0.5,0.64,0.77,1.2},         //  0.5  < cosθμ < 0.75
 												{ 0.1,0.2,0.3,0.4,0.5,0.64,0.77,0.9,1.,1.1,1.2}   //  0.75 < cosθμ < 1
 											};
 											
@@ -1307,7 +1302,7 @@ namespace Constants {
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsProtonCosThetaInMuonCosThetaSlices{ 
 												{ -1.,0.05,0.2,0.37,0.54,0.7,0.8,0.9,1.},                   // -1    < cosθμ < 0
-												{ -1.,-0.73,-0.43,-0.18,0.05,0.2,0.37,0.54,0.7,0.8,0.9,1.}, //  0    < cosθμ < 0.5
+												{ -1.,-0.73,-0.43,-0.18,0.05,0.2,0.37,0.54,0.7,0.8,1.}, //  0    < cosθμ < 0.5
 												{ -1.,-0.73,-0.43,-0.18,0.05,0.2,0.37,0.54,0.7,0.8,0.9,1.}, //  0.5  < cosθμ < 0.75
 												{ -1.,-0.73,-0.43,-0.18,0.05,0.2,0.37,0.54,0.7,0.8,0.9,1.}  //  0.75 < cosθμ < 1
 											};											
@@ -1341,16 +1336,16 @@ namespace Constants {
 	//----------------------------------------//	
 	
 	std::vector< std::vector< std::vector<double> > > TwoDArrayNBinsECalInDeltaPTDeltaAlphaTSlices{	{ // DeltaPT < 0.2 GeV/c
-														{0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}, // DeltaAphaT < 45 deg
-														{0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}, // 45 < DeltaAphaT < 90 deg 
-														{0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}, // 90 < DeltaAlphaT < 135 deg
-														{0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6} // 135 < DeltaAlphaT < 180 deg
+														{0.2,0.4,0.6,0.8,1.,1.2,1.6}, // DeltaAphaT < 45 deg
+														{0.2,0.4,0.6,0.8,1.,1.2,1.6}, // 45 < DeltaAphaT < 90 deg 
+														{0.2,0.4,0.6,0.8,1.,1.2,1.6}, // 90 < DeltaAlphaT < 135 deg
+														{0.2,0.4,0.6,0.8,1.,1.2,1.6} // 135 < DeltaAlphaT < 180 deg
 														},	
 														
 														{ // 0.2 < DeltaPT < 0.4 GeV/c
-														{0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}, // DeltaAphaT < 45 deg
-														{0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}, // 45 < DeltaAphaT < 90 deg
-														{0.2,0.4,0.6,0.8,1.,1.2,1.4,1.6}, // 90 < DeltaAlphaT < 135 deg		
+														{0.2,0.4,0.6,0.8,1.,1.2,1.6}, // DeltaAphaT < 45 deg
+														{0.2,0.4,0.6,0.8,1.,1.2,1.6}, // 45 < DeltaAphaT < 90 deg
+														{0.2,0.4,0.6,0.8,1.,1.2,1.6}, // 90 < DeltaAlphaT < 135 deg		
 														{0.2,0.4,0.6,0.8,1.,1.2,1.6} // 135 < DeltaAlphaT < 180 deg
 														},
 														
@@ -1367,25 +1362,25 @@ namespace Constants {
 	
 	std::vector< std::vector< std::vector<double> > > TwoDArrayNBinsECalInMuonCosThetaMuonMomentumSlices{
 														{ // -1 < cosθμ < 0
-														{0.2,0.4,0.6,0.8,1.6}, // 0.10 < Pμ < 0.40 GeV/c
-														{0.2,0.6,0.8,1.,1.6},  // 0.40 < Pμ < 0.64 GeV/c
-														{0.2,1.,1.6}           // 0.64 < Pμ < 1.20 GeV/c
+														{0.2,0.4,0.6,1.6}, // 0.10 < Pμ < 0.40 GeV/c
+														{0.2,0.6,1.6},  // 0.40 < Pμ < 0.64 GeV/c
+														{0.2,1.6}           // 0.64 < Pμ < 1.20 GeV/c
 														},	
 														
 														{ // 0 < cosθμ < 0.5
-														{0.2,0.4,0.6,0.8,1.6}, // 0.10 < Pμ < 0.40 GeV/c
-														{0.2,0.6,0.8,1.,1.6},  // 0.40 < Pμ < 0.64 GeV/c
+														{0.2,0.4,0.6,1.6}, // 0.10 < Pμ < 0.40 GeV/c
+														{0.2,0.6,0.8,1.6},  // 0.40 < Pμ < 0.64 GeV/c
 														{0.2,0.8,1.,1.2,1.6}   // 0.64 < Pμ < 1.20 GeV/c
 														},
 														
 														{ // 0.5 < cosθμ < 0.75
-														{0.2,0.4,0.6,0.8,1.6}, // 0.10 < Pμ < 0.40 GeV/c
-														{0.2,0.6,0.8,1.,1.6},  // 0.40 < Pμ < 0.64 GeV/c
-														{0.2,0.8,1.,1.2,1.6}   // 0.64 < Pμ < 1.20 GeV/c
+														{0.2,0.4,0.6,1.6}, // 0.10 < Pμ < 0.40 GeV/c
+														{0.2,0.6,0.8,1.6},  // 0.40 < Pμ < 0.64 GeV/c
+														{0.2,0.8,1.,1.6}   // 0.64 < Pμ < 1.20 GeV/c
 														},														
 														
 														{ // 0.75 < cosθμ < 1
-														{0.2,0.5,0.8,1.6},     // 0.10 < Pμ < 0.40 GeV/c
+														{0.2,0.5,1.6},     // 0.10 < Pμ < 0.40 GeV/c
 														{0.2,0.8,1.6},         // 0.40 < Pμ < 0.64 GeV/c
 														{0.2,0.8,1.2,1.6}      // 0.64 < Pμ < 1.20 GeV/c
 														}		
@@ -1438,9 +1433,9 @@ namespace Constants {
 		{ "ProtonCosThetaPlot", 1. },
 		{ "ProtonPhiPlot", 1. },
 		{ "ECalPlot", 1. },
-		{ "ECalLowPTPlot", TwoDArrayNBinsDeltaPT.at(1) - TwoDArrayNBinsDeltaPT.at(0) },	
-		{ "ECalMidPTPlot", TwoDArrayNBinsDeltaPT.at(2) - TwoDArrayNBinsDeltaPT.at(1) },	
-		{ "ECalHighPTPlot", TwoDArrayNBinsDeltaPT.at(3) - TwoDArrayNBinsDeltaPT.at(2) },				
+		{ "ECal_DeltaPT_0_00To0_20Plot", TwoDArrayNBinsDeltaPT.at(1) - TwoDArrayNBinsDeltaPT.at(0) },	
+		{ "ECal_DeltaPT_0_20To0_40Plot", TwoDArrayNBinsDeltaPT.at(2) - TwoDArrayNBinsDeltaPT.at(1) },	
+		{ "ECal_DeltaPT_0_40To1_00Plot", TwoDArrayNBinsDeltaPT.at(3) - TwoDArrayNBinsDeltaPT.at(2) },				
 		{ "EQEPlot", 1. },
 		{ "Q2Plot", 1. },	
 		{ "CCQEMuonMomentumPlot", 1. },
