@@ -171,10 +171,10 @@ namespace Constants {
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 24.) },
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 22.) },
 		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot",  std::make_pair(0, 8.) },
-		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_6Plot",  std::make_pair(0, 1.4) },
-		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_6Plot",  std::make_pair(0, 34.) },
-		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_6Plot",  std::make_pair(0, 69.) },
-		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_6Plot",  std::make_pair(0, 21.) },
+		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_60Plot",  std::make_pair(0, 1.4) },
+		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_60Plot",  std::make_pair(0, 34.) },
+		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_60Plot",  std::make_pair(0, 69.) },
+		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_60Plot",  std::make_pair(0, 21.) },
 		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_6To1_20Plot",  std::make_pair(0, 0.009) },
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_6To1_20Plot",  std::make_pair(0, 3.) },
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_6To1_20Plot",  std::make_pair(0, 21.) },
@@ -318,10 +318,10 @@ namespace Constants {
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },
 		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
-		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_6Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
-		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_6Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
-		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_6Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
-		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_6Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
+		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_60Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
+		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_60Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
+		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_60Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
+		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_60Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
 		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_6To1_20Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_6To1_20Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_6To1_20Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
@@ -462,10 +462,10 @@ namespace Constants {
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot","0 < cos#theta_{#mu} < 0.5, 0.1 < P_{#mu} < 0.4 GeV/c"},
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot","0.5 < cos#theta_{#mu} < 0.75, 0.1 < P_{#mu} < 0.4 GeV/c" },
 		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot","0.75 < cos#theta_{#mu} < 1, 0.1 < P_{#mu} < 0.4 GeV/c"},
-		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_6Plot","-1 < cos#theta_{#mu} < 0, 0.4 < P_{#mu} < 0.6 GeV/c"},
-		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_6Plot","0 < cos#theta_{#mu} < 0.5, 0.4 < P_{#mu} < 0.6 GeV/c"},
-		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_6Plot","0.5 < cos#theta_{#mu} < 0.75, 0.4 < P_{#mu} < 0.6 GeV/c"},
-		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_6Plot","0.75 < cos#theta_{#mu} < 1, 0.4 < P_{#mu} < 0.6 GeV/c"},
+		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_60Plot","-1 < cos#theta_{#mu} < 0, 0.4 < P_{#mu} < 0.6 GeV/c"},
+		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_60Plot","0 < cos#theta_{#mu} < 0.5, 0.4 < P_{#mu} < 0.6 GeV/c"},
+		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_60Plot","0.5 < cos#theta_{#mu} < 0.75, 0.4 < P_{#mu} < 0.6 GeV/c"},
+		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_60Plot","0.75 < cos#theta_{#mu} < 1, 0.4 < P_{#mu} < 0.6 GeV/c"},
 		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_6To1_20Plot","-1 < cos#theta_{#mu} < 0, 0.6 < P_{#mu} < 1.2 GeV/c"},
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_6To1_20Plot","0 < cos#theta_{#mu} < 0.5, 0.6 < P_{#mu} < 1.2 GeV/c"},
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_6To1_20Plot","0.5 < cos#theta_{#mu} < 0.75, 0.6 < P_{#mu} < 1.2 GeV/c"},
@@ -587,16 +587,16 @@ namespace Constants {
 		{ "SerialECal_DeltaPTDeltaAlphaTPlot_11", "ECal_DeltaPT_0_40To1_00_DeltaAlphaT_135_00To180_00Plot" },	
 		
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_0", "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_10To0_40Plot" },
-		{ "SerialECal_MuonCosThetaMuonMomentumPlot_1", "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_6Plot" },
+		{ "SerialECal_MuonCosThetaMuonMomentumPlot_1", "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_60Plot" },
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_2", "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_6To1_20Plot" },	
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_3", "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot" },
-		{ "SerialECal_MuonCosThetaMuonMomentumPlot_4", "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_6Plot" },
+		{ "SerialECal_MuonCosThetaMuonMomentumPlot_4", "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_60Plot" },
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_5", "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_6To1_20Plot" },
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_6", "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot" },
-		{ "SerialECal_MuonCosThetaMuonMomentumPlot_7", "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_6Plot" },
+		{ "SerialECal_MuonCosThetaMuonMomentumPlot_7", "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_60Plot" },
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_8", "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_6To1_20Plot" },
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_9", "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot" },
-		{ "SerialECal_MuonCosThetaMuonMomentumPlot_10", "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_6Plot" },
+		{ "SerialECal_MuonCosThetaMuonMomentumPlot_10", "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_60Plot" },
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot_11", "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_6To1_20Plot" },
 		
 		{ "SerialECal_ProtonCosThetaProtonMomentumPlot_0", "ECal_ProtonCosTheta_Minus1_00To0_00_ProtonMomentum_0_30To0_50Plot" },
@@ -689,8 +689,8 @@ namespace Constants {
 				 ,"ECal_DeltaPT_0_40To1_00_DeltaAlphaT_90_00To135_00Plot","ECal_DeltaPT_0_40To1_00_DeltaAlphaT_135_00To180_00Plot"				 
 				 ,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_10To0_40Plot", "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot"
 				 ,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot"
-				 ,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_6Plot","ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_6Plot"
-				 ,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_6Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_6Plot"
+				 ,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_60Plot","ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_60Plot"
+				 ,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_60Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_60Plot"
 				 ,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_6To1_20Plot","ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_6To1_20Plot"
 				 ,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_6To1_20Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_6To1_20Plot"
 				 ,"ECal_ProtonCosTheta_Minus1_00To0_00_ProtonMomentum_0_30To0_50Plot","ECal_ProtonCosTheta_0_00To0_50_ProtonMomentum_0_30To0_50Plot"
@@ -821,8 +821,8 @@ namespace Constants {
 				 //,"ECal_DeltaPT_0_40To1_00_DeltaAlphaT_90_00To135_00Plot","ECal_DeltaPT_0_40To1_00_DeltaAlphaT_135_00To180_00Plot"				 
 				 //,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_10To0_40Plot", "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot"
 				 //,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot"
-				 //,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_6Plot","ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_6Plot"
-				 //,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_6Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_6Plot"
+				 //,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_60Plot","ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_60Plot"
+				 //,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_60Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_60Plot"
 				 //,"ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_6To1_20Plot","ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_6To1_20Plot"
 				 //,"ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_6To1_20Plot","ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_6To1_20Plot"
 				 //,"ECal_ProtonCosTheta_Minus1_00To0_00_ProtonMomentum_0_30To0_50Plot","ECal_ProtonCosTheta_0_00To0_50_ProtonMomentum_0_30To0_50Plot"
@@ -1762,10 +1762,10 @@ namespace Constants {
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_10To0_40Plot",  ( TwoDArrayNBinsMuonCosTheta.at(2) - TwoDArrayNBinsMuonCosTheta.at(1) ) * ( TwoDArrayNBinsMuonMomentum.at(1) - TwoDArrayNBinsMuonMomentum.at(0) ) },
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_10To0_40Plot", ( TwoDArrayNBinsMuonCosTheta.at(3) - TwoDArrayNBinsMuonCosTheta.at(2) ) * ( TwoDArrayNBinsMuonMomentum.at(1) - TwoDArrayNBinsMuonMomentum.at(0) ) },
 		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_10To0_40Plot", ( TwoDArrayNBinsMuonCosTheta.at(4) - TwoDArrayNBinsMuonCosTheta.at(3) ) * ( TwoDArrayNBinsMuonMomentum.at(1) - TwoDArrayNBinsMuonMomentum.at(0) ) },
-		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_6Plot", ( TwoDArrayNBinsMuonCosTheta.at(1) - TwoDArrayNBinsMuonCosTheta.at(0) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
-		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_6Plot", ( TwoDArrayNBinsMuonCosTheta.at(2) - TwoDArrayNBinsMuonCosTheta.at(1) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
-		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_6Plot", ( TwoDArrayNBinsMuonCosTheta.at(3) - TwoDArrayNBinsMuonCosTheta.at(2) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
-		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_6Plot",  ( TwoDArrayNBinsMuonCosTheta.at(4) - TwoDArrayNBinsMuonCosTheta.at(3) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
+		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_40To0_60Plot", ( TwoDArrayNBinsMuonCosTheta.at(1) - TwoDArrayNBinsMuonCosTheta.at(0) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
+		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_40To0_60Plot", ( TwoDArrayNBinsMuonCosTheta.at(2) - TwoDArrayNBinsMuonCosTheta.at(1) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
+		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_40To0_60Plot", ( TwoDArrayNBinsMuonCosTheta.at(3) - TwoDArrayNBinsMuonCosTheta.at(2) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
+		{ "ECal_MuonCosTheta_0_75To1_00_MuonMomentum_0_40To0_60Plot",  ( TwoDArrayNBinsMuonCosTheta.at(4) - TwoDArrayNBinsMuonCosTheta.at(3) ) * ( TwoDArrayNBinsMuonMomentum.at(2) - TwoDArrayNBinsMuonMomentum.at(1) ) },
 		{ "ECal_MuonCosTheta_Minus1_00To0_00_MuonMomentum_0_6To1_20Plot", ( TwoDArrayNBinsMuonCosTheta.at(1) - TwoDArrayNBinsMuonCosTheta.at(0) ) * ( TwoDArrayNBinsMuonMomentum.at(3) - TwoDArrayNBinsMuonMomentum.at(2) ) },
 		{ "ECal_MuonCosTheta_0_00To0_50_MuonMomentum_0_6To1_20Plot", ( TwoDArrayNBinsMuonCosTheta.at(2) - TwoDArrayNBinsMuonCosTheta.at(1) ) * ( TwoDArrayNBinsMuonMomentum.at(3) - TwoDArrayNBinsMuonMomentum.at(2) ) },
 		{ "ECal_MuonCosTheta_0_50To0_75_MuonMomentum_0_6To1_20Plot",  ( TwoDArrayNBinsMuonCosTheta.at(3) - TwoDArrayNBinsMuonCosTheta.at(2) ) * ( TwoDArrayNBinsMuonMomentum.at(3) - TwoDArrayNBinsMuonMomentum.at(2) )},
