@@ -165,7 +165,7 @@ std::vector<TMatrixD> Tools::MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrix
 
 	}
 
-	std::vector<TMatrixD> NormShapeVector = {matrix_norm,matrix_shape};
+	std::vector<TMatrixD> NormShapeVector = {matrix_norm,matrix_shape+matrix_mixed};
 	return NormShapeVector;
 
 }
