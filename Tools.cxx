@@ -29,9 +29,7 @@ std::vector< std::vector<double> > Tools::CollapseMatrixIntoArray(std::vector< s
 
 	int NRows = Matrix.size();
 	std::vector< std::vector<double> > SerialArray; SerialArray.resize(NRows);
-cout << "NRows = " << NRows << endl;
 	int NColumns = Matrix.at(0).size();
-cout << "NColumns = " << NColumns << endl;
 
 	for (int icolumn = 0; icolumn < NColumns; icolumn++) {
 
@@ -342,21 +340,16 @@ int Tools::Return2DNBins(std::vector< std::vector<double> > BinEdgeVector) {
 
 //----------------------------------------//
 
-int Tools::ConcatRunSubRunEvent(int run, int subrun, int event) { 
-
-	// Safety checks to make sure that the numbers are not huge
-
-	int ModRun = run /1E6; if (TMath::Abs(ModRun) > 1) { run = TMath::Abs(ModRun); }
-	int ModSubRun = subrun /1E6; if (TMath::Abs(ModSubRun) > 1) { subrun = TMath::Abs(ModSubRun); }	
-	int ModEvent = event /1E6; if (TMath::Abs(ModEvent) > 1) { event = TMath::Abs(ModEvent); }	
+int Tools::ConcatRunSubRunEvent(int run, int subrun, int event, int universe) { 
 
 	// Convert the integers to string 
 	std::string srun    = std::to_string(run); 
 	std::string ssubrun = std::to_string(subrun);
 	std::string sevent  = std::to_string(event);
+	std::string suniv  = std::to_string(universe);	
 
-	// Concatenate the subrun and event. Dont add the run because it makes the number too long for storing as an int
-	std::string s =  ssubrun + sevent; 
+	// Concatenate the subrun and universe. Dont add the run/subrun because it makes the number too long for storing as an int
+	std::string s =  ssubrun + suniv; 
 
 	// std::cout << srun << "  " << ssubrun << "  " << sevent<< std::endl;
   

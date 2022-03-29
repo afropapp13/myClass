@@ -29,7 +29,7 @@ class Tools {
 		// Default destructor
 		~Tools(){}
 
-		int ConcatRunSubRunEvent(int run, int subrun, int event);
+		int ConcatRunSubRunEvent(int run, int subrun, int event, int univ);
 		double PoissonRandomNumber(int seed);
 		bool is_meson_or_antimeson(int pdg);
 		bool IsContained(TVector3 TrackStart, TVector3 TrackEnd);
