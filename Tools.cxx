@@ -51,7 +51,7 @@ std::vector< std::vector<double> > Tools::CollapseMatrixIntoArray(std::vector< s
 
 //----------------------------------------//
 
-TH2D* Tools::Get2DHistoBins(TH2D* h,int LowBin,int HighBin,double ScaleFactor,std::vector<double> Binning) {
+TH2D* Tools::Get2DHistoBins(TH2D* h,int LowBin,int HighBin,double ScaleFactor,std::vector<double> Binning, bool Scale = true) {
 
 	TString PlotName = TString(h->GetName()) + "_"+TString(std::to_string(LowBin)) + "_"+TString(std::to_string(HighBin));
 	TString XaxisTitle = h->GetXaxis()->GetTitle();
@@ -66,7 +66,8 @@ TH2D* Tools::Get2DHistoBins(TH2D* h,int LowBin,int HighBin,double ScaleFactor,st
 		for (int jBin = 1; jBin <= NBins; jBin++) {
 
 			double BinWidth = ( Binning.at(iBin) - Binning.at(iBin - 1) ) * ( Binning.at(jBin) - Binning.at(jBin - 1) );
-			double TotalScaleFactor = BinWidth * TMath::Power(ScaleFactor,2.);			
+			double TotalScaleFactor = BinWidth * TMath::Power(ScaleFactor,2.);	
+			if (!Scale) { TotalScaleFactor = 1.; }		
 
 			double CurrentHistoEntry = h->GetBinContent(LowBin + iBin - 1,LowBin + jBin - 1);		
 			double CurrentHistoError = h->GetBinError(LowBin + iBin - 1,LowBin + jBin - 1);	

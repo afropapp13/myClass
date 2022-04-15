@@ -75,7 +75,7 @@ namespace Constants {
 	static std::map<TString,std::pair<double,double> > XSecRange =
 	{
 		{ "DeltaPTPlot",  std::make_pair(0, 59) }, // 57
-		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.13) },
+		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.12) },
 		{ "DeltaPhiTPlot",  std::make_pair(0., 0.39) },
 		{ "MuonMomentumPlot",  std::make_pair(0, 26) },
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
@@ -95,7 +95,7 @@ namespace Constants {
 		{ "CCQEQ2Plot",  std::make_pair(0, 24) },	
 		{ "DeltaPLPlot",  std::make_pair(0, 47) },
 		{ "DeltaPnPlot",  std::make_pair(0, 49) },
-		{ "DeltaPtxPlot",  std::make_pair(0, 44) },
+		{ "DeltaPtxPlot",  std::make_pair(0, 54) },
 		{ "DeltaPtyPlot",  std::make_pair(0, 39) },	
 		{ "APlot",  std::make_pair(0, 34) },	
 		{ "kMissPlot",  std::make_pair(0, 49) },
@@ -110,9 +110,9 @@ namespace Constants {
 		{ "ECal_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 12.9) },
 		{ "ECal_DeltaPty_Minus0_15To0_15Plot",  std::make_pair(0, 46.9) },
 		{ "ECal_DeltaPty_0_15To0_45Plot",  std::make_pair(0, 6.9) },											
-		{ "DeltaAlphaT_DeltaPT_0_00To0_20Plot",  std::make_pair(0, 0.47) },
+		{ "DeltaAlphaT_DeltaPT_0_00To0_20Plot",  std::make_pair(0, 0.37) },
 		{ "DeltaAlphaT_DeltaPT_0_20To0_40Plot",  std::make_pair(0, 0.19) },				
-		{ "DeltaAlphaT_DeltaPT_0_40To1_00Plot",  std::make_pair(0, 0.065) },
+		{ "DeltaAlphaT_DeltaPT_0_40To1_00Plot",  std::make_pair(0, 0.059) },
 		{ "DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 0.02) },
 		{ "DeltaAlphaT_MuonCosTheta_0_00To0_50Plot",  std::make_pair(0, 0.06) },
 		{ "DeltaAlphaT_MuonCosTheta_0_50To0_75Plot",  std::make_pair(0, 0.12) },
@@ -158,8 +158,8 @@ namespace Constants {
 		{ "DeltaPty_DeltaPtx_Minus0_55ToMinus0_15Plot",  std::make_pair(0, 14.) },
 		{ "DeltaPty_DeltaPtx_Minus0_15To0_15Plot",  std::make_pair(0, 89.) },				
 		{ "DeltaPty_DeltaPtx_0_15To0_55Plot",  std::make_pair(0, 13.) },
-		{ "DeltaPtx_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 15.9) },
-		{ "DeltaPtx_DeltaPty_Minus0_15To0_15Plot",  std::make_pair(0, 99.) },
+		{ "DeltaPtx_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 13.4) },
+		{ "DeltaPtx_DeltaPty_Minus0_15To0_15Plot",  std::make_pair(0, 89.) },
 		{ "DeltaPtx_DeltaPty_0_15To0_45Plot",  std::make_pair(0, 14.) },		
 		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.42) },
 		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.44) },
@@ -231,7 +231,10 @@ namespace Constants {
 		{ "SerialECal_ProtonCosThetaProtonMomentumPlot",  std::make_pair(0, 1.1) },		
 		{ "SerialProtonCosTheta_MuonCosThetaPlot",  std::make_pair(0, 1.39) },
 		{ "SerialDeltaPty_DeltaPtxPlot",  std::make_pair(0, 2.9) },
-		{ "SerialDeltaPtx_DeltaPtyPlot",  std::make_pair(0, 2.9) },		
+		{ "SerialDeltaPtx_DeltaPtyPlot",  std::make_pair(0, 2.9) },	
+		{ "VertexXPlot",  std::make_pair(0, 59) },
+		{ "VertexYPlot",  std::make_pair(0, 59) },
+		{ "VertexZPlot",  std::make_pair(0, 59) },							
 								
 	};	
 	
@@ -397,7 +400,10 @@ namespace Constants {
 		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", "#frac{d^{3}#sigma}{dE^{Cal} dp_{p} dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },		
 		{ "SerialProtonCosTheta_MuonCosThetaPlot",  "#frac{d^{2}#sigma}{dcos#theta_{#mu} dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "SerialDeltaPty_DeltaPtxPlot", "#frac{d^{2}#sigma}{d#deltap_{T,x} d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },
-		{ "SerialDeltaPtx_DeltaPtyPlot", "#frac{d^{2}#sigma}{d#deltap_{T,x} d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },		
+		{ "SerialDeltaPtx_DeltaPtyPlot", "#frac{d^{2}#sigma}{d#deltap_{T,x} d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
+		{ "VertexXPlot",  "#frac{d#sigma}{dVertex_{X}} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },
+		{ "VertexYPlot",  "#frac{d#sigma}{dVertex_{Y}} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },
+		{ "VertexZPlot",  "#frac{d#sigma}{dVertex_{Z}} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },			
 					
 	};	
 	
@@ -560,7 +566,10 @@ namespace Constants {
 		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", "cos#theta_{p} & p_{p} slices" },								
 		{ "SerialProtonCosTheta_MuonCosThetaPlot", "cos#theta_{#mu} slices" },
 		{ "SerialDeltaPty_DeltaPtxPlot", "#deltap_{T,x} slices" },
-		{ "SerialDeltaPtx_DeltaPtyPlot", "#deltap_{T,y} slices" },		
+		{ "SerialDeltaPtx_DeltaPtyPlot", "#deltap_{T,y} slices" },	
+		{ "VertexXPlot",  "All events" },
+		{ "VertexYPlot",  "All events" },
+		{ "VertexZPlot",  "All events" },			
 	};	
 	
 	//----------------------------------------//
@@ -805,7 +814,11 @@ namespace Constants {
 				 ,"SerialECal_ProtonCosThetaProtonMomentumPlot"				 
 				 ,"SerialProtonCosTheta_MuonCosThetaPlot"
 				 ,"SerialDeltaPty_DeltaPtxPlot"
-				 ,"SerialDeltaPtx_DeltaPtyPlot"				 				 
+				 ,"SerialDeltaPtx_DeltaPtyPlot"
+				 ,"VertexXPlot"
+				 ,"VertexYPlot"
+				 ,"VertexZPlot"
+				 				 				 				 
 				 };
 
 	// "ECalPlot" "EQEPlot" "Q2Plot" "CCQEECalPlot" "CCQEEQEPlot" "CCQEQ2Plot"
@@ -827,6 +840,9 @@ namespace Constants {
 				 ,"DeltaPnPlot"
 				 ,"DeltaPtxPlot"
 				 ,"DeltaPtyPlot"
+				 ,"VertexX"
+				 ,"VertexY"
+				 ,"VertexZ"
 				 // 2D
 				 ,"SerialDeltaPT_MuonCosThetaPlot"
 				 ,"SerialDeltaPT_ProtonCosThetaPlot"
@@ -1229,9 +1245,9 @@ namespace Constants {
 	static const int NBinsMuonVertexDistance = 25; static const double MinMuonVertexDistance = 0., MaxMuonVertexDistance = 2.;
 	static const int NBinsProtonVertexDistance = 25; static const double MinProtonVertexDistance = 0., MaxProtonVertexDistance = 5.;
 	static const int NBinsVertexActivity = 25; static const double MinVertexActivity = 0., MaxVertexActivity = 1.;
-	static const int NBinsVertexX = 50; static const double MinVertexX = -10., MaxVertexX = 265.;
-	static const int NBinsVertexY = 50; static const double MinVertexY = -120., MaxVertexY = 120.;
-	static const int NBinsVertexZ = 50; static const double MinVertexZ = -50., MaxVertexZ = 1056.;
+	static const int NBinsVertexX = 20; static const double MinVertexX = 10., MaxVertexX = 246.;
+	static const int NBinsVertexY = 20; static const double MinVertexY = -105., MaxVertexY = 105.;
+	static const int NBinsVertexZ = 20; static const double MinVertexZ = 10., MaxVertexZ = 1026.;
 	
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1321,6 +1337,10 @@ namespace Constants {
 	static TString LabelXAxisECal2D = ";True E^{Cal} [GeV];Reco E^{Cal} [GeV]";
 	static TString LabelXAxisEQE2D = ";True E^{QE} [GeV];Reco E^{QE} [GeV]";
 	static TString LabelXAxisQ22D = ";True Q^{2} [GeV^{2}/c^{2}];Reco Q^{2} [GeV^{2}/c^{2}]";
+	
+	static TString RecoLabelXAxisVertexX2D = ";True Vertex X [cm];Reco Vertex X [cm]";
+	static TString RecoLabelXAxisVertexY2D = ";True Vertex Y [cm];Reco Vertex Y [cm]";
+	static TString RecoLabelXAxisVertexZ2D = ";True Vertex Z [cm];Reco Vertex Z [cm]";			
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1951,7 +1971,10 @@ namespace Constants {
 		{ "SerialECal_DeltaPTDeltaAlphaTPlot", 1. },
 		{ "SerialECal_DeltaPtxDeltaPtyPlot", 1. },				
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot", 1. },
-		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", 1. },										
+		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", 1. },
+		{ "VertexX", 1. },
+		{ "VertexY", 1. },
+		{ "VertexZ", 1. },																
 	};	
 	
 	//----------------------------------------//
