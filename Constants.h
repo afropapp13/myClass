@@ -158,8 +158,8 @@ namespace Constants {
 		{ "DeltaPty_DeltaPtx_Minus0_55ToMinus0_15Plot",  std::make_pair(0, 14.) },
 		{ "DeltaPty_DeltaPtx_Minus0_15To0_15Plot",  std::make_pair(0, 89.) },				
 		{ "DeltaPty_DeltaPtx_0_15To0_55Plot",  std::make_pair(0, 13.) },
-		{ "DeltaPtx_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 13.4) },
-		{ "DeltaPtx_DeltaPty_Minus0_15To0_15Plot",  std::make_pair(0, 89.) },
+		{ "DeltaPtx_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 14.4) },
+		{ "DeltaPtx_DeltaPty_Minus0_15To0_15Plot",  std::make_pair(0, 99.) },
 		{ "DeltaPtx_DeltaPty_0_15To0_45Plot",  std::make_pair(0, 14.) },		
 		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.42) },
 		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.44) },
@@ -840,9 +840,9 @@ namespace Constants {
 				 ,"DeltaPnPlot"
 				 ,"DeltaPtxPlot"
 				 ,"DeltaPtyPlot"
-				 ,"VertexX"
-				 ,"VertexY"
-				 ,"VertexZ"
+				 ,"VertexXPlot"
+				 ,"VertexYPlot"
+				 ,"VertexZPlot"
 				 // 2D
 				 ,"SerialDeltaPT_MuonCosThetaPlot"
 				 ,"SerialDeltaPT_ProtonCosThetaPlot"
@@ -1981,7 +1981,8 @@ namespace Constants {
 	
 	// Interaction labels
 	
-	const std::vector<int> InteBreakColors{kBlack,kBlue-5,kYellow+1,kOrange+7,kRed+1,kBlue};	
+	//const std::vector<int> InteBreakColors{kBlack,kBlue-5,kYellow+1,kOrange+7,kRed+1,kBlue};
+	const std::vector<int> InteBreakColors{kBlack,OverlayColor,kOrange-3,kGreen+1,kRed+1,kBlue};		
 	std::vector<TString> InteractionLabels = {"","QE","MEC","RES","DIS","COH"};
 	const int NInte = InteractionLabels.size();
 	
