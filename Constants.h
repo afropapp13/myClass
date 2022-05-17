@@ -8,6 +8,7 @@
 #include <fstream>
 #include <iomanip>
 #include <vector>
+#include <map>
 
 using namespace std;
 
@@ -77,15 +78,15 @@ namespace Constants {
 		{ "DeltaPTPlot",  std::make_pair(0, 59) }, // 57
 		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.12) },
 		{ "DeltaPhiTPlot",  std::make_pair(0., 0.39) },
-		{ "MuonMomentumPlot",  std::make_pair(0, 26) },
+		{ "MuonMomentumPlot",  std::make_pair(0, 29) },
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14) },
 		{ "MuonPhiPlot",  std::make_pair(0, 0.049) },
 		{ "ProtonMomentumPlot",  std::make_pair(0, 34) },
 		{ "ProtonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "ProtonPhiPlot",  std::make_pair(0, 0.045) },
-		{ "ECalPlot",  std::make_pair(0, 22.9) },			
-		{ "EQEPlot",  std::make_pair(0, 24) },
+		{ "ECalPlot",  std::make_pair(0, 29.) },			
+		{ "EQEPlot",  std::make_pair(0, 29.) },
 		{ "Q2Plot",  std::make_pair(0, 29) },	
 		{ "CCQEMuonMomentumPlot",  std::make_pair(0, 24) },
 		{ "CCQEMuonCosThetaPlot",  std::make_pair(0, 9) },
@@ -129,10 +130,10 @@ namespace Constants {
 		{ "DeltaPT_ProtonCosTheta_0_00To0_50Plot",  std::make_pair(0, 22.) },
 		{ "DeltaPT_ProtonCosTheta_0_50To0_75Plot",  std::make_pair(0, 64.) },
 		{ "DeltaPT_ProtonCosTheta_0_75To1_00Plot",  std::make_pair(0, 74.) },
-		{ "ProtonMomentum_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.34) },
-		{ "ProtonMomentum_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.27) },
-		{ "ProtonMomentum_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.28) },
-		{ "ProtonMomentum_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.34) },
+		{ "ProtonMomentum_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.19) },
+		{ "ProtonMomentum_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.19) },
+		{ "ProtonMomentum_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.21) },
+		{ "ProtonMomentum_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.27) },
 		{ "DeltaPT_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.34) },
 		{ "DeltaPT_DeltaAlphaT_45_00To90_00Plot",  std::make_pair(0, 0.27) },
 		{ "DeltaPT_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.28) },
