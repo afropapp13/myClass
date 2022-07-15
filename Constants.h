@@ -77,6 +77,7 @@ namespace Constants {
 	{
 		{ "DeltaPTPlot",  std::make_pair(0, 59) }, // 57
 		{ "DeltaAlphaTPlot",  std::make_pair(0, 0.12) },
+		{ "DeltaAlpha3DPlot",  std::make_pair(0, 0.12) },		
 		{ "DeltaPhiTPlot",  std::make_pair(0., 0.39) },
 		{ "MuonMomentumPlot",  std::make_pair(0, 29) },
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
@@ -163,7 +164,7 @@ namespace Constants {
 		{ "DeltaPty_DeltaPtx_Minus0_55ToMinus0_15Plot",  std::make_pair(0, 14.) },
 		{ "DeltaPty_DeltaPtx_Minus0_15To0_15Plot",  std::make_pair(0, 89.) },				
 		{ "DeltaPty_DeltaPtx_0_15To0_55Plot",  std::make_pair(0, 13.) },
-		{ "DeltaPtx_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 14.4) },
+		{ "DeltaPtx_DeltaPty_Minus0_75ToMinus0_15Plot",  std::make_pair(0, 15.4) },
 		{ "DeltaPtx_DeltaPty_Minus0_15To0_15Plot",  std::make_pair(0, 99.) },
 		{ "DeltaPtx_DeltaPty_0_15To0_45Plot",  std::make_pair(0, 14.) },		
 		{ "ECal_DeltaPT_0_00To0_20_DeltaAlphaT_0_00To45_00Plot",  std::make_pair(0, 0.42) },
@@ -250,6 +251,7 @@ namespace Constants {
 	{
 		{ "DeltaPTPlot",  "#frac{d#sigma}{d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaAlphaTPlot",  "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaAlpha3DPlot",  "#frac{d#sigma}{d#delta#alpha_{3D}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },		
 		{ "DeltaPhiTPlot",  "#frac{d#sigma}{d#delta#phi_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "MuonMomentumPlot",  "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "MuonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
@@ -412,9 +414,9 @@ namespace Constants {
 		{ "SerialProtonCosTheta_MuonCosThetaPlot",  "#frac{d^{2}#sigma}{dcos#theta_{#mu} dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "SerialDeltaPty_DeltaPtxPlot", "#frac{d^{2}#sigma}{d#deltap_{T,x} d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },
 		{ "SerialDeltaPtx_DeltaPtyPlot", "#frac{d^{2}#sigma}{d#deltap_{T,x} d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
-		{ "VertexXPlot",  "#frac{d#sigma}{dVertex_{X}} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },
-		{ "VertexYPlot",  "#frac{d#sigma}{dVertex_{Y}} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },
-		{ "VertexZPlot",  "#frac{d#sigma}{dVertex_{Z}} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },			
+		{ "VertexXPlot",  "#frac{d#sigma}{dx} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },
+		{ "VertexYPlot",  "#frac{d#sigma}{dy} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },
+		{ "VertexZPlot",  "#frac{d#sigma}{dz} #left[10^{-38} #frac{cm^{2}}{cm Ar}#right]" },			
 					
 	};	
 	
@@ -422,6 +424,7 @@ namespace Constants {
 	{
 		{ "DeltaPTPlot",  "All events" },
 		{ "DeltaAlphaTPlot",  "All events" },
+		{ "DeltaAlpha3DPlot",  "All events" },		
 		{ "DeltaPhiTPlot",  "All events" },
 		{ "MuonMomentumPlot",  "All events" },
 		{ "MuonCosThetaPlot",  "All events" },
@@ -592,6 +595,9 @@ namespace Constants {
 	
 	static std::map<TString,TString> MapUncorCor =
 	{
+
+		{ "DeltaPhiTPlot", "DeltaPhiTPlot" },
+		{ "DeltaPtxPlot", "DeltaPtxPlot" },		
 
 		{ "SerialDeltaPT_MuonCosThetaPlot_0", "DeltaPT_MuonCosTheta_Minus1_00To0_00Plot" },
 		{ "SerialDeltaPT_MuonCosThetaPlot_1", "DeltaPT_MuonCosTheta_0_00To0_50Plot" },
@@ -1195,6 +1201,7 @@ namespace Constants {
 	
 //	static const int NBinsDeltaAlphaT = 10; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,15.,30.,45.,62.,77.,92.,115.,135.,160.,180. };
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,22.,44.,66.,88.,110.,145.,180. };
+	static const int NBinsDeltaAlpha3D = 7; static const double ArrayNBinsDeltaAlpha3D[NBinsDeltaAlpha3D+1] = { 0.,22.,44.,66.,88.,110.,145.,180. };	
 
 //	static const int NBinsDeltaPhiT = 13; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,10.,20.,30.,40.,50.,60.,75.,90.,106.,126.,145.,162.,180.};
 	static const int NBinsDeltaPhiT = 12; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,12.5,25.,37.5,50.,60.,75.,90.,106.,126.,145.,162.,180.};
@@ -1312,6 +1319,7 @@ namespace Constants {
 	
 	static TString LabelXAxisDeltaPT = ";#deltap_{T} [GeV/c]"; static TString LabelXAxisTrueDeltaPT = ";True #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT = ";#delta#alpha_{T} [deg]"; static TString LabelXAxisTrueDeltaAlphaT = ";True #delta#alpha_{T} [deg]";
+	static TString LabelXAxisDeltaAlpha3D = ";#delta#alpha_{3D} [deg]"; static TString LabelXAxisTrueDeltaAlpha3D = ";True #delta#alpha_{3D} [deg]";	
 	static TString LabelXAxisDeltaPhiT = ";#delta#phi_{T} [deg]"; static TString LabelXAxisTrueDeltaPhiT = ";True #delta#phi_{T} [deg]";
 
 	TString RecoLabelXAxisLLRPID = ";LLR PID Score";		
@@ -1336,9 +1344,9 @@ namespace Constants {
 	TString RecoLabelXAxisMuonVertexDistanceTrackScore = ";Muon Vertex Distance [cm]";
 	TString RecoLabelXAxisProtonVertexDistanceTrackScore = ";Proton Vertex Distance [cm]";
 	TString RecoLabelXAxisVertexActivity = ";Vertex Activity";
-	TString RecoLabelXAxisVertexX = ";Vertex X [cm]";
-	TString RecoLabelXAxisVertexY = ";Vertex Y [cm]";
-	TString RecoLabelXAxisVertexZ = ";Vertex Z [cm]";
+	TString RecoLabelXAxisVertexX = ";Vertex x [cm]";
+	TString RecoLabelXAxisVertexY = ";Vertex y [cm]";
+	TString RecoLabelXAxisVertexZ = ";Vertex z [cm]";
 	TString RecoLabelXAxisProtonTrackScore = ";Proton Track Score";
 	TString RecoLabelXAxisLengthDifference = ";l_{#mu} - l_{p} [cm]";
 	TString RecoLabelXAxisMuonLength = ";l_{#mu} [cm]";
@@ -1350,6 +1358,7 @@ namespace Constants {
 
 	static TString LabelXAxisDeltaPT2D = LabelXAxisTrueDeltaPT+";Reco #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT2D = LabelXAxisTrueDeltaAlphaT+";Reco #delta#alpha_{T} [deg]";
+	static TString LabelXAxisDeltaAlpha3D2D = LabelXAxisTrueDeltaAlpha3D+";Reco #delta#alpha_{3D} [deg]";	
 	static TString LabelXAxisDeltaPhiT2D = LabelXAxisTrueDeltaPhiT+";Reco #delta#phi_{T} [deg]";
 
 	static TString LabelXAxisDeltaPL2D = LabelXAxisTrueDeltaPL+";Reco #deltap_{L} [GeV/c]";
@@ -1374,9 +1383,9 @@ namespace Constants {
 	static TString LabelXAxisEQE2D = ";True E^{QE} [GeV];Reco E^{QE} [GeV]";
 	static TString LabelXAxisQ22D = ";True Q^{2} [GeV^{2}/c^{2}];Reco Q^{2} [GeV^{2}/c^{2}]";
 	
-	static TString RecoLabelXAxisVertexX2D = ";True Vertex X [cm];Reco Vertex X [cm]";
-	static TString RecoLabelXAxisVertexY2D = ";True Vertex Y [cm];Reco Vertex Y [cm]";
-	static TString RecoLabelXAxisVertexZ2D = ";True Vertex Z [cm];Reco Vertex Z [cm]";			
+	static TString RecoLabelXAxisVertexX2D = ";True Vertex x [cm];Reco Vertex x [cm]";
+	static TString RecoLabelXAxisVertexY2D = ";True Vertex y [cm];Reco Vertex y [cm]";
+	static TString RecoLabelXAxisVertexZ2D = ";True Vertex z [cm];Reco Vertex z [cm]";			
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1665,7 +1674,7 @@ namespace Constants {
 												{0.2,0.34,0.48,0.62,0.76,0.9,1.04,1.18,1.32,1.46,1.6},
 												{0.2,0.34,0.48,0.62,0.76,0.9,1.04,1.18,1.32,1.46,1.6},
 												{0.2,0.34,0.48,0.62,0.76,0.9,1.04,1.18,1.32,1.46,1.6},						
-												{0.2,0.34,0.48,0.62,0.76,0.9,1.04,1.18,1.32,1.46,1.6}
+												{0.2,0.37,0.53,0.69,0.85,1.01,1.16,1.32,1.44,1.6}
 											};																															
 											
 	//----------------------------------------//
@@ -1744,7 +1753,7 @@ namespace Constants {
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaPtxInDeltaPtySlices{ 
 										{-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45,0.55},
 										{-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45,0.55},
-										{-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45,0.55}
+										{-0.55,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.55}
 											};																																	
 																																										
 											
@@ -1859,6 +1868,7 @@ namespace Constants {
 	{
 		{ "DeltaPTPlot", 1. },
 		{ "DeltaAlphaTPlot", 1. },
+		{ "DeltaAlpha3DPlot", 1. },		
 		{ "DeltaPhiTPlot", 1. },
 		{ "MuonMomentumPlot", 1. },
 		{ "MuonCosThetaPlot", 1. },
@@ -2032,7 +2042,7 @@ namespace Constants {
 	// Interaction labels
 	
 	//const std::vector<int> InteBreakColors{kBlack,kBlue-5,kYellow+1,kOrange+7,kRed+1,kBlue};
-	const std::vector<int> InteBreakColors{kBlack,OverlayColor,kOrange-3,kGreen+1,kRed+1,kBlue};		
+	const std::vector<int> InteBreakColors{kBlack,kAzure-4,kOrange-3,kGreen+1,kRed+1,kBlue};		
 	std::vector<TString> InteractionLabels = {"","QE","MEC","RES","DIS","COH"};
 	const int NInte = InteractionLabels.size();
 	

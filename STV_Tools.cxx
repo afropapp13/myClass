@@ -16,7 +16,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 
 	double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938272, NeutronMass_GeV = 0.939565; // GeV
 	double DeltaM2 = TMath::Power(NeutronMass_GeV,2.) - TMath::Power(ProtonMass_GeV,2.);	
-	double BE = 0.04; // GeV	
+	double BE = 0.04; // GeV for Ar
 			
 	// STV Calculation		
 			
@@ -99,7 +99,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 
 	// Minerva longitudinal & total variables
 
-	// For the calcukation of the masses
+	// For the calculation of the masses
 	//https://journals.aps.org/prc/pdf/10.1103/PhysRevC.95.065501
 
 	double MA = 22 * NeutronMass_GeV + 18 * ProtonMass_GeV - 0.34381; // GeV
@@ -130,6 +130,17 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	fPty = - (MuonVectorTrans).Dot(PtVector) / MuonVectorTransMag;
 
 	// -------------------------------------------------------------------------------------------------------------------------
+
+	// Beyond the transverse variables
+	// Based on Andy F's xsec meeting presentation
+	// https://microboone-docdb.fnal.gov/cgi-bin/sso/RetrieveFile?docid=38090&filename=BeyondTransverseVariables_xsec_2022_06_14.pdf&version=1
+
+	TVector3 PnVector(PtVector.X(),PtVector.Y(),fPL);
+	TVector3 qVector = qLorentzVector.Vect();
+	double qMag = qVector.Mag();
+	fDeltaAlpha3D = TMath::ACos( (- qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
+	if (fDeltaAlpha3D > 180.) { fDeltaAlpha3D -= 180.; }
+	if (fDeltaAlpha3D < 0.) { fDeltaAlpha3D += 180.; }	
 
 }
 
@@ -201,6 +212,14 @@ double STV_Tools::ReturnPn() {
 double STV_Tools::ReturnDeltaAlphaT() {
 
 	return fDeltaAlphaT;
+
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnDeltaAlpha3D() {
+
+	return fDeltaAlpha3D;
 
 }
 

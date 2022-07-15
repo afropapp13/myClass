@@ -23,6 +23,7 @@ class STV_Tools {
 		double fPL;
 		double fPn;
 		double fDeltaAlphaT;
+		double fDeltaAlpha3D;		
 		double fDeltaPhiT;
 		double fECal;
 		double fEQE;
@@ -37,7 +38,7 @@ class STV_Tools {
 		STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnergy, double ProtonEnergy);
 
 		// Default destructor
-		//~STV_Tools(){}
+		~STV_Tools(){}
 
 		double ReturnkMiss();
 		double ReturnEMiss();
@@ -47,6 +48,7 @@ class STV_Tools {
 		double ReturnPL();
 		double ReturnPn();
 		double ReturnDeltaAlphaT();
+		double ReturnDeltaAlpha3D();		
 		double ReturnDeltaPhiT();
 		double ReturnECal();
 		double ReturnEQE();
