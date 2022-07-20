@@ -1133,9 +1133,14 @@ namespace Constants {
 //	static const double E1DCNT_wcut_Run4a = 10340017.0;
 //	static const double EXT_Run4a = 36117774.0;
 
-	static const double tor860_wcut_Run4a = 6.785e18;
-	static const double E1DCNT_wcut_Run4a = 1448458.0;
-	static const double EXT_Run4a = 7332586.0;
+	// Rutgers
+//	static const double tor860_wcut_Run4a = 6.785e18;
+//	static const double E1DCNT_wcut_Run4a = 1448458.0;
+//	static const double EXT_Run4a = 7332586.0;
+
+	static const double tor860_wcut_Run4a = 4.103e+19;
+	static const double E1DCNT_wcut_Run4a = 10347885;
+	static const double EXT_Run4a = 36093917;
 
 	static const double tor860_wcut_Run4 = 0.;
 	static const double E1DCNT_wcut_Run4 = 0.;
@@ -1145,9 +1150,14 @@ namespace Constants {
 //	static const double FullE1DCNT_wcut_Run4a = 10340017.0;
 //	static const double FullEXT_Run4a = 36117774.0;
 	
-	static const double Fulltor860_wcut_Run4a = 6.785e18;
-	static const double FullE1DCNT_wcut_Run4a = 1448458.0;
-	static const double FullEXT_Run4a = 7332586.0;	
+	// Rutgers
+//	static const double Fulltor860_wcut_Run4a = 6.785e18;
+//	static const double FullE1DCNT_wcut_Run4a = 1448458.0;
+//	static const double FullEXT_Run4a = 7332586.0;	
+
+	static const double Fulltor860_wcut_Run4a = 4.103e+19;
+	static const double FullE1DCNT_wcut_Run4a = 10347885;
+	static const double FullEXT_Run4a = 36093917;
 
 	static const double Fulltor860_wcut_Run4 = 0.;
 	static const double FullE1DCNT_wcut_Run4 = 0.;
