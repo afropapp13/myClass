@@ -441,7 +441,7 @@ namespace Constants {
 		{ "ECal_DeltaPtx_Minus0_15To0_15Plot",  "|#deltap_{T,x}| < 0.15 GeV/c" },				
 		{ "ECal_DeltaPtx_0_15To0_55Plot",  "#deltap_{T,x} > 0.15 GeV/c" },
 		{ "ECal_DeltaPty_Minus0_75ToMinus0_15Plot","#deltap_{T,y} < -0.15 GeV/c" },
-		{ "ECal_DeltaPty_Minus0_15To0_15Plot","-0.15 < #deltap_{T,y} < 0.15 GeV/c" },
+		{ "ECal_DeltaPty_Minus0_15To0_15Plot","|#deltap_{T,y}| < 0.15 GeV/c" },
 		{ "ECal_DeltaPty_0_15To0_45Plot","#deltap_{T,y} > 0.15 GeV/c" },								
 		{ "EQEPlot",  "All events" },
 		{ "Q2Plot",  "All events" },	
@@ -1332,9 +1332,9 @@ namespace Constants {
 	static TString LabelXAxisDeltaAlpha3D = ";#delta#alpha_{3D} [deg]"; static TString LabelXAxisTrueDeltaAlpha3D = ";True #delta#alpha_{3D} [deg]";	
 	static TString LabelXAxisDeltaPhiT = ";#delta#phi_{T} [deg]"; static TString LabelXAxisTrueDeltaPhiT = ";True #delta#phi_{T} [deg]";
 
-	TString RecoLabelXAxisLLRPID = ";LLR PID Score";		
-	TString RecoLabelXAxisMuonLLRPID = ";#mu Candidate LLR PID Score";
-	TString RecoLabelXAxisProtonLLRPID = ";p Candidate LLR PID Score";
+	TString RecoLabelXAxisLLRPID = ";Candidate LLR PID Score";		
+	TString RecoLabelXAxisMuonLLRPID = ";Muon Candidate LLR PID Score";
+	TString RecoLabelXAxisProtonLLRPID = ";Proton Candidate LLR PID Score";
 	TString RecoLabelXAxisThreePlaneChi2MuonCandidateLogLikelihood = ";3-Plane LogLikelihood #mu-Candidate";
 	TString RecoLabelXAxisThreePlaneChi2ProtonCandidateLogLikelihood = ";3-Plane LogLikelihood p-Candidate";
 	TString RecoLabelXAxisChi2 = "Y-Plane ;#chi^{2}_{p}";
