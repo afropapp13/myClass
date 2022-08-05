@@ -1300,7 +1300,7 @@ namespace Constants {
 	static const int NBinsVertexActivity = 25; static const double MinVertexActivity = 0., MaxVertexActivity = 1.;
 	static const int NBinsVertexX = 15; static const double MinVertexX = 10., MaxVertexX = 246.;
 	static const int NBinsVertexY = 15; static const double MinVertexY = -105., MaxVertexY = 105.;
-	static const int NBinsVertexZ = 15; static const double MinVertexZ = 10., MaxVertexZ = 1026.;
+	static const int NBinsVertexZ = 25; static const double MinVertexZ = 10., MaxVertexZ = 1026.;
 	
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
