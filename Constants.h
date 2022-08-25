@@ -1340,7 +1340,7 @@ namespace Constants {
 	
 //	static const int NBinsDeltaAlphaT = 10; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,15.,30.,45.,62.,77.,92.,115.,135.,160.,180. };
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,22.,44.,66.,88.,110.,145.,180. };
-	static const int NBinsDeltaAlpha3D = 7; static const double ArrayNBinsDeltaAlpha3D[NBinsDeltaAlpha3D+1] = { 0.,22.,44.,66.,88.,110.,145.,180. };	
+	static const int NBinsDeltaAlpha3D = 8; static const double ArrayNBinsDeltaAlpha3D[NBinsDeltaAlpha3D+1] = { 0.,30.,50.,70.,90.,110.,130.,155.,180. };	
 
 //	static const int NBinsDeltaPhiT = 13; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,10.,20.,30.,40.,50.,60.,75.,90.,106.,126.,145.,162.,180.};
 	static const int NBinsDeltaPhiT = 12; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,12.5,25.,37.5,50.,60.,75.,90.,106.,126.,145.,162.,180.};
@@ -1765,8 +1765,8 @@ namespace Constants {
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaAlpha3DInDeltaPnSlices{ 
 												{0.,22.,44.,66.,88.,110.,145.,180.}, // DeltaPn < 0.2 GeV/c
-												{0.,22.,44.,66.,88.,110.,145.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
-												{0.,22.,44.,66.,88.,110.,145.,180.}  // DeltaPn > 0.4 GeV/c						
+												{0.,30.,50.,70.,90.,110.,130.,155.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
+												{0.,30.,50.,70.,90.,110.,130.,150.,180.}  // DeltaPn > 0.4 GeV/c	
 											};
 											
 	//----------------------------------------//
