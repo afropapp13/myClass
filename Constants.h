@@ -865,7 +865,7 @@ namespace Constants {
 				 ,"DeltaPn_DeltaAlpha3D_0_00To45_00Plot","DeltaPn_DeltaAlpha3D_45_00To90_00Plot"
 				 ,"DeltaPn_DeltaAlpha3D_90_00To135_00Plot","DeltaPn_DeltaAlpha3D_135_00To180_00Plot"				 
 				 ,"ProtonMomentum_DeltaAlphaT_0_00To45_00Plot","ProtonMomentum_DeltaAlphaT_45_00To90_00Plot","ProtonMomentum_DeltaAlphaT_90_00To135_00Plot","ProtonMomentum_DeltaAlphaT_135_00To180_00Plot"				 
-				 ,"DeltaPn_DeltaAlphaT_0_00To45_00Plot","DeltaPn_DeltaAlphaT_45_00To90_00Plot","DeltaPn_DeltaAlphaT_90_00To135_00Plot","DeltaPn_DeltaAlphaT_135_00To180_00Plot"				 
+				 //,"DeltaPn_DeltaAlphaT_0_00To45_00Plot","DeltaPn_DeltaAlphaT_45_00To90_00Plot","DeltaPn_DeltaAlphaT_90_00To135_00Plot","DeltaPn_DeltaAlphaT_135_00To180_00Plot"				 
 				 ,"DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot","DeltaAlphaT_MuonCosTheta_0_00To0_50Plot","DeltaAlphaT_MuonCosTheta_0_50To0_75Plot","DeltaAlphaT_MuonCosTheta_0_75To1_00Plot"
 				 ,"DeltaAlphaT_ProtonCosTheta_Minus1_00To0_00Plot","DeltaAlphaT_ProtonCosTheta_0_00To0_50Plot","DeltaAlphaT_ProtonCosTheta_0_50To0_75Plot","DeltaAlphaT_ProtonCosTheta_0_75To1_00Plot"				 
 				 ,"DeltaPT_MuonCosTheta_Minus1_00To0_00Plot","DeltaPT_MuonCosTheta_0_00To0_50Plot","DeltaPT_MuonCosTheta_0_50To0_75Plot","DeltaPT_MuonCosTheta_0_75To1_00Plot"
@@ -915,7 +915,7 @@ namespace Constants {
 				 ,"SerialDeltaPT_DeltaAlphaTPlot"
 				 ,"SerialDeltaPn_DeltaAlpha3DPlot"				 
 				 ,"SerialProtonMomentum_DeltaAlphaTPlot"				 
-				 ,"SerialDeltaPn_DeltaAlphaTPlot"				 
+				 //,"SerialDeltaPn_DeltaAlphaTPlot"				 
 				 ,"SerialDeltaPhiT_DeltaPTPlot"
 //				 ,"SerialDeltaPn_DeltaPTPlot"
 				 ,"SerialECal_DeltaPTPlot"
@@ -999,7 +999,7 @@ namespace Constants {
 				 ,"SerialDeltaAlpha3D_DeltaPnPlot"				 
 				 ,"SerialDeltaPhiT_DeltaPTPlot"
 //				 ,"SerialDeltaPn_DeltaPTPlot"
-				 ,"SerialDeltaPn_DeltaAlphaTPlot"
+				 //,"SerialDeltaPn_DeltaAlphaTPlot"
 				 ,"SerialECal_DeltaPTPlot"
 				 ,"SerialECal_DeltaPtxPlot"
 				 ,"SerialECal_DeltaPtyPlot"				 				 						 
@@ -1130,14 +1130,14 @@ namespace Constants {
 				 ,"SerialDeltaPT_DeltaAlphaTPlot_1"
 				 ,"SerialDeltaPT_DeltaAlphaTPlot_2"
 				 ,"SerialDeltaPT_DeltaAlphaTPlot_3"
-				 ,"SerialDeltaPn_DeltaAlphaTPlot_0"
-				 ,"SerialDeltaPn_DeltaAlphaTPlot_1"
-				 ,"SerialDeltaPn_DeltaAlphaTPlot_2"
-				 ,"SerialDeltaPn_DeltaAlphaTPlot_3"
-				 ,"SerialDeltaPn_DeltaAlpha3DPlot_0"
-				 ,"SerialDeltaPn_DeltaAlpha3DPlot_1"
-				 ,"SerialDeltaPn_DeltaAlpha3DPlot_2"
-				 ,"SerialDeltaPn_DeltaAlpha3DPlot_3"				 				 				
+				 //,"SerialDeltaPn_DeltaAlphaTPlot_0"
+				 //,"SerialDeltaPn_DeltaAlphaTPlot_1"
+				 //,"SerialDeltaPn_DeltaAlphaTPlot_2"
+				 //,"SerialDeltaPn_DeltaAlphaTPlot_3"
+				 //,"SerialDeltaPn_DeltaAlpha3DPlot_0"
+				 //,"SerialDeltaPn_DeltaAlpha3DPlot_1"
+				 //,"SerialDeltaPn_DeltaAlpha3DPlot_2"
+				 //,"SerialDeltaPn_DeltaAlpha3DPlot_3"				 				 				
 				 ,"SerialDeltaPhiT_DeltaPTPlot_0"
 				 ,"SerialDeltaPhiT_DeltaPTPlot_1"
 				 ,"SerialDeltaPhiT_DeltaPTPlot_2"		
@@ -1792,8 +1792,8 @@ namespace Constants {
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaPnInDeltaAlpha3DSlices{ 
 												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.9}, // DeltaAlpha3D < 45 deg
 												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.9}, // 45 < DeltaAlpha3D < 90 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}, // 90 < DeltaAlpha3D < 135 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.75,0.9}  // DeltaAlpha3D > 135 deg		
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.9}, // 90 < DeltaAlpha3D < 135 deg
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.9}  // DeltaAlpha3D > 135 deg		
 											};											
 											
 	//----------------------------------------//
