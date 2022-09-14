@@ -1,5 +1,4 @@
 export UserID=apapadop
-export UBCode=v08_00_00_52
-export UBgpvm=uboonegpvm03.fnal.gov
-export PlotPath="/uboone/data/users/"${UserID}"/mySTVAnalysis/myPlots/"${UBCode}"/"
-export CCQEPlotPath="/uboone/data/users/"${UserID}"/mySTVAnalysis/myCCQEPlots/"${UBCode}"/"
+export SBNDCode=v09_56_00
+export SBNDgpvm=sbndgpvm03.fnal.gov
+export PlotPath="/sbnd/data/users/"${UserID}"/mySTVAnalysis/myPlots/"${SBNDCode}"/"
