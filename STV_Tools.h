@@ -23,7 +23,8 @@ class STV_Tools {
 		double fPL;
 		double fPn;
 		double fDeltaAlphaT;
-		double fDeltaAlpha3D;		
+		double fDeltaAlpha3Dq;
+		double fDeltaAlpha3DMu;				
 		double fDeltaPhiT;
 		double fECal;
 		double fEQE;
@@ -48,7 +49,8 @@ class STV_Tools {
 		double ReturnPL();
 		double ReturnPn();
 		double ReturnDeltaAlphaT();
-		double ReturnDeltaAlpha3D();		
+		double ReturnDeltaAlpha3Dq();
+		double ReturnDeltaAlpha3DMu();			
 		double ReturnDeltaPhiT();
 		double ReturnECal();
 		double ReturnEQE();

@@ -1,5 +1,5 @@
 
-//Class created by Afroditi Papadopoulou (apapadop@mit.edu)
+//Class created by Afroditi Papadopoulou (apapadop@mit.edu, apapadopoulou@anl.gov)
 
 // _________________________________________________________________________________________________________________________________________________
 
@@ -138,9 +138,13 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	TVector3 PnVector(PtVector.X(),PtVector.Y(),fPL);
 	TVector3 qVector = qLorentzVector.Vect();
 	double qMag = qVector.Mag();
-	fDeltaAlpha3D = TMath::ACos( (- qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
-	if (fDeltaAlpha3D > 180.) { fDeltaAlpha3D -= 180.; }
-	if (fDeltaAlpha3D < 0.) { fDeltaAlpha3D += 180.; }	
+	fDeltaAlpha3Dq = TMath::ACos( (- qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
+	if (fDeltaAlpha3Dq > 180.) { fDeltaAlpha3Dq -= 180.; }
+	if (fDeltaAlpha3Dq < 0.) { fDeltaAlpha3Dq += 180.; }	
+
+	fDeltaAlpha3DMu = TMath::ACos( (- MuonVector * PnVector) / ( MuonVector.Mag() * fPn ) ) * 180./TMath::Pi();	
+	if (fDeltaAlpha3DMu > 180.) { fDeltaAlpha3DMu -= 180.; }
+	if (fDeltaAlpha3DMu < 0.) { fDeltaAlpha3DMu += 180.; }
 
 }
 
@@ -217,9 +221,17 @@ double STV_Tools::ReturnDeltaAlphaT() {
 
 // __________________________________________________________________________________________________________________________________________________
 
-double STV_Tools::ReturnDeltaAlpha3D() {
+double STV_Tools::ReturnDeltaAlpha3Dq() {
 
-	return fDeltaAlpha3D;
+	return fDeltaAlpha3Dq;
+
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnDeltaAlpha3DMu() {
+
+	return fDeltaAlpha3DMu;
 
 }
 
