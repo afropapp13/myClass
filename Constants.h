@@ -1772,7 +1772,7 @@ namespace Constants {
 	static TString LabelXAxisDeltaPT2D = LabelXAxisTrueDeltaPT+";Reco #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT2D = LabelXAxisTrueDeltaAlphaT+";Reco #delta#alpha_{T} [deg]";
 	static TString LabelXAxisDeltaAlpha3Dq2D = LabelXAxisTrueDeltaAlpha3Dq+";Reco #delta#alpha_{3D,q} [deg]";
-	static TString LabelXAxisDeltaAlpha3D2MuD = LabelXAxisTrueDeltaAlpha3DMu+";Reco #delta#alpha_{3D,#mu} [deg]";		
+	static TString LabelXAxisDeltaAlpha3DMu2D = LabelXAxisTrueDeltaAlpha3DMu+";Reco #delta#alpha_{3D,#mu} [deg]";		
 	static TString LabelXAxisDeltaPhiT2D = LabelXAxisTrueDeltaPhiT+";Reco #delta#phi_{T} [deg]";
 
 	static TString LabelXAxisDeltaPL2D = LabelXAxisTrueDeltaPL+";Reco #deltap_{L} [GeV/c]";
