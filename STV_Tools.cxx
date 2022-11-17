@@ -138,11 +138,13 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	TVector3 PnVector(PtVector.X(),PtVector.Y(),fPL);
 	TVector3 qVector = qLorentzVector.Vect();
 	double qMag = qVector.Mag();
-	fDeltaAlpha3Dq = TMath::ACos( (- qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
+	// No minus sign
+	fDeltaAlpha3Dq = TMath::ACos( (qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
 	if (fDeltaAlpha3Dq > 180.) { fDeltaAlpha3Dq -= 180.; }
 	if (fDeltaAlpha3Dq < 0.) { fDeltaAlpha3Dq += 180.; }	
 
-	fDeltaAlpha3DMu = TMath::ACos( (- MuonVector * PnVector) / ( MuonVector.Mag() * fPn ) ) * 180./TMath::Pi();	
+	// No minus sign
+	fDeltaAlpha3DMu = TMath::ACos( (MuonVector * PnVector) / ( MuonVector.Mag() * fPn ) ) * 180./TMath::Pi();	
 	if (fDeltaAlpha3DMu > 180.) { fDeltaAlpha3DMu -= 180.; }
 	if (fDeltaAlpha3DMu < 0.) { fDeltaAlpha3DMu += 180.; }
 

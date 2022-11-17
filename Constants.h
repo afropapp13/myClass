@@ -244,7 +244,7 @@ namespace Constants {
 		{ "SerialProtonMomentum_ProtonCosThetaPlot",  std::make_pair(0, 1.34) },
 		{ "SerialDeltaAlphaT_MuonCosThetaPlot",  std::make_pair(0, 1.29) },							
 		{ "SerialDeltaAlphaT_ProtonCosThetaPlot",  std::make_pair(0, 1.73) },
-		{ "SerialDeltaAlphaT_DeltaPTPlot",  std::make_pair(0, 1.73) },
+		{ "SerialDeltaAlphaT_DeltaPTPlot",  std::make_pair(0, 1.83) },
 		{ "SerialDeltaAlphaT_MuonMomentumPlot",  std::make_pair(0, 1.73) },
 		{ "SerialDeltaAlphaT_ProtonMomentumPlot",  std::make_pair(0, 1.73) },				
 		{ "SerialDeltaAlpha3Dq_DeltaPnPlot",  std::make_pair(0, 1.79) },
@@ -266,7 +266,7 @@ namespace Constants {
 		{ "SerialECal_ProtonCosThetaProtonMomentumPlot",  std::make_pair(0, 1.1) },		
 		{ "SerialProtonCosTheta_MuonCosThetaPlot",  std::make_pair(0, 1.39) },
 		{ "SerialDeltaPty_DeltaPtxPlot",  std::make_pair(0, 2.9) },
-		{ "SerialDeltaPtx_DeltaPtyPlot",  std::make_pair(0, 2.9) },	
+		{ "SerialDeltaPtx_DeltaPtyPlot",  std::make_pair(0, 2.4) },	
 		{ "VertexXPlot",  std::make_pair(0, 0.079) },
 		{ "VertexYPlot",  std::make_pair(0, 0.079) },
 		{ "VertexZPlot",  std::make_pair(0, 0.014) },							
@@ -1081,7 +1081,7 @@ namespace Constants {
 
 	// Global Constants
 
-	static const double Units = 1E38; // so that the extracted cross-section is 10^{-38} cm^{2}
+	static const double Units = 1E38; // so that the extracted cross-section is in 10^{-38} cm^{2}
 //	static const double NTargets = 1.203E30; // Argon nuclei, not nucleons
 	static const double NTargets = 1.05E30; // Argon nuclei, not nucleons
 	
@@ -1539,9 +1539,20 @@ namespace Constants {
 //	static const double E1DCNT_wcut_Run4a = 1448458.0;
 //	static const double EXT_Run4a = 7332586.0;
 
-	static const double tor860_wcut_Run4a = 4.103e+19;
-	static const double E1DCNT_wcut_Run4a = 10347885;
-	static const double EXT_Run4a = 36093917;
+	// Aug 2022
+//	static const double tor860_wcut_Run4a = 4.103e+19;
+//	static const double E1DCNT_wcut_Run4a = 10347885;
+//	static const double EXT_Run4a = 36093917;
+
+	// Nov (uB mini-retreat)
+//	static const double tor860_wcut_Run4a = 4.599e+19;
+//	static const double E1DCNT_wcut_Run4a = 14565548;
+//	static const double EXT_Run4a = 36093917;
+	
+	// rm low purity runs (run < 19080 or run > 19420)
+	static const double tor860_wcut_Run4a = 3.05e+19;
+	static const double E1DCNT_wcut_Run4a = 7885027;
+	static const double EXT_Run4a = 36093917;	
 
 	static const double tor860_wcut_Run4 = 0.;
 	static const double E1DCNT_wcut_Run4 = 0.;
@@ -1556,9 +1567,20 @@ namespace Constants {
 //	static const double FullE1DCNT_wcut_Run4a = 1448458.0;
 //	static const double FullEXT_Run4a = 7332586.0;	
 
-	static const double Fulltor860_wcut_Run4a = 4.103e+19;
-	static const double FullE1DCNT_wcut_Run4a = 10347885;
-	static const double FullEXT_Run4a = 36093917;
+	// Aug 2022
+//	static const double Fulltor860_wcut_Run4a = 4.103e+19;
+//	static const double FullE1DCNT_wcut_Run4a = 10347885;
+//	static const double FullEXT_Run4a = 36093917;
+
+	// Nov (uB mini-retreat)
+//	static const double Fulltor860_wcut_Run4a = 4.599e+19;
+//	static const double FullE1DCNT_wcut_Run4a = 14565548;
+//	static const double FullEXT_Run4a = 36093917;
+	
+	// Nov (uB mini-retreat)
+	static const double Fulltor860_wcut_Run4a = 3.05e+19;
+	static const double FullE1DCNT_wcut_Run4a = 7885027;
+	static const double FullEXT_Run4a = 36093917;	
 
 	static const double Fulltor860_wcut_Run4 = 0.;
 	static const double FullE1DCNT_wcut_Run4 = 0.;
@@ -1810,12 +1832,25 @@ namespace Constants {
 	static int Geniev3OutOfTheBoxColor = kMagenta;
 //	static int GenieOverlayColor = kOrange+7;	
 	static int GiBUUColor = kGreen+1; // 410
-	static int NuWroColor = kOrange+7;	
+//	static int NuWroColor = kOrange+7;	
+	static int NuWroColor = kOrange+10;
 	static int NEUTColor = kRed+1;
 	static int GENIEv2Color = kBlue;	
 	static int GENIEv3_0_4_Color = kGray+1;
 //	static int SuSav2Color = 429;	
 	static int SuSav2Color = kOrange-3;	
+	
+	static int NormUncBandColor = kGray+3;	
+	
+	static int G18LineStyle = kSolid;
+	
+	static int GiBUULineStyle = 2;
+	static int NEUTLineStyle = 7;
+	static int NuWroLineStyle = 5;
+	
+	static int UntunedLineStyle = 2;
+	static int G21LineStyle = 7;
+	static int Gv2LineStyle = 5;							
 	
 	// ---------------------------------------------------------------------------------------------------------------------------------------
 
