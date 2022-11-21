@@ -26,12 +26,15 @@ class STV_Tools {
 		double fDeltaAlpha3Dq;
 		double fDeltaAlpha3DMu;				
 		double fDeltaPhiT;
+		double fDeltaPhi3D;		
 		double fECal;
 		double fEQE;
 		double fQ2;
 		double fA;
 		double fPtx;
-		double fPty;										
+		double fPty;
+		double fPnPerp;
+		double fPnPar;												
 
 	public:
 
@@ -52,12 +55,15 @@ class STV_Tools {
 		double ReturnDeltaAlpha3Dq();
 		double ReturnDeltaAlpha3DMu();			
 		double ReturnDeltaPhiT();
+		double ReturnDeltaPhi3D();		
 		double ReturnECal();
 		double ReturnEQE();
 		double ReturnQ2();		
 		double ReturnA();
 		double ReturnPtx();
-		double ReturnPty();		
+		double ReturnPty();	
+		double ReturnPnPerp();
+		double ReturnPnPar();			
 
 };
 

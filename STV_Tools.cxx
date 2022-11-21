@@ -138,15 +138,20 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	TVector3 PnVector(PtVector.X(),PtVector.Y(),fPL);
 	TVector3 qVector = qLorentzVector.Vect();
 	double qMag = qVector.Mag();
-	// No minus sign
 	fDeltaAlpha3Dq = TMath::ACos( (qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
 	if (fDeltaAlpha3Dq > 180.) { fDeltaAlpha3Dq -= 180.; }
 	if (fDeltaAlpha3Dq < 0.) { fDeltaAlpha3Dq += 180.; }	
 
-	// No minus sign
-	fDeltaAlpha3DMu = TMath::ACos( (MuonVector * PnVector) / ( MuonVector.Mag() * fPn ) ) * 180./TMath::Pi();	
+	fDeltaAlpha3DMu = TMath::ACos( -(MuonVector * PnVector) / ( MuonVector.Mag() * fPn ) ) * 180./TMath::Pi();	
 	if (fDeltaAlpha3DMu > 180.) { fDeltaAlpha3DMu -= 180.; }
 	if (fDeltaAlpha3DMu < 0.) { fDeltaAlpha3DMu += 180.; }
+
+	fDeltaPhi3D = TMath::ACos( (qVector * ProtonVector) / ( qMag * ProtonVector.Mag() ) ) * 180./TMath::Pi();
+	if (fDeltaPhi3D > 180.) { fDeltaPhi3D -= 180.; }
+	if (fDeltaPhi3D < 0.) { fDeltaPhi3D += 180.; }	
+
+	fPnPerp = fPn * sin(fDeltaAlpha3Dq * TMath::Pi() / 180.);
+	fPnPar = fPn * cos(fDeltaAlpha3Dq * TMath::Pi() / 180.);	
 
 }
 
@@ -201,6 +206,20 @@ double STV_Tools::ReturnPty() {
 
 // __________________________________________________________________________________________________________________________________________________
 
+double STV_Tools::ReturnPnPerp() {
+
+	return fPnPerp;
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnPnPar() {
+
+	return fPnPar;
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
 double STV_Tools::ReturnPL() {
 
 	return fPL;
@@ -242,6 +261,14 @@ double STV_Tools::ReturnDeltaAlpha3DMu() {
 double STV_Tools::ReturnDeltaPhiT() {
 
 	return fDeltaPhiT;
+
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnDeltaPhi3D() {
+
+	return fDeltaPhi3D;
 
 }
 
