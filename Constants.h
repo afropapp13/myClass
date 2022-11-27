@@ -282,8 +282,8 @@ namespace Constants {
 	{
 		{ "DeltaPTPlot",  "#frac{d#sigma}{d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaAlphaTPlot",  "#frac{d#sigma}{d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
-		{ "DeltaAlpha3DqPlot",  "#frac{d#sigma}{d#delta#alpha_{3D}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
-		{ "DeltaAlpha3DMuPlot",  "#frac{d#sigma}{d#delta#alpha_{3D,#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },		
+		{ "DeltaAlpha3DqPlot",  "#frac{d#sigma}{d#alpha_{3D}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "DeltaAlpha3DMuPlot",  "#frac{d#sigma}{d#alpha_{3D,#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },		
 		{ "DeltaPhiTPlot",  "#frac{d#sigma}{d#delta#phi_{T}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "DeltaPhi3DPlot",  "#frac{d#sigma}{d#phi_{3D}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },		
 		{ "MuonMomentumPlot",  "#frac{d#sigma}{dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
@@ -313,8 +313,8 @@ namespace Constants {
 		{ "CCQEQ2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
 		{ "DeltaPLPlot",  "#frac{d#sigma}{d#deltap_{L}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPnPlot",  "#frac{d#sigma}{dp_{n}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
-		{ "DeltaPnPerpPlot",  "#frac{d#sigma}{dp_{n,#perp}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
-		{ "DeltaPnParPlot",  "#frac{d#sigma}{dp_{n,#parallel}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },				
+		{ "DeltaPnPerpPlot",  "#frac{d#sigma}{dp_{n#perp}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPnParPlot",  "#frac{d#sigma}{dp_{n#parallel}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },				
 		{ "DeltaPtxPlot",  "#frac{d#sigma}{d#deltap_{T,x}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPtyPlot",  "#frac{d#sigma}{d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "APlot",  "#frac{d#sigma}{d#alpha} #left[10^{-38} #frac{cm^{2}}{c Ar}#right]" },
@@ -330,14 +330,14 @@ namespace Constants {
 		{ "DeltaAlphaT_ProtonMomentum_0_30To0_50Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 		{ "DeltaAlphaT_ProtonMomentum_0_50To0_70Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
 		{ "DeltaAlphaT_ProtonMomentum_0_70To1_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },				
-		{ "DeltaAlpha3Dq_DeltaPn_0_00To0_20Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "DeltaAlpha3Dq_DeltaPn_0_20To0_40Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
-		{ "DeltaAlpha3Dq_DeltaPn_0_40To1_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "DeltaAlpha3DMu_DeltaPn_0_00To0_20Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "DeltaAlpha3DMu_DeltaPn_0_20To0_40Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
-		{ "DeltaAlpha3DMu_DeltaPn_0_40To1_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
-		{ "ProtonMomentum_DeltaAlphaT_0_00To45Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
-		{ "ProtonMomentum_DeltaAlphaT_0_00To45Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaAlpha3Dq_DeltaPn_0_00To0_20Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaAlpha3Dq_DeltaPn_0_20To0_40Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "DeltaAlpha3Dq_DeltaPn_0_40To1_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaAlpha3DMu_DeltaPn_0_00To0_20Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaAlpha3DMu_DeltaPn_0_20To0_40Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "DeltaAlpha3DMu_DeltaPn_0_40To1_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "ProtonMomentum_DeltaAlphaT_0_00To45Plot",  "#frac{d^{2}#sigma}{d#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "ProtonMomentum_DeltaAlphaT_0_00To45Plot",  "#frac{d^{2}#sigma}{d#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 		{ "ProtonMomentum_DeltaAlphaT_45_00To90_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
 		{ "ProtonMomentum_DeltaAlphaT_90_00To135_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 		{ "ProtonMomentum_DeltaAlphaT_135_00To180_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
@@ -349,14 +349,14 @@ namespace Constants {
 		{ "DeltaPn_DeltaAlphaT_45_00To90_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
 		{ "DeltaPn_DeltaAlphaT_90_00To135_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 		{ "DeltaPn_DeltaAlphaT_135_00To180_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },	
-		{ "DeltaPn_DeltaAlpha3Dq_0_00To45Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
-		{ "DeltaPn_DeltaAlpha3Dq_90_00To135_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },	
-		{ "DeltaPn_DeltaAlpha3DMu_0_00To45Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
-		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "DeltaPn_DeltaAlpha3Dq_0_00To45Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "DeltaPn_DeltaAlpha3Dq_90_00To135_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },	
+		{ "DeltaPn_DeltaAlpha3DMu_0_00To45Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
 		{ "DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot",  "#frac{d^{2}#sigma}{d#delta#alpha_{T}dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "DeltaAlphaT_MuonCosTheta_0_00To0_50Plot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "DeltaAlphaT_MuonCosTheta_0_50To0_75Plot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
@@ -453,15 +453,15 @@ namespace Constants {
 		{ "SerialDeltaAlphaT_MuonCosThetaPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },				
 		{ "SerialDeltaAlphaT_ProtonCosThetaPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dcos#theta_{p}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "SerialDeltaAlphaT_DeltaPTPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "SerialDeltaAlpha3Dq_DeltaPnPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "SerialDeltaAlpha3DMu_DeltaPnPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "SerialDeltaAlpha3Dq_DeltaPnPlot", "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "SerialDeltaAlpha3DMu_DeltaPnPlot", "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
 		{ "SerialProtonMomentum_DeltaAlphaTPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 		{ "SerialDeltaPT_DeltaAlphaTPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 		{ "SerialDeltaPT_MuonMomentumPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 		{ "SerialDeltaPT_ProtonMomentumPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{p}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },				
 		{ "SerialDeltaPn_DeltaAlphaTPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{T}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
-		{ "SerialDeltaPn_DeltaAlpha3DqPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
-		{ "SerialDeltaPn_DeltaAlpha3DMuPlot", "#frac{d^{2}#sigma}{d#delta#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
+		{ "SerialDeltaPn_DeltaAlpha3DqPlot", "#frac{d^{2}#sigma}{d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
+		{ "SerialDeltaPn_DeltaAlpha3DMuPlot", "#frac{d^{2}#sigma}{d#alpha_{3D,#mu}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },		
 		{ "SerialDeltaPhiT_DeltaPTPlot", "#frac{d^{2}#sigma}{d#delta#phi_{T}d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV/c Ar}#right]" },
 //		{ "SerialDeltaPn_DeltaPTPlot",  "#frac{d^{2}#sigma}{dp_{n}d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },
 		{ "SerialECal_DeltaPTPlot", "#frac{d^{2}#sigma}{dE^{Cal} d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },
@@ -559,14 +559,14 @@ namespace Constants {
 		{ "DeltaPn_DeltaAlphaT_45_00To90_00Plot",  "45^{o} < #delta#alpha_{T} < 90^{o}" },				
 		{ "DeltaPn_DeltaAlphaT_90_00To135_00Plot",  "90^{o} < #delta#alpha_{T} < 135^{o}" },
 		{ "DeltaPn_DeltaAlphaT_135_00To180_00Plot",  "135^{o} < #delta#alpha_{T} < 180^{o}" },
-		{ "DeltaPn_DeltaAlpha3Dq_0_00To45_00Plot",  "#delta#alpha_{3D} < 45^{o}" },
-		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  "45^{o} < #delta#alpha_{3D} < 90^{o}" },				
-		{ "DeltaPn_DeltaAlpha3Dq_90_00To135_00Plot",  "90^{o} < #delta#alpha_{3D} < 135^{o}" },
-		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  "135^{o} < #delta#alpha_{3D} < 180^{o}" },
-		{ "DeltaPn_DeltaAlpha3DMu_0_00To45_00Plot",  "#delta#alpha_{3D,#mu} < 45^{o}" },
-		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  "45^{o} < #delta#alpha_{3D,#mu} < 90^{o}" },				
-		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  "90^{o} < #delta#alpha_{3D,#mu} < 135^{o}" },
-		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  "135^{o} < #delta#alpha_{3D,#mu} < 180^{o}" },								
+		{ "DeltaPn_DeltaAlpha3Dq_0_00To45_00Plot",  "#alpha_{3D} < 45^{o}" },
+		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  "45^{o} < #alpha_{3D} < 90^{o}" },				
+		{ "DeltaPn_DeltaAlpha3Dq_90_00To135_00Plot",  "90^{o} < #alpha_{3D} < 135^{o}" },
+		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  "135^{o} < #alpha_{3D} < 180^{o}" },
+		{ "DeltaPn_DeltaAlpha3DMu_0_00To45_00Plot",  "#alpha_{3D,#mu} < 45^{o}" },
+		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  "45^{o} < #alpha_{3D,#mu} < 90^{o}" },				
+		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  "90^{o} < #alpha_{3D,#mu} < 135^{o}" },
+		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  "135^{o} < #alpha_{3D,#mu} < 180^{o}" },								
 		{ "ProtonCosTheta_MuonCosTheta_Minus1_00To0_00Plot",  "-1 < cos#theta_{#mu} < 0" },
 		{ "ProtonCosTheta_MuonCosTheta_0_00To0_50Plot", "0 < cos#theta_{#mu} < 0.5" },
 		{ "ProtonCosTheta_MuonCosTheta_0_50To0_75Plot", "0.5 < cos#theta_{#mu} < 0.75" },
@@ -660,8 +660,8 @@ namespace Constants {
 		{ "SerialDeltaAlpha3Dq_DeltaPnPlot", "p_{n} slices" },
 		{ "SerialDeltaAlpha3DMu_DeltaPnPlot", "p_{n} slices" },		
 		{ "SerialDeltaPT_DeltaAlphaTPlot", "#delta#alpha_{T} slices" },
-		{ "SerialDeltaPn_DeltaAlpha3DqPlot", "#delta#alpha_{3D} slices" },
-		{ "SerialDeltaPn_DeltaAlpha3DMuPlot", "#delta#alpha_{3D,#mu} slices" },				
+		{ "SerialDeltaPn_DeltaAlpha3DqPlot", "#alpha_{3D} slices" },
+		{ "SerialDeltaPn_DeltaAlpha3DMuPlot", "#alpha_{3D,#mu} slices" },				
 		{ "SerialProtonMomentum_DeltaAlphaTPlot", "#delta#alpha_{T} slices" },		
 		{ "SerialDeltaPn_DeltaAlphaTPlot", "#delta#alpha_{T} slices" },		
 		{ "SerialDeltaPhiT_DeltaPTPlot", "#deltap_{T} slices" },
@@ -1105,8 +1105,10 @@ namespace Constants {
 	// Plots to be included for xsec extraction purposes
 
 	vector<TString> PlotNames{
-				  "DeltaPTPlot","DeltaAlphaTPlot"
-				 ,"DeltaAlpha3DqPlot","DeltaAlpha3DMuPlot"
+				  "DeltaPTPlot"
+				 ,"DeltaAlphaTPlot"
+				 ,"DeltaAlpha3DqPlot"
+				 ,"DeltaAlpha3DMuPlot"
 				 ,"DeltaPhiTPlot"
 				 ,"DeltaPhi3DPlot"
 				 ,"MuonMomentumPlot","MuonCosThetaPlot"
@@ -1570,13 +1572,22 @@ namespace Constants {
 //	static const double EXT_Run4a = 36093917;
 	
 	// rm low purity runs (run < 19080 or run > 19420)
-	static const double tor860_wcut_Run4a = 3.05e+19;
-	static const double E1DCNT_wcut_Run4a = 7885027;
-	static const double EXT_Run4a = 36093917;	
+//	static const double tor860_wcut_Run4a = 3.05e+19;
+//	static const double E1DCNT_wcut_Run4a = 7885027;
+//	static const double EXT_Run4a = 36093917;	
+
+//	static const double tor860_wcut_Run4 = 0.;
+//	static const double E1DCNT_wcut_Run4 = 0.;
+//	static const double EXT_Run4 = 0.;
+	
+	// rm low purity runs (run < 19080 or run > 19420) & after chat with Zarko about current
+	static const double tor860_wcut_Run4a = 3.37e+19;
+	static const double E1DCNT_wcut_Run4a = 7435696;
+	static const double EXT_Run4a = 23377641;	
 
 	static const double tor860_wcut_Run4 = 0.;
 	static const double E1DCNT_wcut_Run4 = 0.;
-	static const double EXT_Run4 = 0.;
+	static const double EXT_Run4 = 0.;	
 
 //	static const double Fulltor860_wcut_Run4a = 4.589e+19;
 //	static const double FullE1DCNT_wcut_Run4a = 10340017.0;
@@ -1598,13 +1609,22 @@ namespace Constants {
 //	static const double FullEXT_Run4a = 36093917;
 	
 	// Nov (uB mini-retreat)
-	static const double Fulltor860_wcut_Run4a = 3.05e+19;
-	static const double FullE1DCNT_wcut_Run4a = 7885027;
-	static const double FullEXT_Run4a = 36093917;	
+//	static const double Fulltor860_wcut_Run4a = 3.05e+19;
+//	static const double FullE1DCNT_wcut_Run4a = 7885027;
+//	static const double FullEXT_Run4a = 36093917;	
+
+//	static const double Fulltor860_wcut_Run4 = 0.;
+//	static const double FullE1DCNT_wcut_Run4 = 0.;
+//	static const double FullEXT_Run4 = 0.;
+	
+	// rm low purity runs (run < 19080 or run > 19420) & after chat with Zarko about current
+	static const double Fulltor860_wcut_Run4a = 3.37e+19;
+	static const double FullE1DCNT_wcut_Run4a = 7435696;
+	static const double FullEXT_Run4a = 23377641;	
 
 	static const double Fulltor860_wcut_Run4 = 0.;
 	static const double FullE1DCNT_wcut_Run4 = 0.;
-	static const double FullEXT_Run4 = 0.;
+	static const double FullEXT_Run4 = 0.;	
 	
 	// v43 Run 5 
 
@@ -1648,7 +1668,7 @@ namespace Constants {
 	
 	static const int NBinsDeltaPnPerp = 10; static const double ArrayNBinsDeltaPnPerp[NBinsDeltaPnPerp+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.65,0.75,0.85};
 	
-	static const int NBinsDeltaPnPar = 10; static const double ArrayNBinsDeltaPnPar[NBinsDeltaPnPar+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.65,0.75,0.85};		
+	static const int NBinsDeltaPnPar = 10; static const double ArrayNBinsDeltaPnPar[NBinsDeltaPnPar+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45};		
 
 //	static const int NBinsDeltaPtx = 20; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.47,-0.4,-0.35,-0.3,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55};
 	static const int NBinsDeltaPtx = 11; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45,0.55};
@@ -1658,7 +1678,8 @@ namespace Constants {
 	
 //	static const int NBinsDeltaAlphaT = 10; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,15.,30.,45.,62.,77.,92.,115.,135.,160.,180. };
 	static const int NBinsDeltaAlphaT = 7; static const double ArrayNBinsDeltaAlphaT[NBinsDeltaAlphaT+1] = { 0.,22.,44.,66.,88.,110.,145.,180. };
-	static const int NBinsDeltaAlpha3Dq = 8; static const double ArrayNBinsDeltaAlpha3Dq[NBinsDeltaAlpha3Dq+1] = { 0.,30.,50.,70.,90.,110.,130.,155.,180. };
+//	static const int NBinsDeltaAlpha3Dq = 8; static const double ArrayNBinsDeltaAlpha3Dq[NBinsDeltaAlpha3Dq+1] = { 0.,30.,50.,70.,90.,110.,130.,155.,180. };
+	static const int NBinsDeltaAlpha3Dq = 8; static const double ArrayNBinsDeltaAlpha3Dq[NBinsDeltaAlpha3Dq+1] = { 0., 25., 50., 70., 90., 110., 130., 150.,180. };
 	static const int NBinsDeltaAlpha3DMu = 8; static const double ArrayNBinsDeltaAlpha3DMu[NBinsDeltaAlpha3DMu+1] = { 0.,30.,50.,70.,90.,110.,130.,155.,180. };	
 
 //	static const int NBinsDeltaPhiT = 13; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,10.,20.,30.,40.,50.,60.,75.,90.,106.,126.,145.,162.,180.};
@@ -1773,16 +1794,16 @@ namespace Constants {
 
 	static TString LabelXAxisDeltaPL = ";#deltap_{L} [GeV/c]"; static TString LabelXAxisTrueDeltaPL = ";True #deltap_{L} [GeV/c]";
 	static TString LabelXAxisDeltaPn = ";p_{n} [GeV/c]"; static TString LabelXAxisTrueDeltaPn = ";True p_{n} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerp = ";p_{n,#perp} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerp = ";True p_{n,#perp} [GeV/c]";
-	static TString LabelXAxisDeltaPnPar = ";p_{n,#parallel} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPar = ";True p_{n,#parallel} [GeV/c]";		
+	static TString LabelXAxisDeltaPnPerp = ";p_{n#perp} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerp = ";True p_{n#perp} [GeV/c]";
+	static TString LabelXAxisDeltaPnPar = ";p_{n#parallel} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPar = ";True p_{n#parallel} [GeV/c]";		
 	static TString LabelXAxisDeltaPtx = ";#deltap_{T,x} [GeV/c]"; static TString LabelXAxisTrueDeltaPtx = ";True #deltap_{T,x} [GeV/c]";
 	static TString LabelXAxisDeltaPty = ";#deltap_{T,y} [GeV/c]"; static TString LabelXAxisTrueDeltaPty = ";True #deltap_{T,y} [GeV/c]";
 	static TString LabelXAxisA = ";#alpha [c]"; static TString LabelXAxisTrueA = ";True #alpha [c]";
 	
 	static TString LabelXAxisDeltaPT = ";#deltap_{T} [GeV/c]"; static TString LabelXAxisTrueDeltaPT = ";True #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT = ";#delta#alpha_{T} [deg]"; static TString LabelXAxisTrueDeltaAlphaT = ";True #delta#alpha_{T} [deg]";
-	static TString LabelXAxisDeltaAlpha3Dq = ";#delta#alpha_{3D} [deg]"; static TString LabelXAxisTrueDeltaAlpha3Dq = ";True #delta#alpha_{3D} [deg]";
-	static TString LabelXAxisDeltaAlpha3DMu = ";#delta#alpha_{3D,#mu} [deg]"; static TString LabelXAxisTrueDeltaAlpha3DMu = ";True #delta#alpha_{3D,#mu} [deg]";	
+	static TString LabelXAxisDeltaAlpha3Dq = ";#alpha_{3D} [deg]"; static TString LabelXAxisTrueDeltaAlpha3Dq = ";True #alpha_{3D} [deg]";
+	static TString LabelXAxisDeltaAlpha3DMu = ";#alpha_{3D,#mu} [deg]"; static TString LabelXAxisTrueDeltaAlpha3DMu = ";True #alpha_{3D,#mu} [deg]";	
 	static TString LabelXAxisDeltaPhiT = ";#delta#phi_{T} [deg]"; static TString LabelXAxisTrueDeltaPhiT = ";True #delta#phi_{T} [deg]";
 	static TString LabelXAxisDeltaPhi3D = ";#phi_{3D} [deg]"; static TString LabelXAxisTrueDeltaPhi3D = ";True #phi_{3D} [deg]";	
 
@@ -1822,15 +1843,15 @@ namespace Constants {
 
 	static TString LabelXAxisDeltaPT2D = LabelXAxisTrueDeltaPT+";Reco #deltap_{T} [GeV/c]";
 	static TString LabelXAxisDeltaAlphaT2D = LabelXAxisTrueDeltaAlphaT+";Reco #delta#alpha_{T} [deg]";
-	static TString LabelXAxisDeltaAlpha3Dq2D = LabelXAxisTrueDeltaAlpha3Dq+";Reco #delta#alpha_{3D} [deg]";
-	static TString LabelXAxisDeltaAlpha3DMu2D = LabelXAxisTrueDeltaAlpha3DMu+";Reco #delta#alpha_{3D,#mu} [deg]";		
+	static TString LabelXAxisDeltaAlpha3Dq2D = LabelXAxisTrueDeltaAlpha3Dq+";Reco #alpha_{3D} [deg]";
+	static TString LabelXAxisDeltaAlpha3DMu2D = LabelXAxisTrueDeltaAlpha3DMu+";Reco #alpha_{3D,#mu} [deg]";		
 	static TString LabelXAxisDeltaPhiT2D = LabelXAxisTrueDeltaPhiT+";Reco #delta#phi_{T} [deg]";
 	static TString LabelXAxisDeltaPhi3D2D = LabelXAxisTrueDeltaPhi3D+";Reco #phi_{3D} [deg]";	
 
 	static TString LabelXAxisDeltaPL2D = LabelXAxisTrueDeltaPL+";Reco #deltap_{L} [GeV/c]";
 	static TString LabelXAxisDeltaPn2D = LabelXAxisTrueDeltaPn+";Reco p_{n} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerp2D = LabelXAxisTrueDeltaPnPerp+";Reco p_{n,#perp} [GeV/c]";
-	static TString LabelXAxisDeltaPnPar2D = LabelXAxisTrueDeltaPnPar+";Reco p_{n,#parallel} [GeV/c]";		
+	static TString LabelXAxisDeltaPnPerp2D = LabelXAxisTrueDeltaPnPerp+";Reco p_{n#perp} [GeV/c]";
+	static TString LabelXAxisDeltaPnPar2D = LabelXAxisTrueDeltaPnPar+";Reco p_{n#parallel} [GeV/c]";		
 	static TString LabelXAxisDeltaPtx2D = LabelXAxisTrueDeltaPtx+";Reco #deltap_{T,x} [GeV/c]";
 	static TString LabelXAxisDeltaPty2D = LabelXAxisTrueDeltaPty+";Reco #deltap_{T,y} [GeV/c]";
 	static TString LabelXAxisA2D = LabelXAxisTrueA+";Reco #alpha [c]";
@@ -2107,9 +2128,13 @@ namespace Constants {
 	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaAlpha3DqInDeltaPnSlices{ 
-												{0.,22.,44.,66.,88.,110.,145.,180.}, // DeltaPn < 0.2 GeV/c
-												{0.,30.,50.,70.,90.,110.,130.,155.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
-												{0.,30.,50.,70.,90.,110.,130.,150.,180.}  // DeltaPn > 0.4 GeV/c	
+//												{0.,22.,44.,66.,88.,110.,145.,180.}, // DeltaPn < 0.2 GeV/c
+//												{0.,30.,50.,70.,90.,110.,130.,155.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
+//												{0.,30.,50.,70.,90.,110.,130.,150.,180.}  // DeltaPn > 0.4 GeV/c
+	
+												{0., 35., 70., 92., 114., 136., 158.,180.}, // DeltaPn < 0.2 GeV/c
+												{0., 25., 50., 70., 90., 110., 130., 150.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
+												{0., 25., 50., 70., 90., 110., 130., 150.,180.}  // DeltaPn > 0.4 GeV/c
 											};
 											
 	//----------------------------------------//
