@@ -500,7 +500,8 @@ int Tools::ReturnIndex(double value, std::vector<double> vec) {
 
 	for (int i = 0; i < length-1; i ++) {
 
-		if (value > vec.at(i) && value < vec.at(i+1)) { return i; }
+		if (i == 0 && value == vec.at(0)) { return 0; }
+		if (value > vec.at(i) && value <= vec.at(i+1)) { return i; }
 
 	}	
 

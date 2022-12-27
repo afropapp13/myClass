@@ -99,8 +99,8 @@ namespace Constants {
 		{ "CCQEQ2Plot",  std::make_pair(0, 24) },	
 		{ "DeltaPLPlot",  std::make_pair(0, 47) },
 		{ "DeltaPnPlot",  std::make_pair(0, 49) },
-		{ "DeltaPnPerpPlot",  std::make_pair(0, 49) },
-		{ "DeltaPnParPlot",  std::make_pair(0, 49) },				
+		{ "DeltaPnPerpPlot",  std::make_pair(0, 64) },
+		{ "DeltaPnParPlot",  std::make_pair(0, 39) },				
 		{ "DeltaPtxPlot",  std::make_pair(0, 54) },
 		{ "DeltaPtyPlot",  std::make_pair(0, 39) },	
 		{ "APlot",  std::make_pair(0, 34) },	
@@ -125,12 +125,12 @@ namespace Constants {
 		{ "DeltaAlphaT_ProtonMomentum_0_30To0_50Plot",  std::make_pair(0, 0.39) },
 		{ "DeltaAlphaT_ProtonMomentum_0_50To0_70Plot",  std::make_pair(0, 0.23) },				
 		{ "DeltaAlphaT_ProtonMomentum_0_70To1_00Plot",  std::make_pair(0, 0.079) },				
-		{ "DeltaAlpha3Dq_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.44) },
-		{ "DeltaAlpha3Dq_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.49) },				
-		{ "DeltaAlpha3Dq_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.099) },
+		{ "DeltaAlpha3Dq_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.39) },
+		{ "DeltaAlpha3Dq_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.39) },				
+		{ "DeltaAlpha3Dq_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.079) },
 		{ "DeltaAlpha3DMu_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.44) },
-		{ "DeltaAlpha3DMu_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.49) },				
-		{ "DeltaAlpha3DMu_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.099) },				
+		{ "DeltaAlpha3DMu_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.39) },				
+		{ "DeltaAlpha3DMu_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.079) },				
 		{ "DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 0.02) },
 		{ "DeltaAlphaT_MuonCosTheta_0_00To0_50Plot",  std::make_pair(0, 0.06) },
 		{ "DeltaAlphaT_MuonCosTheta_0_50To0_75Plot",  std::make_pair(0, 0.12) },
@@ -160,14 +160,14 @@ namespace Constants {
 		{ "DeltaPn_DeltaAlphaT_90_00To135_00Plot",  std::make_pair(0, 0.28) },
 		{ "DeltaPn_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.26) },
 		{ "DeltaPn_DeltaAlphaT_135_00To180_00Plot",  std::make_pair(0, 0.34) },
-		{ "DeltaPn_DeltaAlpha3Dq_0_00To45_00Plot",  std::make_pair(0, 0.249) },
-		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  std::make_pair(0, 0.39) },
+		{ "DeltaPn_DeltaAlpha3Dq_0_00To45_00Plot",  std::make_pair(0, 0.19) },
+		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  std::make_pair(0, 0.34) },
 		{ "DeltaPn_DeltaAlpha3Dq_90_00To135_00Plot",  std::make_pair(0, 0.39) },
-		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  std::make_pair(0, 0.19) },
-		{ "DeltaPn_DeltaAlpha3DMu_0_00To45_00Plot",  std::make_pair(0, 0.249) },
-		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  std::make_pair(0, 0.39) },
+		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  std::make_pair(0, 0.27) },
+		{ "DeltaPn_DeltaAlpha3DMu_0_00To45_00Plot",  std::make_pair(0, 0.149) },
+		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  std::make_pair(0, 0.34) },
 		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  std::make_pair(0, 0.39) },
-		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  std::make_pair(0, 0.19) },										
+		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  std::make_pair(0, 0.17) },										
 		{ "MuonMomentum_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 11.) },
 		{ "MuonMomentum_MuonCosTheta_0_00To0_50Plot",  std::make_pair(0, 19.) },
 		{ "MuonMomentum_MuonCosTheta_0_50To0_75Plot",  std::make_pair(0, 46.) },
@@ -1517,7 +1517,7 @@ namespace Constants {
 //	vector<TString> Runs{"Run1"};
 /*	vector<TString> Runs{"Run1","Run3"};*/
 /*	vector<TString> Runs{"Run1","Run2","Run3"};*/
-	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Combined"};
+	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Run4aRutgers","Combined"};
 //	vector<TString> Runs{"Run1","Run2","Run3","Run4","Run5"};
 
 	// v43 Run 1 
@@ -1557,9 +1557,9 @@ namespace Constants {
 //	static const double EXT_Run4a = 36117774.0;
 
 	// Rutgers
-//	static const double tor860_wcut_Run4a = 6.785e18;
-//	static const double E1DCNT_wcut_Run4a = 1448458.0;
-//	static const double EXT_Run4a = 7332586.0;
+	static const double tor860_wcut_Run4aRutgers = 4.345e+19;
+	static const double E1DCNT_wcut_Run4aRutgers = 13772291.0;
+	static const double EXT_Run4aRutgers = 23377641;
 
 	// Aug 2022
 //	static const double tor860_wcut_Run4a = 4.103e+19;
@@ -1594,9 +1594,9 @@ namespace Constants {
 //	static const double FullEXT_Run4a = 36117774.0;
 	
 	// Rutgers
-//	static const double Fulltor860_wcut_Run4a = 6.785e18;
-//	static const double FullE1DCNT_wcut_Run4a = 1448458.0;
-//	static const double FullEXT_Run4a = 7332586.0;	
+	static const double Fulltor860_wcut_Run4aRutgers = 4.345e+19;
+	static const double FullE1DCNT_wcut_Run4aRutgers = 13772291.0;
+	static const double FullEXT_Run4aRutgers = 23377641;	
 
 	// Aug 2022
 //	static const double Fulltor860_wcut_Run4a = 4.103e+19;
@@ -1666,7 +1666,7 @@ namespace Constants {
 //	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.27,0.34,0.4,0.47,0.55,0.65,0.75};
 	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.65,0.75,0.85};
 	
-	static const int NBinsDeltaPnPerp = 10; static const double ArrayNBinsDeltaPnPerp[NBinsDeltaPnPerp+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.65,0.75,0.85};
+	static const int NBinsDeltaPnPerp = 8; static const double ArrayNBinsDeltaPnPerp[NBinsDeltaPnPerp+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.85};
 	
 	static const int NBinsDeltaPnPar = 10; static const double ArrayNBinsDeltaPnPar[NBinsDeltaPnPar+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45};		
 
@@ -1685,7 +1685,7 @@ namespace Constants {
 //	static const int NBinsDeltaPhiT = 13; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,10.,20.,30.,40.,50.,60.,75.,90.,106.,126.,145.,162.,180.};
 	static const int NBinsDeltaPhiT = 12; static const double ArrayNBinsDeltaPhiT[NBinsDeltaPhiT+1] = {0.,12.5,25.,37.5,50.,60.,75.,90.,106.,126.,145.,162.,180.};
 	
-	static const int NBinsDeltaPhi3D = 12; static const double ArrayNBinsDeltaPhi3D[NBinsDeltaPhi3D+1] = {0.,12.5,25.,37.5,50.,60.,75.,90.,106.,126.,145.,162.,180.};	
+	static const int NBinsDeltaPhi3D = 10; static const double ArrayNBinsDeltaPhi3D[NBinsDeltaPhi3D+1] = {0.,12.5,25.,37.5,50.,60.,75.,90.,106.,126.,180.};	
 	
 	static const int NBinsEQE = 10; static const double ArrayNBinsEQE[NBinsEQE+1] = {0.2,0.34,0.48,0.62,0.76,0.9,1.04,1.18,1.32,1.46,1.6}; 	
 	
@@ -2128,19 +2128,19 @@ namespace Constants {
 	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaAlpha3DqInDeltaPnSlices{ 
-//												{0.,22.,44.,66.,88.,110.,145.,180.}, // DeltaPn < 0.2 GeV/c
+//												{0.,22.,44.,66.,88.,110.,145.,180.},      // DeltaPn < 0.2 GeV/c
 //												{0.,30.,50.,70.,90.,110.,130.,155.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
 //												{0.,30.,50.,70.,90.,110.,130.,150.,180.}  // DeltaPn > 0.4 GeV/c
 	
-												{0., 35., 70., 92., 114., 136., 158.,180.}, // DeltaPn < 0.2 GeV/c
+												{0., 35., 70., 92., 114., 136., 158.,180.},      // DeltaPn < 0.2 GeV/c
 												{0., 25., 50., 70., 90., 110., 130., 150.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
-												{0., 25., 50., 70., 90., 110., 130., 150.,180.}  // DeltaPn > 0.4 GeV/c
+												{0., 35., 70., 90., 110., 130., 145.,180.}       // DeltaPn > 0.4 GeV/c
 											};
 											
 	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaAlpha3DMuInDeltaPnSlices{ 
-												{0.,22.,44.,66.,88.,110.,145.,180.}, // DeltaPn < 0.2 GeV/c
+												{0.,22.,44.,66.,88.,110.,145.,180.},      // DeltaPn < 0.2 GeV/c
 												{0.,30.,50.,70.,90.,110.,130.,155.,180.}, // 0.2 < DeltaPn < 0.4 GeV/c
 												{0.,30.,50.,70.,90.,110.,130.,150.,180.}  // DeltaPn > 0.4 GeV/c	
 											};											
@@ -2166,28 +2166,28 @@ namespace Constants {
 	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaPnInDeltaAlpha3DqSlices{ 
-												{0,0.1,0.2,0.3,0.4,0.5,0.9},                           // DeltaAlpha3Dq < 45 deg
-												{0,0.1,0.2,0.3,0.4,0.55,0.65,0.9},                     // 45 < DeltaAlpha3Dq < 90 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.9},      // 90 < DeltaAlpha3Dq < 135 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.9}            // DeltaAlpha3Dq > 135 deg		
+												{0,0.1,0.2,0.3,0.4,0.85},                               // DeltaAlpha3Dq < 45 deg
+												{0,0.1,0.2,0.3,0.4,0.55,0.85},                          // 45 < DeltaAlpha3Dq < 90 deg
+												{0,0.08,0.15,0.23,0.3,0.38,0.45,0.85},                  // 90 < DeltaAlpha3Dq < 135 deg
+												{0,0.08,0.15,0.23,0.3,0.4,0.85}                         // DeltaAlpha3Dq > 135 deg		
 											};
 											
 	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaPnInDeltaAlpha3DMuSlices{ 
-												{0,0.1,0.2,0.3,0.4,0.5,0.9},                           // DeltaAlpha3DMu < 45 deg
-												{0,0.1,0.2,0.3,0.4,0.47,0.55,0.65,0.9},                // 45 < DeltaAlpha3DMu < 90 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.9},      // 90 < DeltaAlpha3DMu < 135 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.9}            // DeltaAlpha3DMu > 135 deg		
+												{0,0.1,0.2,0.3,0.4,0.85},                               // DeltaAlpha3DMu < 45 deg
+												{0,0.1,0.2,0.3,0.4,0.47,0.55,0.85},                     // 45 < DeltaAlpha3DMu < 90 deg
+												{0,0.08,0.15,0.23,0.3,0.38,0.45,0.85},                  // 90 < DeltaAlpha3DMu < 135 deg
+												{0,0.08,0.15,0.23,0.3,0.4,0.85}                         // DeltaAlpha3DMu > 135 deg		
 											};																						
 											
 	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsDeltaPnInDeltaAlphaTSlices{ 
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.9}, // DeltaAlphaT < 45 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.9}, // 45 < DeltaAlphaT < 90 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.9}, // 90 < DeltaAlphaT < 135 deg
-												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.9}  // DeltaAlphaT > 135 deg		
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.85}, // DeltaAlphaT < 45 deg
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.85}, // 45 < DeltaAlphaT < 90 deg
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.65,0.85}, // 90 < DeltaAlphaT < 135 deg
+												{0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55,0.85}  // DeltaAlphaT > 135 deg		
 											};																						
 
 	//----------------------------------------//
