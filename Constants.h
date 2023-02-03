@@ -53,9 +53,9 @@ namespace Constants {
 
 	// Detector
 
-	double FVx = 256; //cm
-	double FVy = 220; //cm	
-	double FVz = 1056; //cm
+	double FVx = 199.15; //cm
+	double FVy = 200; //cm	
+	double FVz = 500; //cm
 
 	double borderx = 10; //cm
 	double bordery = 10; //cm	
