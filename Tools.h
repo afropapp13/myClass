@@ -42,7 +42,8 @@ class Tools {
 		int ReturnIndex(double value, std::vector<double> vec);
 		void Reweight(TH1D* h, double SF);	
 		void Reweight2D(TH2D* h, double SF);	
-		std::vector<TMatrixD> MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrixD matrix_syst);		
+		std::vector<TMatrixD> MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrixD matrix_syst);	
+		void CalcChiSquared(TH1D* h_model, TH1D* h_data, TH2D* cov, double &chi, int &ndof, double &pval);	
 		
 		int Return2DNBins(std::vector< std::vector<double> > BinVector);
 		std::vector<double> Return2DBinIndices(std::vector< std::vector<double> > BinVector);			
