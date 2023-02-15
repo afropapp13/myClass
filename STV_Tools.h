@@ -28,6 +28,7 @@ class STV_Tools {
 		double fDeltaPhiT;
 		double fDeltaPhi3D;		
 		double fECal;
+		double fECalMB;		
 		double fEQE;
 		double fQ2;
 		double fA;
@@ -57,6 +58,7 @@ class STV_Tools {
 		double ReturnDeltaPhiT();
 		double ReturnDeltaPhi3D();		
 		double ReturnECal();
+		double ReturnECalMB();		
 		double ReturnEQE();
 		double ReturnQ2();		
 		double ReturnA();

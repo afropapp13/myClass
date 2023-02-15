@@ -16,6 +16,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 
 	double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938272, NeutronMass_GeV = 0.939565; // GeV
 	double DeltaM2 = TMath::Power(NeutronMass_GeV,2.) - TMath::Power(ProtonMass_GeV,2.);	
+
 	double BE = 0.04; // GeV for Ar
 			
 	// STV Calculation		
@@ -71,10 +72,20 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	TLorentzVector nuLorentzVector(0.,0.,fECal,fECal);
 	TLorentzVector qLorentzVector = nuLorentzVector - MuonLorentzVector;
 	fQ2 = - qLorentzVector.Mag2();
+
+	// https://journals.aps.org/prd/pdf/10.1103/PhysRevD.101.092001
+
+//	Just the magnitudes
+//	fPtx = fPt * TMath::Sin(fDeltaAlphaT * TMath::Pi() / 180.);
+//	fPty = fPt * TMath::Cos(fDeltaAlphaT * TMath::Pi() / 180.);
+
+	TVector3 UnitZ(0,0,1);
+	fPtx = ( UnitZ.Cross(MuonVectorTrans) ).Dot(PtVector) / MuonVectorTransMag;
+	fPty = - (MuonVectorTrans).Dot(PtVector) / MuonVectorTransMag;	
 	
 	// -------------------------------------------------------------------------------------------------------------------------
 	
-	// Light Cone Variables
+	// JLab Light Cone Variables
 	
 	TLorentzVector MissLorentzVector = MuonLorentzVector + ProtonLorentzVector - nuLorentzVector;
 	
@@ -112,22 +123,13 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	// For the calculation of p_n, back to the Minerva PRL
 	// https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.121.022504
 
-	double R = MA + MuonVectorLongMag + ProtonVectorLongMag - MuonEnergy - ProtonEnergy; // Equation 8
+	double R = MA + (MuonVectorLong + ProtonVectorLong).Mag() - MuonEnergy - ProtonEnergy; // Equation 8
 
 	// Equation 7
 
 	fPL = 0.5 * R - (MAPrime * MAPrime + fPt * fPt) / (2 * R);
 
 	fPn = TMath::Sqrt( fPt * fPt + fPL * fPL );
-
-	// https://journals.aps.org/prd/pdf/10.1103/PhysRevD.101.092001
-
-//	fPtx = fPt * TMath::Sin(fDeltaAlphaT * TMath::Pi() / 180.);
-//	fPty = fPt * TMath::Cos(fDeltaAlphaT * TMath::Pi() / 180.);
-
-	TVector3 UnitZ(0,0,1);
-	fPtx = ( UnitZ.Cross(MuonVectorTrans) ).Dot(PtVector) / MuonVectorTransMag;
-	fPty = - (MuonVectorTrans).Dot(PtVector) / MuonVectorTransMag;
 
 	// -------------------------------------------------------------------------------------------------------------------------
 
@@ -136,7 +138,12 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	// https://microboone-docdb.fnal.gov/cgi-bin/sso/RetrieveFile?docid=38090&filename=BeyondTransverseVariables_xsec_2022_06_14.pdf&version=1
 
 	TVector3 PnVector(PtVector.X(),PtVector.Y(),fPL);
-	TVector3 qVector = qLorentzVector.Vect();
+
+	fECalMB = MuonEnergy + ProtonKE + 0.0309; // GeV, after discussion with Andy F who got the numbers from Jan S
+	TLorentzVector nuLorentzVectorMB(0.,0.,fECalMB,fECalMB);
+	TLorentzVector qLorentzVectorMB = nuLorentzVectorMB - MuonLorentzVector;
+	TVector3 qVector = qLorentzVectorMB.Vect();
+
 	double qMag = qVector.Mag();
 	fDeltaAlpha3Dq = TMath::ACos( (qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
 	if (fDeltaAlpha3Dq > 180.) { fDeltaAlpha3Dq -= 180.; }
@@ -277,6 +284,14 @@ double STV_Tools::ReturnDeltaPhi3D() {
 double STV_Tools::ReturnECal() {
 
 	return fECal;
+
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnECalMB() {
+
+	return fECalMB;
 
 }
 
