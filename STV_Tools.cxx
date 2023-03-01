@@ -143,6 +143,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	TLorentzVector nuLorentzVectorMB(0.,0.,fECalMB,fECalMB);
 	TLorentzVector qLorentzVectorMB = nuLorentzVectorMB - MuonLorentzVector;
 	TVector3 qVector = qLorentzVectorMB.Vect();
+	TVector3 qVectorUnit = qVector.Unit();	
 
 	double qMag = qVector.Mag();
 	fDeltaAlpha3Dq = TMath::ACos( (qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
@@ -157,8 +158,15 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	if (fDeltaPhi3D > 180.) { fDeltaPhi3D -= 180.; }
 	if (fDeltaPhi3D < 0.) { fDeltaPhi3D += 180.; }	
 
-	fPnPerp = fPn * sin(fDeltaAlpha3Dq * TMath::Pi() / 180.);
-	fPnPar = fPn * cos(fDeltaAlpha3Dq * TMath::Pi() / 180.);	
+	// Magnitudes
+//	fPnPerp = fPn * sin(fDeltaAlpha3Dq * TMath::Pi() / 180.);
+//	fPnPar = fPn * cos(fDeltaAlpha3Dq * TMath::Pi() / 180.);	
+
+	fPnPerp = - (UnitZ.Cross(qVectorUnit) ).Dot(PnVector);
+	fPnPar = qVectorUnit.Dot(PnVector);
+
+	fPnPerpx = - ( ( UnitZ.Cross(qVectorUnit) ) * ( PnVector.Dot(UnitZ) ) ).Mag();
+	fPnPerpy = - ( ( UnitZ.Cross(qVectorUnit) ) * ( PnVector.Cross(UnitZ) ) ).Mag();		
 
 }
 
@@ -216,6 +224,20 @@ double STV_Tools::ReturnPty() {
 double STV_Tools::ReturnPnPerp() {
 
 	return fPnPerp;
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnPnPerpx() {
+
+	return fPnPerpx;
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnPnPerpy() {
+
+	return fPnPerpy;
 }
 
 // __________________________________________________________________________________________________________________________________________________

@@ -100,6 +100,8 @@ namespace Constants {
 		{ "DeltaPLPlot",  std::make_pair(0, 47) },
 		{ "DeltaPnPlot",  std::make_pair(0, 49) },
 		{ "DeltaPnPerpPlot",  std::make_pair(0, 64) },
+		{ "DeltaPnPerpxPlot",  std::make_pair(0, 64) },
+		{ "DeltaPnPerpyPlot",  std::make_pair(0, 64) },				
 		{ "DeltaPnParPlot",  std::make_pair(0, 39) },				
 		{ "DeltaPtxPlot",  std::make_pair(0, 54) },
 		{ "DeltaPtyPlot",  std::make_pair(0, 39) },	
@@ -126,9 +128,9 @@ namespace Constants {
 		{ "DeltaAlphaT_ProtonMomentum_0_50To0_70Plot",  std::make_pair(0, 0.23) },				
 		{ "DeltaAlphaT_ProtonMomentum_0_70To1_00Plot",  std::make_pair(0, 0.079) },				
 		{ "DeltaAlpha3Dq_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.32) },
-		{ "DeltaAlpha3Dq_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.39) },				
-		{ "DeltaAlpha3Dq_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.109) },
-		{ "DeltaAlpha3DMu_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.44) },
+		{ "DeltaAlpha3Dq_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.44) },				
+		{ "DeltaAlpha3Dq_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.119) },
+		{ "DeltaAlpha3DMu_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.34) },
 		{ "DeltaAlpha3DMu_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.39) },				
 		{ "DeltaAlpha3DMu_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.099) },				
 		{ "DeltaAlphaT_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 0.02) },
@@ -164,10 +166,10 @@ namespace Constants {
 		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  std::make_pair(0, 0.34) },
 		{ "DeltaPn_DeltaAlpha3Dq_90_00To135_00Plot",  std::make_pair(0, 0.39) },
 		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  std::make_pair(0, 0.199) },
-		{ "DeltaPn_DeltaAlpha3DMu_0_00To45_00Plot",  std::make_pair(0, 0.149) },
+		{ "DeltaPn_DeltaAlpha3DMu_0_00To45_00Plot",  std::make_pair(0, 0.159) },
 		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  std::make_pair(0, 0.34) },
-		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  std::make_pair(0, 0.39) },
-		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  std::make_pair(0, 0.17) },										
+		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  std::make_pair(0, 0.42) },
+		{ "DeltaPn_DeltaAlpha3DMu_135_00To180_00Plot",  std::make_pair(0, 0.199) },										
 		{ "MuonMomentum_MuonCosTheta_Minus1_00To0_00Plot",  std::make_pair(0, 11.) },
 		{ "MuonMomentum_MuonCosTheta_0_00To0_50Plot",  std::make_pair(0, 19.) },
 		{ "MuonMomentum_MuonCosTheta_0_50To0_75Plot",  std::make_pair(0, 46.) },
@@ -314,6 +316,8 @@ namespace Constants {
 		{ "DeltaPLPlot",  "#frac{d#sigma}{d#deltap_{L}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPnPlot",  "#frac{d#sigma}{dp_{n}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPnPerpPlot",  "#frac{d#sigma}{dp_{n#perp}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPnPerpxPlot",  "#frac{d#sigma}{dp_{n#perp,x}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPnPerpyPlot",  "#frac{d#sigma}{dp_{n#perp,y}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },				
 		{ "DeltaPnParPlot",  "#frac{d#sigma}{dp_{n#parallel}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },				
 		{ "DeltaPtxPlot",  "#frac{d#sigma}{d#deltap_{T,x}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPtyPlot",  "#frac{d#sigma}{d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
@@ -517,6 +521,8 @@ namespace Constants {
 		{ "DeltaPLPlot",  "All events" },
 		{ "DeltaPnPlot",  "All events" },
 		{ "DeltaPnPerpPlot",  "All events" },
+		{ "DeltaPnPerpxPlot",  "All events" },
+		{ "DeltaPnPerpyPlot",  "All events" },				
 		{ "DeltaPnParPlot",  "All events" },				
 		{ "DeltaPtxPlot",  "All events" },
 		{ "DeltaPtyPlot",  "All events" },
@@ -699,6 +705,8 @@ namespace Constants {
 		{ "DeltaPTPlot", "DeltaPTPlot" },
 		{ "DeltaPnPlot", "DeltaPnPlot" },
 		{ "DeltaPnPerpPlot", "DeltaPnPerpPlot" },
+		{ "DeltaPnPerpxPlot", "DeltaPnPerpxPlot" },
+		{ "DeltaPnPerpyPlot", "DeltaPnPerpyPlot" },				
 		{ "DeltaPnParPlot", "DeltaPnParPlot" },						
 		{ "DeltaAlphaTPlot", "DeltaAlphaTPlot" },
 		{ "DeltaAlpha3DqPlot", "DeltaAlpha3DqPlot" },
@@ -1126,6 +1134,8 @@ namespace Constants {
 				 //,"DeltaPLPlot"
 				 ,"DeltaPnPlot"
 				 ,"DeltaPnPerpPlot"
+				 ,"DeltaPnPerpxPlot"
+				 ,"DeltaPnPerpyPlot"				 				 
 				 ,"DeltaPnParPlot"
 				 ,"DeltaPtxPlot"
 				 ,"DeltaPtyPlot"
@@ -1234,6 +1244,8 @@ namespace Constants {
 				 ,"EQEPlot"				 
 				 ,"DeltaPnPlot"
 				 ,"DeltaPnPerpPlot"
+				 ,"DeltaPnPerpxPlot"
+				 ,"DeltaPnPerpyPlot"				 				 
 				 ,"DeltaPnParPlot"				 				 
 				 ,"DeltaPtxPlot"
 				 ,"DeltaPtyPlot"
@@ -1329,6 +1341,8 @@ namespace Constants {
 				 //,"DeltaPLPlot"
 				 ,"DeltaPnPlot"
 				 ,"DeltaPnPerpPlot"
+				 ,"DeltaPnPerpxPlot"
+				 ,"DeltaPnPerpyPlot"				 				 
 				 ,"DeltaPnParPlot"				 				 
 				 ,"DeltaPtxPlot"
 				 ,"DeltaPtyPlot"
@@ -1521,8 +1535,11 @@ namespace Constants {
 //	vector<TString> Runs{"Run1"};
 /*	vector<TString> Runs{"Run1","Run3"};*/
 /*	vector<TString> Runs{"Run1","Run2","Run3"};*/
-	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Run4aRutgers","Combined"};
+//	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Run4aRutgers","Combined"};
+	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Run4b","Combined"};
 //	vector<TString> Runs{"Run1","Run2","Run3","Run4","Run5"};
+
+	// ------------------------------------ //
 
 	// v43 Run 1 
 
@@ -1534,6 +1551,8 @@ namespace Constants {
 	static const double FullE1DCNT_wcut_Run1 = 36139233.0;
 	static const double FullEXT_Run1 = 65498807.0;
 	
+	// ------------------------------------ //	
+	
 	// v43 Run 2 
 
 	static const double tor860_wcut_Run2 = 0.;
@@ -1543,6 +1562,8 @@ namespace Constants {
 	static const double Fulltor860_wcut_Run2 = 2.62e20;
 	static const double FullE1DCNT_wcut_Run2 = 62045760.0;
 	static const double FullEXT_Run2 = 152404890.0;
+	
+	// ------------------------------------ //	
 	
 	// v43 Run 3 
 
@@ -1554,7 +1575,9 @@ namespace Constants {
 	static const double FullE1DCNT_wcut_Run3 = 61012955.0;
 	static const double FullEXT_Run3 = 214555174.0;
 	
-	// v43 Run 4(a) 
+	// ------------------------------------ //	
+	
+	// v43 Run 4(a & b) 
 
 //	static const double tor860_wcut_Run4a = 4.589e+19;
 //	static const double E1DCNT_wcut_Run4a = 10340017.0;
@@ -1587,11 +1610,16 @@ namespace Constants {
 	// rm low purity runs (run < 19080 or run > 19420) & after chat with Zarko about current
 	static const double tor860_wcut_Run4a = 3.37e+19;
 	static const double E1DCNT_wcut_Run4a = 7435696;
-	static const double EXT_Run4a = 23377641;	
+	static const double EXT_Run4a = 23377641;
+	
+	// Feb 27 2023
+	static const double tor860_wcut_Run4b = 1.4e20;
+	static const double E1DCNT_wcut_Run4b = 33067363;
+	static const double EXT_Run4b = 92797963;		
 
-	static const double tor860_wcut_Run4 = 0.;
-	static const double E1DCNT_wcut_Run4 = 0.;
-	static const double EXT_Run4 = 0.;	
+	static const double tor860_wcut_Run4 = 1.4e20;
+	static const double E1DCNT_wcut_Run4 = 33067363;
+	static const double EXT_Run4 = 92797963;		
 
 //	static const double Fulltor860_wcut_Run4a = 4.589e+19;
 //	static const double FullE1DCNT_wcut_Run4a = 10340017.0;
@@ -1625,12 +1653,27 @@ namespace Constants {
 	static const double Fulltor860_wcut_Run4a = 3.37e+19;
 	static const double FullE1DCNT_wcut_Run4a = 7435696;
 	static const double FullEXT_Run4a = 23377641;	
+	
+	// Feb 27 2023
+	static const double Fulltor860_wcut_Run4b = 1.4e20;
+	static const double FullE1DCNT_wcut_Run4b = 33067363;
+	static const double FullEXT_Run4b = 92797963;	
 
-	static const double Fulltor860_wcut_Run4 = 0.;
-	static const double FullE1DCNT_wcut_Run4 = 0.;
-	static const double FullEXT_Run4 = 0.;	
+	static const double Fulltor860_wcut_Run4 = 1.4e20;
+	static const double FullE1DCNT_wcut_Run4 = 33067363;
+	static const double FullEXT_Run4 = 92797963;
+	
+	// ------------------------------------ //		
 	
 	// v43 Run 5 
+
+	static const double tor860_wcut_Run5a = 0.;
+	static const double E1DCNT_wcut_Run5a = 0.;
+	static const double EXT_Run5a = 0.;	
+
+	static const double Fulltor860_wcut_Run5a = 0.;
+	static const double FullE1DCNT_wcut_Run5a = 0.;
+	static const double FullEXT_Run5a = 0.;
 
 	static const double tor860_wcut_Run5 = 0.;
 	static const double E1DCNT_wcut_Run5 = 0.;
@@ -1641,10 +1684,11 @@ namespace Constants {
 	static const double FullEXT_Run5 = 0.;	
 
 	// Combined POT
+	// For now just Runs 1 + 2 +3
 
-	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + tor860_wcut_Run5;	
-	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4 + FullEXT_Run5;	
-	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4 + FullE1DCNT_wcut_Run5;	
+	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3;	
+	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3;	
+	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3;	
 
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -1669,9 +1713,12 @@ namespace Constants {
 		
 //	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.27,0.34,0.4,0.47,0.55,0.65,0.75};
 	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.65,0.75,0.85};
-	
+
 	static const int NBinsDeltaPnPerp = 8; static const double ArrayNBinsDeltaPnPerp[NBinsDeltaPnPerp+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.85};
 	
+	static const int NBinsDeltaPnPerpx = 11; static const double ArrayNBinsDeltaPnPerpx[NBinsDeltaPnPerpx+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45,0.55};
+	static const int NBinsDeltaPnPerpy = 11; static const double ArrayNBinsDeltaPnPerpy[NBinsDeltaPnPerpy+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45,0.55};		
+
 	static const int NBinsDeltaPnPar = 10; static const double ArrayNBinsDeltaPnPar[NBinsDeltaPnPar+1] = {-0.55,-0.45,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.45};		
 
 //	static const int NBinsDeltaPtx = 20; static const double ArrayNBinsDeltaPtx[NBinsDeltaPtx+1] = {-0.55,-0.47,-0.4,-0.35,-0.3,-0.25,-0.2,-0.15,-0.1,-0.05,0,0.05,0.1,0.15,0.2,0.25,0.3,0.35,0.4,0.47,0.55};
@@ -1799,6 +1846,8 @@ namespace Constants {
 	static TString LabelXAxisDeltaPL = ";#deltap_{L} [GeV/c]"; static TString LabelXAxisTrueDeltaPL = ";True #deltap_{L} [GeV/c]";
 	static TString LabelXAxisDeltaPn = ";p_{n} [GeV/c]"; static TString LabelXAxisTrueDeltaPn = ";True p_{n} [GeV/c]";
 	static TString LabelXAxisDeltaPnPerp = ";p_{n#perp} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerp = ";True p_{n#perp} [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpx = ";p_{n#perp,x} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerpx = ";True p_{n#perp,x} [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpy = ";p_{n#perp,y} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerpy = ";True p_{n#perp,y} [GeV/c]";		
 	static TString LabelXAxisDeltaPnPar = ";p_{n#parallel} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPar = ";True p_{n#parallel} [GeV/c]";		
 	static TString LabelXAxisDeltaPtx = ";#deltap_{T,x} [GeV/c]"; static TString LabelXAxisTrueDeltaPtx = ";True #deltap_{T,x} [GeV/c]";
 	static TString LabelXAxisDeltaPty = ";#deltap_{T,y} [GeV/c]"; static TString LabelXAxisTrueDeltaPty = ";True #deltap_{T,y} [GeV/c]";
@@ -1855,6 +1904,8 @@ namespace Constants {
 	static TString LabelXAxisDeltaPL2D = LabelXAxisTrueDeltaPL+";Reco #deltap_{L} [GeV/c]";
 	static TString LabelXAxisDeltaPn2D = LabelXAxisTrueDeltaPn+";Reco p_{n} [GeV/c]";
 	static TString LabelXAxisDeltaPnPerp2D = LabelXAxisTrueDeltaPnPerp+";Reco p_{n#perp} [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpx2D = LabelXAxisTrueDeltaPnPerpx+";Reco p_{n#perp,x} [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpy2D = LabelXAxisTrueDeltaPnPerpy+";Reco p_{n#perp,y} [GeV/c]";		
 	static TString LabelXAxisDeltaPnPar2D = LabelXAxisTrueDeltaPnPar+";Reco p_{n#parallel} [GeV/c]";		
 	static TString LabelXAxisDeltaPtx2D = LabelXAxisTrueDeltaPtx+";Reco #deltap_{T,x} [GeV/c]";
 	static TString LabelXAxisDeltaPty2D = LabelXAxisTrueDeltaPty+";Reco #deltap_{T,y} [GeV/c]";
@@ -2466,6 +2517,8 @@ namespace Constants {
 		{ "DeltaPLPlot", 1. },
 		{ "DeltaPnPlot", 1. },
 		{ "DeltaPnPerpPlot", 1. },
+		{ "DeltaPnPerpxPlot", 1. },	
+		{ "DeltaPnPerpyPlot", 1. },			
 		{ "DeltaPnParPlot", 1. },				
 		{ "DeltaPtxPlot", 1. },
 		{ "DeltaPtyPlot", 1. },	

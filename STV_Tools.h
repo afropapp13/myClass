@@ -35,6 +35,8 @@ class STV_Tools {
 		double fPtx;
 		double fPty;
 		double fPnPerp;
+		double fPnPerpx;
+		double fPnPerpy;				
 		double fPnPar;												
 
 	public:
@@ -65,6 +67,8 @@ class STV_Tools {
 		double ReturnPtx();
 		double ReturnPty();	
 		double ReturnPnPerp();
+		double ReturnPnPerpx();
+		double ReturnPnPerpy();				
 		double ReturnPnPar();			
 
 };
