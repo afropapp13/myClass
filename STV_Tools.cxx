@@ -166,7 +166,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	fPnPar = qVectorUnit.Dot(PnVector);
 
 	fPnPerpx = - ( ( UnitZ.Cross(qVectorUnit) ) * ( PnVector.Dot(UnitZ) ) ).Mag();
-	fPnPerpy = - ( ( UnitZ.Cross(qVectorUnit) ) * ( PnVector.Cross(UnitZ) ) ).Mag();		
+	fPnPerpy = - ( ( UnitZ.Cross(qVectorUnit) ).Dot( ( PnVector.Cross(UnitZ) ) ) );		
 
 }
 
