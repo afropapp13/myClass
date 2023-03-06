@@ -126,10 +126,8 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	double R = MA + (MuonVectorLong + ProtonVectorLong).Mag() - MuonEnergy - ProtonEnergy; // Equation 8
 
 	// Equation 7
-
-	fPL = 0.5 * R - (MAPrime * MAPrime + fPt * fPt) / (2 * R);
-
-	fPn = TMath::Sqrt( fPt * fPt + fPL * fPL );
+	// Abandoned this expression on Mar 6 2023
+//	fPL = 0.5 * R - (MAPrime * MAPrime + fPt * fPt) / (2 * R);
 
 	// -------------------------------------------------------------------------------------------------------------------------
 
@@ -145,7 +143,11 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	TVector3 qVector = qLorentzVectorMB.Vect();
 	TVector3 qTVector(qVector.X(), qVector.X(), 0.);	
 	TVector3 qVectorUnit = qVector.Unit();
-	TVector3 qTVectorUnit = qTVector.Unit();		
+	TVector3 qTVectorUnit = qTVector.Unit();	
+
+	fPL = MuonVector.Z() + ProtonVector.Z() - fECalMB;	
+
+	fPn = TMath::Sqrt( fPt * fPt + fPL * fPL );		
 
 	double qMag = qVector.Mag();
 	fDeltaAlpha3Dq = TMath::ACos( (qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
@@ -162,13 +164,13 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 
 	// Magnitudes
 	fPnPerp = fPn * sin(fDeltaAlpha3Dq * TMath::Pi() / 180.);
-//	fPnPar = fPn * cos(fDeltaAlpha3Dq * TMath::Pi() / 180.);	
+	fPnPar = fPn * cos(fDeltaAlpha3Dq * TMath::Pi() / 180.);	
 
 //	fPnPerp = - (UnitZ.Cross(qVectorUnit) ).Dot(PnVector);
 //	fPnPar = qVectorUnit.Dot(PnVector);
-	fPnPar = fECalMB - MuonVector.Z() - ProtonVector.Z();	
+//	fPnPar = fECalMB - MuonVector.Z() - ProtonVector.Z();	
 
-	fPnPerpx = (qTVectorUnit.Cross(UnitZ)).Dot(PnVector);
+	fPnPerpx = ( qTVectorUnit.Cross(UnitZ) ).Dot(PnVector);
 	fPnPerpy = ( qVectorUnit.Cross( (qTVectorUnit.Cross(UnitZ) ) ) ).Dot(PnVector);		
 
 }
