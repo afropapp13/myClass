@@ -135,24 +135,26 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	// Based on Andy F's xsec meeting presentation
 	// https://microboone-docdb.fnal.gov/cgi-bin/sso/RetrieveFile?docid=38090&filename=BeyondTransverseVariables_xsec_2022_06_14.pdf&version=1
 
-	TVector3 PnVector(PtVector.X(),PtVector.Y(),fPL);
-
 	fECalMB = MuonEnergy + ProtonKE + 0.0309; // GeV, after discussion with Andy F who got the numbers from Jan S
 	TLorentzVector nuLorentzVectorMB(0.,0.,fECalMB,fECalMB);
 	TLorentzVector qLorentzVectorMB = nuLorentzVectorMB - MuonLorentzVector;
+
+//	fPL = 0.5 * R - (MAPrime * MAPrime + fPt * fPt) / (2 * R);
+	fPL = MuonVector.Z() + ProtonVector.Z() - fECalMB;
+	TVector3 PnVector(PtVector.X(),PtVector.Y(),fPL);
+
 	TVector3 qVector = qLorentzVectorMB.Vect();
 	TVector3 qTVector(qVector.X(), qVector.X(), 0.);	
 	TVector3 qVectorUnit = qVector.Unit();
-	TVector3 qTVectorUnit = qTVector.Unit();	
-
-	fPL = MuonVector.Z() + ProtonVector.Z() - fECalMB;	
+	TVector3 qTVectorUnit = qTVector.Unit();		
 
 	fPn = TMath::Sqrt( fPt * fPt + fPL * fPL );		
 
-	double qMag = qVector.Mag();
+	double qMag = qVector.Mag();	
 	fDeltaAlpha3Dq = TMath::ACos( (qVector * PnVector) / ( qMag * fPn ) ) * 180./TMath::Pi();
 	if (fDeltaAlpha3Dq > 180.) { fDeltaAlpha3Dq -= 180.; }
 	if (fDeltaAlpha3Dq < 0.) { fDeltaAlpha3Dq += 180.; }	
+//if (fDeltaAlpha3Dq < 10) {cout << "qVector * PnVector = " << qVector * PnVector << ",  qMag = " << qMag << ", fPn = " << fPn << ", fDeltaAlpha3Dq = " << fDeltaAlpha3Dq << endl;}	
 
 	fDeltaAlpha3DMu = TMath::ACos( -(MuonVector * PnVector) / ( MuonVector.Mag() * fPn ) ) * 180./TMath::Pi();	
 	if (fDeltaAlpha3DMu > 180.) { fDeltaAlpha3DMu -= 180.; }
