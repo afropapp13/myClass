@@ -100,7 +100,7 @@ namespace Constants {
 		{ "DeltaPLPlot",  std::make_pair(0, 47) },
 		{ "DeltaPnPlot",  std::make_pair(0, 49) },
 		{ "DeltaPnPerpPlot",  std::make_pair(0, 64) },
-		{ "DeltaPnPerpxPlot",  std::make_pair(0, 54) },
+		{ "DeltaPnPerpxPlot",  std::make_pair(0, 49) },
 		{ "DeltaPnPerpyPlot",  std::make_pair(0, 54) },				
 		{ "DeltaPnParPlot",  std::make_pair(0, 39) },				
 		{ "DeltaPtxPlot",  std::make_pair(0, 54) },
@@ -165,7 +165,7 @@ namespace Constants {
 		{ "DeltaPn_DeltaAlpha3Dq_0_00To45_00Plot",  std::make_pair(0, 0.1499) },
 		{ "DeltaPn_DeltaAlpha3Dq_45_00To90_00Plot",  std::make_pair(0, 0.34) },
 		{ "DeltaPn_DeltaAlpha3Dq_90_00To135_00Plot",  std::make_pair(0, 0.39) },
-		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  std::make_pair(0, 0.199) },
+		{ "DeltaPn_DeltaAlpha3Dq_135_00To180_00Plot",  std::make_pair(0, 0.229) },
 		{ "DeltaPn_DeltaAlpha3DMu_0_00To45_00Plot",  std::make_pair(0, 0.159) },
 		{ "DeltaPn_DeltaAlpha3DMu_45_00To90_00Plot",  std::make_pair(0, 0.34) },
 		{ "DeltaPn_DeltaAlpha3DMu_90_00To135_00Plot",  std::make_pair(0, 0.42) },
@@ -1094,6 +1094,10 @@ namespace Constants {
 	static const double R_3_0_6_G18_10a_02_11a_RFG_NoRPA_FluxIntegratedXSection = 27.2908; // e-38 cm^2 MCC9 number GENIE v3.0.6 / G18_10a_02_11a and RFG instead of LFG w/o RPA	
 	static const double R_3_0_6_G18_10a_02_11a_EffSF_FluxIntegratedXSection = 24.5238; // e-38 cm^2 MCC9 number GENIE v3.0.6 / G18_10a_02_11a and EffSF instead of LFG
 	static const double R_3_0_6_G18_10a_02_11a_EffSF_NoRPA_FluxIntegratedXSection = 25.3184; // e-38 cm^2 MCC9 number GENIE v3.0.6 / G18_10a_02_11a and EffSF instead of LFG	w/o RPA
+	static const double v3_2_0_G21_11b_00_000_FluxIntegratedXSection = 31.9663; // e-38 cm^2 MCC9
+	static const double v3_4_0_G18_02a_02_11a_FluxIntegratedXSection = 27.2797; // e-38 cm^2 MCC9
+	static const double v3_4_0_G21_11b_00_000_FluxIntegratedXSection = 31.9544; // e-38 cm^2 MCC9
+	static const double v3_0_6_G18_10d_02_11a_FluxIntegratedXSection = 27.1433; // e-38 cm^2 MCC9				
 
 	// Global Constants
 
