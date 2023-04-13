@@ -1105,7 +1105,8 @@ namespace Constants {
 //	static const double NTargets = 1.203E30; // Argon nuclei, not nucleons
 	static const double NTargets = 1.05E30; // Argon nuclei, not nucleons
 	
-	static const int NuMuPdg = 14, MuonPdg = 13, ProtonPdg = 2212, AbsChargedPionPdg = 211, NeutralPionPdg = 111, ElectronPdg = 11, NeutronPdg = 2112, KaonPdg = 321;
+	static const int NuMuPdg = 14, MuonPdg = 13, ProtonPdg = 2212, AbsChargedPionPdg = 211, NeutralPionPdg = 111;
+	static const int ElectronPdg = 11, PhotonPdg = 22, NeutronPdg = 2112, KaonPdg = 321;
 	static const int DeuteriumPdg = 1000010020, HeliumPdg = 1000020040, ArgonPdg = 1000180400;
 
 	static const double MuonMass = 106, ProtonMass = 938.272, NeutronMass = 939.565; // MeV
