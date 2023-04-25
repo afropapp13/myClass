@@ -1097,7 +1097,8 @@ namespace Constants {
 	static const double v3_2_0_G21_11b_00_000_FluxIntegratedXSection = 31.9663; // e-38 cm^2 MCC9
 	static const double v3_4_0_G18_02a_02_11a_FluxIntegratedXSection = 27.2797; // e-38 cm^2 MCC9
 	static const double v3_4_0_G21_11b_00_000_FluxIntegratedXSection = 31.9544; // e-38 cm^2 MCC9
-	static const double v3_0_6_G18_10d_02_11a_FluxIntegratedXSection = 27.1433; // e-38 cm^2 MCC9				
+	static const double v3_0_6_G18_10d_02_11a_FluxIntegratedXSection = 27.1433; // e-38 cm^2 MCC9
+	static const double v3_2_0_G18_10d_02_11a_FluxIntegratedXSection = 27.144; // e-38 cm^2 MCC9				
 
 	// Global Constants
 
@@ -2699,6 +2700,18 @@ namespace Constants {
 	const std::vector<int> InteBreakColors{kBlack,kAzure-4,kOrange-3,kGreen+1,kRed+1,kBlue};		
 	std::vector<TString> InteractionLabels = {"","QE","MEC","RES","DIS","COH"};
 	const int NInte = InteractionLabels.size();
+	
+	const std::vector<std::string> knobList = {"AGKYpT1pi_UBGenie","AGKYxF1pi_UBGenie","AhtBY_UBGenie","AxFFCCQEshape_UBGenie","BhtBY_UBGenie",
+                 "CV1uBY_UBGenie","CV2uBY_UBGenie","DecayAngMEC_UBGenie","EtaNCEL_UBGenie","FrAbs_N_UBGenie",
+                 "FrAbs_pi_UBGenie","FrCEx_N_UBGenie","FrCEx_pi_UBGenie","FrInel_N_UBGenie","FrInel_pi_UBGenie",
+                 "FrPiProd_N_UBGenie","FrPiProd_pi_UBGenie","FracDelta_CCMEC_UBGenie","FracPN_CCMEC_UBGenie","MFP_N_UBGenie",
+                 "MFP_pi_UBGenie","MaCCQE_UBGenie","MaCCRES_UBGenie","MaNCEL_UBGenie","MaNCRES_UBGenie",
+                 "MvCCRES_UBGenie","MvNCRES_UBGenie","NonRESBGvbarnCC1pi_UBGenie","NonRESBGvbarnCC2pi_UBGenie","NonRESBGvbarnNC1pi_UBGenie",
+                 "NonRESBGvbarnNC2pi_UBGenie","NonRESBGvbarpCC1pi_UBGenie","NonRESBGvbarpCC2pi_UBGenie","NonRESBGvbarpNC1pi_UBGenie","NonRESBGvbarpNC2pi_UBGenie",
+                 "NonRESBGvnCC1pi_UBGenie","NonRESBGvnCC2pi_UBGenie","NonRESBGvnNC1pi_UBGenie","NonRESBGvnNC2pi_UBGenie","NonRESBGvpCC1pi_UBGenie",
+                 "NonRESBGvpCC2pi_UBGenie","NonRESBGvpNC1pi_UBGenie","NonRESBGvpNC2pi_UBGenie","NormCCMEC_UBGenie","NormNCMEC_UBGenie",
+                 "RDecBR1eta_UBGenie","RDecBR1gamma_UBGenie","RPA_CCQE_UBGenie","Theta_Delta2Npi_UBGenie","TunedCentralValue_UBGenie",
+                 "VecFFCCQEshape_UBGenie","XSecShape_CCMEC_UBGenie","splines_general_Spline"};	
 	
 	//----------------------------------------//		
 
