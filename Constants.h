@@ -1673,21 +1673,21 @@ namespace Constants {
 	
 	// v43 Run 5 
 
-	static const double tor860_wcut_Run5a = 0.;
-	static const double E1DCNT_wcut_Run5a = 0.;
-	static const double EXT_Run5a = 0.;	
+	static const double tor860_wcut_Run5a = 3.473e+19;
+	static const double E1DCNT_wcut_Run5a = 8310967.0;
+	static const double EXT_Run5a = 35657042.0;	
 
-	static const double Fulltor860_wcut_Run5a = 0.;
-	static const double FullE1DCNT_wcut_Run5a = 0.;
-	static const double FullEXT_Run5a = 0.;
+	static const double Fulltor860_wcut_Run5a = 3.473e+19;
+	static const double FullE1DCNT_wcut_Run5a = 8310967.0;
+	static const double FullEXT_Run5a = 35657042.0;
 
-	static const double tor860_wcut_Run5 = 0.;
-	static const double E1DCNT_wcut_Run5 = 0.;
-	static const double EXT_Run5 = 0.;	
+	static const double tor860_wcut_Run5 = 3.473e+19;
+	static const double E1DCNT_wcut_Run5 = 8310967.0;
+	static const double EXT_Run5 = 35657042.0;	
 
-	static const double Fulltor860_wcut_Run5 = 0.;
-	static const double FullE1DCNT_wcut_Run5 = 0.;
-	static const double FullEXT_Run5 = 0.;	
+	static const double Fulltor860_wcut_Run5 = 3.473e+19;
+	static const double FullE1DCNT_wcut_Run5 = 8310967.0;
+	static const double FullEXT_Run5 = 35657042.0;	
 
 	// Combined POT
 	// For now just Runs 1 + 2 +3
