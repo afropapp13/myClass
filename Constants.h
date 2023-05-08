@@ -1542,7 +1542,7 @@ namespace Constants {
 /*	vector<TString> Runs{"Run1","Run3"};*/
 /*	vector<TString> Runs{"Run1","Run2","Run3"};*/
 //	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Run4aRutgers","Combined"};
-	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Run4b","Combined"};
+	vector<TString> Runs{"Run1","Run2","Run3","Run4a","Run4b","Run5","Combined"};
 //	vector<TString> Runs{"Run1","Run2","Run3","Run4","Run5"};
 
 	// ------------------------------------ //
