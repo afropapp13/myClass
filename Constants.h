@@ -256,7 +256,7 @@ namespace Constants {
 		{ "SerialDeltaAlpha3DMu_DeltaPnPlot",  std::make_pair(0, 1.79) },		
 		{ "SerialProtonMomentum_DeltaAlphaTPlot",  std::make_pair(0, 1.2) },
 		{ "SerialDeltaPT_DeltaAlphaTPlot",  std::make_pair(0, 1.2) },
-		{ "SerialDeltaPn_DeltaAlpha3DqPlot",  std::make_pair(0, 1.3) },
+		{ "SerialDeltaPn_DeltaAlpha3DqPlot",  std::make_pair(0, 1.9) },
 		{ "SerialDeltaPn_DeltaAlpha3DMuPlot",  std::make_pair(0, 1.3) },		
 		{ "SerialDeltaPn_DeltaAlphaTPlot",  std::make_pair(0, 1.39) },		
 		{ "SerialDeltaPhiT_DeltaPTPlot",  std::make_pair(0, 4.09) },
