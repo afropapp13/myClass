@@ -315,9 +315,9 @@ namespace Constants {
 		{ "CCQEQ2Plot",  "#frac{d#sigma}{dQ^{2}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c^{2} Ar}#right]" },	
 		{ "DeltaPLPlot",  "#frac{d#sigma}{d#deltap_{L}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPnPlot",  "#frac{d#sigma}{dp_{n}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
-		{ "DeltaPnPerpPlot",  "#frac{d#sigma}{dp_{n#perp}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
-		{ "DeltaPnPerpxPlot",  "#frac{d#sigma}{dp_{n#perp,x}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
-		{ "DeltaPnPerpyPlot",  "#frac{d#sigma}{dp_{n#perp,y}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },				
+		{ "DeltaPnPerpPlot",  "#frac{d#sigma}{dp_{n#perp} }   #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPnPerpxPlot",  "#frac{d#sigma}{dp_{n#perp ,x} }   #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
+		{ "DeltaPnPerpyPlot",  "#frac{d#sigma}{dp_{n#perp ,y} }   #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },				
 		{ "DeltaPnParPlot",  "#frac{d#sigma}{dp_{n#parallel}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },				
 		{ "DeltaPtxPlot",  "#frac{d#sigma}{d#deltap_{T,x}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
 		{ "DeltaPtyPlot",  "#frac{d#sigma}{d#deltap_{T,y}} #left[10^{-38} #frac{cm^{2}}{GeV/c Ar}#right]" },
@@ -1856,9 +1856,9 @@ namespace Constants {
 
 	static TString LabelXAxisDeltaPL = ";#deltap_{L} [GeV/c]"; static TString LabelXAxisTrueDeltaPL = ";True #deltap_{L} [GeV/c]";
 	static TString LabelXAxisDeltaPn = ";p_{n} [GeV/c]"; static TString LabelXAxisTrueDeltaPn = ";True p_{n} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerp = ";p_{n#perp} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerp = ";True p_{n#perp} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerpx = ";p_{n#perp,x} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerpx = ";True p_{n#perp,x} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerpy = ";p_{n#perp,y} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerpy = ";True p_{n#perp,y} [GeV/c]";		
+	static TString LabelXAxisDeltaPnPerp = ";p_{n#perp}  [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerp = ";True p_{n#perp}  [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpx = ";p_{n#perp ,x}  [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerpx = ";True p_{n#perp ,x}  [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpy = ";p_{n#perp ,y}  [GeV/c]"; static TString LabelXAxisTrueDeltaPnPerpy = ";True p_{n#perp ,y}  [GeV/c]";		
 	static TString LabelXAxisDeltaPnPar = ";p_{n#parallel} [GeV/c]"; static TString LabelXAxisTrueDeltaPnPar = ";True p_{n#parallel} [GeV/c]";		
 	static TString LabelXAxisDeltaPtx = ";#deltap_{T,x} [GeV/c]"; static TString LabelXAxisTrueDeltaPtx = ";True #deltap_{T,x} [GeV/c]";
 	static TString LabelXAxisDeltaPty = ";#deltap_{T,y} [GeV/c]"; static TString LabelXAxisTrueDeltaPty = ";True #deltap_{T,y} [GeV/c]";
@@ -1914,9 +1914,9 @@ namespace Constants {
 
 	static TString LabelXAxisDeltaPL2D = LabelXAxisTrueDeltaPL+";Reco #deltap_{L} [GeV/c]";
 	static TString LabelXAxisDeltaPn2D = LabelXAxisTrueDeltaPn+";Reco p_{n} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerp2D = LabelXAxisTrueDeltaPnPerp+";Reco p_{n#perp} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerpx2D = LabelXAxisTrueDeltaPnPerpx+";Reco p_{n#perp,x} [GeV/c]";
-	static TString LabelXAxisDeltaPnPerpy2D = LabelXAxisTrueDeltaPnPerpy+";Reco p_{n#perp,y} [GeV/c]";		
+	static TString LabelXAxisDeltaPnPerp2D = LabelXAxisTrueDeltaPnPerp+";Reco p_{n#perp}  [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpx2D = LabelXAxisTrueDeltaPnPerpx+";Reco p_{n#perp ,x}  [GeV/c]";
+	static TString LabelXAxisDeltaPnPerpy2D = LabelXAxisTrueDeltaPnPerpy+";Reco p_{n#perp ,y}  [GeV/c]";		
 	static TString LabelXAxisDeltaPnPar2D = LabelXAxisTrueDeltaPnPar+";Reco p_{n#parallel} [GeV/c]";		
 	static TString LabelXAxisDeltaPtx2D = LabelXAxisTrueDeltaPtx+";Reco #deltap_{T,x} [GeV/c]";
 	static TString LabelXAxisDeltaPty2D = LabelXAxisTrueDeltaPty+";Reco #deltap_{T,y} [GeV/c]";
