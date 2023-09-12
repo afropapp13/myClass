@@ -17,7 +17,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	double MuonMass_GeV = 0.106, ProtonMass_GeV = 0.938272, NeutronMass_GeV = 0.939565; // GeV
 	double DeltaM2 = TMath::Power(NeutronMass_GeV,2.) - TMath::Power(ProtonMass_GeV,2.);	
 
-	double BE = 0.04; // GeV for Ar
+	double BE = 0.0309; // GeV for Ar
 			
 	// STV Calculation		
 			

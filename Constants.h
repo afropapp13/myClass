@@ -177,7 +177,7 @@ namespace Constants {
 		{ "SerialECal_DeltaPTDeltaAlphaTPlot", "#frac{d^{3}#sigma}{dE^{Cal} d#deltap_{T} d#delta#alpha_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot", "#frac{d^{3}#sigma}{dE^{Cal} dp_{#mu} dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },
 	
-	}
+	};
 
 	static std::map<TString,TString> LatexLabel =
 	{
@@ -329,7 +329,9 @@ namespace Constants {
 		{ "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_30To0_50Plot", "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_30To0_50Plot" },
 		{ "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_50To0_70Plot", "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_50To0_70Plot" },
 		{ "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_70To1_00Plot", "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_70To1_00Plot" },					
-						
+	
+	};
+					
 	// -------------------------------------------------------------------------------------------------------------------------
 
 	// Global Constants
