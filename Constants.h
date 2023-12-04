@@ -1585,115 +1585,67 @@ namespace Constants {
 	static const double Fulltor860_wcut_Run3 = 2.55e20;
 	static const double FullE1DCNT_wcut_Run3 = 61012955.0;
 	static const double FullEXT_Run3 = 214555174.0;
-	
-	// ------------------------------------ //	
-	
-	// v43 Run 4(a & b) 
 
-//	static const double tor860_wcut_Run4a = 4.589e+19;
-//	static const double E1DCNT_wcut_Run4a = 10340017.0;
-//	static const double EXT_Run4a = 36117774.0;
-
-	// Rutgers
-	static const double tor860_wcut_Run4aRutgers = 4.345e+19;
-	static const double E1DCNT_wcut_Run4aRutgers = 13772291.0;
-	static const double EXT_Run4aRutgers = 23377641;
-
-	// Aug 2022
-//	static const double tor860_wcut_Run4a = 4.103e+19;
-//	static const double E1DCNT_wcut_Run4a = 10347885;
-//	static const double EXT_Run4a = 36093917;
-
-	// Nov (uB mini-retreat)
-//	static const double tor860_wcut_Run4a = 4.599e+19;
-//	static const double E1DCNT_wcut_Run4a = 14565548;
-//	static const double EXT_Run4a = 36093917;
-	
-	// rm low purity runs (run < 19080 or run > 19420)
-//	static const double tor860_wcut_Run4a = 3.05e+19;
-//	static const double E1DCNT_wcut_Run4a = 7885027;
-//	static const double EXT_Run4a = 36093917;	
-
-//	static const double tor860_wcut_Run4 = 0.;
-//	static const double E1DCNT_wcut_Run4 = 0.;
-//	static const double EXT_Run4 = 0.;
-	
-	// rm low purity runs (run < 19080 or run > 19420) & after chat with Zarko about current
-	static const double tor860_wcut_Run4a = 3.37e+19;
-	static const double E1DCNT_wcut_Run4a = 7435696;
-	static const double EXT_Run4a = 23377641;
-	
-	// Feb 27 2023
-	static const double tor860_wcut_Run4b = 1.4e20;
-	static const double E1DCNT_wcut_Run4b = 33067363;
-	static const double EXT_Run4b = 92797963;		
-
-	static const double tor860_wcut_Run4 = 1.4e20;
-	static const double E1DCNT_wcut_Run4 = 33067363;
-	static const double EXT_Run4 = 92797963;		
-
-//	static const double Fulltor860_wcut_Run4a = 4.589e+19;
-//	static const double FullE1DCNT_wcut_Run4a = 10340017.0;
-//	static const double FullEXT_Run4a = 36117774.0;
-	
-	// Rutgers
-	static const double Fulltor860_wcut_Run4aRutgers = 4.345e+19;
-	static const double FullE1DCNT_wcut_Run4aRutgers = 13772291.0;
-	static const double FullEXT_Run4aRutgers = 23377641;	
-
-	// Aug 2022
-//	static const double Fulltor860_wcut_Run4a = 4.103e+19;
-//	static const double FullE1DCNT_wcut_Run4a = 10347885;
-//	static const double FullEXT_Run4a = 36093917;
-
-	// Nov (uB mini-retreat)
-//	static const double Fulltor860_wcut_Run4a = 4.599e+19;
-//	static const double FullE1DCNT_wcut_Run4a = 14565548;
-//	static const double FullEXT_Run4a = 36093917;
-	
-	// Nov (uB mini-retreat)
-//	static const double Fulltor860_wcut_Run4a = 3.05e+19;
-//	static const double FullE1DCNT_wcut_Run4a = 7885027;
-//	static const double FullEXT_Run4a = 36093917;	
-
-//	static const double Fulltor860_wcut_Run4 = 0.;
-//	static const double FullE1DCNT_wcut_Run4 = 0.;
-//	static const double FullEXT_Run4 = 0.;
-	
-	// rm low purity runs (run < 19080 or run > 19420) & after chat with Zarko about current
-	static const double Fulltor860_wcut_Run4a = 3.37e+19;
-	static const double FullE1DCNT_wcut_Run4a = 7435696;
-	static const double FullEXT_Run4a = 23377641;	
-	
-	// Feb 27 2023
-	static const double Fulltor860_wcut_Run4b = 1.4e20;
-	static const double FullE1DCNT_wcut_Run4b = 33067363;
-	static const double FullEXT_Run4b = 92797963;	
-
-	static const double Fulltor860_wcut_Run4 = 1.4e20;
-	static const double FullE1DCNT_wcut_Run4 = 33067363;
-	static const double FullEXT_Run4 = 92797963;
-	
-	// ------------------------------------ //		
-	
-	// v43 Run 5 
-
-	static const double tor860_wcut_Run5a = 3.473e+19;
-	static const double E1DCNT_wcut_Run5a = 8310967.0;
-	static const double EXT_Run5a = 35657042.0;	
-
-	static const double Fulltor860_wcut_Run5a = 3.473e+19;
-	static const double FullE1DCNT_wcut_Run5a = 8310967.0;
-	static const double FullEXT_Run5a = 35657042.0;
-
-	static const double tor860_wcut_Run5 = 3.473e+19;
-	static const double E1DCNT_wcut_Run5 = 8310967.0;
-	static const double EXT_Run5 = 35657042.0;	
-
-	static const double Fulltor860_wcut_Run5 = 3.473e+19;
-	static const double FullE1DCNT_wcut_Run5 = 8310967.0;
-	static const double FullEXT_Run5 = 35657042.0;	
-
+        // ------------------------------------ //      
+        
+        // Run 4a 
+        
+        static const double tor860_wcut_Run4a = 0.;
+        static const double E1DCNT_wcut_Run4a = 0.;
+        static const double EXT_Run4a = 1.;
+        
+        static const double Fulltor860_wcut_Run4a = 5.537e+19;
+        static const double FullE1DCNT_wcut_Run4a = 12329277.0;
+        static const double FullEXT_Run4a = 35295091.0;
+        
+        // ------------------------------------ //      
+        
+        // Run 4b 
+        
+        static const double tor860_wcut_Run4b = 0.;
+        static const double E1DCNT_wcut_Run4b = 0.;
+        static const double EXT_Run4b = 1.;
+        
+        static const double Fulltor860_wcut_Run4b = 1.47e20;
+        static const double FullE1DCNT_wcut_Run4b = 34737600.0;
+        static const double FullEXT_Run4b = 91167643.0;
+        
+        // ------------------------------------ //
+        
+        // Run 4c
+        
+        static const double tor860_wcut_Run4c = 0.;
+        static const double E1DCNT_wcut_Run4c = 0.;
+        static const double EXT_Run4c = 1.;
+        
+        static const double Fulltor860_wcut_Run4c = 9.11e19;
+        static const double FullE1DCNT_wcut_Run4c = 20639283.0;
+        static const double FullEXT_Run4c = 50978641.0;
+        
+        // ------------------------------------ //
+       
+        // Run 4d 
+        
+        static const double tor860_wcut_Run4d = 0.;
+        static const double E1DCNT_wcut_Run4d = 0.;
+        static const double EXT_Run4d = 1.;
+        
+        static const double Fulltor860_wcut_Run4d = 5.11e19;
+        static const double FullE1DCNT_wcut_Run4d = 11610448.0;
+        static const double FullEXT_Run4d = 75637751.0;
+        
+        // ------------------------------------ //
+        
+        // Run 5 
+        
+        static const double tor860_wcut_Run5 = 0.;
+        static const double E1DCNT_wcut_Run5 = 0.;
+        static const double EXT_Run5 = 1.;
+        
+        static const double Fulltor860_wcut_Run5 = 1.552e20;
+        static const double FullE1DCNT_wcut_Run5 = 37159286.0;
+        static const double FullEXT_Run5 = 115079907.0;
+        
 	// Combined POT
 	// For now just Runs 1 + 2 +3
 
