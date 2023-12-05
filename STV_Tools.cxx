@@ -175,6 +175,12 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	fPnPerpx = ( qTVectorUnit.Cross(UnitZ) ).Dot(PnVector);
 	fPnPerpy = ( qVectorUnit.Cross( (qTVectorUnit.Cross(UnitZ) ) ) ).Dot(PnVector);		
 
+	//-----------------//
+	
+	fDeltaTheta = (MuonVector + ProtonVector).Theta() * 180./TMath::Pi(); // degrees
+	
+	//-----------------//	
+
 }
 
 // __________________________________________________________________________________________________________________________________________________
@@ -348,5 +354,14 @@ double STV_Tools::ReturnA() {
 }
 
 // __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnDeltaTheta() {
+
+	return fDeltaTheta;
+
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
 
 #endif
