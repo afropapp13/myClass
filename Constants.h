@@ -632,9 +632,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run4a = 0.;
 	static const double EXT_Run4a = 1.;
 
-	static const double Fulltor860_wcut_Run4a = 5.54e19;
-	static const double FullE1DCNT_wcut_Run4a = 12329277.;
-	static const double FullEXT_Run4a = 35295091.;	
+	static const double Fulltor860_wcut_Run4a = 4.5e19;
+	static const double FullE1DCNT_wcut_Run4a = 9897624.;
+	static const double FullEXT_Run4a = 27596585.;	
 
 	// ------------------------------------ //	
 	
