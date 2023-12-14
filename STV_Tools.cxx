@@ -176,8 +176,10 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	fPnPerpy = ( qVectorUnit.Cross( (qTVectorUnit.Cross(UnitZ) ) ) ).Dot(PnVector);		
 
 	//-----------------//
+
+	// Atmospherics
 	
-	fDeltaTheta = (MuonVector + ProtonVector).Theta() * 180./TMath::Pi(); // degrees
+	fDeltaTheta = (MuonVector + ProtonVector).Dot(UnitZ) * 180./TMath::Pi(); // degrees
 	
 	//-----------------//	
 
