@@ -66,7 +66,7 @@ namespace Constants {
 	{
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14) },
-		{ "DeltaThetaPlot",  std::make_pair(0, 10.) },		
+		{ "ThetaZPlot",  std::make_pair(0, 10.) },		
 								
 	};	
 	
@@ -76,7 +76,7 @@ namespace Constants {
 	{
 		{ "MuonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "MuonCosThetaSingleBinPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
-		{ "DeltaThetaPlot",  "#frac{d#sigma}{d#delta#theta} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "ThetaZPlot",  "#frac{d#sigma}{d#theta_{z}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 	
 	};
 
@@ -84,7 +84,7 @@ namespace Constants {
 	{
 		{ "MuonCosThetaPlot",  "All events" },
 		{ "MuonCosThetaSingleBinPlot",  "All events" },
-		{ "DeltaThetaPlot", "All events" },								
+		{ "ThetaZPlot", "All events" },								
 	};	
 	
 	//----------------------------------------//
@@ -94,7 +94,7 @@ namespace Constants {
 
 		{ "MuonCosThetaPlot", "MuonCosThetaPlot" },
 		{ "MuonCosThetaSingleBinPlot", "MuonCosThetaSingleBinPlot" },
-		{ "DeltaThetaPlot", "DeltaThetaPlot" },
+		{ "ThetaZPlot", "ThetaZPlot" },
 	
 	};
 					
@@ -120,7 +120,7 @@ namespace Constants {
 	vector<TString> PlotNames{
 				 "MuonCosThetaPlot"
 				 ,"MuonCosThetaSingleBinPlot"
-				 ,"DeltaThetaPlot"
+				 ,"ThetaZPlot"
 			 };
 	
 	//----------------------------------------//
@@ -129,7 +129,7 @@ namespace Constants {
 				  // 1D
 				  "MuonCosThetaPlot"
 				 ,"MuonCosThetaSingleBinPlot"
-				 ,"DeltaThetaPlot"
+				 ,"ThetaZPlot"
 				 				 
 			};	
 	
@@ -138,7 +138,7 @@ namespace Constants {
 	vector<TString> MultiDimXSec = {
 				  "MuonCosThetaPlot"
 				 ,"MuonCosThetaSingleBinPlot"
-				 ,"DeltaThetaPlot"
+				 ,"ThetaZPlot"
 	};	
 
 	// --------------------------------------------------------------------------------------------------------------------------
@@ -261,8 +261,8 @@ namespace Constants {
 	static const int NBinsMuonCosTheta = 18;
 	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.85,-0.7,-0.57,-0.45,-0.32,-0.2,-0.1,0.,0.1,0.2,0.3,0.4,0.5,0.6,0.72,0.84,0.95,1.};
 
-	static const int NBinsDeltaTheta = 16;
-	static const double ArrayNBinsDeltaTheta[NBinsDeltaTheta+1] = { 0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.};
+	static const int NBinsThetaZ = 29;
+	static const double ArrayNBinsThetaZ[NBinsThetaZ+1] = { 0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.};
 
 
 	static const int NBinsProtonMomentum = 10; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3,0.38,0.45,0.5,0.55,0.625,0.7,0.75,0.8,0.87,1.};
@@ -273,14 +273,14 @@ namespace Constants {
 	// Labels for 1D plots
 	
 	static TString LabelXAxisMuonCosTheta = ";cos#theta_{#mu}"; static TString LabelXAxisTrueMuonCosTheta = ";True cos#theta_{#mu}";
-	static TString LabelXAxiDeltaTheta = ";#delta#theta [deg]"; static TString LabelXAxisTrueDeltaTheta = ";True #delta#theta [deg]";
+	static TString LabelXAxisThetaZ = ";#theta_{z} [deg]"; static TString LabelXAxisTrueThetaZ = ";True #theta_{z} [deg]";
 	
 	// ------------------------------------------------------------------------------------------------------------------------------------
 
 	// Labels for 2D Plots
 
 	static TString LabelXAxisMuonCosTheta2D = LabelXAxisTrueMuonCosTheta+";Reco cos#theta_{#mu}";
-	static TString LabelXAxisDeltaTheta2D = LabelXAxisTrueDeltaTheta+";Reco #delta#theta [deg]";
+	static TString LabelXAxisThetaZ2D = LabelXAxisTrueThetaZ+";Reco #theta_{z} [deg]";
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -348,11 +348,12 @@ namespace Constants {
 	const TString PMinSumHits = "1.";  const double PMinSumHitsValue = 1.;	
 
 	//----------------------------------------//
+
 	static std::map<TString,double> MultiDimScaleFactor =
 	{
 		{ "MuonCosThetaPlot", 1. },
 		{ "MuonCosThetaSingleBinPlot", 1. },
-		{ "DeltaThetaPlot", 1. },
+		{ "ThetaZPlot", 1. },
 	};	
 	
 	//----------------------------------------//
@@ -364,6 +365,10 @@ namespace Constants {
 	const int NInte = InteractionLabels.size();
 	
 	//----------------------------------------//		
+
+	static const int TwoDNBinsECal = 3; std::vector<double> TwoDArrayNBinsECal{0.0,0.5,0.8,2.0};
+	static const int TwoDNBinsMuonMomentum = 3; std::vector<double> TwoDArrayNBinsMuonMomentum{0.1,0.4,0.6,1.2};
+	static const int TwoDNBinsProtonMomentum = 3; std::vector<double> TwoDArrayNBinsProtonMomentum{0.3,0.5,0.7,1.};	
 
 }
 #endif

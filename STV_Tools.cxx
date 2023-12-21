@@ -178,8 +178,11 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	//-----------------//
 
 	// Atmospherics
+
+	TVector3 VectorRecoBeam = (MuonVector + ProtonVector);
+	double VectorRecoBeamMag = VectorRecoBeam.Mag();
 	
-	fDeltaTheta = (MuonVector + ProtonVector).Dot(UnitZ) * 180./TMath::Pi(); // degrees
+	fThetaZ = TMath::ACos( ( (VectorRecoBeam).Dot(UnitZ) ) / (VectorRecoBeamMag) ) * 180./TMath::Pi(); // degrees
 	
 	//-----------------//	
 
@@ -357,9 +360,9 @@ double STV_Tools::ReturnA() {
 
 // __________________________________________________________________________________________________________________________________________________
 
-double STV_Tools::ReturnDeltaTheta() {
+double STV_Tools::ReturnThetaZ() {
 
-	return fDeltaTheta;
+	return fThetaZ;
 
 }
 

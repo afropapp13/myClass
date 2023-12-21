@@ -38,7 +38,7 @@ class STV_Tools {
 		double fPnPerpx;
 		double fPnPerpy;				
 		double fPnPar;												
-		double fDeltaTheta;												
+		double fThetaZ;												
 
 	public:
 
@@ -71,7 +71,7 @@ class STV_Tools {
 		double ReturnPnPerpx();
 		double ReturnPnPerpy();				
 		double ReturnPnPar();			
-		double ReturnDeltaTheta();			
+		double ReturnThetaZ();			
 
 
 };
