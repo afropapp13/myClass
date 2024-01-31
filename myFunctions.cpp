@@ -67,7 +67,7 @@ double FindTwoDimHistoMinValue(TH2D* h){
 
 //----------------------------------------//
 
-TString to_string_with_precision(double a_value, const int n = 3)
+TString to_string_with_precision(double a_value, const int n = 1)
 {
     std::ostringstream out;
     out.precision(n);
