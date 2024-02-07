@@ -250,9 +250,14 @@ namespace Constants {
 	// Combined POT
 	// Add 4a ???
 
+	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
 	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d + Fulltor860_wcut_Run5;	
+	
 	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d + FullEXT_Run5;	
+	static const double FullEXT_Run4 = FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d;
+	
 	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d + FullE1DCNT_wcut_Run5;	
+	static const double FullE1DCNT_wcut_Run4 = FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d;	
 
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
