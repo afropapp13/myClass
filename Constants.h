@@ -67,7 +67,11 @@ namespace Constants {
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14) },
 		{ "ThetaZPlot",  std::make_pair(0, 0.39) },		
-								
+		{ "CosThetaZPlot",  std::make_pair(0, 14.) },		
+		{ "ThetaZ_ECal_0_00To0_50Plot",  std::make_pair(0, 14) },
+		{ "ThetaZ_ECal_0_50To0_80Plot",  std::make_pair(0, 14) },
+		{ "ThetaZ_ECal_0_80To2_00Plot",  std::make_pair(0, 14) },
+		{ "SerialThetaZ_ECalPlot",  std::make_pair(0, 1.6) },			
 	};	
 	
 	//----------------------------------------//
@@ -77,6 +81,11 @@ namespace Constants {
 		{ "MuonCosThetaPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "MuonCosThetaSingleBinPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "ThetaZPlot",  "#frac{d#sigma}{d#theta_{z}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
+		{ "CosThetaZPlot",  "#frac{d#sigma}{dcos#theta_{z}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
+		{ "ThetaZ_ECal_0_00To0_50Plot", "#frac{d^{2}#sigma}{d#theta_{z}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
+		{ "ThetaZ_ECal_0_50To0_80Plot", "#frac{d^{2}#sigma}{d#theta_{z}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
+		{ "ThetaZ_ECal_0_80To2_00Plot", "#frac{d^{2}#sigma}{d#theta_{z}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
+		{ "SerialThetaZ_ECalPlot", "#frac{d^{2}#sigma}{d#theta_{z}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },			
 	
 	};
 
@@ -84,7 +93,13 @@ namespace Constants {
 	{
 		{ "MuonCosThetaPlot",  "All events" },
 		{ "MuonCosThetaSingleBinPlot",  "All events" },
-		{ "ThetaZPlot", "All events" },								
+		{ "ThetaZPlot", "All events" },	
+		{ "CosThetaZPlot", "All events" },	
+		{ "ThetaZ_ECal_0_00To0_50Plot", "0 < E_{Cal}} < 0.5 GeV"  },
+		{ "ThetaZ_ECal_0_50To0_80Plot", "0.5 < E_{Cal} < 0.8 GeV"  },
+		{ "ThetaZ_ECal_0_80To2_00Plot", "0.8 < E_{Cal} < 2 GeV"  },
+		{ "SerialThetaZ_ECalPlot", "All events"  },			
+	
 	};	
 	
 	//----------------------------------------//
@@ -95,6 +110,11 @@ namespace Constants {
 		{ "MuonCosThetaPlot", "MuonCosThetaPlot" },
 		{ "MuonCosThetaSingleBinPlot", "MuonCosThetaSingleBinPlot" },
 		{ "ThetaZPlot", "ThetaZPlot" },
+		{ "CosThetaZPlot", "CosThetaZPlot" },
+		{ "SerialThetaZ_ECalPlot_0","ThetaZ_ECal_0_00To0_50Plot"},
+		{ "SerialThetaZ_ECalPlot_1","ThetaZ_ECal_0_50To0_80Plot"},
+		{ "SerialThetaZ_ECalPlot_2","ThetaZ_ECal_0_80To2_00Plot"},
+		{ "SerialThetaZ_ECalPlot", "SerialThetaZ_ECalPlot"  },			
 	
 	};
 					
@@ -121,6 +141,11 @@ namespace Constants {
 				 "MuonCosThetaPlot"
 				 ,"MuonCosThetaSingleBinPlot"
 				 ,"ThetaZPlot"
+				 ,"CosThetaZPlot"
+				 ,"ThetaZ_ECal_0_00To0_50Plot"
+				 ,"ThetaZ_ECal_0_50To0_80Plot"
+				 ,"ThetaZ_ECal_0_80To2_00Plot"
+				 ,"SerialThetaZ_ECalPlot"			
 			 };
 	
 	//----------------------------------------//
@@ -130,6 +155,11 @@ namespace Constants {
 				  "MuonCosThetaPlot"
 				 ,"MuonCosThetaSingleBinPlot"
 				 ,"ThetaZPlot"
+				 ,"CosThetaZPlot"
+				 ,"ThetaZ_ECal_0_00To0_50Plot"
+				 ,"ThetaZ_ECal_0_50To0_80Plot"
+				 ,"ThetaZ_ECal_0_80To2_00Plot"
+				 ,"SerialThetaZ_ECalPlot"			
 				 				 
 			};	
 	
@@ -139,6 +169,11 @@ namespace Constants {
 				  "MuonCosThetaPlot"
 				 ,"MuonCosThetaSingleBinPlot"
 				 ,"ThetaZPlot"
+				 ,"CosThetaZPlot"
+				 ,"ThetaZ_ECal_0_00To0_50Plot"
+				 ,"ThetaZ_ECal_0_50To0_80Plot"
+				 ,"ThetaZ_ECal_0_80To2_00Plot"
+				 ,"SerialThetaZ_ECalPlot"			
 	};	
 
 	// --------------------------------------------------------------------------------------------------------------------------
@@ -266,9 +301,14 @@ namespace Constants {
 	static const int NBinsMuonCosTheta = 18;
 	static const double ArrayNBinsMuonCosTheta[NBinsMuonCosTheta+1] = { -1.,-0.85,-0.7,-0.57,-0.45,-0.32,-0.2,-0.1,0.,0.1,0.2,0.3,0.4,0.5,0.6,0.72,0.84,0.95,1.};
 
+	static const int NBinsProtonCosTheta = 11;
+	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.37,0.54,0.7,0.8,0.9,1.};
+
 	static const int NBinsThetaZ = 29;
 	static const double ArrayNBinsThetaZ[NBinsThetaZ+1] = { 0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.};
 
+	static const int NBinsCosThetaZ = 18;
+	static const double ArrayNBinsCosThetaZ[NBinsCosThetaZ+1] = { -1.,-0.85,-0.7,-0.57,-0.45,-0.32,-0.2,-0.1,0.,0.1,0.2,0.3,0.4,0.5,0.6,0.72,0.84,0.95,1.};
 
 	static const int NBinsProtonMomentum = 10; static const double ArrayNBinsProtonMomentum[NBinsProtonMomentum+1] = {0.3,0.38,0.45,0.5,0.55,0.625,0.7,0.75,0.8,0.87,1.};
 	static const int NBinsMuonMomentum = 10; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.2,0.3,0.4,0.5,0.64,0.77,0.9,1.,1.1,1.2};
@@ -281,6 +321,7 @@ namespace Constants {
 	
 	static TString LabelXAxisMuonCosTheta = ";cos#theta_{#mu}"; static TString LabelXAxisTrueMuonCosTheta = ";True cos#theta_{#mu}";
 	static TString LabelXAxisThetaZ = ";#theta_{z} [deg]"; static TString LabelXAxisTrueThetaZ = ";True #theta_{z} [deg]";
+	static TString LabelXAxisCosThetaZ = ";cos#theta_{z}"; static TString LabelXAxisTrueCosThetaZ = ";True cos#theta_{z}";
 	
 	// ------------------------------------------------------------------------------------------------------------------------------------
 
@@ -288,9 +329,11 @@ namespace Constants {
 
 	static TString LabelXAxisMuonCosTheta2D = LabelXAxisTrueMuonCosTheta+";Reco cos#theta_{#mu}";
 	static TString LabelXAxisThetaZ2D = LabelXAxisTrueThetaZ+";Reco #theta_{z} [deg]";
+	static TString LabelXAxisCosThetaZ2D = LabelXAxisTrueCosThetaZ+";Reco cos#theta_{z}";
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
+	static int MCUncColor = kGray;	
 	static int OverlayColor = kAzure-4;
 	static int BeamOnColor = kBlack;
 	static int GenieOverlayColor = kBlack;
@@ -355,15 +398,6 @@ namespace Constants {
 	const TString PMinSumHits = "1.";  const double PMinSumHitsValue = 1.;	
 
 	//----------------------------------------//
-
-	static std::map<TString,double> MultiDimScaleFactor =
-	{
-		{ "MuonCosThetaPlot", 1. },
-		{ "MuonCosThetaSingleBinPlot", 1. },
-		{ "ThetaZPlot", 1. },
-	};	
-	
-	//----------------------------------------//
 	
 	// Interaction labels
 	
@@ -385,5 +419,27 @@ namespace Constants {
 	static const int NBinsDeltaPn = 10; static const double ArrayNBinsDeltaPn[NBinsDeltaPn+1] = {0,0.07,0.14,0.2,0.3,0.4,0.47,0.55,0.65,0.75,0.85};
 	static const int TwoDNBinsMuonCosTheta = 4; std::vector<double> TwoDArrayNBinsMuonCosTheta{-1.,0.0,0.5,0.75,1.0};
 	static const int TwoDNBinsProtonCosTheta = 4; std::vector<double> TwoDArrayNBinsProtonCosTheta{-1.,0.0,0.5,0.75,1.0};
+
+	//----------------------------------------//
+
+	static std::map<TString,double> MultiDimScaleFactor =
+	{
+		{ "MuonCosThetaPlot", 1. },
+		{ "MuonCosThetaSingleBinPlot", 1. },
+		{ "ThetaZPlot", 1. },
+		{ "CosThetaZPlot", 1. },
+		{ "ThetaZ_ECal_0_00To0_50Plot",  TwoDArrayNBinsECal.at(1) - TwoDArrayNBinsECal.at(0)  },
+		{ "ThetaZ_ECal_0_50To0_80Plot", TwoDArrayNBinsECal.at(2) - TwoDArrayNBinsECal.at(1)  },
+		{ "ThetaZ_ECal_0_80To2_00Plot",  TwoDArrayNBinsECal.at(3) - TwoDArrayNBinsECal.at(2) },
+		{ "SerialThetaZ_ECalPlot", 1.  },			
+	};	
+		//----------------------------------------//
+	
+	std::vector< std::vector<double> > TwoDArrayNBinsThetaZInECalSlices{ 
+										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.},
+										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.},
+										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.}
+	};	
+
 }
 #endif

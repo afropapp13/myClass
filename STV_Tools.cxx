@@ -179,10 +179,10 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 
 	// Atmospherics
 
-	TVector3 VectorRecoBeam = (MuonVector + ProtonVector);
-	double VectorRecoBeamMag = VectorRecoBeam.Mag();
+	fBeamVector = (MuonVector + ProtonVector);
+	double BeamVectorMag = fBeamVector.Mag();
 	
-	fThetaZ = TMath::ACos( ( (VectorRecoBeam).Dot(UnitZ) ) / (VectorRecoBeamMag) ) * 180./TMath::Pi(); // degrees
+	fThetaZ = TMath::ACos( ( (fBeamVector).Dot(UnitZ) ) / (BeamVectorMag) ) * 180./TMath::Pi(); // degrees
 	
 	//-----------------//	
 
