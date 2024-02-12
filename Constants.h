@@ -68,9 +68,9 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14) },
 		{ "ThetaZPlot",  std::make_pair(0, 0.39) },		
 		{ "CosThetaZPlot",  std::make_pair(0, 14.) },		
-		{ "ThetaZ_ECal_0_00To0_50Plot",  std::make_pair(0, 14) },
-		{ "ThetaZ_ECal_0_50To0_80Plot",  std::make_pair(0, 14) },
-		{ "ThetaZ_ECal_0_80To2_00Plot",  std::make_pair(0, 14) },
+		{ "ThetaZ_ECal_0_00To0_50Plot",  std::make_pair(0, 0.039) },
+		{ "ThetaZ_ECal_0_50To0_80Plot",  std::make_pair(0, 0.14) },
+		{ "ThetaZ_ECal_0_80To2_00Plot",  std::make_pair(0, 0.24) },
 		{ "SerialThetaZ_ECalPlot",  std::make_pair(0, 1.6) },			
 	};	
 	
@@ -95,7 +95,7 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot",  "All events" },
 		{ "ThetaZPlot", "All events" },	
 		{ "CosThetaZPlot", "All events" },	
-		{ "ThetaZ_ECal_0_00To0_50Plot", "0 < E_{Cal}} < 0.5 GeV"  },
+		{ "ThetaZ_ECal_0_00To0_50Plot", "0 < E_{Cal} < 0.5 GeV"  },
 		{ "ThetaZ_ECal_0_50To0_80Plot", "0.5 < E_{Cal} < 0.8 GeV"  },
 		{ "ThetaZ_ECal_0_80To2_00Plot", "0.8 < E_{Cal} < 2 GeV"  },
 		{ "SerialThetaZ_ECalPlot", "All events"  },			
@@ -436,9 +436,9 @@ namespace Constants {
 		//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsThetaZInECalSlices{ 
-										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.},
-										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.},
-										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.}
+										{0.,10.,20.,30.,40.,50.,60.,70.,80.,90.,100.,110.,120.,130.,140,160.,180.},
+										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,86.,180.},
+										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,180.}
 	};	
 
 }
