@@ -19,7 +19,7 @@ using namespace Constants;
 double FindOneDimHistoMaxValueBin(TH1D* h){
 
 	int NBins = h->GetXaxis()->GetNbins();
-	double HistoMax = -9999.;	
+	double HistoMax = -999.;	
 	int bin_max = -1;
 
 	for (int ibin = 1; ibin<= NBins; ibin++) {
