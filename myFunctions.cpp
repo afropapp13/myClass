@@ -77,7 +77,7 @@ TString to_string_with_precision(double a_value, const int n = 1)
 
 //----------------------------------------//
 
-void CalcChiSquared(TH1D* h_model, TH1D* h_data, TH2D* cov, double &chi, int &ndof, double &pval) {
+void CalcChiSquared(TH1D* h_model, TH1D* h_data, TH2D* cov, double &chi, int &ndof, double &pval, double &sigma) {
 
 	// Clone them so we can scale them 
 
@@ -134,6 +134,7 @@ void CalcChiSquared(TH1D* h_model, TH1D* h_data, TH2D* cov, double &chi, int &nd
 
 	ndof = h_data_clone->GetNbinsX();
 	pval = TMath::Prob(chi, ndof);
+        sigma = TMath::Sqrt( TMath::ChisquareQuantile( 1-pval, 1 ) );
 
 	delete h_model_clone;
 	delete h_data_clone;
