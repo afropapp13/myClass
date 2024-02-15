@@ -67,7 +67,7 @@ namespace Constants {
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14) },
 		{ "ThetaZPlot",  std::make_pair(0, 0.39) },		
-		{ "CosThetaZPlot",  std::make_pair(0, 14.) },		
+		{ "CosThetaZPlot",  std::make_pair(0, 109.) },		
 		{ "ThetaZ_ECal_0_00To0_50Plot",  std::make_pair(0, 0.039) },
 		{ "ThetaZ_ECal_0_50To0_80Plot",  std::make_pair(0, 0.14) },
 		{ "ThetaZ_ECal_0_80To2_00Plot",  std::make_pair(0, 0.24) },
