@@ -40,13 +40,13 @@ namespace Constants {
 
 	// Exporting paths
 
-	const TString PathToFiles = "/uboone/data/users/"+UserID+"/my3DEvents/OutputFiles/"+UBCodeVersion+"/";
-	const TString PathToExtractedXSec = "/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myXSec/"+UBCodeVersion+"/"; 
-	const TString FileEfficienciesPath = "/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myEfficiencies/"+UBCodeVersion+"/";
-	const TString PlotPath = "/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myPlots/"+UBCodeVersion+"/"; 
-	const TString PathToSystematics = "/uboone/data/users/"+UserID+"/my3DSTVAnalysis/mySystematics/"+UBCodeVersion+"/";
+	const TString PathToFiles = "/exp/uboone/data/users/"+UserID+"/my3DEvents/OutputFiles/"+UBCodeVersion+"/";
+	const TString PathToExtractedXSec = "/exp/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myXSec/"+UBCodeVersion+"/"; 
+	const TString FileEfficienciesPath = "/exp/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myEfficiencies/"+UBCodeVersion+"/";
+	const TString PlotPath = "/exp/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myPlots/"+UBCodeVersion+"/"; 
+	const TString PathToSystematics = "/exp/uboone/data/users/"+UserID+"/my3DSTVAnalysis/mySystematics/"+UBCodeVersion+"/";
 	const TString TrueSTVPath = PathToFiles;
-	const TString MigrationMatrixPath = "/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myMigrationMatrices/"+UBCodeVersion+"/"; 
+	const TString MigrationMatrixPath = "/exp/uboone/data/users/"+UserID+"/my3DSTVAnalysis/myMigrationMatrices/"+UBCodeVersion+"/"; 
 
 	//----------------------------------------//
 
