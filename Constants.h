@@ -40,13 +40,13 @@ namespace Constants {
 
 	// Exporting paths
 
-	const TString PathToFiles = "/uboone/data/users/"+UserID+"/Atmospherics/OutputFiles/"+UBCodeVersion+"/";
-	const TString PathToExtractedXSec = "/uboone/data/users/"+UserID+"/Atmospherics/myXSec/"+UBCodeVersion+"/"; 
-	const TString FileEfficienciesPath = "/uboone/data/users/"+UserID+"/Atmospherics/myEfficiencies/"+UBCodeVersion+"/";
-	const TString PlotPath = "/uboone/data/users/"+UserID+"/Atmospherics/myPlots/"+UBCodeVersion+"/"; 
-	const TString PathToSystematics = "/uboone/data/users/"+UserID+"/Atmospherics/mySystematics/"+UBCodeVersion+"/";
+	const TString PathToFiles = "/exp/uboone/data/users/"+UserID+"/Atmospherics/OutputFiles/"+UBCodeVersion+"/";
+	const TString PathToExtractedXSec = "/exp/uboone/data/users/"+UserID+"/Atmospherics/myXSec/"+UBCodeVersion+"/"; 
+	const TString FileEfficienciesPath = "/exp/uboone/data/users/"+UserID+"/Atmospherics/myEfficiencies/"+UBCodeVersion+"/";
+	const TString PlotPath = "/exp/uboone/data/users/"+UserID+"/Atmospherics/myPlots/"+UBCodeVersion+"/"; 
+	const TString PathToSystematics = "/exp/uboone/data/users/"+UserID+"/Atmospherics/mySystematics/"+UBCodeVersion+"/";
 	const TString TrueSTVPath = PathToFiles;
-	const TString MigrationMatrixPath = "/uboone/data/users/"+UserID+"/Atmospherics/myMigrationMatrices/"+UBCodeVersion+"/"; 
+	const TString MigrationMatrixPath = "/exp/uboone/data/users/"+UserID+"/Atmospherics/myMigrationMatrices/"+UBCodeVersion+"/"; 
 
 	//----------------------------------------//
 
