@@ -16,6 +16,25 @@ using namespace Constants;
 
 //----------------------------------------//
 
+double FindOneDimHistoMaxValueBin(TH1D* h){
+
+	int NBins = h->GetXaxis()->GetNbins();
+	double HistoMax = -999.;	
+	int bin_max = -1;
+
+	for (int ibin = 1; ibin<= NBins; ibin++) {
+
+		double LocalMax = h->GetBinContent(ibin);
+		if (LocalMax > HistoMax) { HistoMax = LocalMax; bin_max = ibin; }
+
+	}
+
+	double bin_center_max = h->GetBinCenter(bin_max);
+
+	return bin_center_max;
+
+}//----------------------------------------//
+
 double FindTwoDimHistoMaxValue(TH2D* h){
 
 	int NXBins = h->GetXaxis()->GetNbins();

@@ -397,6 +397,11 @@ namespace Constants {
 		{ "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_50To0_70Plot", "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_50To0_70Plot" },
 		{ "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_70To1_00Plot", "ECal_ProtonCosTheta_0_75To1_00_ProtonMomentum_0_70To1_00Plot" },					
 	
+		{ "SerialECal_DeltaPTDeltaAlphaTPlot", "SerialECal_DeltaPTDeltaAlphaTPlot" },
+		{ "SerialECal_DeltaPnDeltaAlpha3DqPlot", "SerialECal_DeltaPnDeltaAlpha3DqPlot" },	
+		{ "SerialECal_MuonCosThetaMuonMomentumPlot", "SerialECal_MuonCosThetaMuonMomentumPlot" },
+		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", "SerialECal_ProtonCosThetaProtonMomentumPlot" },								
+	
 	};
 					
 	// -------------------------------------------------------------------------------------------------------------------------
@@ -770,6 +775,7 @@ namespace Constants {
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
+	static int MCUncColor = kGray;	
 	static int OverlayColor = kAzure-4;
 	static int BeamOnColor = kBlack;
 	static int GenieOverlayColor = kBlack;
