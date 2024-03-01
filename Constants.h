@@ -304,8 +304,8 @@ namespace Constants {
 	static const int NBinsProtonCosTheta = 11;
 	static const double ArrayNBinsProtonCosTheta[NBinsProtonCosTheta+1] = { -1.,-0.73,-0.43,-0.18,0.05,0.2,0.37,0.54,0.7,0.8,0.9,1.};
 
-	static const int NBinsThetaZ = 29;
-	static const double ArrayNBinsThetaZ[NBinsThetaZ+1] = { 0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,85.,90.,95.,100.,105.,110.,115.,120.,125.,130.,135.,140.,180.};
+	static const int NBinsThetaZ = 15;
+	static const double ArrayNBinsThetaZ[NBinsThetaZ+1] = { 0.,5.,10.,15.,20.,25.,30.,40.,50.,60.,70.,80.,90.,115.,140.,180.};
 
 	static const int NBinsCosThetaZ = 18;
 	static const double ArrayNBinsCosThetaZ[NBinsCosThetaZ+1] = { -1.,-0.85,-0.7,-0.57,-0.45,-0.32,-0.2,-0.1,0.,0.1,0.2,0.3,0.4,0.5,0.6,0.72,0.84,0.95,1.};
@@ -436,9 +436,9 @@ namespace Constants {
 		//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsThetaZInECalSlices{ 
-										{0.,10.,20.,30.,40.,50.,60.,70.,80.,90.,100.,110.,120.,130.,140,160.,180.},
-										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,55.,60.,65.,70.,75.,80.,86.,180.},
-										{0.,5.,10.,15.,20.,25.,30.,35.,40.,45.,50.,180.}
+										{0.,10.,20.,30.,40.,50.,60.,70.,80.,90.,115.,140,180.},
+										{0.,5.,10.,15.,20.,25.,30.,40.,50.,60.,180.},
+										{0.,5.,10.,15.,20.,30.,40.,180.}
 	};	
 
 }
