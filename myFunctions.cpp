@@ -16,6 +16,29 @@ using namespace Constants;
 
 //----------------------------------------//
 
+//Function to divide by the bin width and to get xsecs
+void Reweight(TH1D* h, double SF = 1.) {
+
+  int NBins = h->GetXaxis()->GetNbins();
+
+  for (int i = 0; i < NBins; i++) {
+
+    double CurrentEntry = h->GetBinContent(i+1);
+    double NewEntry = SF * CurrentEntry / h->GetBinWidth(i+1);
+
+    double CurrentError = h->GetBinError(i+1);
+    double NewError = SF * CurrentError / h->GetBinWidth(i+1);
+
+    h->SetBinContent(i+1,NewEntry); 
+    h->SetBinError(i+1,NewError); 
+    //h->SetBinError(i+1,0.000001); 
+
+  }
+
+}
+
+//----------------------------------------//
+
 double FindOneDimHistoMaxValueBin(TH1D* h){
 
 	int NBins = h->GetXaxis()->GetNbins();
