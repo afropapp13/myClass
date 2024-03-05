@@ -739,7 +739,7 @@ namespace Constants {
 														},	
 														
 														{ // DeltaPT > 0.3 GeV/c
-														{0.2,0.4,0.6,0.8,1.,1.6}, // DeltaAphaT < 90 deg
+														{0.2,0.5,0.8,1.6}, // DeltaAphaT < 90 deg
 														{0.2,0.4,0.6,0.8,1.,1.6}  // 90 < DeltaAlphaT < 180 deg
 														}		
 																
@@ -747,7 +747,7 @@ namespace Constants {
 	
 	std::vector< std::vector< std::vector<double> > > TwoDArrayNBinsECalInDeltaPnDeltaAlpha3DqSlices{
 														{ // DeltaPn < 0.3 GeV/c
-														{0.2,0.4,0.6,0.8,1.,1.6}, // DeltaApha3Dq < 90 deg
+														{0.2,0.5,0.8,1.,1.6}, // DeltaApha3Dq < 90 deg
 														{0.2,0.4,0.6,0.8,1.,1.6}  // 90 < DeltaAlpha3Dq < 180 deg
 														},	
 														
@@ -779,12 +779,12 @@ namespace Constants {
 	std::vector< std::vector< std::vector<double> > > TwoDArrayNBinsECalInProtonCosThetaProtonMomentumSlices{
 														{ // -1 < cosθp < 0.6
 														{0.2,0.4,0.6,1.1,1.6},   // 0.30 < Pp < 0.60 GeV/c
-														{0.2,0.4,0.6,1.1,1.6}    // 0.60 < Pp < 1.00 GeV/c
+														{0.2,0.6,1.1,1.6}    // 0.60 < Pp < 1.00 GeV/c
 														},														
 														
 														{ // 0.6 < cosθμ < 1
 														{0.2,0.4,0.6,1.1,1.6},   // 0.30 < Pp < 0.60 GeV/c
-														{0.2,0.4,0.6,1.1,1.6}    // 0.60 < Pp < 1.00 GeV/c
+														{0.2,0.6,1.1,1.6}    // 0.60 < Pp < 1.00 GeV/c
 														}		
 																
 													};																										
