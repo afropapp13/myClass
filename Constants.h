@@ -765,10 +765,10 @@ namespace Constants {
 	std::vector< std::vector< std::vector<double> > > TwoDArrayNBinsECalInMuonCosThetaMuonMomentumSlices{
 														{ // -1 < cosθμ < 0.6
 														{0.2,0.4,0.6,0.8,1.6},  // 0.10 < Pμ < 0.50 GeV/c
-														{0.2,0.6,0.9,1.6}   // 0.50 < Pμ < 1.20 GeV/c
+														{0.2,0.6,0.9,1.6}       // 0.50 < Pμ < 1.20 GeV/c
 														},														
 														{ // 0.6 < cosθμ < 1
-														{0.2,0.35,0.5,0.65,1.6},  // 0.10 < Pμ < 0.50 GeV/c
+														{0.2,0.5,0.7,1.6},  // 0.10 < Pμ < 0.50 GeV/c
 														{0.2,0.7,0.9,1.1,1.3,1.6}   // 0.50 < Pμ < 1.20 GeV/c
 														}		
 																
@@ -779,11 +779,11 @@ namespace Constants {
 	std::vector< std::vector< std::vector<double> > > TwoDArrayNBinsECalInProtonCosThetaProtonMomentumSlices{
 														{ // -1 < cosθp < 0.6
 														{0.2,0.4,0.6,1.1,1.6},   // 0.30 < Pp < 0.60 GeV/c
-														{0.2,0.6,1.1,1.6}    // 0.60 < Pp < 1.00 GeV/c
+														{0.2,0.6,0.9,1.6}    // 0.60 < Pp < 1.00 GeV/c
 														},														
 														
 														{ // 0.6 < cosθμ < 1
-														{0.2,0.4,0.6,1.1,1.6},   // 0.30 < Pp < 0.60 GeV/c
+														{0.2,0.4,0.6,0.9,1.6},   // 0.30 < Pp < 0.60 GeV/c
 														{0.2,0.6,1.1,1.6}    // 0.60 < Pp < 1.00 GeV/c
 														}		
 																
