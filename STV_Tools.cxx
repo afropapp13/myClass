@@ -182,7 +182,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	fBeamVector = (MuonVector + ProtonVector);
 	double BeamVectorMag = fBeamVector.Mag();
 	
-	fThetaZ = TMath::ACos( ( (fBeamVector).Dot(UnitZ) ) / (BeamVectorMag) ) * 180./TMath::Pi(); // degrees
+	fThetaVis = TMath::ACos( ( (fBeamVector).Dot(UnitZ) ) / (BeamVectorMag) ) * 180./TMath::Pi(); // degrees
 	
 	//-----------------//	
 
@@ -360,9 +360,9 @@ double STV_Tools::ReturnA() {
 
 // __________________________________________________________________________________________________________________________________________________
 
-double STV_Tools::ReturnThetaZ() {
+double STV_Tools::ReturnThetaVis() {
 
-	return fThetaZ;
+	return fThetaVis;
 
 }
 

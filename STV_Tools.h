@@ -38,7 +38,7 @@ class STV_Tools {
 		double fPnPerpx;
 		double fPnPerpy;				
 		double fPnPar;												
-		double fThetaZ;												
+		double fThetaVis;												
 		TVector3 fBeamVector;
 
 	public:
@@ -72,7 +72,7 @@ class STV_Tools {
 		double ReturnPnPerpx();
 		double ReturnPnPerpy();				
 		double ReturnPnPar();			
-		double ReturnThetaZ();			
+		double ReturnThetaVis();			
 		TVector3 ReturnBeamVector();
 
 };
