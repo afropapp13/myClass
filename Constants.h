@@ -22,6 +22,7 @@ namespace Constants {
 
 	//----------------------------------------//
 
+	// constants
 	// Argon 
 
 	static const double A = 40.;
@@ -72,6 +73,10 @@ namespace Constants {
 		{ "ThetaVis_ECal_0_50To0_80Plot",  std::make_pair(0, 0.14) },
 		{ "ThetaVis_ECal_0_80To2_00Plot",  std::make_pair(0, 0.24) },
 		{ "SerialThetaVis_ECalPlot",  std::make_pair(0, 1.6) },			
+		{ "ThetaVis_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.039) },
+		{ "ThetaVis_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.12) },
+		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.049) },
+		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 1.6) },			
 	};	
 	
 	//----------------------------------------//
@@ -86,6 +91,10 @@ namespace Constants {
 		{ "ThetaVis_ECal_0_50To0_80Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
 		{ "ThetaVis_ECal_0_80To2_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
 		{ "SerialThetaVis_ECalPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },			
+		{ "ThetaVis_DeltaPn_0_00To0_20Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
+		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
+		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
+		{ "SerialThetaVis_DeltaPnPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },			
 	
 	};
 
@@ -99,6 +108,10 @@ namespace Constants {
 		{ "ThetaVis_ECal_0_50To0_80Plot", "0.5 < E_{Cal} < 0.8 GeV"  },
 		{ "ThetaVis_ECal_0_80To2_00Plot", "0.8 < E_{Cal} < 2 GeV"  },
 		{ "SerialThetaVis_ECalPlot", "All events"  },			
+		{ "ThetaVis_DeltaPn_0_00To0_20Plot", "p_{n} < 0.2 GeV/c"  },
+		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "0.2 < p_{n} < 0.4 GeV/c"  },
+		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "p_{n} > 0.4 GeV/c"  },
+		{ "SerialThetaVis_DeltaPnPlot", "All events"  },			
 	
 	};	
 	
@@ -115,6 +128,10 @@ namespace Constants {
 		{ "SerialThetaVis_ECalPlot_1","ThetaVis_ECal_0_50To0_80Plot"},
 		{ "SerialThetaVis_ECalPlot_2","ThetaVis_ECal_0_80To2_00Plot"},
 		{ "SerialThetaVis_ECalPlot", "SerialThetaVis_ECalPlot"  },			
+		{ "SerialThetaVis_DeltaPnPlot_0","ThetaVis_DeltaPn_0_00To0_20Plot"},
+		{ "SerialThetaVis_DeltaPnPlot_1","ThetaVis_DeltaPn_0_20To0_40Plot"},
+		{ "SerialThetaVis_DeltaPnPlot_2","ThetaVis_DeltaPn_0_40To1_00Plot"},
+		{ "SerialThetaVis_DeltaPnPlot", "SerialThetaVis_DeltaPnPlot"  },			
 	
 	};
 					
@@ -146,6 +163,10 @@ namespace Constants {
 				 ,"ThetaVis_ECal_0_50To0_80Plot"
 				 ,"ThetaVis_ECal_0_80To2_00Plot"
 				 ,"SerialThetaVis_ECalPlot"			
+				 ,"ThetaVis_DeltaPn_0_00To0_20Plot"
+				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
+				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
+				 ,"SerialThetaVis_DeltaPnPlot"			
 			 };
 	
 	//----------------------------------------//
@@ -160,6 +181,10 @@ namespace Constants {
 				 ,"ThetaVis_ECal_0_50To0_80Plot"
 				 ,"ThetaVis_ECal_0_80To2_00Plot"
 				 ,"SerialThetaVis_ECalPlot"			
+				 ,"ThetaVis_DeltaPn_0_00To0_20Plot"
+				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
+				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
+				 ,"SerialThetaVis_DeltaPnPlot"			
 				 				 
 			};	
 	
@@ -174,6 +199,10 @@ namespace Constants {
 				 ,"ThetaVis_ECal_0_50To0_80Plot"
 				 ,"ThetaVis_ECal_0_80To2_00Plot"
 				 ,"SerialThetaVis_ECalPlot"			
+				 ,"ThetaVis_DeltaPn_0_00To0_20Plot"
+				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
+				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
+				 ,"SerialThetaVis_DeltaPnPlot"			
 	};	
 
 	// --------------------------------------------------------------------------------------------------------------------------
@@ -240,9 +269,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run4b = 0.;
 	static const double EXT_Run4b = 1.;
 
-	static const double Fulltor860_wcut_Run4b = 1.47e20;
-	static const double FullE1DCNT_wcut_Run4b = 34737600.0;
-	static const double FullEXT_Run4b = 91167643.0;	
+	static const double Fulltor860_wcut_Run4b = 1.36e20;
+	static const double FullE1DCNT_wcut_Run4b = 32305463.0;
+	static const double FullEXT_Run4b = 89244940.0;	
 
 	// ------------------------------------ //
 		
@@ -252,9 +281,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run4c = 0.;
 	static const double EXT_Run4c = 1.;
 
-	static const double Fulltor860_wcut_Run4c = 9.11e19;
-	static const double FullE1DCNT_wcut_Run4c = 20639283.0;
-	static const double FullEXT_Run4c = 50978641.0;	
+	static const double Fulltor860_wcut_Run4c = 8.95e19;
+	static const double FullE1DCNT_wcut_Run4c = 20273291.0;
+	static const double FullEXT_Run4c = 47178301.0;	
 
 	// ------------------------------------ //
 		
@@ -264,9 +293,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run4d = 0.;
 	static const double EXT_Run4d = 1.;
 
-	static const double Fulltor860_wcut_Run4d = 5.11e19;
-	static const double FullE1DCNT_wcut_Run4d = 11610448.0;
-	static const double FullEXT_Run4d = 75637751.0;	
+	static const double Fulltor860_wcut_Run4d = 4.93e19;
+	static const double FullE1DCNT_wcut_Run4d = 11192660.0;
+	static const double FullEXT_Run4d = 74409530.0;	
 
 	// ------------------------------------ //
 		
@@ -276,9 +305,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run5 = 0.;
 	static const double EXT_Run5 = 1.;
 
-	static const double Fulltor860_wcut_Run5 = 1.55e20;
-	static const double FullE1DCNT_wcut_Run5 = 37159286.;
-	static const double FullEXT_Run5 = 115079907.;	
+	static const double Fulltor860_wcut_Run5 = 1.48e20;
+	static const double FullE1DCNT_wcut_Run5 = 35265730.0;
+	static const double FullEXT_Run5 = 107466402.0;	
 
 	// ------------------------------------ //	
 	
@@ -314,6 +343,9 @@ namespace Constants {
 	static const int NBinsMuonMomentum = 10; static const double ArrayNBinsMuonMomentum[NBinsMuonMomentum+1] = { 0.1,0.2,0.3,0.4,0.5,0.64,0.77,0.9,1.,1.1,1.2};
 
 	static const int NBinsECal = 9; static const double ArrayNBinsECal[NBinsECal+1] = {0.2,0.35,0.5,0.65,0.8,0.95,1.1,1.25,1.4,1.6}; 
+
+	static const int NBinsEv = 16;	
+	static const double ArrayNBinEv[NBinsEv+1] = {0.2,0.25,0.3,0.35,0.4,0.45,0.5,.55,0.6,0.65,0.7,0.75,0.8,0.85,1.1,1.3,1.6};
 
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -432,14 +464,26 @@ namespace Constants {
 		{ "ThetaVis_ECal_0_50To0_80Plot", TwoDArrayNBinsECal.at(2) - TwoDArrayNBinsECal.at(1)  },
 		{ "ThetaVis_ECal_0_80To2_00Plot",  TwoDArrayNBinsECal.at(3) - TwoDArrayNBinsECal.at(2) },
 		{ "SerialThetaVis_ECalPlot", 1.  },			
+		{ "ThetaVis_DeltaPn_0_00To0_20Plot",  TwoDArrayNBinsDeltaPn.at(1) - TwoDArrayNBinsDeltaPn.at(0)  },
+		{ "ThetaVis_DeltaPn_0_20To0_40Plot", TwoDArrayNBinsDeltaPn.at(2) - TwoDArrayNBinsDeltaPn.at(1)  },
+		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  TwoDArrayNBinsDeltaPn.at(3) - TwoDArrayNBinsDeltaPn.at(2) },
+		{ "SerialThetaVis_DeltaPnPlot", 1.  },			
 	};	
-		//----------------------------------------//
+
+	//----------------------------------------//
 	
 	std::vector< std::vector<double> > TwoDArrayNBinsThetaVisInECalSlices{ 
 										{0.,10.,20.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
 										{0.,5.,10.,15.,20.,25.,30.,40.,50.,60.,180.},
 										{0.,5.,10.,15.,20.,30.,180.}
 	};	
+
+	std::vector< std::vector<double> > TwoDArrayNBinsThetaVisInDeltaPnSlices{ 
+										{0.,10.,20.,180.},
+										{0.,10.,20.,30.,40.,50.,60.,180.},
+										{0.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
+	};	
+
 
 }
 #endif

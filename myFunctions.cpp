@@ -1,18 +1,142 @@
 #include "TMath.h"
 #include <TH1D.h>
 #include <TH2D.h>
-#include <TMatrixD.h>
 
 #include <iostream>
 #include <iomanip>
 #include <string>
 #include <sstream>
 #include <cmath>
+#include <TVectorD.h>
 
 #include "Constants.h"
 
 using namespace std;
 using namespace Constants;
+
+//----------------------------------------//
+
+void TV2TH(const TVectorD vec, TH1D* histo)
+{
+    // Fill vector to histogram,
+    for(Int_t i=0; i<vec.GetNrows(); i++)
+    {
+        histo->SetBinContent(i+1, vec(i));
+    }
+}
+
+//----------------------------------------//
+
+void TH2TM(const TH2D* histo, TMatrixD& mat, bool rowcolumn) {
+
+    // Fill 2D histogram into matrix
+    // If TH2D(i, j) = Matrix(i, j), rowcolumn = kTRUE, else rowcolumn = kFALSE
+
+    for (Int_t i=0; i<histo->GetNbinsX(); i++) {
+
+        for (Int_t j=0; j<histo->GetNbinsY(); j++) {
+
+            if (rowcolumn) { mat(i, j) = histo->GetBinContent(i+1, j+1); }
+            else { mat(j, i) = histo->GetBinContent(i+1, j+1); }
+
+        }
+
+    }
+
+}
+
+//----------------------------------------//
+
+void TH2TV(const TH1D* histo, TVectorD& vec)
+{
+    // Fill 1D histogram into matrix
+    for(Int_t i=0; i<histo->GetNbinsX(); i++)
+    {
+        vec(i) = histo->GetBinContent(i+1);
+    }
+}
+
+//----------------------------------------//
+
+int LocateClosetsBinWithValue(TH1D* h, double value) {
+
+  int NBins = h->GetXaxis()->GetNbins();
+
+  for (int i = 1; i <= NBins; i++) {
+
+    double low_edge = h->GetBinLowEdge(i);
+    double high_edge = h->GetBinLowEdge(i+1);
+ 
+   if (value >= low_edge && value < high_edge) { return i; } 
+
+  }
+
+  if ( value > h->GetBinLowEdge(NBins+1) ) { return NBins; }
+
+  return -99;
+
+}
+
+//----------------------------------------//
+
+int LocateBinWithValue(TH1D* h, double Value) {
+
+  int NBins = h->GetXaxis()->GetNbins();
+
+  for (int i = 1; i <= NBins; i++) {
+
+    double CurrentEntry = h->GetBinContent(i);
+    if (CurrentEntry == Value) { return i; } 
+
+  }
+
+  return -99;
+
+}
+
+//----------------------------------------//                                                                                                
+
+void PrettyPlot(TH1D* h) {
+
+  h->GetXaxis()->SetLabelFont(FontStyle);
+  h->GetXaxis()->SetTitleFont(FontStyle);
+  h->GetXaxis()->SetTitleSize(0.06);
+  h->GetXaxis()->SetLabelSize(0.06);
+  h->GetXaxis()->SetTitleOffset(1.05);
+  h->GetXaxis()->SetNdivisions(8);
+
+
+  h->GetYaxis()->SetLabelFont(FontStyle);
+  h->GetYaxis()->SetTitleFont(FontStyle);
+  h->GetYaxis()->SetNdivisions(8);
+  h->GetYaxis()->SetTitleOffset(1.35);
+  h->GetYaxis()->SetTitleSize(0.06);
+  h->GetYaxis()->SetLabelSize(0.06);
+}
+
+//----------------------------------------//                                                                                               
+
+TH1D* Multiply(TH1D* True, TH2D* SmearMatrix) {
+
+  TH1D* TrueClone = (TH1D*)(True->Clone());
+
+  int XBins = SmearMatrix->GetXaxis()->GetNbins();
+  int YBins = SmearMatrix->GetYaxis()->GetNbins();
+
+  if (XBins != YBins) { std::cout << "Not symmetric matrix" << std::endl; }
+
+  TVectorD signal(XBins);
+  TMatrixD response(XBins,XBins);
+
+  TH2TV(TrueClone, signal);
+  TH2TM(SmearMatrix, response, kTRUE);
+
+  TVectorD RecoSpace = response * signal;
+  TV2TH(RecoSpace, TrueClone);
+
+  return TrueClone;
+
+}
 
 //----------------------------------------//
 
