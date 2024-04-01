@@ -426,9 +426,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run4b = 0.;
 	static const double EXT_Run4b = 1.;
 
-	static const double Fulltor860_wcut_Run4b = 1.47e20;
-	static const double FullE1DCNT_wcut_Run4b = 34737600.0;
-	static const double FullEXT_Run4b = 91167643.0;	
+	static const double Fulltor860_wcut_Run4b = 1.36e20;
+	static const double FullE1DCNT_wcut_Run4b = 32305463.0;
+	static const double FullEXT_Run4b = 89244940.0;	
 
 	// ------------------------------------ //
 		
@@ -438,9 +438,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run4c = 0.;
 	static const double EXT_Run4c = 1.;
 
-	static const double Fulltor860_wcut_Run4c = 9.11e19;
-	static const double FullE1DCNT_wcut_Run4c = 20639283.0;
-	static const double FullEXT_Run4c = 50978641.0;	
+	static const double Fulltor860_wcut_Run4c = 8.95e19;
+	static const double FullE1DCNT_wcut_Run4c = 20273291.0;
+	static const double FullEXT_Run4c = 47178301.0;	
 
 	// ------------------------------------ //
 		
@@ -450,9 +450,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run4d = 0.;
 	static const double EXT_Run4d = 1.;
 
-	static const double Fulltor860_wcut_Run4d = 5.11e19;
-	static const double FullE1DCNT_wcut_Run4d = 11610448.0;
-	static const double FullEXT_Run4d = 75637751.0;	
+	static const double Fulltor860_wcut_Run4d = 4.93e19;
+	static const double FullE1DCNT_wcut_Run4d = 11192660.0;
+	static const double FullEXT_Run4d = 74409530.0;	
 
 	// ------------------------------------ //
 		
@@ -462,9 +462,9 @@ namespace Constants {
 	static const double E1DCNT_wcut_Run5 = 0.;
 	static const double EXT_Run5 = 1.;
 
-	static const double Fulltor860_wcut_Run5 = 1.55e20;
-	static const double FullE1DCNT_wcut_Run5 = 37159286.;
-	static const double FullEXT_Run5 = 115079907.;	
+	static const double Fulltor860_wcut_Run5 = 1.48e20;
+	static const double FullE1DCNT_wcut_Run5 = 35265730.0;
+	static const double FullEXT_Run5 = 107466402.0;	
 
 	// ------------------------------------ //	
 	
