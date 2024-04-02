@@ -16,6 +16,73 @@ using namespace Constants;
 
 //----------------------------------------//
 
+void bin_number_x_title(TH2D* h) {
+
+	TString hname = h->GetName();
+	if (string(hname).find("Serial") != std::string::npos) {	
+
+		TString axis_title = h->GetXaxis()->GetTitle();
+		axis_title.ReplaceAll("deg","bin #");
+		axis_title.ReplaceAll("GeV/c","bin #");
+		axis_title.ReplaceAll("GeV","bin #");				
+		h->GetXaxis()->SetTitle(axis_title);
+
+	}
+
+}
+
+//----------------------------------------//
+
+void bin_number_y_title(TH2D* h) {
+
+	TString hname = h->GetName();
+	if (string(hname).find("Serial") != std::string::npos) {	
+
+		TString axis_title = h->GetYaxis()->GetTitle();
+		axis_title.ReplaceAll("deg","bin #");
+		axis_title.ReplaceAll("GeV/c","bin #");
+		axis_title.ReplaceAll("GeV","bin #");				
+		h->GetYaxis()->SetTitle(axis_title);
+
+	}
+
+}
+//----------------------------------------//
+
+void bin_number_x_title(TH1D* h) {
+
+	TString hname = h->GetName();
+	if (string(hname).find("Serial") != std::string::npos) {	
+
+		TString axis_title = h->GetXaxis()->GetTitle();
+		axis_title.ReplaceAll("deg","bin #");
+		axis_title.ReplaceAll("GeV/c","bin #");
+		axis_title.ReplaceAll("GeV","bin #");				
+		h->GetXaxis()->SetTitle(axis_title);
+
+	}
+
+}
+
+//----------------------------------------//
+
+void bin_number_y_title(TH1D* h) {
+
+	TString hname = h->GetName();
+	if (string(hname).find("Serial") != std::string::npos) {	
+
+		TString axis_title = h->GetYaxis()->GetTitle();
+		axis_title.ReplaceAll("deg","bin #");
+		axis_title.ReplaceAll("GeV/c","bin #");
+		axis_title.ReplaceAll("GeV","bin #");				
+		h->GetYaxis()->SetTitle(axis_title);
+
+	}
+
+}
+
+//----------------------------------------//
+
 void TV2TH(const TVectorD vec, TH1D* histo)
 {
     // Fill vector to histogram,
