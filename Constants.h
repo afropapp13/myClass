@@ -70,7 +70,7 @@ namespace Constants {
 		{ "DeltaAlpha3DqPlot",  std::make_pair(0, 0.18) },
 		{ "MuonMomentumPlot",  std::make_pair(0, 29) },
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
-		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14) },
+		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14.9) },
 		{ "ProtonMomentumPlot",  std::make_pair(0, 34) },
 		{ "ProtonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "ECalPlot",  std::make_pair(0, 29.) },			
@@ -178,7 +178,7 @@ namespace Constants {
 		{ "ECal_ProtonCosTheta_0_60To1_00_ProtonMomentum_0_60To1_00Plot","0.6 < cos#theta_{p} < 1, 0.6 < P_{p} < 1 GeV/c"},
 
 		{ "SerialECal_DeltaPTDeltaAlphaTPlot", "#deltap_{T} & #delta#alpha_{T} slices" },
-		{ "SerialECal_DeltaPnDeltaAlpha3DqPlot", "p_{n} & #delta#alpha_{3D} slices" },	
+		{ "SerialECal_DeltaPnDeltaAlpha3DqPlot", "p_{n} & #alpha_{3D} slices" },	
 		{ "SerialECal_MuonCosThetaMuonMomentumPlot", "cos#theta_{#mu} & p_{#mu} slices" },
 		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", "cos#theta_{p} & p_{p} slices" },								
 	};	
@@ -472,14 +472,14 @@ namespace Constants {
 	// Add 4a ???
 
 	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
-	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d + Fulltor860_wcut_Run5;	
+	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + Fulltor860_wcut_Run5;	
 	
-	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d + FullEXT_Run5;	
 	static const double FullEXT_Run4 = FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d;
-	
-	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d + FullE1DCNT_wcut_Run5;	
-	static const double FullE1DCNT_wcut_Run4 = FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d;	
+	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4 + FullEXT_Run5;	
 
+	static const double FullE1DCNT_wcut_Run4 = FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d;	
+	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4 + FullE1DCNT_wcut_Run5;
+	
 	// -----------------------------------------------------------------------------------------------------------------------------------------------
 
 	// Binning
