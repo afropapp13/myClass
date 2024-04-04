@@ -67,16 +67,16 @@ namespace Constants {
 	{
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14.9) },
-		{ "ThetaVisPlot",  std::make_pair(0, 0.39) },		
+		{ "ThetaVisPlot",  std::make_pair(0, 0.49) },		
 		{ "CosThetaVisPlot",  std::make_pair(0, 109.) },		
-		{ "ThetaVis_ECal_0_00To0_50Plot",  std::make_pair(0, 0.039) },
-		{ "ThetaVis_ECal_0_50To0_80Plot",  std::make_pair(0, 0.14) },
-		{ "ThetaVis_ECal_0_80To2_00Plot",  std::make_pair(0, 0.24) },
+		{ "ThetaVis_ECal_0_00To0_50Plot",  std::make_pair(0, 0.079) },
+		{ "ThetaVis_ECal_0_50To0_80Plot",  std::make_pair(0, 0.59) },
+		{ "ThetaVis_ECal_0_80To2_00Plot",  std::make_pair(0, 0.29) },
 		{ "SerialThetaVis_ECalPlot",  std::make_pair(0, 1.6) },			
-		{ "ThetaVis_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 0.039) },
-		{ "ThetaVis_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.12) },
-		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.049) },
-		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 1.6) },			
+		{ "ThetaVis_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 1.99) },
+		{ "ThetaVis_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.9) },
+		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.099) },
+		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 3.49) },			
 	};	
 	
 	//----------------------------------------//
