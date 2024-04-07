@@ -43,7 +43,7 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	TLorentzVector ProtonLorentzVector(ProtonVector,ProtonEnergy);
 	double ProtonKE = ProtonEnergy - ProtonMass_GeV;		
 
-	TVector3 PtVector = MuonVectorTrans + ProtonVectorTrans;
+	PtVector = MuonVectorTrans + ProtonVectorTrans;
 
 	fPt = PtVector.Mag();
 
@@ -371,6 +371,13 @@ double STV_Tools::ReturnThetaVis() {
 TVector3 STV_Tools::ReturnBeamVector() {
 
 	return fBeamVector;
+
+}
+// __________________________________________________________________________________________________________________________________________________
+
+TVector3 STV_Tools::ReturnPt_vec() {
+
+	return PtVector;
 
 }
 // __________________________________________________________________________________________________________________________________________________
