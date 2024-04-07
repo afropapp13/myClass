@@ -70,7 +70,7 @@ namespace Constants {
 		{ "DeltaAlpha3DqPlot",  std::make_pair(0, 0.18) },
 		{ "MuonMomentumPlot",  std::make_pair(0, 29) },
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
-		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14.9) },
+		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 16.9) },
 		{ "ProtonMomentumPlot",  std::make_pair(0, 34) },
 		{ "ProtonCosThetaPlot",  std::make_pair(0, 24) },
 		{ "ECalPlot",  std::make_pair(0, 24.) },			
