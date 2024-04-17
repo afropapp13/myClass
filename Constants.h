@@ -66,7 +66,7 @@ namespace Constants {
 	static std::map<TString,std::pair<double,double> > XSecRange =
 	{
 		{ "MuonCosThetaPlot",  std::make_pair(0, 24) },
-		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 14.9) },
+		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 16.9) },
 		{ "ThetaVisPlot",  std::make_pair(0, 0.49) },		
 		{ "CosThetaVisPlot",  std::make_pair(0, 109.) },		
 		{ "ThetaVis_ECal_0_00To0_50Plot",  std::make_pair(0, 0.079) },
@@ -87,10 +87,10 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "ThetaVisPlot",  "#frac{d#sigma}{d#theta_{vis}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "CosThetaVisPlot",  "#frac{d#sigma}{dcos#theta_{vis}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
-		{ "ThetaVis_ECal_0_00To0_50Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
-		{ "ThetaVis_ECal_0_50To0_80Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
-		{ "ThetaVis_ECal_0_80To2_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
-		{ "SerialThetaVis_ECalPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },			
+		{ "ThetaVis_ECal_0_00To0_50Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
+		{ "ThetaVis_ECal_0_50To0_80Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
+		{ "ThetaVis_ECal_0_80To2_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
+		{ "SerialThetaVis_ECalPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dE^{Cal}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },			
 		{ "ThetaVis_DeltaPn_0_00To0_20Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
@@ -104,9 +104,9 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot",  "All events" },
 		{ "ThetaVisPlot", "All events" },	
 		{ "CosThetaVisPlot", "All events" },	
-		{ "ThetaVis_ECal_0_00To0_50Plot", "0 < E_{Cal} < 0.5 GeV"  },
-		{ "ThetaVis_ECal_0_50To0_80Plot", "0.5 < E_{Cal} < 0.8 GeV"  },
-		{ "ThetaVis_ECal_0_80To2_00Plot", "0.8 < E_{Cal} < 2 GeV"  },
+		{ "ThetaVis_ECal_0_00To0_50Plot", "0 < E^{Cal} < 0.5 GeV"  },
+		{ "ThetaVis_ECal_0_50To0_80Plot", "0.5 < E^{Cal} < 0.8 GeV"  },
+		{ "ThetaVis_ECal_0_80To2_00Plot", "0.8 < E^{Cal} < 2 GeV"  },
 		{ "SerialThetaVis_ECalPlot", "All events"  },			
 		{ "ThetaVis_DeltaPn_0_00To0_20Plot", "p_{n} < 0.2 GeV/c"  },
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "0.2 < p_{n} < 0.4 GeV/c"  },
@@ -483,6 +483,13 @@ namespace Constants {
 										{0.,10.,20.,30.,40.,50.,60.,180.},
 										{0.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
 	};	
+
+	static std::map<TString,vector< vector<double> > > map_to_2d_bin =
+	{
+		{ "SerialThetaVis_ECalPlot", TwoDArrayNBinsThetaVisInECalSlices  },			
+		{ "SerialThetaVis_DeltaPnPlot", TwoDArrayNBinsThetaVisInDeltaPnSlices },			
+	
+	};
 
 
 }
