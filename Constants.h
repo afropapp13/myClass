@@ -83,12 +83,12 @@ namespace Constants {
 		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_0_00To90_00Plot",  std::make_pair(0, 0.29) },
 		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot",  std::make_pair(0, 0.49) },
 		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot",  std::make_pair(0, 0.049) },
-		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot",  std::make_pair(0, 0.089) },
+		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot",  std::make_pair(0, 0.109) },
 
-		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_10To0_50Plot",  std::make_pair(0, 14.9) },
+		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_10To0_50Plot",  std::make_pair(0, 16.9) },
 		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_50To1_20Plot",  std::make_pair(0, 3.2) },
 		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_10To0_50Plot",  std::make_pair(0, 19.9) },
-		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_50To1_20Plot",  std::make_pair(0, 29.9) },
+		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_50To1_20Plot",  std::make_pair(0, 34.9) },
 
 		{ "ECal_ProtonCosTheta_Minus1_00To0_60_ProtonMomentum_0_30To0_60Plot",  std::make_pair(0, 14.9) },
 		{ "ECal_ProtonCosTheta_Minus1_00To0_60_ProtonMomentum_0_60To1_00Plot",  std::make_pair(0, 4.9) },
