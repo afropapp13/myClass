@@ -122,10 +122,10 @@ namespace Constants {
 		{ "ECal_DeltaPT_0_30To1_00_DeltaAlphaT_0_00To90_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#delta#alpha_{T}d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
 		{ "ECal_DeltaPT_0_30To1_00_DeltaAlphaT_90_00To180_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#delta#alpha_{T}d#deltap_{T}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
 
-         	{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_0_00To90_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#delta#alpha_{3D}d#deltap_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
-		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#delta#alpha_{3D}d#deltap_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
-		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#delta#alpha_{3D}d#deltap_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
-		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#delta#alpha_{3D}d#deltap_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
+         	{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_0_00To90_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
+		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
+		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
+		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot","#frac{d^{3}#sigma}{dE^{Cal}d#alpha_{3D}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg GeV^{2}/c Ar}#right]" },
 
 		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_10To0_50Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]" },
 		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_10To0_50Plot","#frac{d^{3}#sigma}{dE^{Cal}dcos#theta_{#mu}dp_{#mu}} #left[10^{-38} #frac{cm^{2}}{GeV^{2}/c Ar}#right]"},
@@ -162,20 +162,20 @@ namespace Constants {
 		{ "ECal_DeltaPT_0_30To1_00_DeltaAlphaT_0_00To90_00Plot","#deltap_{T} > 0.3 GeV/c, #delta#alpha_{T} < 90^{o}" },
 		{ "ECal_DeltaPT_0_30To1_00_DeltaAlphaT_90_00To180_00Plot","#deltap_{T} > 0.3 GeV/c, 90^{o} < #delta#alpha_{T} < 180^{o}" },
 
-		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_0_00To90_00Plot","#deltap_{n} < 0.3 GeV/c, #delta#alpha_{3D} < 90^{o}" },
-		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot","#deltap_{n} < 0.3 GeV/c, 90^{o} < #delta#alpha_{3D} < 180^{o}" },
-		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot","#deltap_{n} > 0.3 GeV/c, #delta#alpha_{3D} < 90^{o}" },
-		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot","#deltap_{n} > 0.3 GeV/c, 90^{o} < #delta#alpha_{3D} < 180^{o}" },
+		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_0_00To90_00Plot","p_{n} < 0.3 GeV/c, #alpha_{3D} < 90^{o}" },
+		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot","p{n} < 0.3 GeV/c, 90^{o} < #alpha_{3D} < 180^{o}" },
+		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot","p_{n} > 0.3 GeV/c, #alpha_{3D} < 90^{o}" },
+		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot","p_{n} > 0.3 GeV/c, 90^{o} < #alpha_{3D} < 180^{o}" },
 
-		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_10To0_50Plot","-1 < cos#theta_{#mu} < 0.6, 0.1 < P_{#mu} < 0.5 GeV/c" },
-		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_10To0_50Plot","0.6 < cos#theta_{#mu} < 1, 0.1 < P_{#mu} < 0.5 GeV/c"},
-		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_50To1_20Plot","-1 < cos#theta_{#mu} < 0.6, 0.5 < P_{#mu} < 1.2 GeV/c"},
-		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_50To1_20Plot","0.6 < cos#theta_{#mu} < 1, 0.5 < P_{#mu} < 1.2 GeV/c"},
+		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_10To0_50Plot","-1 < cos#theta_{#mu} < 0.6, 0.1 < p_{#mu} < 0.5 GeV/c" },
+		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_10To0_50Plot","0.6 < cos#theta_{#mu} < 1, 0.1 < p_{#mu} < 0.5 GeV/c"},
+		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_50To1_20Plot","-1 < cos#theta_{#mu} < 0.6, 0.5 < p_{#mu} < 1.2 GeV/c"},
+		{ "ECal_MuonCosTheta_0_60To1_00_MuonMomentum_0_50To1_20Plot","0.6 < cos#theta_{#mu} < 1, 0.5 < p_{#mu} < 1.2 GeV/c"},
 
-		{ "ECal_ProtonCosTheta_Minus1_00To0_60_ProtonMomentum_0_30To0_60Plot","-1 < cos#theta_{p} < 0.6, 0.3 < P_{p} < 0.6 GeV/c"},
-		{ "ECal_ProtonCosTheta_0_60To1_00_ProtonMomentum_0_30To0_60Plot","0.6 < cos#theta_{p} < 1, 0.3 < P_{p} < 0.6 GeV/c"},
-		{ "ECal_ProtonCosTheta_Minus1_00To0_60_ProtonMomentum_0_60To1_00Plot","-1 < cos#theta_{p} < 0.6, 0.6 < P_{p} < 1 GeV/c"},
-		{ "ECal_ProtonCosTheta_0_60To1_00_ProtonMomentum_0_60To1_00Plot","0.6 < cos#theta_{p} < 1, 0.6 < P_{p} < 1 GeV/c"},
+		{ "ECal_ProtonCosTheta_Minus1_00To0_60_ProtonMomentum_0_30To0_60Plot","-1 < cos#theta_{p} < 0.6, 0.3 < p_{p} < 0.6 GeV/c"},
+		{ "ECal_ProtonCosTheta_0_60To1_00_ProtonMomentum_0_30To0_60Plot","0.6 < cos#theta_{p} < 1, 0.3 < p_{p} < 0.6 GeV/c"},
+		{ "ECal_ProtonCosTheta_Minus1_00To0_60_ProtonMomentum_0_60To1_00Plot","-1 < cos#theta_{p} < 0.6, 0.6 < p_{p} < 1 GeV/c"},
+		{ "ECal_ProtonCosTheta_0_60To1_00_ProtonMomentum_0_60To1_00Plot","0.6 < cos#theta_{p} < 1, 0.6 < p_{p} < 1 GeV/c"},
 
 		{ "SerialECal_DeltaPTDeltaAlphaTPlot", "#deltap_{T} & #delta#alpha_{T} slices" },
 		{ "SerialECal_DeltaPnDeltaAlpha3DqPlot", "p_{n} & #alpha_{3D} slices" },	
@@ -832,6 +832,16 @@ namespace Constants {
 		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", 1. },
 	};	
 	
+	static std::map<TString,vector< vector< vector<double> > > > map_to_3d_bin =
+	{
+		{ "SerialECal_DeltaPTDeltaAlphaTPlot", TwoDArrayNBinsECalInDeltaPTDeltaAlphaTSlices  },			
+		{ "SerialECal_DeltaPnDeltaAlpha3DqPlot", TwoDArrayNBinsECalInDeltaPnDeltaAlpha3DqSlices },			
+		{ "SerialECal_MuonCosThetaMuonMomentumPlot", TwoDArrayNBinsECalInMuonCosThetaMuonMomentumSlices },			
+		{ "SerialECal_ProtonCosThetaProtonMomentumPlot", TwoDArrayNBinsECalInProtonCosThetaProtonMomentumSlices },			
+	
+	};
+
+
 	//----------------------------------------//
 	
 	// Interaction labels
