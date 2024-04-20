@@ -16,13 +16,41 @@ using namespace Constants;
 
 //----------------------------------------//
 
-//vector<double> get_2d_bin_break_points( vector< vector<double> > bins) { 
+vector<int> get_2d_bin_break_points( vector< vector<double> > bins) {  
 
-//	int nslices = bins.size();
-//cout << "nslices = " << nslices << endl;
+	// main number of slices
+	int nslices = bins.size();
+	vector<int> bin_break_points;
+	int break_bin = 0;
 
+	for (int islice = 0; islice < nslices; islice++) {
+
+		// number of subslices
+		int nsub = bins.at(islice).size();
+
+		for (int isub = 0; isub < nsub; isub++) {
+
+			if (isub == nsub-1) { 
+
+				// store the breaking point bin
+				bin_break_points.push_back(break_bin);
+				// increase the counter bc we are moving to the next slice
+				break_bin--; 
+
+			}
+
+			break_bin++;
+
+		}
+
+	}
+
+	//cout << "bin_break_points.size() = " << bin_break_points.size() << endl;
+	//for(auto bin:bin_break_points) { cout << bin << " " << endl; }
+	
+	return bin_break_points;
  
-//}
+}
 
 //----------------------------------------//
 
