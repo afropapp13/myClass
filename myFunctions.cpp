@@ -179,7 +179,7 @@ void TH2TV(const TH1D* histo, TVectorD& vec)
 int LocateClosetsBinWithValue(TH1D* h, double value) {
 
   int NBins = h->GetXaxis()->GetNbins();
-
+  
   for (int i = 1; i <= NBins; i++) {
 
     double low_edge = h->GetBinLowEdge(i);
