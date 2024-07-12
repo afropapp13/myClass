@@ -160,9 +160,21 @@ std::vector<TMatrixD> Tools::MatrixDecomp(int nbins,TVectorD matrix_pred,TMatrix
 			matrix_mixed(i,j) = N_j*M_ik/N_T + N_i*M_kj/N_T - 2*N_i*N_j*M_kl/N_T/N_T;	
 			matrix_norm(i,j) = N_i*N_j*M_kl/N_T/N_T;
 
+			// debug
+			//if (i == j) {
+	
+			//	cout << "matrix_syst(" << i << "," << j <<") = " << matrix_syst(i,j) << " "; 
+			//	cout << "matrix_norm(" << i << "," << j <<") = " << matrix_norm(i,j) << " "; 
+			//	cout << "matrix_shape(" << i << "," << j <<") = " << matrix_shape(i,j) << " "; 
+			//	cout << "matrix_mixed(" << i << "," << j <<") = " << matrix_mixed(i,j) << endl; 
+
+			//} // end of debugging
+
 		}
 
 	}
+
+	//cout << endl;
 
 	std::vector<TMatrixD> NormShapeVector = {matrix_norm+matrix_mixed,matrix_shape};
 	return NormShapeVector;

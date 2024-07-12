@@ -1,0 +1,221 @@
+double calc_diff_chi2(TMatrixD matrix_pred, TMatrixD matrix_data, TMatrixD cov){
+
+  gStyle->SetOptStat(0);
+
+  double sigma = 2;
+
+  int rows = cov.GetNrows();
+
+  int color_pred = kRed;
+  int color_meas = kBlack;
+
+  //TF1 *ff_1 = new TF1("ff_1", "1", 0, 1e3);
+  //ff_1->SetLineColor(kGray+1); ff_1->SetLineStyle(7);
+
+  TF1 *ff_0 = new TF1("ff_0", "0", 0, 1e3);
+  ff_0->SetLineColor(kGray+1); ff_0->SetLineStyle(7);
+
+  TH1D *h1_fake_meas = new TH1D("h1_fake_meas", "", rows, 0, rows);
+  TGraphErrors *gh_fake_meas = new TGraphErrors();
+  TH1D *h1_pred = new TH1D("h1_pred", "", rows, 0, rows);
+  TH1D *h1_meas2pred = new TH1D("h1_meas2pred", "", rows, 0, rows);
+  TH1D *h1_meas2pred_syst = new TH1D("h1_meas2pred_syst", "", rows, 0, rows);
+
+  TH1D *h1_lambda_pred = new TH1D("h1_lambda_pred", "", rows, 0, rows);
+  TH1D *h1_lambda_meas = new TH1D("h1_lambda_meas", "", rows, 0, rows);
+  TH1D *h1_lambda_absigma_dis = new TH1D("h1_lambda_absigma_dis", "", 10, 0, 10);
+  TH1D *h1_lambda_sigma_iii = new TH1D("h1_lambda_sigma_iii", "", rows, 0, rows);
+
+
+  TCanvas *canv_lambda_sigma = new TCanvas("dchi2_Enu", "dchi2_Enu", 1200, 600);
+  func_canv_margin(canv_lambda_sigma, 0.09, 0.03, 0.03, 0.18);
+
+  TH1D *h1_lambda_sigmax3 = new TH1D("dchi2_Enu3", "", rows, 0, rows);
+  for(int ibin=1; ibin<=rows; ibin++) h1_lambda_sigmax3->SetBinError(ibin, 6);
+
+  TH1D *h1_lambda_sigmax2 = new TH1D("dchi2_Enu2", "", rows, 0, rows);
+  for(int ibin=1; ibin<=rows; ibin++) h1_lambda_sigmax2->SetBinError(ibin, 2);
+
+  TH1D *h1_lambda_sigmax1 = new TH1D("dchi2_Enu1", "", rows, 0, rows);
+  for(int ibin=1; ibin<=rows; ibin++) h1_lambda_sigmax1->SetBinError(ibin, 1);
+
+  h1_lambda_sigmax3->Draw("e2");
+  h1_lambda_sigmax3->SetMinimum(-6);
+  h1_lambda_sigmax3->SetMaximum(6);
+  h1_lambda_sigmax3->SetFillColor(kRed-9); h1_lambda_sigmax3->SetFillStyle(1001);
+  h1_lambda_sigmax3->SetMarkerSize(0);
+  h1_lambda_sigmax3->SetLineColor(color_pred);
+  func_xy_title(h1_lambda_sigmax3, "Decomposition bin index", "#epsilon_{i} value");
+  func_title_size(h1_lambda_sigmax3, 0.09, 0.09, 0.06, 0.09);
+  h1_lambda_sigmax3->GetXaxis()->CenterTitle(); h1_lambda_sigmax3->GetYaxis()->CenterTitle();
+  h1_lambda_sigmax3->GetYaxis()->SetTitleOffset(0.4);
+  h1_lambda_sigmax3->GetXaxis()->SetTitleOffset(0.9);
+  h1_lambda_sigmax3->GetYaxis()->SetNdivisions(112);
+
+  h1_lambda_sigmax2->Draw("same e2"); h1_lambda_sigmax2->SetMarkerSize(0);
+  h1_lambda_sigmax2->SetFillColor(kYellow); h1_lambda_sigmax2->SetFillStyle(1001);
+
+  h1_lambda_sigmax1->Draw("same e2"); h1_lambda_sigmax1->SetMarkerSize(0);
+  h1_lambda_sigmax1->SetFillColor(kGreen); h1_lambda_sigmax1->SetFillStyle(1001);
+
+  h1_lambda_sigma_iii->Draw("same p");
+  h1_lambda_sigma_iii->SetMarkerSize(2); h1_lambda_sigma_iii->SetMarkerStyle(21); h1_lambda_sigma_iii->SetMarkerColor(color_meas);
+
+  ff_0->Draw("same");
+
+  h1_lambda_sigmax2->Draw("same axis");
+
+  double shift_x_lambda_sigma = -0.15;
+  TLegend *lg_lambda_sigma = new TLegend(0.15+shift_x_lambda_sigma, 0.8, 0.7+shift_x_lambda_sigma, 0.9+0.02);
+
+
+  TMatrixDSym DSmatrix_cov(rows);
+  for(int ibin=0; ibin<rows; ibin++)
+    for(int jbin=0; jbin<rows; jbin++)
+      DSmatrix_cov(ibin, jbin) = cov(ibin, jbin);
+  TMatrixDSymEigen DSmatrix_eigen( DSmatrix_cov );
+  TMatrixD matrix_eigenvector = DSmatrix_eigen.GetEigenVectors();
+  TVectorD matrix_eigenvalue = DSmatrix_eigen.GetEigenValues();
+  TMatrixD matrix_eigenvector_T = matrix_eigenvector.T(); matrix_eigenvector.T();
+
+  //matrix_eigenvector.Print();
+  //matrix_eigenvalue.Print();
+
+  TMatrixD matrix_lambda_pred = matrix_pred * matrix_eigenvector;
+  TMatrixD matrix_lambda_meas = matrix_data * matrix_eigenvector;
+  TMatrixD matrix_delta_lambda = matrix_lambda_meas - matrix_lambda_pred;
+  TMatrixD matrix_delta_lambda_T = matrix_delta_lambda.T(); matrix_delta_lambda.T();
+
+  TMatrixD matrix_cov_lambda(rows, rows);
+  for(int idx=0; idx<rows; idx++){
+
+     //double T = 0.001 * matrix_eigenvalue(0);
+     matrix_cov_lambda(idx, idx) = matrix_eigenvalue(idx);
+     //if(matrix_eigenvalue(idx)<T) matrix_cov_lambda(idx, idx) = T;
+
+     //matrix_cov_lambda(idx, idx) = matrix_eigenvalue(idx)+0.00001;
+  }
+  TMatrixD matrix_cov_lambda_inv = matrix_cov_lambda; matrix_cov_lambda_inv.Invert();
+  double chi2_lambda = (matrix_delta_lambda * matrix_cov_lambda_inv * matrix_delta_lambda_T)(0,0);
+  cout<<TString::Format(" ---> check chi2_lambda %7.2f", chi2_lambda)<<endl<<endl;
+
+   map<int, double>map_above3sigma;
+  vector<double>vec_above3sigma;
+
+  for(int ibin=1; ibin<=rows; ibin++) {
+
+    double pred_val = matrix_pred(0, ibin-1);
+    double pred_err = sqrt( cov(ibin-1, ibin-1) );
+    double meas_val = matrix_data(0, ibin-1);
+    //double meas2pred_val = 0;
+    if( pred_val!=0 ) {
+      h1_meas2pred->SetBinContent(ibin, meas_val/pred_val);
+      h1_meas2pred->SetBinError(ibin, sqrt(meas_val)/pred_val);
+      h1_meas2pred_syst->SetBinContent(ibin, 1);
+      h1_meas2pred_syst->SetBinError(ibin, pred_err/pred_val);
+    }
+
+    double pred_lambda_val = matrix_lambda_pred(0, ibin-1);
+    double pred_lambda_err = sqrt( matrix_cov_lambda(ibin-1, ibin-1) );
+    double meas_lambda_val = matrix_lambda_meas(0, ibin-1);
+    double delta_lambda_val = matrix_delta_lambda(0, ibin-1);
+    double relerr_lambda = delta_lambda_val/pred_lambda_err;
+
+    gh_fake_meas->SetPoint( ibin-1, h1_fake_meas->GetBinCenter(ibin), meas_val );
+    gh_fake_meas->SetPointError( ibin-1, h1_fake_meas->GetBinWidth(ibin)*0.5, sqrt(meas_val) );
+    h1_fake_meas->SetBinContent( ibin, meas_val );
+    h1_pred->SetBinContent( ibin, pred_val );
+    h1_pred->SetBinError( ibin, pred_err );
+
+    h1_lambda_pred->SetBinContent( ibin, pred_lambda_val );
+    h1_lambda_pred->SetBinError( ibin, pred_lambda_err );
+    h1_lambda_meas->SetBinContent( ibin, meas_lambda_val );
+
+    if( fabs(relerr_lambda)>=10 ) h1_lambda_absigma_dis->Fill( 9.5 );
+    else h1_lambda_absigma_dis->Fill( fabs(relerr_lambda) );
+
+    double edge_val = 6;
+    double mod_relerr_lambda = relerr_lambda;
+    if( fabs(relerr_lambda)>edge_val ) {
+      (relerr_lambda>0) ? (mod_relerr_lambda = edge_val) : (mod_relerr_lambda = edge_val*(-1));
+    }
+    h1_lambda_sigma_iii->SetBinContent( ibin, mod_relerr_lambda );
+
+    if( fabs(relerr_lambda)>=sigma ) {
+    //if( fabs(relerr_lambda)>=3 ) {
+      map_above3sigma[ibin] = fabs(relerr_lambda);
+      vec_above3sigma.push_back( fabs(relerr_lambda) );
+    }
+
+  if (ibin==0) std::cout << relerr_lambda ;
+  else std::cout << ", " << relerr_lambda;
+
+}
+  std::cout<<endl;
+  std::cout<<endl;
+  cout<<" bin above "<<sigma<<" sigma"<<endl;
+  for(auto it_map_above3sigma=map_above3sigma.begin(); it_map_above3sigma!=map_above3sigma.end(); it_map_above3sigma++) {
+    int user_index = it_map_above3sigma->first;
+    double user_value = it_map_above3sigma->second;
+    cout<<TString::Format(" ---> %2d, %3.1f", user_index, user_value)<<endl;
+  }
+  cout<<endl;
+
+
+  double pvalue_default = TMath::Prob( chi2_lambda, rows );
+  double sigma_default = sqrt( TMath::ChisquareQuantile( 1-pvalue_default, 1 ) );
+  double pvalue_global = 0;
+  double sigma_global = 0;
+  double sigma_global_AA = 0;
+  double sigma_global_BB = 0;
+  double sum_AA = 0;
+
+  if( (int)(map_above3sigma.size())>=1 ) {
+    if( (int)(map_above3sigma.size())==1 ) {
+      double chi2_local = pow(map_above3sigma.begin()->second, 2);
+      double pvalue_local = TMath::Prob( chi2_local, 1 );
+      pvalue_global = 1 - pow(1-pvalue_local, rows);
+      sigma_global = sqrt( TMath::ChisquareQuantile( 1-pvalue_global, 1 ) );
+      sum_AA = chi2_local;
+ //if (isnan(sigma_global) ){
+
+  std::cout<<"  chi2_local: "<<chi2_local<<"  pvalue_local: "<<pvalue_local<<"  pvalue_global: "<<pvalue_global<<"  pvalue_default: "<<pvalue_default<<std::endl;
+  //exit(1);
+//}
+    }
+    else {
+      int user_vec_size = vec_above3sigma.size();
+
+      sum_AA = 0;
+      for(int idx=0; idx<user_vec_size; idx++) {
+        sum_AA += pow( vec_above3sigma.at(idx), 2 );
+      }
+      double pvalue_local_AA = TMath::Prob( sum_AA, user_vec_size );
+
+      double coeff = TMath::Factorial(rows)/TMath::Factorial(rows-user_vec_size)/TMath::Factorial(user_vec_size);
+      double pvalue_global_AA = coeff*pvalue_local_AA;
+      sigma_global = sqrt( TMath::ChisquareQuantile( 1-pvalue_global_AA, 1 ) );
+ //if (isnan(sigma_global) ){
+   std::cout<<"  pvalue_local: "<<pvalue_local_AA<<"  pvalue_global: "<<pvalue_global_AA<<"  pvalue_default: "<<pvalue_default<<std::endl;
+  //exit(1);
+//}
+
+    }
+  }
+
+  if(vec_above3sigma.size()>0){
+    lg_lambda_sigma->AddEntry("", TString::Format("#color[%d]{%3.1f#sigma:  Decomposition #chi^{2}/dof = %3.1f/%d (|#epsilon_{i}|>2)}",
+                                                  kBlue, sigma_global, sum_AA, (int)(map_above3sigma.size())), "");
+
+  }
+  else {
+    lg_lambda_sigma->AddEntry("", "", "");
+  }
+
+  lg_lambda_sigma->Draw();
+  lg_lambda_sigma->SetBorderSize(0); lg_lambda_sigma->SetFillStyle(0); lg_lambda_sigma->SetTextSize(0.085);
+  canv_lambda_sigma->SaveAs("dchi2_Enu.pdf");
+
+
+ return chi2_lambda;
+}

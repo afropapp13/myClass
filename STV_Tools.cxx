@@ -186,6 +186,10 @@ STV_Tools::STV_Tools(TVector3 MuonVector,TVector3 ProtonVector, double MuonEnerg
 	
 	//-----------------//	
 
+	fmtilde = fECalMB - BeamVectorMag; // GeV
+
+	//-----------------//	
+
 }
 
 // __________________________________________________________________________________________________________________________________________________
@@ -363,6 +367,14 @@ double STV_Tools::ReturnA() {
 double STV_Tools::ReturnThetaVis() {
 
 	return fThetaVis;
+
+}
+
+// __________________________________________________________________________________________________________________________________________________
+
+double STV_Tools::ReturnMTilde() {
+
+	return fmtilde;
 
 }
 
