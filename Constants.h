@@ -76,7 +76,10 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_00To0_20Plot",  std::make_pair(0, 1.99) },
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.9) },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.099) },
-		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 3.49) },			
+		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 3.49) },		
+		{ "ThetaVis_PMiss_0_00To0_15Plot",  std::make_pair(0, 2.49) },
+		{ "ThetaVis_PMiss_0_15To0_50Plot",  std::make_pair(0, 0.24) },
+		{ "SerialThetaVis_PMissPlot",  std::make_pair(0, 3.49) },
 	};	
 	
 	//----------------------------------------//
@@ -95,6 +98,9 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
 		{ "SerialThetaVis_DeltaPnPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },			
+		{ "ThetaVis_PMiss_0_00To0_15Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
+		{ "ThetaVis_PMiss_0_15To0_50Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
+		{ "SerialThetaVis_PMissPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },			
 	
 	};
 
@@ -112,6 +118,9 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "0.2 < p_{n} < 0.4 GeV/c"  },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "p_{n} > 0.4 GeV/c"  },
 		{ "SerialThetaVis_DeltaPnPlot", "All events"  },			
+		{ "ThetaVis_PMiss_0_00To0_15Plot", "|p_{miss}| < 0.15 GeV/c"  },
+		{ "ThetaVis_PMiss_0_15To0_50Plot", "|p_{n}| > 0.15 GeV/c"  },
+		{ "SerialThetaVis_PMissPlot", "All events"  },			
 	
 	};	
 	
@@ -132,6 +141,9 @@ namespace Constants {
 		{ "SerialThetaVis_DeltaPnPlot_1","ThetaVis_DeltaPn_0_20To0_40Plot"},
 		{ "SerialThetaVis_DeltaPnPlot_2","ThetaVis_DeltaPn_0_40To1_00Plot"},
 		{ "SerialThetaVis_DeltaPnPlot", "SerialThetaVis_DeltaPnPlot"  },			
+		{ "SerialThetaVis_PMissPlot_0","ThetaVis_PMiss_0_00To0_15Plot"},
+		{ "SerialThetaVis_PMissPlot_1","ThetaVis_PMiss_0_15To0_50Plot"},
+		{ "SerialThetaVis_PMissPlot", "SerialThetaVis_PMissPlot"  },			
 	
 	};
 					
@@ -167,6 +179,9 @@ namespace Constants {
 				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
 				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
 				 ,"SerialThetaVis_DeltaPnPlot"			
+				 ,"ThetaVis_PMiss_0_00To0_15Plot"
+				 ,"ThetaVis_PMiss_0_15To0_50Plot"
+				 ,"SerialThetaVis_PMissPlot"			
 			 };
 	
 	//----------------------------------------//
@@ -185,6 +200,9 @@ namespace Constants {
 				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
 				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
 				 ,"SerialThetaVis_DeltaPnPlot"			
+				 ,"ThetaVis_PMiss_0_00To0_15Plot"
+				 ,"ThetaVis_PMiss_0_15To0_50Plot"
+				 ,"SerialThetaVis_PMissPlot"			
 				 				 
 			};	
 	
@@ -203,6 +221,9 @@ namespace Constants {
 				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
 				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
 				 ,"SerialThetaVis_DeltaPnPlot"			
+				 ,"ThetaVis_PMiss_0_00To0_15Plot"
+				 ,"ThetaVis_PMiss_0_15To0_40Plot"
+				 ,"SerialThetaVis_PMissPlot"			
 	};	
 
 	// --------------------------------------------------------------------------------------------------------------------------
@@ -368,6 +389,8 @@ namespace Constants {
 
 	static const int NBinsECal = 9; static const double ArrayNBinsECal[NBinsECal+1] = {0.2,0.35,0.5,0.65,0.8,0.95,1.1,1.25,1.4,1.6}; 
 
+	static const int NBinsPMiss = 9; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {-0.5,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.5};
+	
 	static const int NBinsEv = 16;	
 	static const double ArrayNBinEv[NBinsEv+1] = {0.2,0.25,0.3,0.35,0.4,0.45,0.5,.55,0.6,0.65,0.7,0.75,0.8,0.85,1.1,1.3,1.6};
 
@@ -468,6 +491,7 @@ namespace Constants {
 	static const int TwoDNBinsProtonMomentum = 3; std::vector<double> TwoDArrayNBinsProtonMomentum{0.3,0.5,0.7,1.};	
 	static const int TwoDNBinsDeltaPT = 3; std::vector<double> TwoDArrayNBinsDeltaPT{0.0,0.2,0.4,1.0};
 	static const int TwoDNBinsDeltaPn = 3; std::vector<double> TwoDArrayNBinsDeltaPn{0.0,0.2,0.4,1.0};	
+	static const int TwoDNBinsPMiss = 2; std::vector<double> TwoDArrayNBinsPMiss{0.0,0.15,0.5};	
 	static const int TwoDNBinsDeltaAlphaT = 4; std::vector<double> TwoDArrayNBinsDeltaAlphaT{0.0,45.0,90.0,135.0,180.0};
 	static const int TwoDNBinsDeltaAlpha3D = 4; std::vector<double> TwoDArrayNBinsDeltaAlpha3D{0.0,45.0,90.0,135.0,180.0};
 
@@ -492,6 +516,9 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", TwoDArrayNBinsDeltaPn.at(2) - TwoDArrayNBinsDeltaPn.at(1)  },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  TwoDArrayNBinsDeltaPn.at(3) - TwoDArrayNBinsDeltaPn.at(2) },
 		{ "SerialThetaVis_DeltaPnPlot", 1.  },			
+		{ "ThetaVis_PMiss_0_00To0_15Plot",  TwoDArrayNBinsPMiss.at(1) - TwoDArrayNBinsPMiss.at(0)  },
+		{ "ThetaVis_PMiss_0_15To0_50Plot", TwoDArrayNBinsPMiss.at(2) - TwoDArrayNBinsPMiss.at(1)  },
+		{ "SerialThetaVis_PMissPlot", 1.  },			
 	};	
 
 	//----------------------------------------//
@@ -508,10 +535,17 @@ namespace Constants {
 										{0.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
 	};	
 
+	std::vector< std::vector<double> > TwoDArrayNBinsThetaVisInPMissSlices{ 
+										{0.,10.,20.,30.,40.,50.,60.,180.},
+										{0.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
+	};	
+
+
 	static std::map<TString,vector< vector<double> > > map_to_2d_bin =
 	{
 		{ "SerialThetaVis_ECalPlot", TwoDArrayNBinsThetaVisInECalSlices  },			
 		{ "SerialThetaVis_DeltaPnPlot", TwoDArrayNBinsThetaVisInDeltaPnSlices },			
+		{ "SerialThetaVis_PMissPlot", TwoDArrayNBinsThetaVisInPMissSlices },			
 	
 	};
 
