@@ -79,7 +79,7 @@ namespace Constants {
 		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 3.49) },		
 		{ "ThetaVis_PMiss_0_00To0_15Plot",  std::make_pair(0, 2.49) },
 		{ "ThetaVis_PMiss_0_15To0_50Plot",  std::make_pair(0, 0.24) },
-		{ "SerialThetaVis_PMissPlot",  std::make_pair(0, 3.49) },
+		{ "SerialThetaVis_PMissPlot",  std::make_pair(0, 3.89) },
 	};	
 	
 	//----------------------------------------//
@@ -119,7 +119,7 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "p_{n} > 0.4 GeV/c"  },
 		{ "SerialThetaVis_DeltaPnPlot", "All events"  },			
 		{ "ThetaVis_PMiss_0_00To0_15Plot", "|p_{miss}| < 0.15 GeV/c"  },
-		{ "ThetaVis_PMiss_0_15To0_50Plot", "|p_{n}| > 0.15 GeV/c"  },
+		{ "ThetaVis_PMiss_0_15To0_50Plot", "|p_{miss}| > 0.15 GeV/c"  },
 		{ "SerialThetaVis_PMissPlot", "All events"  },			
 	
 	};	
@@ -250,24 +250,24 @@ namespace Constants {
 
 	// Run 1A Open Trigger 
 
-	static const double tor860_wcut_Run1A_open_trigger = 5.47e+19;
-	static const double E1DCNT_wcut_Run1A_open_trigger = 14518060.0;
+	static const double tor860_wcut_Run1A_open_trigger = 4.56e+19;
+	static const double E1DCNT_wcut_Run1A_open_trigger = 11707009.0;
 	static const double EXT_Run1A_open_trigger = 32514217.0;
 
-	static const double Fulltor860_wcut_Run1A_open_trigger = 5.47e19;
-	static const double FullE1DCNT_wcut_Run1A_open_trigger = 14518060.0;
+	static const double Fulltor860_wcut_Run1A_open_trigger = 4.56e19;
+	static const double FullE1DCNT_wcut_Run1A_open_trigger = 11707009.0;
 	static const double FullEXT_Run1A_open_trigger = 65744587.0;
 	
 	// ------------------------------------ //
 
 	// Run 1B Open Trigger 
 
-	static const double tor860_wcut_Run1B_open_trigger = 7.8e+19;
-	static const double E1DCNT_wcut_Run1B_open_trigger = 17298676.0;
+	static const double tor860_wcut_Run1B_open_trigger = 8.36e+19;
+	static const double E1DCNT_wcut_Run1B_open_trigger = 18551936.0;
 	static const double EXT_Run1B_open_trigger = 32514217.0;
 
-	static const double Fulltor860_wcut_Run1B_open_trigger = 7.8e19;
-	static const double FullE1DCNT_wcut_Run1B_open_trigger = 17298676.0;
+	static const double Fulltor860_wcut_Run1B_open_trigger = 8.36e19;
+	static const double FullE1DCNT_wcut_Run1B_open_trigger = 18551936.0;
 	static const double FullEXT_Run1B_open_trigger = 65744587.0;
 	
 	// ------------------------------------ //	
