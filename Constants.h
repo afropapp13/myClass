@@ -82,7 +82,7 @@ namespace Constants {
 
 		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_0_00To90_00Plot",  std::make_pair(0, 0.29) },
 		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot",  std::make_pair(0, 0.49) },
-		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot",  std::make_pair(0, 0.049) },
+		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot",  std::make_pair(0, 0.039) },
 		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot",  std::make_pair(0, 0.109) },
 
 		{ "ECal_MuonCosTheta_Minus1_00To0_60_MuonMomentum_0_10To0_50Plot",  std::make_pair(0, 16.9) },
@@ -163,7 +163,7 @@ namespace Constants {
 		{ "ECal_DeltaPT_0_30To1_00_DeltaAlphaT_90_00To180_00Plot","#deltap_{T} > 0.3 GeV/c, 90^{o} < #delta#alpha_{T} < 180^{o}" },
 
 		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_0_00To90_00Plot","p_{n} < 0.3 GeV/c, #alpha_{3D} < 90^{o}" },
-		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot","p{n} < 0.3 GeV/c, 90^{o} < #alpha_{3D} < 180^{o}" },
+		{ "ECal_DeltaPn_0_00To0_30_DeltaAlpha3Dq_90_00To180_00Plot","p_{n} < 0.3 GeV/c, 90^{o} < #alpha_{3D} < 180^{o}" },
 		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_0_00To90_00Plot","p_{n} > 0.3 GeV/c, #alpha_{3D} < 90^{o}" },
 		{ "ECal_DeltaPn_0_30To1_00_DeltaAlpha3Dq_90_00To180_00Plot","p_{n} > 0.3 GeV/c, 90^{o} < #alpha_{3D} < 180^{o}" },
 
