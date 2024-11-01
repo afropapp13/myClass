@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <vector>
 #include <map>
+#include <TDecompSVD.h>
 
 using namespace std;
 
@@ -381,7 +382,31 @@ namespace Constants {
 	static const double Fulltor860_wcut_Run1 = 1.67e20;
 	static const double FullE1DCNT_wcut_Run1 = 37273255.0;
 	static const double FullEXT_Run1 = 65744587.0;
+
+	// ------------------------------------ //
+
+	// Run 1A Open Trigger 
+
+	static const double tor860_wcut_Run1A_open_trigger = 3.189e+19;
+	static const double E1DCNT_wcut_Run1A_open_trigger = 8206126.0;
+	static const double EXT_Run1A_open_trigger = 65744587.0;
+
+	static const double Fulltor860_wcut_Run1A_open_trigger = 3.189e+19;
+	static const double FullE1DCNT_wcut_Run1A_open_trigger = 8206126.0;
+	static const double FullEXT_Run1A_open_trigger = 65744587.0;
 	
+	// ------------------------------------ //
+
+	// Run 1B Open Trigger 
+
+	static const double tor860_wcut_Run1B_open_trigger = 6.081e+19;
+	static const double E1DCNT_wcut_Run1B_open_trigger = 13472878.0;
+	static const double EXT_Run1B_open_trigger = 65744587.0;
+
+	static const double Fulltor860_wcut_Run1B_open_trigger = 6.081e+19;
+	static const double FullE1DCNT_wcut_Run1B_open_trigger = 13472878.0;
+	static const double FullEXT_Run1B_open_trigger = 65744587.0;
+		
 	// ------------------------------------ //	
 	
 	// Run 2 
@@ -469,18 +494,20 @@ namespace Constants {
 	// ------------------------------------ //	
 	
 	// Combined POT
-	// Add 4a ???
 
-	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
-	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + Fulltor860_wcut_Run5;	
+	static const double Fulltor860_wcut_Run1all = Fulltor860_wcut_Run1 + bFulltor860_wcut_Run1A_open_trigger + Fulltor860_wcut_Run1B_open_trigger;	
+	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4a + bFulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
+	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1all + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + Fulltor860_wcut_Run5;	
 	
-	static const double FullEXT_Run4 = FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d;
-	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4 + FullEXT_Run5;	
+	static const double FullEXT_Run1all = FullEXT_Run1 + FullEXT_Run1A_open_trigger + FullEXT_Run1B_open_trigger;
+	static const double FullEXT_Run4 = FullEXT_Run4a + FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d;
+	static const double FullEXT_Combined = FullEXT_Run1all + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4 + FullEXT_Run5;	
 
-	static const double FullE1DCNT_wcut_Run4 = FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d;	
-	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4 + FullE1DCNT_wcut_Run5;
+	static const double FullE1DCNT_wcut_Run1all = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run1A_open_trigger + FullE1DCNT_wcut_Run1B_open_trigger;	
+	static const double FullE1DCNT_wcut_Run4 =  FullE1DCNT_wcut_Run4a + FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d;	
+	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1all + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4 + FullE1DCNT_wcut_Run5;
 	
-	// -----------------------------------------------------------------------------------------------------------------------------------------------
+	// ---------------------------------------------------------------------------------------------------------------------------
 
 	// Binning
 
