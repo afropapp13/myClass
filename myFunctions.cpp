@@ -8,6 +8,7 @@
 #include <sstream>
 #include <cmath>
 #include <TVectorD.h>
+#include <TDecompSVD.h>
 
 #include "Constants.h"
 
@@ -435,7 +436,12 @@ void CalcChiSquared(TH1D* h_model, TH1D* h_data, TH2D* cov, double &chi, int &nd
 	TMatrixD copy_cov_m = cov_m;
 
 	// Inverting the covariance matrix
-	TMatrixD inverse_cov_m = cov_m.Invert();
+	//TMatrixD inverse_cov_m = cov_m.Invert();
+
+  	TMatrixD inverse_cov_m = cov_m;
+
+	TDecompSVD svd(cov_m);
+	inverse_cov_m = TMatrixDSym(cov_m.GetNrows(), svd.Invert().GetMatrixArray());
 
 	// Calculating the chi2 = Summation_ij{ (x_i - mu_j)*E_ij^(-1)*(x_j - mu_j)  }
 	// x = data, mu = model, E^(-1) = inverted covariance matrix 

@@ -77,8 +77,8 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot",  std::make_pair(0, 0.9) },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.099) },
 		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 3.49) },		
-		{ "ThetaVis_PMiss_0_00To0_15Plot",  std::make_pair(0, 2.49) },
-		{ "ThetaVis_PMiss_0_15To0_50Plot",  std::make_pair(0, 0.24) },
+		{ "ThetaVis_PMiss_0_00To0_12Plot",  std::make_pair(0, 2.49) },
+		{ "ThetaVis_PMiss_0_12To0_50Plot",  std::make_pair(0, 0.24) },
 		{ "SerialThetaVis_PMissPlot",  std::make_pair(0, 3.89) },
 	};	
 	
@@ -98,8 +98,8 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
 		{ "SerialThetaVis_DeltaPnPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{n}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },			
-		{ "ThetaVis_PMiss_0_00To0_15Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
-		{ "ThetaVis_PMiss_0_15To0_50Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
+		{ "ThetaVis_PMiss_0_00To0_12Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
+		{ "ThetaVis_PMiss_0_12To0_50Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },
 		{ "SerialThetaVis_PMissPlot", "#frac{d^{2}#sigma}{d#theta_{vis}dp_{miss}} #left[10^{-38} #frac{cm^{2}}{deg (GeV/c) Ar}#right]"  },			
 	
 	};
@@ -118,8 +118,8 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", "0.2 < p_{n} < 0.4 GeV/c"  },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot", "p_{n} > 0.4 GeV/c"  },
 		{ "SerialThetaVis_DeltaPnPlot", "All events"  },			
-		{ "ThetaVis_PMiss_0_00To0_15Plot", "|p_{miss}| < 0.15 GeV/c"  },
-		{ "ThetaVis_PMiss_0_15To0_50Plot", "|p_{miss}| > 0.15 GeV/c"  },
+		{ "ThetaVis_PMiss_0_00To0_12Plot", "|p_{miss}| < 0.12 GeV/c"  },
+		{ "ThetaVis_PMiss_0_12To0_50Plot", "|p_{miss}| > 0.12 GeV/c"  },
 		{ "SerialThetaVis_PMissPlot", "All events"  },			
 	
 	};	
@@ -141,8 +141,8 @@ namespace Constants {
 		{ "SerialThetaVis_DeltaPnPlot_1","ThetaVis_DeltaPn_0_20To0_40Plot"},
 		{ "SerialThetaVis_DeltaPnPlot_2","ThetaVis_DeltaPn_0_40To1_00Plot"},
 		{ "SerialThetaVis_DeltaPnPlot", "SerialThetaVis_DeltaPnPlot"  },			
-		{ "SerialThetaVis_PMissPlot_0","ThetaVis_PMiss_0_00To0_15Plot"},
-		{ "SerialThetaVis_PMissPlot_1","ThetaVis_PMiss_0_15To0_50Plot"},
+		{ "SerialThetaVis_PMissPlot_0","ThetaVis_PMiss_0_00To0_12Plot"},
+		{ "SerialThetaVis_PMissPlot_1","ThetaVis_PMiss_0_12To0_50Plot"},
 		{ "SerialThetaVis_PMissPlot", "SerialThetaVis_PMissPlot"  },			
 	
 	};
@@ -179,8 +179,8 @@ namespace Constants {
 				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
 				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
 				 ,"SerialThetaVis_DeltaPnPlot"			
-				 ,"ThetaVis_PMiss_0_00To0_15Plot"
-				 ,"ThetaVis_PMiss_0_15To0_50Plot"
+				 ,"ThetaVis_PMiss_0_00To0_12Plot"
+				 ,"ThetaVis_PMiss_0_12To0_50Plot"
 				 ,"SerialThetaVis_PMissPlot"			
 			 };
 	
@@ -200,8 +200,8 @@ namespace Constants {
 				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
 				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
 				 ,"SerialThetaVis_DeltaPnPlot"			
-				 ,"ThetaVis_PMiss_0_00To0_15Plot"
-				 ,"ThetaVis_PMiss_0_15To0_50Plot"
+				 ,"ThetaVis_PMiss_0_00To0_12Plot"
+				 ,"ThetaVis_PMiss_0_12To0_50Plot"
 				 ,"SerialThetaVis_PMissPlot"			
 				 				 
 			};	
@@ -221,8 +221,8 @@ namespace Constants {
 				 ,"ThetaVis_DeltaPn_0_20To0_40Plot"
 				 ,"ThetaVis_DeltaPn_0_40To1_00Plot"
 				 ,"SerialThetaVis_DeltaPnPlot"			
-				 ,"ThetaVis_PMiss_0_00To0_15Plot"
-				 ,"ThetaVis_PMiss_0_15To0_40Plot"
+				 ,"ThetaVis_PMiss_0_00To0_12Plot"
+				 ,"ThetaVis_PMiss_0_12To0_50Plot"
 				 ,"SerialThetaVis_PMissPlot"			
 	};	
 
@@ -250,24 +250,24 @@ namespace Constants {
 
 	// Run 1A Open Trigger 
 
-	static const double tor860_wcut_Run1A_open_trigger = 4.56e+19;
-	static const double E1DCNT_wcut_Run1A_open_trigger = 11707009.0;
-	static const double EXT_Run1A_open_trigger = 32514217.0;
+	static const double tor860_wcut_Run1A_open_trigger = 3.189e+19;
+	static const double E1DCNT_wcut_Run1A_open_trigger = 8206126.0;
+	static const double EXT_Run1A_open_trigger = 65744587.0;
 
-	static const double Fulltor860_wcut_Run1A_open_trigger = 4.56e19;
-	static const double FullE1DCNT_wcut_Run1A_open_trigger = 11707009.0;
+	static const double Fulltor860_wcut_Run1A_open_trigger = 3.189e+19;
+	static const double FullE1DCNT_wcut_Run1A_open_trigger = 8206126.0;
 	static const double FullEXT_Run1A_open_trigger = 65744587.0;
 	
 	// ------------------------------------ //
 
 	// Run 1B Open Trigger 
 
-	static const double tor860_wcut_Run1B_open_trigger = 8.36e+19;
-	static const double E1DCNT_wcut_Run1B_open_trigger = 18551936.0;
-	static const double EXT_Run1B_open_trigger = 32514217.0;
+	static const double tor860_wcut_Run1B_open_trigger = 6.081e+19;
+	static const double E1DCNT_wcut_Run1B_open_trigger = 13472878.0;
+	static const double EXT_Run1B_open_trigger = 65744587.0;
 
-	static const double Fulltor860_wcut_Run1B_open_trigger = 8.36e19;
-	static const double FullE1DCNT_wcut_Run1B_open_trigger = 18551936.0;
+	static const double Fulltor860_wcut_Run1B_open_trigger = 6.081e+19;
+	static const double FullE1DCNT_wcut_Run1B_open_trigger = 13472878.0;
 	static const double FullEXT_Run1B_open_trigger = 65744587.0;
 	
 	// ------------------------------------ //	
@@ -357,18 +357,20 @@ namespace Constants {
 	// ------------------------------------ //	
 	
 	// Combined POT
-	// Add 4a ???
 
-	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
-	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + Fulltor860_wcut_Run5;	
+	static const double Fulltor860_wcut_Run1all = Fulltor860_wcut_Run1 + bFulltor860_wcut_Run1A_open_trigger + Fulltor860_wcut_Run1B_open_trigger;	
+	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4a + bFulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
+	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1all + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + Fulltor860_wcut_Run5;	
 	
-	static const double FullEXT_Run4 = FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d;
-	static const double FullEXT_Combined = FullEXT_Run1 + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4 + FullEXT_Run5;	
+	static const double FullEXT_Run1all = FullEXT_Run1 + FullEXT_Run1A_open_trigger + FullEXT_Run1B_open_trigger;
+	static const double FullEXT_Run4 = FullEXT_Run4a + FullEXT_Run4b + FullEXT_Run4c + FullEXT_Run4d;
+	static const double FullEXT_Combined = FullEXT_Run1all + FullEXT_Run2 + FullEXT_Run3 + FullEXT_Run4 + FullEXT_Run5;	
 
-	static const double FullE1DCNT_wcut_Run4 = FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d;	
-	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4 + FullE1DCNT_wcut_Run5;
+	static const double FullE1DCNT_wcut_Run1all = FullE1DCNT_wcut_Run1 + FullE1DCNT_wcut_Run1A_open_trigger + FullE1DCNT_wcut_Run1B_open_trigger;	
+	static const double FullE1DCNT_wcut_Run4 =  FullE1DCNT_wcut_Run4a + FullE1DCNT_wcut_Run4b + FullE1DCNT_wcut_Run4c + FullE1DCNT_wcut_Run4d;	
+	static const double FullE1DCNT_wcut_Combined = FullE1DCNT_wcut_Run1all + FullE1DCNT_wcut_Run2 + FullE1DCNT_wcut_Run3 + FullE1DCNT_wcut_Run4 + FullE1DCNT_wcut_Run5;
 	
-	// -----------------------------------------------------------------------------------------------------------------------------------------------
+	// -----------------------------------------------------------------------------------------------------------------------------
 
 	// Binning
 
@@ -389,7 +391,7 @@ namespace Constants {
 
 	static const int NBinsECal = 9; static const double ArrayNBinsECal[NBinsECal+1] = {0.2,0.35,0.5,0.65,0.8,0.95,1.1,1.25,1.4,1.6}; 
 
-	static const int NBinsPMiss = 9; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {-0.5,-0.35,-0.25,-0.15,-0.05,0.05,0.15,0.25,0.35,0.5};
+	static const int NBinsPMiss = 9; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {-0.5,-0.35,-0.25,-0.12,-0.05,0.05,0.12,0.25,0.35,0.5};
 	
 	static const int NBinsEv = 16;	
 	static const double ArrayNBinEv[NBinsEv+1] = {0.2,0.25,0.3,0.35,0.4,0.45,0.5,.55,0.6,0.65,0.7,0.75,0.8,0.85,1.1,1.3,1.6};
@@ -491,7 +493,7 @@ namespace Constants {
 	static const int TwoDNBinsProtonMomentum = 3; std::vector<double> TwoDArrayNBinsProtonMomentum{0.3,0.5,0.7,1.};	
 	static const int TwoDNBinsDeltaPT = 3; std::vector<double> TwoDArrayNBinsDeltaPT{0.0,0.2,0.4,1.0};
 	static const int TwoDNBinsDeltaPn = 3; std::vector<double> TwoDArrayNBinsDeltaPn{0.0,0.2,0.4,1.0};	
-	static const int TwoDNBinsPMiss = 2; std::vector<double> TwoDArrayNBinsPMiss{0.0,0.15,0.5};	
+	static const int TwoDNBinsPMiss = 2; std::vector<double> TwoDArrayNBinsPMiss{0.0,0.12,0.5};	
 	static const int TwoDNBinsDeltaAlphaT = 4; std::vector<double> TwoDArrayNBinsDeltaAlphaT{0.0,45.0,90.0,135.0,180.0};
 	static const int TwoDNBinsDeltaAlpha3D = 4; std::vector<double> TwoDArrayNBinsDeltaAlpha3D{0.0,45.0,90.0,135.0,180.0};
 
@@ -516,8 +518,8 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_20To0_40Plot", TwoDArrayNBinsDeltaPn.at(2) - TwoDArrayNBinsDeltaPn.at(1)  },
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  TwoDArrayNBinsDeltaPn.at(3) - TwoDArrayNBinsDeltaPn.at(2) },
 		{ "SerialThetaVis_DeltaPnPlot", 1.  },			
-		{ "ThetaVis_PMiss_0_00To0_15Plot",  TwoDArrayNBinsPMiss.at(1) - TwoDArrayNBinsPMiss.at(0)  },
-		{ "ThetaVis_PMiss_0_15To0_50Plot", TwoDArrayNBinsPMiss.at(2) - TwoDArrayNBinsPMiss.at(1)  },
+		{ "ThetaVis_PMiss_0_00To0_12Plot",  TwoDArrayNBinsPMiss.at(1) - TwoDArrayNBinsPMiss.at(0)  },
+		{ "ThetaVis_PMiss_0_12To0_50Plot", TwoDArrayNBinsPMiss.at(2) - TwoDArrayNBinsPMiss.at(1)  },
 		{ "SerialThetaVis_PMissPlot", 1.  },			
 	};	
 
@@ -537,7 +539,8 @@ namespace Constants {
 
 	std::vector< std::vector<double> > TwoDArrayNBinsThetaVisInPMissSlices{ 
 										{0.,10.,20.,30.,40.,50.,60.,180.},
-										{0.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
+										//{0.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
+										{0.,15.,30.,40.,50.,60.,70.,80.,90.,115.,180.},
 	};	
 
 
