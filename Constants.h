@@ -495,8 +495,8 @@ namespace Constants {
 	
 	// Combined POT
 
-	static const double Fulltor860_wcut_Run1all = Fulltor860_wcut_Run1 + bFulltor860_wcut_Run1A_open_trigger + Fulltor860_wcut_Run1B_open_trigger;	
-	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4a + bFulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
+	static const double Fulltor860_wcut_Run1all = Fulltor860_wcut_Run1 + Fulltor860_wcut_Run1A_open_trigger + Fulltor860_wcut_Run1B_open_trigger;	
+	static const double Fulltor860_wcut_Run4 = Fulltor860_wcut_Run4a + Fulltor860_wcut_Run4b + Fulltor860_wcut_Run4c + Fulltor860_wcut_Run4d;	
 	static const double Fulltor860_wcut_Combined = Fulltor860_wcut_Run1all + Fulltor860_wcut_Run2 + Fulltor860_wcut_Run3 + Fulltor860_wcut_Run4 + Fulltor860_wcut_Run5;	
 	
 	static const double FullEXT_Run1all = FullEXT_Run1 + FullEXT_Run1A_open_trigger + FullEXT_Run1B_open_trigger;
