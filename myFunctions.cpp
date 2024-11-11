@@ -432,6 +432,8 @@ double PeLEE_ReturnBeamOnRunPOT(TString Run) {
 	double DataPOT = -99.;
 
 	if (Run == "Run1") { DataPOT = Fulltor860_wcut_Run1 ; }
+	if (Run == "Run1A_open_trigger") { DataPOT = Fulltor860_wcut_Run1A_open_trigger ; }
+	if (Run == "Run1B_open_trigger") { DataPOT = Fulltor860_wcut_Run1B_open_trigger ; }
 	if (Run == "Run2") { DataPOT = Fulltor860_wcut_Run2 ; }
 	if (Run == "Run3") { DataPOT = Fulltor860_wcut_Run3 ; }
 	if (Run == "Run4a") { DataPOT = Fulltor860_wcut_Run4a ; }

@@ -387,24 +387,24 @@ namespace Constants {
 
 	// Run 1A Open Trigger 
 
-	static const double tor860_wcut_Run1A_open_trigger = 3.189e+19;
-	static const double E1DCNT_wcut_Run1A_open_trigger = 8206126.0;
+	static const double tor860_wcut_Run1A_open_trigger = 5.885e+19;
+	static const double E1DCNT_wcut_Run1A_open_trigger = 15639842.0;
 	static const double EXT_Run1A_open_trigger = 65744587.0;
 
-	static const double Fulltor860_wcut_Run1A_open_trigger = 3.189e+19;
-	static const double FullE1DCNT_wcut_Run1A_open_trigger = 8206126.0;
+	static const double Fulltor860_wcut_Run1A_open_trigger = 5.885e+19;
+	static const double FullE1DCNT_wcut_Run1A_open_trigger = 15639842.0;
 	static const double FullEXT_Run1A_open_trigger = 65744587.0;
 	
 	// ------------------------------------ //
 
 	// Run 1B Open Trigger 
 
-	static const double tor860_wcut_Run1B_open_trigger = 6.081e+19;
-	static const double E1DCNT_wcut_Run1B_open_trigger = 13472878.0;
+	static const double tor860_wcut_Run1B_open_trigger = 8.932e+19;
+	static const double E1DCNT_wcut_Run1B_open_trigger = 19789737.0;
 	static const double EXT_Run1B_open_trigger = 65744587.0;
 
-	static const double Fulltor860_wcut_Run1B_open_trigger = 6.081e+19;
-	static const double FullE1DCNT_wcut_Run1B_open_trigger = 13472878.0;
+	static const double Fulltor860_wcut_Run1B_open_trigger = 8.932e+19;
+	static const double FullE1DCNT_wcut_Run1B_open_trigger = 19789737.0;
 	static const double FullEXT_Run1B_open_trigger = 65744587.0;
 		
 	// ------------------------------------ //	
