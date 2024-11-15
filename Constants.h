@@ -78,7 +78,7 @@ namespace Constants {
 		{ "ThetaVis_DeltaPn_0_40To1_00Plot",  std::make_pair(0, 0.099) },
 		{ "SerialThetaVis_DeltaPnPlot",  std::make_pair(0, 3.49) },		
 		{ "ThetaVis_PMiss_0_00To0_12Plot",  std::make_pair(0, 2.49) },
-		{ "ThetaVis_PMiss_0_12To0_50Plot",  std::make_pair(0, 0.24) },
+		{ "ThetaVis_PMiss_0_12To0_50Plot",  std::make_pair(0, 0.34) },
 		{ "SerialThetaVis_PMissPlot",  std::make_pair(0, 3.89) },
 	};	
 	
