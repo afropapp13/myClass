@@ -402,6 +402,7 @@ namespace Constants {
 	
 	static TString LabelXAxisMuonCosTheta = ";cos#theta_{#mu}"; static TString LabelXAxisTrueMuonCosTheta = ";True cos#theta_{#mu}";
 	static TString LabelXAxisThetaVis = ";#theta_{vis} [deg]"; static TString LabelXAxisTrueThetaVis = ";True #theta_{vis} [deg]";
+	static TString LabelXAxisPMiss = ";p_{miss} [GeV/c]"; static TString LabelXAxisTruePMiss = ";True p_{miss} [GeV/c]";
 	static TString LabelXAxisCosThetaVis = ";cos#theta_{vis}"; static TString LabelXAxisTrueCosThetaVis = ";True cos#theta_{vis}";
 	
 	// ------------------------------------------------------------------------------------------------------------------------------------

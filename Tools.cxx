@@ -88,6 +88,7 @@ TH2D* Tools::Get2DHistoBins(TH2D* h,int LowBin,int HighBin,double ScaleFactor,st
 
 //----------------------------------------//
 
+// Scales by both the bin width and the slice width
 TH1D* Tools::GetHistoBins(TH1D* h,int LowBin,int HighBin,double ScaleFactor,std::vector<double> Binning, TString Name) {
 
 	TString PlotName = Name + TString(h->GetName()) + "_"+TString(std::to_string(LowBin)) + "_"+TString(std::to_string(HighBin));
