@@ -69,6 +69,7 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot",  std::make_pair(0, 16.9) },
 		{ "ThetaVisPlot",  std::make_pair(0, 0.49) },		
 		{ "CosThetaVisPlot",  std::make_pair(0, 109.) },		
+		{ "PMissPlot",  std::make_pair(0, 34.) },		
 		{ "ThetaVis_ECal_0_00To0_50Plot",  std::make_pair(0, 0.079) },
 		{ "ThetaVis_ECal_0_50To0_80Plot",  std::make_pair(0, 0.59) },
 		{ "ThetaVis_ECal_0_80To2_00Plot",  std::make_pair(0, 0.29) },
@@ -90,6 +91,7 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot",  "#frac{d#sigma}{dcos#theta_{#mu}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
 		{ "ThetaVisPlot",  "#frac{d#sigma}{d#theta_{vis}} #left[10^{-38} #frac{cm^{2}}{deg Ar}#right]" },
 		{ "CosThetaVisPlot",  "#frac{d#sigma}{dcos#theta_{vis}} #left[10^{-38} #frac{cm^{2}}{Ar}#right]" },
+		{ "PMissPlot",  "#frac{d#sigma}{dp_{miss}} #left[10^{-38} #frac{cm^{2}}{(GeV/c) Ar}#right]" },
 		{ "ThetaVis_ECal_0_00To0_50Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{reco}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
 		{ "ThetaVis_ECal_0_50To0_80Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{reco}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
 		{ "ThetaVis_ECal_0_80To2_00Plot", "#frac{d^{2}#sigma}{d#theta_{vis}dE_{reco}} #left[10^{-38} #frac{cm^{2}}{deg GeV Ar}#right]"  },
@@ -110,6 +112,7 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot",  "All events" },
 		{ "ThetaVisPlot", "All events" },	
 		{ "CosThetaVisPlot", "All events" },	
+		{ "PMissPlot", "All events" },	
 		{ "ThetaVis_ECal_0_00To0_50Plot", "0 < E_{reco} < 0.5 GeV"  },
 		{ "ThetaVis_ECal_0_50To0_80Plot", "0.5 < E_{reco} < 0.8 GeV"  },
 		{ "ThetaVis_ECal_0_80To2_00Plot", "0.8 < E_{reco} < 2 GeV"  },
@@ -133,6 +136,7 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot", "MuonCosThetaSingleBinPlot" },
 		{ "ThetaVisPlot", "ThetaVisPlot" },
 		{ "CosThetaVisPlot", "CosThetaVisPlot" },
+		{ "PMissPlot", "PMissPlot" },
 		{ "ThetaVis_ECal_0_00To0_50Plot","ThetaVis_ECal_0_00To0_50Plot"},
 		{ "ThetaVis_ECal_0_50To0_80Plot","ThetaVis_ECal_0_50To0_80Plot"},
 		{ "ThetaVis_ECal_0_80To2_00Plot","ThetaVis_ECal_0_80To2_00Plot"},
@@ -180,6 +184,7 @@ namespace Constants {
 				 ,"MuonCosThetaSingleBinPlot"
 				 ,"ThetaVisPlot"
 				 ,"CosThetaVisPlot"
+				 ,"PMissPlot"
 				 ,"ThetaVis_ECal_0_00To0_50Plot"
 				 ,"ThetaVis_ECal_0_50To0_80Plot"
 				 ,"ThetaVis_ECal_0_80To2_00Plot"
@@ -201,6 +206,7 @@ namespace Constants {
 				 ,"MuonCosThetaSingleBinPlot"
 				 ,"ThetaVisPlot"
 				 ,"CosThetaVisPlot"
+				 ,"PMissPlot"
 				 ,"ThetaVis_ECal_0_00To0_50Plot"
 				 ,"ThetaVis_ECal_0_50To0_80Plot"
 				 ,"ThetaVis_ECal_0_80To2_00Plot"
@@ -222,6 +228,7 @@ namespace Constants {
 				 ,"MuonCosThetaSingleBinPlot"
 				 ,"ThetaVisPlot"
 				 ,"CosThetaVisPlot"
+				 ,"PMissPlot"
 				 ,"ThetaVis_ECal_0_00To0_50Plot"
 				 ,"ThetaVis_ECal_0_50To0_80Plot"
 				 ,"ThetaVis_ECal_0_80To2_00Plot"
@@ -400,7 +407,7 @@ namespace Constants {
 
 	static const int NBinsECal = 9; static const double ArrayNBinsECal[NBinsECal+1] = {0.2,0.35,0.5,0.65,0.8,0.95,1.1,1.25,1.4,1.6}; 
 
-	static const int NBinsPMiss = 9; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {-0.5,-0.35,-0.25,-0.12,-0.05,0.05,0.12,0.25,0.35,0.5};
+	static const int NBinsPMiss = 9; static const double ArrayNBinsPMiss[NBinsPMiss+1] = {-0.5,-0.35,-0.20,-0.12,-0.05,0.05,0.12,0.20,0.35,0.5};
 	
 	static const int NBinsEv = 16;	
 	static const double ArrayNBinEv[NBinsEv+1] = {0.2,0.25,0.3,0.35,0.4,0.45,0.5,.55,0.6,0.65,0.7,0.75,0.8,0.85,1.1,1.3,1.6};
@@ -421,6 +428,7 @@ namespace Constants {
 	static TString LabelXAxisMuonCosTheta2D = LabelXAxisTrueMuonCosTheta+";Reco cos#theta_{#mu}";
 	static TString LabelXAxisThetaVis2D = LabelXAxisTrueThetaVis+";Reco #theta_{vis} [deg]";
 	static TString LabelXAxisCosThetaVis2D = LabelXAxisTrueCosThetaVis+";Reco cos#theta_{vis}";
+	static TString LabelXAxisPMiss2D = LabelXAxisTruePMiss+";Reco p_{miss}";
 
 	// --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -520,6 +528,7 @@ namespace Constants {
 		{ "MuonCosThetaSingleBinPlot", 1. },
 		{ "ThetaVisPlot", 1. },
 		{ "CosThetaVisPlot", 1. },
+		{ "PMissPlot", 1. },
 		{ "ThetaVis_ECal_0_00To0_50Plot",  TwoDArrayNBinsECal.at(1) - TwoDArrayNBinsECal.at(0)  },
 		{ "ThetaVis_ECal_0_50To0_80Plot", TwoDArrayNBinsECal.at(2) - TwoDArrayNBinsECal.at(1)  },
 		{ "ThetaVis_ECal_0_80To2_00Plot",  TwoDArrayNBinsECal.at(3) - TwoDArrayNBinsECal.at(2) },
